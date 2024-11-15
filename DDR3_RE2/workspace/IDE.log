@@ -228,3 +228,222 @@ dow C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem
 12:30:22 INFO  : Jtag cable 'RealDigital Boo 887100000005A' is selected.
 12:30:22 INFO  : 'jtag frequency' command is executed.
 12:30:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+12:30:23 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit"
+12:30:23 INFO  : Context for processor 'microblaze_0' is selected.
+12:30:23 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+12:30:23 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:30:23 INFO  : Context for processor 'microblaze_0' is selected.
+12:30:23 INFO  : System reset is completed.
+12:30:26 INFO  : 'after 3000' command is executed.
+12:30:26 INFO  : Context for processor 'microblaze_0' is selected.
+12:30:26 ERROR : Cannot stop MicroBlaze. Stalled on instruction fetch. PC=0x0
+12:30:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem_test.elf
+----------------End of Script----------------
+
+12:30:26 ERROR : Cannot stop MicroBlaze. Stalled on instruction fetch. PC=0x0
+12:37:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:37:17 INFO  : Jtag cable 'RealDigital Boo 887100000005A' is selected.
+12:37:17 INFO  : 'jtag frequency' command is executed.
+12:37:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+12:37:18 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit"
+12:37:18 INFO  : Context for processor 'microblaze_0' is selected.
+12:37:18 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+12:37:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:37:18 INFO  : Context for processor 'microblaze_0' is selected.
+12:37:18 INFO  : System reset is completed.
+12:37:21 INFO  : 'after 3000' command is executed.
+12:37:21 INFO  : Context for processor 'microblaze_0' is selected.
+12:37:21 ERROR : Cannot stop MicroBlaze. Stalled on instruction fetch. PC=0x0
+12:37:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem_test.elf
+----------------End of Script----------------
+
+12:37:21 ERROR : Cannot stop MicroBlaze. Stalled on instruction fetch. PC=0x0
+12:54:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:54:53 INFO  : Jtag cable 'RealDigital Boo 887100000005A' is selected.
+12:54:53 INFO  : 'jtag frequency' command is executed.
+12:54:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+12:54:55 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit"
+12:54:55 INFO  : Context for processor 'microblaze_0' is selected.
+12:54:55 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+12:54:55 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:54:55 INFO  : Context for processor 'microblaze_0' is selected.
+12:54:55 INFO  : System reset is completed.
+12:54:58 INFO  : 'after 3000' command is executed.
+12:54:58 INFO  : Context for processor 'microblaze_0' is selected.
+12:54:58 ERROR : Cannot stop MicroBlaze. Stalled on instruction fetch. PC=0x0
+12:54:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem_test.elf
+----------------End of Script----------------
+
+12:54:58 ERROR : Cannot stop MicroBlaze. Stalled on instruction fetch. PC=0x0
+12:55:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+12:55:22 INFO  : Jtag cable 'RealDigital Boo 887100000005A' is selected.
+12:55:22 INFO  : 'jtag frequency' command is executed.
+12:55:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+12:55:24 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit"
+12:55:24 INFO  : Context for processor 'microblaze_0' is selected.
+12:55:24 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+12:55:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+12:55:24 INFO  : Context for processor 'microblaze_0' is selected.
+12:55:24 INFO  : System reset is completed.
+12:55:27 INFO  : 'after 3000' command is executed.
+12:55:27 INFO  : Context for processor 'microblaze_0' is selected.
+12:55:27 ERROR : Cannot stop MicroBlaze. Stalled on instruction fetch. PC=0x0
+12:55:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem_test.elf
+----------------End of Script----------------
+
+12:55:27 ERROR : Cannot stop MicroBlaze. Stalled on instruction fetch. PC=0x0
+13:06:11 INFO  : Result from executing command 'removePlatformRepo': 
+13:06:34 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+13:06:49 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+13:06:49 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+13:06:50 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+13:07:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:07:17 INFO  : Jtag cable 'RealDigital Boo 887100000005A' is selected.
+13:07:17 INFO  : 'jtag frequency' command is executed.
+13:07:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+13:07:18 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit"
+13:07:18 INFO  : Context for processor 'microblaze_0' is selected.
+13:07:18 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+13:07:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:07:18 INFO  : Context for processor 'microblaze_0' is selected.
+13:07:18 INFO  : System reset is completed.
+13:07:21 INFO  : 'after 3000' command is executed.
+13:07:21 INFO  : Context for processor 'microblaze_0' is selected.
+13:07:21 ERROR : Cannot stop MicroBlaze. Stalled on instruction fetch. PC=0x0
+13:07:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem_test.elf
+----------------End of Script----------------
+
+13:07:21 ERROR : Cannot stop MicroBlaze. Stalled on instruction fetch. PC=0x0
+13:17:38 ERROR : Failed to update hardware specification for project 'mb_ddr3_top'.
+Reason: Failed to execute command 'platform config -updatehw {C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/mb_ddr3_top.xsa}'. Click on details for more information.
+13:17:45 ERROR : Failed to update hardware specification for project 'mb_ddr3_top'.
+Reason: Failed to execute command 'platform config -updatehw {C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/mb_ddr3_top.xsa}'. Click on details for more information.
+13:20:08 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+13:20:15 INFO  : Result from executing command 'removePlatformRepo': 
+13:20:27 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+13:20:27 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+13:20:28 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+13:20:31 INFO  : The hardware specification used by project 'mb_mem_test' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+13:20:31 INFO  : The file 'C:\Users\sjasi3\ECE385\ECE385_FP\DDR3_RE2\workspace\mb_mem_test\_ide\bitstream\mb_ddr3_top.bit' stored in project is removed.
+13:20:31 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sjasi3\ECE385\ECE385_FP\DDR3_RE2\workspace\mb_mem_test\_ide\bitstream' in project 'mb_mem_test'.
+13:20:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:20:33 INFO  : Jtag cable 'RealDigital Boo 887100000005A' is selected.
+13:20:33 INFO  : 'jtag frequency' command is executed.
+13:20:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+13:20:34 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit"
+13:20:34 INFO  : Context for processor 'microblaze_0' is selected.
+13:20:34 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+13:20:34 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:20:34 INFO  : Context for processor 'microblaze_0' is selected.
+13:20:34 INFO  : System reset is completed.
+13:20:37 INFO  : 'after 3000' command is executed.
+13:20:38 INFO  : Context for processor 'microblaze_0' is selected.
+13:20:38 ERROR : Memory write error at 0x80000000. MicroBlaze instruction insert overrun
+13:20:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem_test.elf
+----------------End of Script----------------
+
+13:20:38 ERROR : Memory write error at 0x80000000. MicroBlaze instruction insert overrun
+13:24:06 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+13:24:58 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+13:25:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:25:02 INFO  : Jtag cable 'RealDigital Boo 887100000005A' is selected.
+13:25:02 INFO  : 'jtag frequency' command is executed.
+13:25:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+13:25:04 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit"
+13:25:04 INFO  : Context for processor 'microblaze_0' is selected.
+13:25:04 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+13:25:04 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:25:04 INFO  : Context for processor 'microblaze_0' is selected.
+13:25:04 INFO  : System reset is completed.
+13:25:07 INFO  : 'after 3000' command is executed.
+13:25:07 INFO  : Context for processor 'microblaze_0' is selected.
+13:25:07 INFO  : The application 'C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem_test.elf' is downloaded to processor 'microblaze_0'.
+13:25:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 887100000005A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem_test.elf
+----------------End of Script----------------
+
+13:25:07 INFO  : Context for processor 'microblaze_0' is selected.
+13:25:07 INFO  : 'con' command is executed.
+13:25:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:25:07 INFO  : Launch script is exported to file 'C:\Users\sjasi3\ECE385\ECE385_FP\DDR3_RE2\workspace\mb_mem_test_system\_ide\scripts\systemdebugger_mb_mem_test_system_standalone.tcl'
+13:25:40 INFO  : Disconnected from the channel tcfchan#2.

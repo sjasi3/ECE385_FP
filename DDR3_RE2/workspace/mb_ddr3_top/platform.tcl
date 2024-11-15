@@ -24,3 +24,11 @@ platform generate
 platform clean
 platform clean
 platform generate
+platform clean
+platform config -updatehw {C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/mb_ddr3_top.xsa}
+platform generate
+platform config -updatehw {C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/mb_ddr3_top.xsa}
+platform config -updatehw {C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/mb_ddr3_top.xsa}
+platform config -updatehw {C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/mb_ddr3_top.xsa}
+platform clean
+platform generate

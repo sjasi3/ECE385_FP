@@ -1490,7 +1490,7 @@
               },
               "SEG_mig_7series_0_memaddr": {
                 "address_block": "/mig_7series_0/memmap/memaddr",
-                "offset": "0x80000000",
+                "offset": "0x00000000",
                 "range": "128M"
               }
             }
@@ -1514,7 +1514,7 @@
               },
               "SEG_mig_7series_0_memaddr": {
                 "address_block": "/mig_7series_0/memmap/memaddr",
-                "offset": "0x80000000",
+                "offset": "0x00000000",
                 "range": "128M"
               }
             }

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Fri Nov 15 12:27:56 2024
+| Date             : Fri Nov 15 13:17:19 2024
 | Host             : ECEB-3022-11 running 64-bit major release  (build 9200)
 | Command          : report_power -file mb_ddr3_top_power_routed.rpt -pb mb_ddr3_top_power_summary_routed.pb -rpx mb_ddr3_top_power_routed.rpx
 | Design           : mb_ddr3_top
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.814        |
+| Total On-Chip Power (W)  | 0.813        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.736        |
+| Dynamic (W)              | 0.735        |
 | Device Static (W)        | 0.078        |
 | Effective TJA (C/W)      | 4.9          |
 | Max Ambient (C)          | 81.0         |
@@ -52,17 +52,17 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.041 |       24 |       --- |             --- |
-| Slice Logic              |     0.018 |    26011 |       --- |             --- |
-|   LUT as Logic           |     0.017 |    10107 |     32600 |           31.00 |
-|   Register               |    <0.001 |     9904 |     65200 |           15.19 |
-|   CARRY4                 |    <0.001 |      404 |      8150 |            4.96 |
+| Clocks                   |     0.040 |       24 |       --- |             --- |
+| Slice Logic              |     0.018 |    25977 |       --- |             --- |
+|   LUT as Logic           |     0.016 |    10089 |     32600 |           30.95 |
+|   Register               |    <0.001 |     9891 |     65200 |           15.17 |
+|   CARRY4                 |    <0.001 |      403 |      8150 |            4.94 |
 |   LUT as Distributed RAM |    <0.001 |      512 |      9600 |            5.33 |
 |   F7/F8 Muxes            |    <0.001 |      185 |     32600 |            0.57 |
-|   LUT as Shift Register  |    <0.001 |      519 |      9600 |            5.41 |
-|   Others                 |    <0.001 |     1320 |       --- |             --- |
-| Signals                  |     0.024 |    19338 |       --- |             --- |
-| Block RAM                |     0.052 |       18 |        75 |           24.00 |
+|   LUT as Shift Register  |    <0.001 |      514 |      9600 |            5.35 |
+|   Others                 |    <0.001 |     1318 |       --- |             --- |
+| Signals                  |     0.024 |    19318 |       --- |             --- |
+| Block RAM                |     0.051 |       18 |        75 |           24.00 |
 | MMCM                     |     0.099 |        1 |         5 |           20.00 |
 | PLL                      |     0.116 |        1 |         5 |           20.00 |
 | DSPs                     |     0.003 |        6 |       120 |            5.00 |
@@ -70,7 +70,7 @@ Table of Contents
 | PHASER                   |     0.113 |       14 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.078 |          |           |                 |
-| Total                    |     0.814 |          |           |                 |
+| Total                    |     0.813 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,8 +80,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.184 |       0.172 |      0.011 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.234 |       0.222 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.182 |       0.171 |      0.011 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.234 |       0.221 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -168,8 +168,8 @@ Table of Contents
 +--------------------------------------+-----------+
 | Name                                 | Power (W) |
 +--------------------------------------+-----------+
-| mb_ddr3_top                          |     0.736 |
-|   mb_ddr3_i                          |     0.736 |
+| mb_ddr3_top                          |     0.735 |
+|   mb_ddr3_i                          |     0.734 |
 |     axi_timer_0                      |     0.002 |
 |       U0                             |     0.002 |
 |     microblaze_0                     |     0.080 |
@@ -178,11 +178,11 @@ Table of Contents
 |       U0                             |     0.001 |
 |     microblaze_0_axi_periph          |     0.010 |
 |       m00_couplers                   |     0.003 |
-|       m01_couplers                   |     0.002 |
+|       m01_couplers                   |     0.003 |
 |       m02_couplers                   |     0.002 |
 |       xbar                           |     0.003 |
-|     mig_7series_0                    |     0.641 |
-|       u_ddr3_re2_mig_7series_0_0_mig |     0.641 |
+|     mig_7series_0                    |     0.640 |
+|       u_ddr3_re2_mig_7series_0_0_mig |     0.640 |
 +--------------------------------------+-----------+
 
 

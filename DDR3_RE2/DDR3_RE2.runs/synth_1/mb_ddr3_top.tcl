@@ -95,10 +95,6 @@ set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_mig_7series_0_0/ddr3_re2_mig_7series_0_0/user_design/constraints/ddr3_re2_mig_7series_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_mig_7series_0_0/ddr3_re2_mig_7series_0_0/user_design/constraints/ddr3_re2_mig_7series_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_xbar_0/ddr3_re2_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_auto_pc_3/ddr3_re2_auto_pc_3_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_auto_pc_0/ddr3_re2_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_auto_pc_1/ddr3_re2_auto_pc_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_auto_pc_2/ddr3_re2_auto_pc_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_microblaze_0_axi_intc_0/ddr3_re2_microblaze_0_axi_intc_0.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_microblaze_0_axi_intc_0/ddr3_re2_microblaze_0_axi_intc_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_microblaze_0_axi_intc_0/ddr3_re2_microblaze_0_axi_intc_0_ooc.xdc]
@@ -112,6 +108,10 @@ set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_axi_uartlite_0_0/ddr3_re2_axi_uartlite_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_axi_uartlite_0_0/ddr3_re2_axi_uartlite_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_axi_uartlite_0_0/ddr3_re2_axi_uartlite_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_auto_pc_3/ddr3_re2_auto_pc_3_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_auto_pc_0/ddr3_re2_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_auto_pc_1/ddr3_re2_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_auto_pc_2/ddr3_re2_auto_pc_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ddr3_re2_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_microblaze_0_0/data/mb_bootloop_le.elf]
 
@@ -130,6 +130,8 @@ set_property used_in_implementation false [get_files C:/Users/sjasi3/ECE385/ECE3
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.srcs/utils_1/imports/synth_1/mb_ddr3_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

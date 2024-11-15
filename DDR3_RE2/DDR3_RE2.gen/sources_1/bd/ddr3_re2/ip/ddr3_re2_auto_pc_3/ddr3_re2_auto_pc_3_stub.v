@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
 // Date        : Fri Nov 15 11:57:22 2024
 // Host        : ECEB-3022-11 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ip/ddr3_re2_auto_pc_3/ddr3_re2_auto_pc_3_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top ddr3_re2_auto_pc_3 -prefix
+//               ddr3_re2_auto_pc_3_ ddr3_re2_auto_pc_3_stub.v
 // Design      : ddr3_re2_auto_pc_3
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7s50csga324-1

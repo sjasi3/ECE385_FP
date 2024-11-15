@@ -17,7 +17,7 @@ _HEAP_SIZE = DEFINED(_HEAP_SIZE) ? _HEAP_SIZE : 0x4000;
 
 MEMORY
 {
-   mig_7series_0_memaddr : ORIGIN = 0x80000000, LENGTH = 0x8000000
+   mig_7series_0_memaddr : ORIGIN = 0x50, LENGTH = 0x7FFFFB0
 }
 
 /* Specify the default entry point to the program */
