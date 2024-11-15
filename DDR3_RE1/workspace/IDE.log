@@ -1,0 +1,36 @@
+23:08:23 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/DDR3_RE1/workspace/IDE.log'.
+23:08:24 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/workspace/temp_xsdb_launch_script.tcl
+23:08:24 INFO  : Registering command handlers for Vitis TCF services
+23:08:24 INFO  : Platform repository initialization has completed.
+23:08:25 INFO  : XSCT server has started successfully.
+23:08:25 INFO  : Successfully done setting XSCT server connection channel  
+23:08:25 INFO  : Successfully done setting workspace for the tool. 
+23:08:25 INFO  : Successfully done query RDI_DATADIR 
+23:08:25 INFO  : plnx-install-location is set to ''
+23:18:19 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/DDR3_RE1/workspace/IDE.log'.
+23:18:20 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/workspace/temp_xsdb_launch_script.tcl
+23:18:20 INFO  : Registering command handlers for Vitis TCF services
+23:18:21 INFO  : Platform repository initialization has completed.
+23:18:22 INFO  : XSCT server has started successfully.
+23:18:22 INFO  : Successfully done setting XSCT server connection channel  
+23:18:22 INFO  : plnx-install-location is set to ''
+23:18:22 INFO  : Successfully done setting workspace for the tool. 
+23:18:22 INFO  : Successfully done query RDI_DATADIR 
+23:37:30 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/DDR3_RE1/workspace/IDE.log'.
+23:37:30 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/workspace/temp_xsdb_launch_script.tcl
+23:37:30 INFO  : Registering command handlers for Vitis TCF services
+23:37:31 INFO  : Platform repository initialization has completed.
+23:37:32 INFO  : XSCT server has started successfully.
+23:37:32 INFO  : Successfully done setting XSCT server connection channel  
+23:37:32 INFO  : plnx-install-location is set to ''
+23:37:32 INFO  : Successfully done setting workspace for the tool. 
+23:37:32 INFO  : Successfully done query RDI_DATADIR 
+23:38:58 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/DDR3_RE1/workspace/IDE.log'.
+23:38:59 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/workspace/temp_xsdb_launch_script.tcl
+23:38:59 INFO  : Registering command handlers for Vitis TCF services
+23:38:59 INFO  : Platform repository initialization has completed.
+23:39:00 INFO  : XSCT server has started successfully.
+23:39:00 INFO  : Successfully done setting XSCT server connection channel  
+23:39:00 INFO  : plnx-install-location is set to ''
+23:39:00 INFO  : Successfully done query RDI_DATADIR 
+23:39:00 INFO  : Successfully done setting workspace for the tool. 
