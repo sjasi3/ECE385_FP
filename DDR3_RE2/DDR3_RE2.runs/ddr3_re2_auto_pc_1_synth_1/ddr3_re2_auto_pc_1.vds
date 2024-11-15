@@ -1,0 +1,22 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Nov 15 11:57:30 2024
+# Process ID: 17204
+# Current directory: C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.runs/ddr3_re2_auto_pc_1_synth_1
+# Command line: vivado.exe -log ddr3_re2_auto_pc_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ddr3_re2_auto_pc_1.tcl
+# Log file: C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.runs/ddr3_re2_auto_pc_1_synth_1/ddr3_re2_auto_pc_1.vds
+# Journal file: C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.runs/ddr3_re2_auto_pc_1_synth_1\vivado.jou
+# Running On: ECEB-3022-11, OS: Windows, CPU Frequency: 3000 MHz, CPU Physical cores: 6, Host memory: 33554 MB
+#-----------------------------------------------------------
+source ddr3_re2_auto_pc_1.tcl -notrace
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: ddr3_re2_auto_pc_1
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 51446dc87ad820ec to dir: C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.runs/ddr3_re2_auto_pc_1_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.cache/ip/2022.2/5/1/51446dc87ad820ec/ddr3_re2_auto_pc_0.dcp to C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.runs/ddr3_re2_auto_pc_1_synth_1/ddr3_re2_auto_pc_1.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.cache/ip/2022.2/5/1/51446dc87ad820ec/ddr3_re2_auto_pc_0_sim_netlist.v to C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.runs/ddr3_re2_auto_pc_1_synth_1/ddr3_re2_auto_pc_1_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.cache/ip/2022.2/5/1/51446dc87ad820ec/ddr3_re2_auto_pc_0_sim_netlist.vhdl to C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.runs/ddr3_re2_auto_pc_1_synth_1/ddr3_re2_auto_pc_1_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.cache/ip/2022.2/5/1/51446dc87ad820ec/ddr3_re2_auto_pc_0_stub.v to C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.runs/ddr3_re2_auto_pc_1_synth_1/ddr3_re2_auto_pc_1_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.cache/ip/2022.2/5/1/51446dc87ad820ec/ddr3_re2_auto_pc_0_stub.vhdl to C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.runs/ddr3_re2_auto_pc_1_synth_1/ddr3_re2_auto_pc_1_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP ddr3_re2_auto_pc_1, cache-ID = 51446dc87ad820ec.
+INFO: [Common 17-206] Exiting Vivado at Fri Nov 15 11:57:41 2024...

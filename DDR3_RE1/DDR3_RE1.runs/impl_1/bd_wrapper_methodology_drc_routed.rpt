@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Thu Nov 14 22:58:12 2024
-| Host         : SgoSkzD running 64-bit unknown
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Fri Nov 15 10:55:59 2024
+| Host         : ECEB-3022-11 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file bd_wrapper_methodology_drc_routed.rpt -pb bd_wrapper_methodology_drc_routed.pb -rpx bd_wrapper_methodology_drc_routed.rpx
 | Design       : bd_wrapper
 | Device       : xc7s50csga324-1
@@ -65,62 +65,62 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X51Y79 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[0] in site SLICE_X39Y79 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X49Y79 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
+The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[10] in site SLICE_X37Y72 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[10] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X49Y76 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
+The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[11] in site SLICE_X34Y79 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[11] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X50Y80 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
+The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[1] in site SLICE_X36Y84 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[1] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X49Y74 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
+The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[2] in site SLICE_X33Y79 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[2] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X49Y71 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
+The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[3] in site SLICE_X37Y76 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[3] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#7 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X48Y71 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
+The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[4] in site SLICE_X32Y78 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[4] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#8 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X48Y73 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
+The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[5] in site SLICE_X37Y74 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[5] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#9 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X50Y78 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
+The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[6] in site SLICE_X38Y79 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[6] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#10 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X48Y78 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
+The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[7] in site SLICE_X36Y77 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[7] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#11 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X48Y75 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
+The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[8] in site SLICE_X37Y80 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[8] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#12 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X48Y81 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
+The FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_sync_r5_reg[9] in site SLICE_X36Y82 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell bd_i/mig_7series_0/u_bd_mig_7series_0_0_mig/temp_mon_enabled.u_tempmon/device_temp_r_reg[9] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-9#1 Warning
@@ -135,13 +135,13 @@ Related violations: <none>
 
 ULMTCS-1#1 Warning
 Control Sets use limits recommend reduction  
-This design uses 808 control sets (vs. available limit of 8150, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
+This design uses 793 control sets (vs. available limit of 8150, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
 Related violations: <none>
 
 XDCB-5#1 Warning
 Runtime inefficient way to find pin objects  
 The option '-to : [get_pins -hier -include_replicated_objects -filter {NAME =~ *temp_mon_enabled.u_tempmon/device_temp_sync_r1_reg[*]/D}]' of constraint 'set_max_delay' uses inefficient query to find pin objects (see constraint position '13' in the Timing Constraint window in Vivado IDE). To reduce runtime, it is recommended to get the pins through the cell objects. Please refer to Using Constraints Guide (Constraints Efficiency). An example of optimal query is: get_pins -filter {REF_PIN_NAME=~yy*} -of_objects [get_cells -hierarchical xx*].
-Current XDC: /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mig_7series_0_0/bd_mig_7series_0_0/user_design/constraints/bd_mig_7series_0_0.xdc (Line: 346)
+Current XDC: c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mig_7series_0_0/bd_mig_7series_0_0/user_design/constraints/bd_mig_7series_0_0.xdc (Line: 346)
 Related violations: <none>
 
 REQP-1959#1 Advisory

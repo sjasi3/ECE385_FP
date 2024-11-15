@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Thu Nov 14 22:44:40 2024
-// Host        : SgoSkzD running 64-bit unknown
+// Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+// Date        : Fri Nov 15 10:49:54 2024
+// Host        : ECEB-3022-11 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mig_7series_0_0/bd_mig_7series_0_0_sim_netlist.v
+//               c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mig_7series_0_0/bd_mig_7series_0_0_sim_netlist.v
 // Design      : bd_mig_7series_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

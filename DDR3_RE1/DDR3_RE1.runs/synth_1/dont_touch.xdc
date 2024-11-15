@@ -45,4 +45,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_rst_clk_
 # IP: bd/bd/ip/bd_rst_mig_7series_0_166M_0/bd_rst_mig_7series_0_166M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==bd_rst_mig_7series_0_166M_0 || ORIG_REF_NAME==bd_rst_mig_7series_0_166M_0} -quiet] -quiet
 
-# XDC: /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/bd_ooc.xdc
+# XDC: c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/bd_ooc.xdc

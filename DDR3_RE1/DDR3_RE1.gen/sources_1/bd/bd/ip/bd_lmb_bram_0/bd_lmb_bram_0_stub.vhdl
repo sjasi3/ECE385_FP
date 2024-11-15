@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 -- Date        : Thu Nov 14 22:44:57 2024
 -- Host        : SgoSkzD running 64-bit unknown
--- Command     : write_vhdl -force -mode synth_stub
---               /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_lmb_bram_0/bd_lmb_bram_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top bd_lmb_bram_0 -prefix
+--               bd_lmb_bram_0_ bd_lmb_bram_0_stub.vhdl
 -- Design      : bd_lmb_bram_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s50csga324-1

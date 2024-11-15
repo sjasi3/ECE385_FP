@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.runs/synth_1/bd_wrapper.tcl"
+  variable script "C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.runs/synth_1/bd_wrapper.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param gui.addressMap 0
+set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -78,82 +78,82 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.cache/wt [current_project]
-set_property parent.project_path /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.xpr [current_project]
+set_property webtalk.parent_dir C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.cache/wt [current_project]
+set_property parent.project_path C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.cache/ip [current_project]
+set_property ip_output_repo c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/hdl/bd_wrapper.v
-add_files /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.srcs/sources_1/bd/bd/bd.bd
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_1/bd_2327_psr0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_1/bd_2327_psr0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_2/bd_2327_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_2/bd_2327_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_3/bd_2327_psr_aclk1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_3/bd_2327_psr_aclk1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_4/bd_2327_arsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_5/bd_2327_rsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_6/bd_2327_awsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_7/bd_2327_wsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_8/bd_2327_bsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_12/bd_2327_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_13/bd_2327_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_14/bd_2327_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_15/bd_2327_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_16/bd_2327_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_17/bd_2327_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_21/bd_2327_s01a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_22/bd_2327_sarn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_23/bd_2327_srn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_27/bd_2327_s02a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_28/bd_2327_sarn_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_29/bd_2327_srn_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_30/bd_2327_sawn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_31/bd_2327_swn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_32/bd_2327_sbn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_33/bd_2327_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_34/bd_2327_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_35/bd_2327_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_36/bd_2327_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_37/bd_2327_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_38/bd_2327_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_40/bd_2327_m01s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_41/bd_2327_m01arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_42/bd_2327_m01rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_43/bd_2327_m01awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_44/bd_2327_m01wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_45/bd_2327_m01bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_uartlite_0_0/bd_axi_uartlite_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_uartlite_0_0/bd_axi_uartlite_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_uartlite_0_0/bd_axi_uartlite_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_clk_wiz_1_0/bd_clk_wiz_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_clk_wiz_1_0/bd_clk_wiz_1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_clk_wiz_1_0/bd_clk_wiz_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mdm_1_0/bd_mdm_1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mdm_1_0/bd_mdm_1_0_ooc_trace.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_microblaze_0_0/bd_microblaze_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_microblaze_0_0/bd_microblaze_0_0_ooc_debug.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_microblaze_0_0/bd_microblaze_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_dlmb_bram_if_cntlr_0/bd_dlmb_bram_if_cntlr_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_dlmb_v10_0/bd_dlmb_v10_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_ilmb_bram_if_cntlr_0/bd_ilmb_bram_if_cntlr_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_ilmb_v10_0/bd_ilmb_v10_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_lmb_bram_0/bd_lmb_bram_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mig_7series_0_0/bd_mig_7series_0_0/user_design/constraints/bd_mig_7series_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mig_7series_0_0/bd_mig_7series_0_0/user_design/constraints/bd_mig_7series_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_rst_clk_wiz_1_100M_0/bd_rst_clk_wiz_1_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_rst_clk_wiz_1_100M_0/bd_rst_clk_wiz_1_100M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_rst_clk_wiz_1_100M_0/bd_rst_clk_wiz_1_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_rst_mig_7series_0_166M_0/bd_rst_mig_7series_0_166M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_rst_mig_7series_0_166M_0/bd_rst_mig_7series_0_166M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_rst_mig_7series_0_166M_0/bd_rst_mig_7series_0_166M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/bd_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_microblaze_0_0/data/mb_bootloop_le.elf]
+read_verilog -library xil_defaultlib C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/hdl/bd_wrapper.v
+add_files C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.srcs/sources_1/bd/bd/bd.bd
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_1/bd_2327_psr0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_1/bd_2327_psr0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_2/bd_2327_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_2/bd_2327_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_3/bd_2327_psr_aclk1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_3/bd_2327_psr_aclk1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_4/bd_2327_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_5/bd_2327_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_6/bd_2327_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_7/bd_2327_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_8/bd_2327_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_12/bd_2327_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_13/bd_2327_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_14/bd_2327_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_15/bd_2327_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_16/bd_2327_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_17/bd_2327_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_21/bd_2327_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_22/bd_2327_sarn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_23/bd_2327_srn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_27/bd_2327_s02a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_28/bd_2327_sarn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_29/bd_2327_srn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_30/bd_2327_sawn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_31/bd_2327_swn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_32/bd_2327_sbn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_33/bd_2327_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_34/bd_2327_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_35/bd_2327_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_36/bd_2327_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_37/bd_2327_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_38/bd_2327_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_40/bd_2327_m01s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_41/bd_2327_m01arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_42/bd_2327_m01rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_43/bd_2327_m01awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_44/bd_2327_m01wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_0/ip/ip_45/bd_2327_m01bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_uartlite_0_0/bd_axi_uartlite_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_uartlite_0_0/bd_axi_uartlite_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_uartlite_0_0/bd_axi_uartlite_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_clk_wiz_1_0/bd_clk_wiz_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_clk_wiz_1_0/bd_clk_wiz_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_clk_wiz_1_0/bd_clk_wiz_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mdm_1_0/bd_mdm_1_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mdm_1_0/bd_mdm_1_0_ooc_trace.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_microblaze_0_0/bd_microblaze_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_microblaze_0_0/bd_microblaze_0_0_ooc_debug.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_microblaze_0_0/bd_microblaze_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_dlmb_bram_if_cntlr_0/bd_dlmb_bram_if_cntlr_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_dlmb_v10_0/bd_dlmb_v10_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_ilmb_bram_if_cntlr_0/bd_ilmb_bram_if_cntlr_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_ilmb_v10_0/bd_ilmb_v10_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_lmb_bram_0/bd_lmb_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mig_7series_0_0/bd_mig_7series_0_0/user_design/constraints/bd_mig_7series_0_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mig_7series_0_0/bd_mig_7series_0_0/user_design/constraints/bd_mig_7series_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_rst_clk_wiz_1_100M_0/bd_rst_clk_wiz_1_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_rst_clk_wiz_1_100M_0/bd_rst_clk_wiz_1_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_rst_clk_wiz_1_100M_0/bd_rst_clk_wiz_1_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_rst_mig_7series_0_166M_0/bd_rst_mig_7series_0_166M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_rst_mig_7series_0_166M_0/bd_rst_mig_7series_0_166M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_rst_mig_7series_0_166M_0/bd_rst_mig_7series_0_166M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/bd_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_microblaze_0_0/data/mb_bootloop_le.elf]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -164,12 +164,14 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.srcs/constrs_1/imports/constraints/bd-mem.xdc
-set_property used_in_implementation false [get_files /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.srcs/constrs_1/imports/constraints/bd-mem.xdc]
+read_xdc C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.srcs/constrs_1/imports/constraints/bd-mem.xdc
+set_property used_in_implementation false [get_files C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.srcs/constrs_1/imports/constraints/bd-mem.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.srcs/utils_1/imports/synth_1/bd_wrapper.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

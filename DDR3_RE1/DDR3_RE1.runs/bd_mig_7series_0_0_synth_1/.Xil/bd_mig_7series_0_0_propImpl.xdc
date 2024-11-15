@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mig_7series_0_0/bd_mig_7series_0_0/user_design/constraints/bd_mig_7series_0_0.xdc rfile:../../../DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mig_7series_0_0/bd_mig_7series_0_0/user_design/constraints/bd_mig_7series_0_0.xdc id:1 order:EARLY} [current_design]
+set_property SRC_FILE_INFO {cfile:c:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mig_7series_0_0/bd_mig_7series_0_0/user_design/constraints/bd_mig_7series_0_0.xdc rfile:../../../DDR3_RE1.gen/sources_1/bd/bd/ip/bd_mig_7series_0_0/bd_mig_7series_0_0/user_design/constraints/bd_mig_7series_0_0.xdc id:1 order:EARLY} [current_design]
 set_property src_info {type:XDC file:1 line:41 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN K2 [get_ports {ddr3_dq[0]}]
 set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ} [current_design]

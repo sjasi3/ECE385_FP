@@ -1,10 +1,10 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Thu Nov 14 22:45:25 2024
+// Date        : Thu Nov 14 22:45:21 2024
 // Host        : SgoSkzD running 64-bit unknown
-// Command     : write_verilog -force -mode synth_stub
-//               /home/sean/Downloads/git/ECE385_FP/DDR3_RE1/DDR3_RE1.gen/sources_1/bd/bd/ip/bd_axi_smc_0/bd_axi_smc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top bd_axi_smc_0 -prefix
+//               bd_axi_smc_0_ bd_axi_smc_0_stub.v
 // Design      : bd_axi_smc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7s50csga324-1

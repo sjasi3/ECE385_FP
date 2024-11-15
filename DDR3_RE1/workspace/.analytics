@@ -10,3 +10,26 @@ timestamp=[2024-11-14 23:37:31], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00
 timestamp=[2024-11-14 23:38:59], mode=WORKBENCH_START, duration=0:00:02.933, duration_ms=2933, data={}
 timestamp=[2024-11-14 23:38:59], mode=WORKBENCH_UI_INIT, duration=0:00:00.250, duration_ms=250, data={editors_count=0, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
 timestamp=[2024-11-14 23:38:59], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.509, duration_ms=509, data={}
+timestamp=[2024-11-15 10:11:52], mode=WORKBENCH_START, duration=0:00:05.150, duration_ms=5150, data={}
+timestamp=[2024-11-15 10:11:52], mode=WORKBENCH_UI_INIT, duration=0:00:00.601, duration_ms=601, data={editors_count=0, platform_editors_count=0, projects_count=1, platform_projects_count=0, active_platform_editor=false, projects=RemoteSystemsTempFiles}
+timestamp=[2024-11-15 10:11:54], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.083, duration_ms=1083, data={}
+timestamp=[2024-11-15 10:12:41], mode=APP_CREATION, duration=0:00:06.547, duration_ms=6547, data={name=mb_ddrtest, project_type=sdk, os=standalone, processor=microblaze, runtime=cpp, platform=bd_wrapper, application_type=application}
+timestamp=[2024-11-15 10:14:25], mode=PLATFORM_GENERATION, duration=0:00:07.721, duration_ms=7721, data={name=bd_wrapper}
+timestamp=[2024-11-15 10:14:28], mode=BUILD, duration=0:00:02.589, duration_ms=2589, data={name=mb_ddrtest, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 10:14:28], mode=BUILD, duration=0:00:00.234, duration_ms=234, data={name=mb_ddrtest_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 10:16:56], mode=BUILD, duration=0:00:00.297, duration_ms=297, data={name=mb_ddrtest, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 10:16:57], mode=BUILD, duration=0:00:00.293, duration_ms=293, data={name=mb_ddrtest_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 10:58:59], mode=PLATFORM_GENERATION, duration=0:00:09.259, duration_ms=9259, data={name=bd_wrapper}
+timestamp=[2024-11-15 10:59:01], mode=BUILD, duration=0:00:02.062, duration_ms=2062, data={name=mb_ddrtest, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 10:59:02], mode=BUILD, duration=0:00:00.218, duration_ms=218, data={name=mb_ddrtest_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 11:00:54], mode=BUILD, duration=0:00:00.222, duration_ms=222, data={name=mb_ddrtest, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 11:00:54], mode=BUILD, duration=0:00:00.224, duration_ms=224, data={name=mb_ddrtest_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 11:02:36], mode=WORKBENCH_START, duration=0:00:05.980, duration_ms=5980, data={}
+timestamp=[2024-11-15 11:02:37], mode=WORKBENCH_UI_INIT, duration=0:00:00.665, duration_ms=665, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,bd_wrapper,mb_ddrtest,mb_ddrtest_system}
+timestamp=[2024-11-15 11:02:38], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.821, duration_ms=821, data={}
+timestamp=[2024-11-15 12:18:19], mode=WORKBENCH_START, duration=0:00:06.745, duration_ms=6745, data={}
+timestamp=[2024-11-15 12:18:20], mode=WORKBENCH_UI_INIT, duration=0:00:00.663, duration_ms=663, data={editors_count=3, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,bd_wrapper,mb_ddrtest,mb_ddrtest_system}
+timestamp=[2024-11-15 12:18:21], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.879, duration_ms=879, data={}
+timestamp=[2024-11-15 12:18:51], mode=PLATFORM_GENERATION, duration=0:00:09.732, duration_ms=9732, data={name=bd_wrapper}
+timestamp=[2024-11-15 12:18:54], mode=BUILD, duration=0:00:02.364, duration_ms=2364, data={name=mb_ddrtest, configuration=Debug, clean_build=false}
+timestamp=[2024-11-15 12:18:55], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=mb_ddrtest_system, configuration=Debug, clean_build=false}

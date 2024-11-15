@@ -1,0 +1,41 @@
+12:18:51 **** Build of configuration Debug for project mb_ddrtest ****
+make all 
+'Building file: ../src/memory_config_g.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/memory_config_g.o" -IC:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/workspace/bd_wrapper/export/bd_wrapper/sw/bd_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/memory_config_g.d" -MT"src/memory_config_g.o" -o "src/memory_config_g.o" "../src/memory_config_g.c"
+'Finished building: ../src/memory_config_g.c'
+' '
+'Building file: ../src/memorytest.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/memorytest.o" -IC:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/workspace/bd_wrapper/export/bd_wrapper/sw/bd_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/memorytest.d" -MT"src/memorytest.o" -o "src/memorytest.o" "../src/memorytest.c"
+../src/memorytest.c: In function 'test_memory_range':
+../src/memorytest.c:66:28: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   66 |     status = Xil_TestMem32((u32*)range->base, 1024, 0xAAAA5555, XIL_TESTMEM_ALLMEMTESTS);
+      |                            ^
+../src/memorytest.c:69:28: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   69 |     status = Xil_TestMem16((u16*)range->base, 2048, 0xAA55, XIL_TESTMEM_ALLMEMTESTS);
+      |                            ^
+../src/memorytest.c:72:27: warning: cast to pointer from integer of different size [-Wint-to-pointer-cast]
+   72 |     status = Xil_TestMem8((u8*)range->base, 4096, 0xA5, XIL_TESTMEM_ALLMEMTESTS);
+      |                           ^
+'Finished building: ../src/memorytest.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/workspace/bd_wrapper/export/bd_wrapper/sw/bd_wrapper/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: mb_ddrtest.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/workspace/bd_wrapper/export/bd_wrapper/sw/bd_wrapper/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "mb_ddrtest.elf"  ./src/memory_config_g.o ./src/memorytest.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mb_ddrtest.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mb_ddrtest.elf  |tee "mb_ddrtest.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7644	    368	   1068	   9080	   2378	mb_ddrtest.elf
+'Finished building: mb_ddrtest.elf.size'
+' '
+
+12:18:54 Build Finished (took 2s.345ms)
+

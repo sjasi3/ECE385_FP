@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="mb_ddrtest" location="C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/workspace/mb_ddrtest" platform="C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE1/workspace/bd_wrapper/export/bd_wrapper/bd_wrapper.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="mb_ddrtest_system" sysConfig="bd_wrapper" runtime="cpp" cpu="standalone_microblaze_0" cpuInstance="microblaze_0" os="standalone" mssSignature="f88ae275ba51e850795e85c45a407a10">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.459924560">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.1829070661" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="memory_tests"/>
+</sdkproject:SdkProject>

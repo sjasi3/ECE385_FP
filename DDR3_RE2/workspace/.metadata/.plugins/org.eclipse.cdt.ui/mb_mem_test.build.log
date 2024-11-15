@@ -1,0 +1,31 @@
+12:30:16 **** Build of configuration Debug for project mb_mem_test ****
+make all 
+'Building file: ../src/dhry_1.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dhry_1.o" -IC:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/dhry_1.d" -MT"src/dhry_1.o" -o "src/dhry_1.o" "../src/dhry_1.c"
+'Finished building: ../src/dhry_1.c'
+' '
+'Building file: ../src/dhry_2.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dhry_2.o" -IC:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/dhry_2.d" -MT"src/dhry_2.o" -o "src/dhry_2.o" "../src/dhry_2.c"
+'Finished building: ../src/dhry_2.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -IC:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: mb_mem_test.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "mb_mem_test.elf"  ./src/dhry_1.o ./src/dhry_2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mb_mem_test.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mb_mem_test.elf  |tee "mb_mem_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  20864	    396	  43164	  64424	   fba8	mb_mem_test.elf
+'Finished building: mb_mem_test.elf.size'
+' '
+
+12:30:18 Build Finished (took 2s.56ms)
+
