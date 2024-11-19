@@ -63,7 +63,6 @@
     <C0_MEM_SIZE>134217728</C0_MEM_SIZE>
     <UserMemoryAddressMap>BANK_ROW_COLUMN</UserMemoryAddressMap>
     <PinSelection>
-      <Pin IN_TERM="" IOSTANDARD="LVCMOS33" PADName="N15" SLEW="" VCCAUX_IO="" name="clk_100mhz"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL135" PADName="V3" SLEW="FAST" VCCAUX_IO="" name="ddr3_addr[0]"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL135" PADName="U3" SLEW="FAST" VCCAUX_IO="" name="ddr3_addr[10]"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL135" PADName="P5" SLEW="FAST" VCCAUX_IO="" name="ddr3_addr[11]"/>
@@ -110,7 +109,8 @@
       <Pin IN_TERM="" IOSTANDARD="SSTL135" PADName="U2" SLEW="FAST" VCCAUX_IO="" name="ddr3_ras_n"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL135" PADName="M5" SLEW="FAST" VCCAUX_IO="" name="ddr3_reset_n"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL135" PADName="T2" SLEW="FAST" VCCAUX_IO="" name="ddr3_we_n"/>
-      <Pin IN_TERM="" IOSTANDARD="LVCMOS33" PADName="B16" SLEW="SLOW" VCCAUX_IO="" name="uart_rxd"/>
+      <Pin IN_TERM="" IOSTANDARD="LVCMOS25" PADName="J2" SLEW="" VCCAUX_IO="" name="reset_rtl_0"/>
+      <Pin IN_TERM="" IOSTANDARD="LVCMOS33" PADName="B16" SLEW="" VCCAUX_IO="" name="uart_rxd"/>
       <Pin IN_TERM="" IOSTANDARD="LVCMOS33" PADName="A16" SLEW="" VCCAUX_IO="" name="uart_txd"/>
     </PinSelection>
     <System_Clock>
@@ -148,7 +148,7 @@
     <AXIParameters>
       <C0_C_RD_WR_ARB_ALGORITHM>RD_PRI_REG</C0_C_RD_WR_ARB_ALGORITHM>
       <C0_S_AXI_ADDR_WIDTH>27</C0_S_AXI_ADDR_WIDTH>
-      <C0_S_AXI_DATA_WIDTH>32</C0_S_AXI_DATA_WIDTH>
+      <C0_S_AXI_DATA_WIDTH>128</C0_S_AXI_DATA_WIDTH>
       <C0_S_AXI_ID_WIDTH>2</C0_S_AXI_ID_WIDTH>
       <C0_S_AXI_SUPPORTS_NARROW_BURST>0</C0_S_AXI_SUPPORTS_NARROW_BURST>
     </AXIParameters>

@@ -1,16 +1,6 @@
-13:24:58 **** Incremental Build of configuration Debug for project mb_mem_test ****
+18:45:17 **** Incremental Build of configuration Debug for project mb_mem_test ****
 make all 
-'Building target: mb_mem_test.elf'
-'Invoking: MicroBlaze gcc linker'
-mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "mb_mem_test.elf"  ./src/dhry_1.o ./src/dhry_2.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: mb_mem_test.elf'
-' '
-'Invoking: MicroBlaze Print Size'
-mb-size mb_mem_test.elf  |tee "mb_mem_test.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  20852	    396	  43168	  64416	   fba0	mb_mem_test.elf
-'Finished building: mb_mem_test.elf.size'
-' '
+make: Nothing to be done for 'all'.
 
-13:24:59 Build Finished (took 852ms)
+18:45:17 Build Finished (took 204ms)
 

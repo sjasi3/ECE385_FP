@@ -1,0 +1,35 @@
+18:45:14 **** Incremental Build of configuration Debug for project mb_hello_world ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -IC:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include/xil_printf.h:16,
+                 from ../src/helloworld.c:50:
+C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include/xparameters.h:487:34: warning: initialization of 'volatile uint32_t *' {aka 'volatile long unsigned int *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  487 | #define XPAR_AXI_GPIO_0_BASEADDR 0x40000000
+      |                                  ^~~~~~~~~~
+../src/helloworld.c:510:32: note: in expansion of macro 'XPAR_AXI_GPIO_0_BASEADDR'
+  510 | volatile uint32_t* color_out = XPAR_AXI_GPIO_0_BASEADDR;
+      |                                ^~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include/xparameters.h:487:34: warning: initialization of 'volatile uint32_t *' {aka 'volatile long unsigned int *'} from 'int' makes pointer from integer without a cast [-Wint-conversion]
+  487 | #define XPAR_AXI_GPIO_0_BASEADDR 0x40000000
+      |                                  ^~~~~~~~~~
+../src/helloworld.c:511:34: note: in expansion of macro 'XPAR_AXI_GPIO_0_BASEADDR'
+  511 | volatile uint32_t* position_in = XPAR_AXI_GPIO_0_BASEADDR + 0x8;
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: mb_hello_world.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -LC:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "mb_hello_world.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: mb_hello_world.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size mb_hello_world.elf  |tee "mb_hello_world.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 723272	    404	   3108	 726784	  b1700	mb_hello_world.elf
+'Finished building: mb_hello_world.elf.size'
+' '
+
+18:45:16 Build Finished (took 1s.554ms)
+

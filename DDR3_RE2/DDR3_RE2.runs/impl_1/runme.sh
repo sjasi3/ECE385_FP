@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/sjasi3/ECE385/ECE385_FP/DDR3_RE2/DDR3_RE2.runs/impl_1'
+HD_PWD='C:/Users/sjasi3/ECE385_FP/DDR3_RE2/DDR3_RE2.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
@@ -41,7 +41,7 @@ EAStep()
 }
 
 # pre-commands:
-/bin/touch .write_bitstream.begin.rst
+/bin/touch .init_design.begin.rst
 EAStep vivado -log mb_ddr3_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source mb_ddr3_top.tcl -notrace
 
 

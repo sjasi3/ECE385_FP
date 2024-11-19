@@ -66,7 +66,7 @@ Controller Options :
 
 AXI Parameters :
 
-   Data Width                    : 32
+   Data Width                    : 128
 
    Arbitration Scheme            : RD_PRI_REG
 

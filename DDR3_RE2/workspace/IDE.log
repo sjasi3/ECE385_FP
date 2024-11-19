@@ -447,3 +447,662 @@ con
 
 13:25:07 INFO  : Launch script is exported to file 'C:\Users\sjasi3\ECE385\ECE385_FP\DDR3_RE2\workspace\mb_mem_test_system\_ide\scripts\systemdebugger_mb_mem_test_system_standalone.tcl'
 13:25:40 INFO  : Disconnected from the channel tcfchan#2.
+16:12:35 DEBUG : Logs will be stored at 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/IDE.log'.
+16:12:36 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\temp_xsdb_launch_script.tcl
+16:12:40 INFO  : Registering command handlers for Vitis TCF services
+16:12:40 INFO  : XSCT server has started successfully.
+16:12:40 INFO  : plnx-install-location is set to ''
+16:12:41 INFO  : Platform repository initialization has completed.
+16:12:45 INFO  : Successfully done setting XSCT server connection channel  
+16:12:45 INFO  : Successfully done query RDI_DATADIR 
+16:12:45 INFO  : Successfully done setting workspace for the tool. 
+16:13:29 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+16:14:02 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+16:14:02 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+16:14:19 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+16:14:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:14:28 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+16:14:28 INFO  : 'jtag frequency' command is executed.
+16:14:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:14:29 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit"
+16:14:29 INFO  : Context for processor 'microblaze_0' is selected.
+16:14:29 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+16:14:29 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:14:29 INFO  : Context for processor 'microblaze_0' is selected.
+16:14:29 INFO  : System reset is completed.
+16:14:32 INFO  : 'after 3000' command is executed.
+16:14:32 INFO  : Context for processor 'microblaze_0' is selected.
+16:14:33 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem_test.elf' is downloaded to processor 'microblaze_0'.
+16:14:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem_test.elf
+----------------End of Script----------------
+
+16:14:33 INFO  : Context for processor 'microblaze_0' is selected.
+16:14:33 INFO  : 'con' command is executed.
+16:14:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:14:33 INFO  : Launch script is exported to file 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_mem_test_system\_ide\scripts\systemdebugger_mb_mem_test_system_standalone.tcl'
+16:18:19 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+16:18:22 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+16:18:26 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:18:26 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+16:18:26 INFO  : 'jtag frequency' command is executed.
+16:18:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:18:27 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit"
+16:18:27 INFO  : Context for processor 'microblaze_0' is selected.
+16:18:27 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+16:18:27 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:18:27 INFO  : Context for processor 'microblaze_0' is selected.
+16:18:27 INFO  : System reset is completed.
+16:18:30 INFO  : 'after 3000' command is executed.
+16:18:30 INFO  : Context for processor 'microblaze_0' is selected.
+16:18:30 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem_test.elf' is downloaded to processor 'microblaze_0'.
+16:18:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_mem_test/Debug/mb_mem_test.elf
+----------------End of Script----------------
+
+16:18:30 INFO  : Context for processor 'microblaze_0' is selected.
+16:18:30 INFO  : 'con' command is executed.
+16:18:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:18:31 INFO  : Disconnected from the channel tcfchan#2.
+16:18:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:18:43 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+16:18:43 INFO  : 'jtag frequency' command is executed.
+16:18:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:18:44 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+16:18:44 INFO  : Context for processor 'microblaze_0' is selected.
+16:18:44 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+16:18:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:18:44 INFO  : Context for processor 'microblaze_0' is selected.
+16:18:44 INFO  : System reset is completed.
+16:18:47 INFO  : 'after 3000' command is executed.
+16:18:47 INFO  : Context for processor 'microblaze_0' is selected.
+16:18:47 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+16:18:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+16:18:47 INFO  : Context for processor 'microblaze_0' is selected.
+16:18:47 INFO  : 'con' command is executed.
+16:18:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:18:47 INFO  : Disconnected from the channel tcfchan#3.
+16:21:24 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+16:21:25 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+16:21:28 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+16:21:29 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+16:21:35 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+16:26:09 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+16:26:23 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+16:29:27 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+16:29:29 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+16:31:05 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+16:31:07 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+16:31:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:31:15 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+16:31:15 INFO  : 'jtag frequency' command is executed.
+16:31:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+16:31:16 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+16:31:16 INFO  : Context for processor 'microblaze_0' is selected.
+16:31:16 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+16:31:16 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+16:31:16 INFO  : Context for processor 'microblaze_0' is selected.
+16:31:16 INFO  : System reset is completed.
+16:31:19 INFO  : 'after 3000' command is executed.
+16:31:19 INFO  : Context for processor 'microblaze_0' is selected.
+16:31:23 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+16:31:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+16:31:23 INFO  : Context for processor 'microblaze_0' is selected.
+16:31:23 INFO  : 'con' command is executed.
+16:31:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+16:31:23 INFO  : Disconnected from the channel tcfchan#4.
+16:40:29 WARN  : channel "tcfchan#2" closed
+17:28:43 DEBUG : Logs will be stored at 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/IDE.log'.
+17:28:44 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\temp_xsdb_launch_script.tcl
+17:28:48 INFO  : XSCT server has started successfully.
+17:28:48 INFO  : plnx-install-location is set to ''
+17:28:48 INFO  : Successfully done setting XSCT server connection channel  
+17:28:48 INFO  : Successfully done setting workspace for the tool. 
+17:28:48 INFO  : Registering command handlers for Vitis TCF services
+17:28:49 INFO  : Platform repository initialization has completed.
+17:28:51 INFO  : Successfully done query RDI_DATADIR 
+17:31:37 INFO  : Result from executing command 'removePlatformRepo': 
+17:31:43 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+17:31:51 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+17:32:04 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+17:32:04 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+17:37:15 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+17:37:16 INFO  : Updating application flags with new BSP settings...
+17:37:16 INFO  : Successfully updated application flags for project mb_hello_world.
+17:37:17 INFO  : The hardware specification used by project 'mb_hello_world' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+17:37:17 INFO  : The file 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_hello_world\_ide\bitstream\mb_ddr3_top.bit' stored in project is removed.
+17:37:17 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_hello_world\_ide\bitstream' in project 'mb_hello_world'.
+17:37:17 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+17:37:17 INFO  : Updating application flags with new BSP settings...
+17:37:17 INFO  : Successfully updated application flags for project mb_mem_test.
+17:37:20 INFO  : The hardware specification used by project 'mb_mem_test' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+17:37:20 INFO  : The file 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_mem_test\_ide\bitstream\mb_ddr3_top.bit' stored in project is removed.
+17:37:20 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_mem_test\_ide\bitstream' in project 'mb_mem_test'.
+17:37:34 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+17:37:37 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+17:40:30 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+17:40:31 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+17:40:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:40:41 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+17:40:41 INFO  : 'jtag frequency' command is executed.
+17:40:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+17:40:42 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+17:40:42 INFO  : Context for processor 'microblaze_0' is selected.
+17:40:42 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+17:40:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:40:42 INFO  : Context for processor 'microblaze_0' is selected.
+17:40:42 INFO  : System reset is completed.
+17:40:45 INFO  : 'after 3000' command is executed.
+17:40:45 INFO  : Context for processor 'microblaze_0' is selected.
+17:40:49 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+17:40:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+17:40:49 INFO  : Context for processor 'microblaze_0' is selected.
+17:40:49 INFO  : 'con' command is executed.
+17:40:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+17:40:49 INFO  : Disconnected from the channel tcfchan#3.
+17:41:30 INFO  : Result from executing command 'removePlatformRepo': 
+17:41:38 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+17:41:38 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+17:41:42 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+17:41:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:41:51 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+17:41:51 INFO  : 'jtag frequency' command is executed.
+17:41:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+17:41:52 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+17:41:52 INFO  : Context for processor 'microblaze_0' is selected.
+17:41:52 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+17:41:52 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:41:52 INFO  : Context for processor 'microblaze_0' is selected.
+17:41:52 INFO  : System reset is completed.
+17:41:55 INFO  : 'after 3000' command is executed.
+17:41:55 INFO  : Context for processor 'microblaze_0' is selected.
+17:41:59 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+17:41:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+17:41:59 INFO  : Context for processor 'microblaze_0' is selected.
+17:41:59 INFO  : 'con' command is executed.
+17:41:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+17:41:59 INFO  : Disconnected from the channel tcfchan#6.
+17:42:32 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+17:42:35 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+17:42:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:42:40 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+17:42:40 INFO  : 'jtag frequency' command is executed.
+17:42:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+17:42:41 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+17:42:41 INFO  : Context for processor 'microblaze_0' is selected.
+17:42:41 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+17:42:41 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:42:42 INFO  : Context for processor 'microblaze_0' is selected.
+17:42:42 INFO  : System reset is completed.
+17:42:45 INFO  : 'after 3000' command is executed.
+17:42:45 INFO  : Context for processor 'microblaze_0' is selected.
+17:42:48 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+17:42:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+17:42:48 INFO  : Context for processor 'microblaze_0' is selected.
+17:42:48 INFO  : 'con' command is executed.
+17:42:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+17:42:48 INFO  : Disconnected from the channel tcfchan#7.
+17:48:33 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+17:48:35 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+17:48:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:48:42 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+17:48:42 INFO  : 'jtag frequency' command is executed.
+17:48:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+17:48:43 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+17:48:43 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:43 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+17:48:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:48:43 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:43 INFO  : System reset is completed.
+17:48:46 INFO  : 'after 3000' command is executed.
+17:48:47 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:50 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+17:48:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+17:48:50 INFO  : Context for processor 'microblaze_0' is selected.
+17:48:50 INFO  : 'con' command is executed.
+17:48:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+17:48:50 INFO  : Disconnected from the channel tcfchan#8.
+17:49:58 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+17:50:01 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+17:50:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:50:04 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+17:50:04 INFO  : 'jtag frequency' command is executed.
+17:50:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+17:50:06 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+17:50:06 INFO  : Context for processor 'microblaze_0' is selected.
+17:50:06 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+17:50:06 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:50:06 INFO  : Context for processor 'microblaze_0' is selected.
+17:50:06 INFO  : System reset is completed.
+17:50:09 INFO  : 'after 3000' command is executed.
+17:50:09 INFO  : Context for processor 'microblaze_0' is selected.
+17:50:12 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+17:50:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+17:50:12 INFO  : Context for processor 'microblaze_0' is selected.
+17:50:12 INFO  : 'con' command is executed.
+17:50:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+17:50:12 INFO  : Disconnected from the channel tcfchan#9.
+17:59:02 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+17:59:12 INFO  : Result from executing command 'removePlatformRepo': 
+17:59:26 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+17:59:26 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+17:59:27 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+17:59:30 INFO  : The hardware specification used by project 'mb_hello_world' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+17:59:30 INFO  : The file 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_hello_world\_ide\bitstream\mb_ddr3_top.bit' stored in project is removed.
+17:59:30 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_hello_world\_ide\bitstream' in project 'mb_hello_world'.
+17:59:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+17:59:34 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+17:59:34 INFO  : 'jtag frequency' command is executed.
+17:59:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+17:59:36 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+17:59:36 INFO  : Context for processor 'microblaze_0' is selected.
+17:59:36 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+17:59:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+17:59:36 INFO  : Context for processor 'microblaze_0' is selected.
+17:59:36 INFO  : System reset is completed.
+17:59:39 INFO  : 'after 3000' command is executed.
+17:59:39 INFO  : Context for processor 'microblaze_0' is selected.
+17:59:42 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+17:59:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+17:59:42 INFO  : Context for processor 'microblaze_0' is selected.
+17:59:42 INFO  : 'con' command is executed.
+17:59:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+17:59:42 INFO  : Disconnected from the channel tcfchan#12.
+18:00:05 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+18:00:07 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+18:00:10 INFO  : The hardware specification used by project 'mb_mem_test' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+18:00:10 INFO  : The file 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_mem_test\_ide\bitstream\mb_ddr3_top.bit' stored in project is removed.
+18:00:10 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_mem_test\_ide\bitstream' in project 'mb_mem_test'.
+18:00:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:00:16 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+18:00:16 INFO  : 'jtag frequency' command is executed.
+18:00:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+18:00:17 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+18:00:17 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:17 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+18:00:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:00:17 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:17 INFO  : System reset is completed.
+18:00:20 INFO  : 'after 3000' command is executed.
+18:00:20 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:24 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+18:00:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+18:00:24 INFO  : Context for processor 'microblaze_0' is selected.
+18:00:24 INFO  : 'con' command is executed.
+18:00:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:00:24 INFO  : Disconnected from the channel tcfchan#13.
+18:17:12 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+18:17:24 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+18:17:24 INFO  : Result from executing command 'getPlatforms': mb_ddr3_top|C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/mb_ddr3_top.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+18:17:25 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+18:17:27 INFO  : The hardware specification used by project 'mb_hello_world' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+18:17:27 INFO  : The file 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_hello_world\_ide\bitstream\mb_ddr3_top.bit' stored in project is removed.
+18:17:27 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_hello_world\_ide\bitstream' in project 'mb_hello_world'.
+18:17:28 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+18:17:30 INFO  : The hardware specification used by project 'mb_mem_test' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+18:17:30 INFO  : The file 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_mem_test\_ide\bitstream\mb_ddr3_top.bit' stored in project is removed.
+18:17:30 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_mem_test\_ide\bitstream' in project 'mb_mem_test'.
+18:17:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:17:57 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+18:17:57 INFO  : 'jtag frequency' command is executed.
+18:17:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+18:17:58 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+18:17:58 INFO  : Context for processor 'microblaze_0' is selected.
+18:17:58 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+18:17:58 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:17:58 INFO  : Context for processor 'microblaze_0' is selected.
+18:17:58 INFO  : System reset is completed.
+18:18:01 INFO  : 'after 3000' command is executed.
+18:18:01 INFO  : Context for processor 'microblaze_0' is selected.
+18:18:05 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+18:18:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+18:18:05 INFO  : Context for processor 'microblaze_0' is selected.
+18:18:05 INFO  : 'con' command is executed.
+18:18:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:18:05 INFO  : Disconnected from the channel tcfchan#15.
+18:18:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:18:12 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+18:18:12 INFO  : 'jtag frequency' command is executed.
+18:18:15 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+18:18:15 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+18:18:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+18:18:15 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+18:43:49 DEBUG : Logs will be stored at 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/IDE.log'.
+18:43:50 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\temp_xsdb_launch_script.tcl
+18:43:53 INFO  : XSCT server has started successfully.
+18:43:53 INFO  : plnx-install-location is set to ''
+18:43:53 INFO  : Successfully done setting XSCT server connection channel  
+18:43:53 INFO  : Successfully done setting workspace for the tool. 
+18:43:54 INFO  : Registering command handlers for Vitis TCF services
+18:43:54 INFO  : Successfully done query RDI_DATADIR 
+18:43:54 INFO  : Platform repository initialization has completed.
+18:44:02 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+18:44:12 INFO  : Result from executing command 'removePlatformRepo': 
+18:44:22 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+18:44:22 INFO  : Result from executing command 'getPlatforms': xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+18:44:23 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+18:44:26 INFO  : The hardware specification used by project 'mb_hello_world' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+18:44:26 INFO  : The file 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_hello_world\_ide\bitstream\mb_ddr3_top.bit' stored in project is removed.
+18:44:26 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_hello_world\_ide\bitstream' in project 'mb_hello_world'.
+18:44:27 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+18:44:29 INFO  : The hardware specification used by project 'mb_mem_test' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+18:44:29 INFO  : The file 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_mem_test\_ide\bitstream\mb_ddr3_top.bit' stored in project is removed.
+18:44:29 INFO  : The updated bitstream files are copied from platform to folder 'C:\Users\sjasi3\ECE385_FP\DDR3_RE2\workspace\mb_mem_test\_ide\bitstream' in project 'mb_mem_test'.
+18:44:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:44:40 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+18:44:40 INFO  : 'jtag frequency' command is executed.
+18:44:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+18:44:41 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+18:44:41 INFO  : Context for processor 'microblaze_0' is selected.
+18:44:41 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+18:44:41 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:44:41 INFO  : Context for processor 'microblaze_0' is selected.
+18:44:42 INFO  : System reset is completed.
+18:44:45 INFO  : 'after 3000' command is executed.
+18:44:45 INFO  : Context for processor 'microblaze_0' is selected.
+18:44:48 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+18:44:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+18:44:48 INFO  : Context for processor 'microblaze_0' is selected.
+18:44:48 INFO  : 'con' command is executed.
+18:44:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:44:48 INFO  : Disconnected from the channel tcfchan#3.
+18:45:14 INFO  : Checking for BSP changes to sync application flags for project 'mb_hello_world'...
+18:45:17 INFO  : Checking for BSP changes to sync application flags for project 'mb_mem_test'...
+18:45:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:45:24 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+18:45:24 INFO  : 'jtag frequency' command is executed.
+18:45:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+18:45:25 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+18:45:25 INFO  : Context for processor 'microblaze_0' is selected.
+18:45:25 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+18:45:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:45:25 INFO  : Context for processor 'microblaze_0' is selected.
+18:45:25 INFO  : System reset is completed.
+18:45:28 INFO  : 'after 3000' command is executed.
+18:45:28 INFO  : Context for processor 'microblaze_0' is selected.
+18:45:32 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+18:45:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+18:45:32 INFO  : Context for processor 'microblaze_0' is selected.
+18:45:32 INFO  : 'con' command is executed.
+18:45:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:45:32 INFO  : Disconnected from the channel tcfchan#4.
+18:45:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:45:55 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+18:45:55 INFO  : 'jtag frequency' command is executed.
+18:45:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+18:45:57 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit"
+18:45:57 INFO  : Context for processor 'microblaze_0' is selected.
+18:45:57 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+18:45:57 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:45:57 INFO  : Context for processor 'microblaze_0' is selected.
+18:45:57 INFO  : System reset is completed.
+18:46:00 INFO  : 'after 3000' command is executed.
+18:46:00 INFO  : Context for processor 'microblaze_0' is selected.
+18:46:03 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf' is downloaded to processor 'microblaze_0'.
+18:46:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world/Debug/mb_hello_world.elf
+----------------End of Script----------------
+
+18:46:04 INFO  : Context for processor 'microblaze_0' is selected.
+18:46:04 INFO  : 'con' command is executed.
+18:46:04 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:46:04 INFO  : Disconnected from the channel tcfchan#5.

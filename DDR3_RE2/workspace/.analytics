@@ -29,3 +29,89 @@ timestamp=[2024-11-15 13:20:31], mode=BUILD, duration=0:00:00.204, duration_ms=2
 timestamp=[2024-11-15 13:24:06], mode=BUILD, duration=0:00:00.478, duration_ms=478, data={name=mb_mem_test, configuration=Debug, clean_build=false}
 timestamp=[2024-11-15 13:24:59], mode=BUILD, duration=0:00:00.860, duration_ms=860, data={name=mb_mem_test, configuration=Debug, clean_build=false}
 timestamp=[2024-11-15 13:25:00], mode=BUILD, duration=0:00:00.246, duration_ms=246, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:12:39], mode=WORKBENCH_START, duration=0:00:08.301, duration_ms=8301, data={}
+timestamp=[2024-11-18 16:12:39], mode=WORKBENCH_UI_INIT, duration=0:00:00.887, duration_ms=887, data={editors_count=6, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_ddr3_top,mb_mem_test,mb_mem_test_system}
+timestamp=[2024-11-18 16:12:41], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.333, duration_ms=1333, data={}
+timestamp=[2024-11-18 16:14:03], mode=PLATFORM_GENERATION, duration=0:00:10.788, duration_ms=10788, data={name=mb_ddr3_top}
+timestamp=[2024-11-18 16:14:22], mode=BUILD, duration=0:00:02.497, duration_ms=2497, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:14:23], mode=BUILD, duration=0:00:00.230, duration_ms=230, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:17:09], mode=APP_CREATION, duration=0:00:01.602, duration_ms=1602, data={name=mb_hello_world, project_type=sdk, os=standalone, processor=microblaze_0, runtime=C/C++, platform=mb_ddr3_top, application_type=application}
+timestamp=[2024-11-18 16:18:21], mode=BUILD, duration=0:00:02.178, duration_ms=2178, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:18:22], mode=BUILD, duration=0:00:00.233, duration_ms=233, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:18:23], mode=BUILD, duration=0:00:00.228, duration_ms=228, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:18:23], mode=BUILD, duration=0:00:00.221, duration_ms=221, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:21:24], mode=BUILD, duration=0:00:00.478, duration_ms=478, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:21:25], mode=BUILD, duration=0:00:00.214, duration_ms=214, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:21:26], mode=BUILD, duration=0:00:00.210, duration_ms=210, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:21:29], mode=BUILD, duration=0:00:00.461, duration_ms=461, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:21:29], mode=BUILD, duration=0:00:00.215, duration_ms=215, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:21:30], mode=BUILD, duration=0:00:00.213, duration_ms=213, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:21:35], mode=BUILD, duration=0:00:00.480, duration_ms=480, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:26:09], mode=BUILD, duration=0:00:00.475, duration_ms=475, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:27:18], mode=BUILD, duration=0:00:55.237, duration_ms=55237, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:29:29], mode=BUILD, duration=0:00:01.685, duration_ms=1685, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:29:29], mode=BUILD, duration=0:00:00.205, duration_ms=205, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:29:30], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:29:30], mode=BUILD, duration=0:00:00.213, duration_ms=213, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:31:07], mode=BUILD, duration=0:00:01.618, duration_ms=1618, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:31:07], mode=BUILD, duration=0:00:00.208, duration_ms=208, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:31:07], mode=BUILD, duration=0:00:00.214, duration_ms=214, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 16:31:08], mode=BUILD, duration=0:00:00.209, duration_ms=209, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:28:47], mode=WORKBENCH_START, duration=0:00:08.039, duration_ms=8039, data={}
+timestamp=[2024-11-18 17:28:47], mode=WORKBENCH_UI_INIT, duration=0:00:00.965, duration_ms=965, data={editors_count=3, platform_editors_count=0, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_ddr3_top,mb_hello_world,mb_hello_world_system,mb_mem_test,mb_mem_test_system}
+timestamp=[2024-11-18 17:28:49], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.093, duration_ms=1093, data={}
+timestamp=[2024-11-18 17:31:39], mode=PLATFORM_GENERATION, duration=0:00:05.054, duration_ms=5054, data={name=mb_ddr3_top}
+timestamp=[2024-11-18 17:32:05], mode=PLATFORM_GENERATION, duration=0:00:10.022, duration_ms=10022, data={name=mb_ddr3_top}
+timestamp=[2024-11-18 17:37:17], mode=BUILD, duration=0:00:00.669, duration_ms=669, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:37:19], mode=BUILD, duration=0:00:02.109, duration_ms=2109, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:37:20], mode=BUILD, duration=0:00:00.216, duration_ms=216, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:37:36], mode=BUILD, duration=0:00:01.799, duration_ms=1799, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:37:37], mode=BUILD, duration=0:00:00.219, duration_ms=219, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:37:37], mode=BUILD, duration=0:00:00.203, duration_ms=203, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:37:37], mode=BUILD, duration=0:00:00.212, duration_ms=212, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:40:31], mode=BUILD, duration=0:00:00.207, duration_ms=207, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:40:31], mode=BUILD, duration=0:00:00.206, duration_ms=206, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:40:31], mode=BUILD, duration=0:00:00.200, duration_ms=200, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:40:32], mode=BUILD, duration=0:00:00.208, duration_ms=208, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:41:31], mode=PLATFORM_GENERATION, duration=0:00:03.997, duration_ms=3997, data={name=mb_ddr3_top}
+timestamp=[2024-11-18 17:41:39], mode=PLATFORM_GENERATION, duration=0:00:07.099, duration_ms=7099, data={name=mb_ddr3_top}
+timestamp=[2024-11-18 17:41:43], mode=BUILD, duration=0:00:00.203, duration_ms=203, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:41:43], mode=BUILD, duration=0:00:00.203, duration_ms=203, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:42:34], mode=BUILD, duration=0:00:01.600, duration_ms=1600, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:42:34], mode=BUILD, duration=0:00:00.219, duration_ms=219, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:42:35], mode=BUILD, duration=0:00:00.219, duration_ms=219, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:42:35], mode=BUILD, duration=0:00:00.204, duration_ms=204, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:48:34], mode=BUILD, duration=0:00:01.741, duration_ms=1741, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:48:35], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:48:36], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:48:36], mode=BUILD, duration=0:00:00.219, duration_ms=219, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:50:00], mode=BUILD, duration=0:00:01.474, duration_ms=1474, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:50:01], mode=BUILD, duration=0:00:00.200, duration_ms=200, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:50:01], mode=BUILD, duration=0:00:00.204, duration_ms=204, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:50:01], mode=BUILD, duration=0:00:00.220, duration_ms=220, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:59:13], mode=PLATFORM_GENERATION, duration=0:00:03.927, duration_ms=3927, data={name=mb_ddr3_top}
+timestamp=[2024-11-18 17:59:27], mode=PLATFORM_GENERATION, duration=0:00:09.134, duration_ms=9134, data={name=mb_ddr3_top}
+timestamp=[2024-11-18 17:59:30], mode=BUILD, duration=0:00:01.914, duration_ms=1914, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 17:59:30], mode=BUILD, duration=0:00:00.204, duration_ms=204, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:00:07], mode=BUILD, duration=0:00:01.459, duration_ms=1459, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:00:07], mode=BUILD, duration=0:00:00.204, duration_ms=204, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:00:09], mode=BUILD, duration=0:00:01.710, duration_ms=1710, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:00:10], mode=BUILD, duration=0:00:00.204, duration_ms=204, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:17:25], mode=PLATFORM_GENERATION, duration=0:00:09.337, duration_ms=9337, data={name=mb_ddr3_top}
+timestamp=[2024-11-18 18:17:27], mode=BUILD, duration=0:00:01.918, duration_ms=1918, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:17:28], mode=BUILD, duration=0:00:00.206, duration_ms=206, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:17:29], mode=BUILD, duration=0:00:01.720, duration_ms=1720, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:17:30], mode=BUILD, duration=0:00:00.201, duration_ms=201, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:43:52], mode=WORKBENCH_START, duration=0:00:06.758, duration_ms=6758, data={}
+timestamp=[2024-11-18 18:43:53], mode=WORKBENCH_UI_INIT, duration=0:00:00.752, duration_ms=752, data={editors_count=4, platform_editors_count=1, projects_count=6, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_ddr3_top,mb_hello_world,mb_hello_world_system,mb_mem_test,mb_mem_test_system}
+timestamp=[2024-11-18 18:43:54], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.803, duration_ms=803, data={}
+timestamp=[2024-11-18 18:44:13], mode=PLATFORM_GENERATION, duration=0:00:04.180, duration_ms=4180, data={name=mb_ddr3_top}
+timestamp=[2024-11-18 18:44:23], mode=PLATFORM_GENERATION, duration=0:00:09.296, duration_ms=9296, data={name=mb_ddr3_top}
+timestamp=[2024-11-18 18:44:26], mode=BUILD, duration=0:00:02.307, duration_ms=2307, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:44:27], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:44:28], mode=BUILD, duration=0:00:01.788, duration_ms=1788, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:44:29], mode=BUILD, duration=0:00:00.219, duration_ms=219, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:45:16], mode=BUILD, duration=0:00:01.569, duration_ms=1569, data={name=mb_hello_world, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:45:17], mode=BUILD, duration=0:00:00.204, duration_ms=204, data={name=mb_hello_world_system, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:45:17], mode=BUILD, duration=0:00:00.204, duration_ms=204, data={name=mb_mem_test, configuration=Debug, clean_build=false}
+timestamp=[2024-11-18 18:45:17], mode=BUILD, duration=0:00:00.204, duration_ms=204, data={name=mb_mem_test_system, configuration=Debug, clean_build=false}

@@ -10,6 +10,18 @@
 ############## NET - IOSTANDARD ##################
 
 
+#HDMI Signals
+set_property -dict { PACKAGE_PIN V17   IOSTANDARD TMDS_33 } [get_ports {hdmi_tmds_clk_n}]
+set_property -dict { PACKAGE_PIN U16   IOSTANDARD TMDS_33 } [get_ports {hdmi_tmds_clk_p}]
+
+set_property -dict { PACKAGE_PIN U18   IOSTANDARD TMDS_33  } [get_ports {hdmi_tmds_data_n[0]}]
+set_property -dict { PACKAGE_PIN R17   IOSTANDARD TMDS_33  } [get_ports {hdmi_tmds_data_n[1]}]
+set_property -dict { PACKAGE_PIN T14   IOSTANDARD TMDS_33  } [get_ports {hdmi_tmds_data_n[2]}]
+                                    
+set_property -dict { PACKAGE_PIN U17   IOSTANDARD TMDS_33  } [get_ports {hdmi_tmds_data_p[0]}]
+set_property -dict { PACKAGE_PIN R16   IOSTANDARD TMDS_33  } [get_ports {hdmi_tmds_data_p[1]}]
+set_property -dict { PACKAGE_PIN R14   IOSTANDARD TMDS_33  } [get_ports {hdmi_tmds_data_p[2]}]
+
 # PadFunction: IO_L12N_T1_MRCC_16 (SCHEMATIC RGB0_G)
 
 # PadFunction: IO_L14N_T2_SRCC_16 (SCHEMATIC RGB1_R)
@@ -245,8 +257,14 @@ set_property IOSTANDARD SSTL135 [get_ports ddr3_reset_n]
 set_property PACKAGE_PIN M5 [get_ports ddr3_reset_n]
 
 # PadFunction: IO_L24N_T3_34 (SCHEMATIC DDR_CKE)
+set_property SLEW FAST [get_ports {ddr3_cke[0]}]
+set_property IOSTANDARD SSTL135 [get_ports {ddr3_cke[0]}]
+set_property PACKAGE_PIN T5 [get_ports {ddr3_cke[0]}]
 
 # PadFunction: IO_25_34 (SCHEMATIC DDR_ODT)
+set_property SLEW FAST [get_ports {ddr3_odt[0]}]
+set_property IOSTANDARD SSTL135 [get_ports {ddr3_odt[0]}]
+set_property PACKAGE_PIN P7 [get_ports {ddr3_odt[0]}]
 
 # PadFunction: IO_L1P_T0_34 (SCHEMATIC DDR_LDM)
 set_property SLEW FAST [get_ports {ddr3_dm[0]}]
@@ -295,8 +313,14 @@ set_property PACKAGE_PIN N3 [get_ports {ddr3_dqs_p[1]}]
 set_property PACKAGE_PIN N2 [get_ports {ddr3_dqs_n[1]}]
 
 # PadFunction: IO_L21P_T3_DQS_34 (SCHEMATIC DDR_CLK_P)
+set_property SLEW FAST [get_ports {ddr3_ck_p[0]}]
+set_property IOSTANDARD DIFF_SSTL135 [get_ports {ddr3_ck_p[0]}]
 
 # PadFunction: IO_L21N_T3_DQS_34 (SCHEMATIC DDR_CLK_N)
+set_property SLEW FAST [get_ports {ddr3_ck_n[0]}]
+set_property IOSTANDARD DIFF_SSTL135 [get_ports {ddr3_ck_n[0]}]
+set_property PACKAGE_PIN R5 [get_ports {ddr3_ck_p[0]}]
+set_property PACKAGE_PIN T4 [get_ports {ddr3_ck_n[0]}]
 
 
 set_property INTERNAL_VREF 0.675 [get_iobanks 34]

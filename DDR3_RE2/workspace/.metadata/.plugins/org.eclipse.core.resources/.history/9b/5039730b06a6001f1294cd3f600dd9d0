@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="mb_hello_world" location="C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_hello_world" platform="C:/Users/sjasi3/ECE385_FP/DDR3_RE2/workspace/mb_ddr3_top/export/mb_ddr3_top/mb_ddr3_top.xpfm" platformUID="xilinx:::0.0(custom)" systemProject="mb_hello_world_system" sysConfig="mb_ddr3_top" runtime="C/C++" cpu="standalone_microblaze_0" cpuInstance="microblaze_0" os="standalone" mssSignature="3ccd10870f519cb3ce65d9856fc82465">
+  <configuration name="Debug" id="xilinx.gnu.mb.exe.debug.2068852809">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.mb.exe.release.922081489" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>

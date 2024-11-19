@@ -42,10 +42,10 @@
     <TimePeriod>3000</TimePeriod>
     <VccAuxIO>1.8V</VccAuxIO>
     <PHYRatio>4:1</PHYRatio>
-    <InputClkFreq>102.564</InputClkFreq>
+    <InputClkFreq>166.666</InputClkFreq>
     <UIExtraClocks>1</UIExtraClocks>
     <MMCM_VCO>666</MMCM_VCO>
-    <MMCMClkOut0> 3.375</MMCMClkOut0>
+    <MMCMClkOut0> 2.000</MMCMClkOut0>
     <MMCMClkOut1>1</MMCMClkOut1>
     <MMCMClkOut2>1</MMCMClkOut2>
     <MMCMClkOut3>1</MMCMClkOut3>
@@ -65,7 +65,6 @@
     <C0_MEM_SIZE>134217728</C0_MEM_SIZE>
     <UserMemoryAddressMap>BANK_ROW_COLUMN</UserMemoryAddressMap>
     <PinSelection>
-      <Pin IN_TERM="" IOSTANDARD="LVCMOS33" PADName="N15" SLEW="" VCCAUX_IO="" name="clk_100mhz"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL135" PADName="V3" SLEW="FAST" VCCAUX_IO="" name="ddr3_addr[0]"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL135" PADName="U3" SLEW="FAST" VCCAUX_IO="" name="ddr3_addr[10]"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL135" PADName="P5" SLEW="FAST" VCCAUX_IO="" name="ddr3_addr[11]"/>
@@ -112,7 +111,8 @@
       <Pin IN_TERM="" IOSTANDARD="SSTL135" PADName="U2" SLEW="FAST" VCCAUX_IO="" name="ddr3_ras_n"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL135" PADName="M5" SLEW="FAST" VCCAUX_IO="" name="ddr3_reset_n"/>
       <Pin IN_TERM="" IOSTANDARD="SSTL135" PADName="T2" SLEW="FAST" VCCAUX_IO="" name="ddr3_we_n"/>
-      <Pin IN_TERM="" IOSTANDARD="LVCMOS33" PADName="B16" SLEW="SLOW" VCCAUX_IO="" name="uart_rxd"/>
+      <Pin IN_TERM="" IOSTANDARD="LVCMOS25" PADName="J2" SLEW="" VCCAUX_IO="" name="reset_rtl_0"/>
+      <Pin IN_TERM="" IOSTANDARD="LVCMOS33" PADName="B16" SLEW="" VCCAUX_IO="" name="uart_rxd"/>
       <Pin IN_TERM="" IOSTANDARD="LVCMOS33" PADName="A16" SLEW="" VCCAUX_IO="" name="uart_txd"/>
     </PinSelection>
     <System_Clock>
