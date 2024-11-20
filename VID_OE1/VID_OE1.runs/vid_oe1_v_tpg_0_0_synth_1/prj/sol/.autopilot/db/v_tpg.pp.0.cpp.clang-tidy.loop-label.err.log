@@ -1,0 +1,4 @@
+3 warnings and 26 errors generated.
+Error while processing /home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.runs/vid_oe1_v_tpg_0_0_synth_1/prj/sol/.autopilot/db/v_tpg.pp.0.cpp.
+clang-tidy applied 372 of 372 suggested fixes.
+Suppressed 3 warnings (3 with check filters).

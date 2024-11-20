@@ -1,0 +1,2 @@
+vram.v,verilog,xil_defaultlib,../../../../../../../ip_repo/frame_buffer_1_0/src/vram_1/sim/vram.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

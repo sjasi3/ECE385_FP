@@ -1,0 +1,53 @@
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: /alottadata/tools/Xilinx/Vivado/2022.2/bin/unwrapped/lnx64.o/xelab --incr --debug typical --relax --mt 8 -L xil_defaultlib -L axi_bram_ctrl_v4_1_7 -L blk_mem_gen_v8_4_5 -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot hdmi_text_controller_tb_behav xil_defaultlib.hdmi_text_controller_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-9380] size mismatch in mixed-language port association of VHDL port 'bram_addr_a' [/home/sean/Downloads/git/ECE385_FP/ip_repo/frame_buffer_1_0/src/hdmi_text_controller_v1_0_AXI.sv:128]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'axi_awaddr' [/home/sean/Downloads/git/ECE385_FP/ip_repo/frame_buffer_1_0/src/hdmi_text_controller_v1_0_tb.sv:74]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'axi_araddr' [/home/sean/Downloads/git/ECE385_FP/ip_repo/frame_buffer_1_0/src/hdmi_text_controller_v1_0_tb.sv:88]
+WARNING: [VRFC 10-5021] port 'bram_rst_a' is not connected on this instance [/home/sean/Downloads/git/ECE385_FP/ip_repo/frame_buffer_1_0/src/hdmi_text_controller_v1_0_AXI.sv:128]
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4099] "/home/sean/Downloads/git/ECE385_FP/ip_repo/frame_buffer_1_0/src/VGA_controller.sv" Line 26. Module vga_controller doesn't have a timescale but at least one module in design has a timescale.
+WARNING: [XSIM 43-4099] "/home/sean/Downloads/git/ECE385_FP/ip_repo/frame_buffer_1_0/src/VGA_controller.sv" Line 26. Module vga_controller doesn't have a timescale but at least one module in design has a timescale.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package xpm.vcomponents
+Compiling package axi_bram_ctrl_v4_1_7.axi_bram_ctrl_funcs
+Compiling module xil_defaultlib.blk_mem_gen_v8_4_5_output_stage(...
+Compiling module xil_defaultlib.blk_mem_gen_v8_4_5_softecc_outpu...
+Compiling module xil_defaultlib.blk_mem_gen_v8_4_5_mem_module(C_...
+Compiling module xil_defaultlib.blk_mem_gen_v8_4_5(C_FAMILY="spa...
+Compiling module xil_defaultlib.vram
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_7.axi_lite [\axi_lite(c_s_axi_addr_width=17,...]
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_7.axi_bram_ctrl_top [\axi_bram_ctrl_top(c_bram_addr_w...]
+Compiling architecture implementation of entity axi_bram_ctrl_v4_1_7.axi_bram_ctrl [\axi_bram_ctrl(c_memory_depth=32...]
+Compiling architecture axi_bram_ctl_arch of entity xil_defaultlib.axi_bram_ctl [axi_bram_ctl_default]
+Compiling module xil_defaultlib.hdmi_text_controller_v1_0_AXI(C_...
+Compiling module unisims_ver.MMCME2_ADV(CLKFBOUT_MULT_F=10.0,...
+Compiling module unisims_ver.BUFG
+Compiling module xil_defaultlib.clk_wiz_0_clk_wiz
+Compiling module xil_defaultlib.clk_wiz_0
+Compiling module xil_defaultlib.vga_controller
+Compiling module unisims_ver.SRL16E_default
+Compiling module xil_defaultlib.srldelay(WIDTH=40,TAPS=4'b1010)
+Compiling module xil_defaultlib.encode_default
+Compiling module xil_defaultlib.encode(CHANNEL="GREEN")
+Compiling module xil_defaultlib.encode(CHANNEL="RED")
+Compiling module unisims_ver.OSERDESE2(DATA_RATE_TQ="SDR",DAT...
+Compiling module unisims_ver.OSERDESE2(DATA_RATE_TQ="SDR",DAT...
+Compiling module xil_defaultlib.serdes_10_to_1
+Compiling module unisims_ver.OBUFDS(IOSTANDARD="TMDS_33")
+Compiling module xil_defaultlib.hdmi_tx_v1_0(C_RED_WIDTH=5,C_GRE...
+Compiling module xil_defaultlib.hdmi_tx_0
+Compiling module xil_defaultlib.hdmi_text_controller_v1_0(C_AXI_...
+Compiling module xil_defaultlib.hdmi_text_controller_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot hdmi_text_controller_tb_behav

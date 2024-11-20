@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:C:/Users/sjasi3/ECE385_FP/DDR3_RE2/DDR3_RE2.srcs/constrs_1/imports/DDR3_provided_files/urbana_ddr3.xdc rfile:../../../DDR3_RE2.srcs/constrs_1/imports/DDR3_provided_files/urbana_ddr3.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/sean/Downloads/git/ECE385_FP/DDR3_RE2/DDR3_RE2.srcs/constrs_1/imports/DDR3_provided_files/urbana_ddr3.xdc rfile:../../../DDR3_RE2.srcs/constrs_1/imports/DDR3_provided_files/urbana_ddr3.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:14 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN V17   IOSTANDARD TMDS_33 } [get_ports {hdmi_tmds_clk_n}]
 set_property src_info {type:XDC file:1 line:15 export:INPUT save:INPUT read:READ} [current_design]

@@ -7,8 +7,7 @@
       "name": "ddr3_re2",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2022.2",
-      "validated": "true"
+      "tool_version": "2022.2"
     },
     "design_tree": {
       "microblaze_0": "",
@@ -50,7 +49,10 @@
       "axi_timer_0": "",
       "axi_uartlite_0": "",
       "axi_gpio_0": "",
-      "clk_wiz_0": ""
+      "clk_wiz_0": "",
+      "v_tpg_0": "",
+      "v_axi4s_vid_out_0": "",
+      "hdmi_tx_0": ""
     },
     "interface_ports": {
       "ddr3": {
@@ -256,69 +258,15 @@
     "ports": {
       "reset_rtl_0": {
         "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
+        "direction": "I"
       },
       "clk_out1_0": {
         "type": "clk",
-        "direction": "O",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "/clk_wiz_0_clk_out1",
-            "value_src": "ip_prop"
-          },
-          "FREQ_HZ": {
-            "value": "25011506",
-            "value_src": "ip_prop"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "ip_prop"
-          }
-        }
+        "direction": "O"
       },
       "clk_out2_0": {
         "type": "clk",
-        "direction": "O",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "/clk_wiz_0_clk_out1",
-            "value_src": "ip_prop"
-          },
-          "FREQ_HZ": {
-            "value": "124710149",
-            "value_src": "ip_prop"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.0",
-            "value_src": "ip_prop"
-          }
-        }
+        "direction": "O"
       },
       "locked_0": {
         "direction": "O"
@@ -328,7 +276,7 @@
       "microblaze_0": {
         "vlnv": "xilinx.com:ip:microblaze:11.0",
         "xci_name": "ddr3_re2_microblaze_0_0",
-        "xci_path": "ip\\ddr3_re2_microblaze_0_0\\ddr3_re2_microblaze_0_0.xci",
+        "xci_path": "ip/ddr3_re2_microblaze_0_0/ddr3_re2_microblaze_0_0.xci",
         "inst_hier_path": "microblaze_0",
         "parameters": {
           "C_DEBUG_ENABLED": {
@@ -401,7 +349,7 @@
       "mig_7series_0": {
         "vlnv": "xilinx.com:ip:mig_7series:4.2",
         "xci_name": "ddr3_re2_mig_7series_0_0",
-        "xci_path": "ip\\ddr3_re2_mig_7series_0_0\\ddr3_re2_mig_7series_0_0.xci",
+        "xci_path": "ip/ddr3_re2_mig_7series_0_0/ddr3_re2_mig_7series_0_0.xci",
         "inst_hier_path": "mig_7series_0",
         "parameters": {
           "BOARD_MIG_PARAM": {
@@ -420,7 +368,7 @@
       },
       "microblaze_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_path": "ip\\ddr3_re2_microblaze_0_axi_periph_0\\ddr3_re2_microblaze_0_axi_periph_0.xci",
+        "xci_path": "ip/ddr3_re2_microblaze_0_axi_periph_0/ddr3_re2_microblaze_0_axi_periph_0.xci",
         "inst_hier_path": "microblaze_0_axi_periph",
         "xci_name": "ddr3_re2_microblaze_0_axi_periph_0",
         "parameters": {
@@ -620,7 +568,7 @@
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
             "xci_name": "ddr3_re2_xbar_0",
-            "xci_path": "ip\\ddr3_re2_xbar_0\\ddr3_re2_xbar_0.xci",
+            "xci_path": "ip/ddr3_re2_xbar_0/ddr3_re2_xbar_0.xci",
             "inst_hier_path": "microblaze_0_axi_periph/xbar",
             "parameters": {
               "NUM_MI": {
@@ -720,7 +668,7 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "xci_name": "ddr3_re2_auto_pc_4",
-                "xci_path": "ip\\ddr3_re2_auto_pc_4\\ddr3_re2_auto_pc_4.xci",
+                "xci_path": "ip/ddr3_re2_auto_pc_4/ddr3_re2_auto_pc_4.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/s00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -743,7 +691,7 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "xci_name": "ddr3_re2_auto_us_0",
-                "xci_path": "ip\\ddr3_re2_auto_us_0\\ddr3_re2_auto_us_0.xci",
+                "xci_path": "ip/ddr3_re2_auto_us_0/ddr3_re2_auto_us_0.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/s00_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -852,7 +800,7 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "xci_name": "ddr3_re2_auto_us_1",
-                "xci_path": "ip\\ddr3_re2_auto_us_1\\ddr3_re2_auto_us_1.xci",
+                "xci_path": "ip/ddr3_re2_auto_us_1/ddr3_re2_auto_us_1.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/s01_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -953,7 +901,7 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "xci_name": "ddr3_re2_auto_us_2",
-                "xci_path": "ip\\ddr3_re2_auto_us_2\\ddr3_re2_auto_us_2.xci",
+                "xci_path": "ip/ddr3_re2_auto_us_2/ddr3_re2_auto_us_2.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/s02_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -1054,7 +1002,7 @@
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "xci_name": "ddr3_re2_auto_ds_0",
-                "xci_path": "ip\\ddr3_re2_auto_ds_0\\ddr3_re2_auto_ds_0.xci",
+                "xci_path": "ip/ddr3_re2_auto_ds_0/ddr3_re2_auto_ds_0.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m00_couplers/auto_ds",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -1077,7 +1025,7 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "xci_name": "ddr3_re2_auto_pc_0",
-                "xci_path": "ip\\ddr3_re2_auto_pc_0\\ddr3_re2_auto_pc_0.xci",
+                "xci_path": "ip/ddr3_re2_auto_pc_0/ddr3_re2_auto_pc_0.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -1186,7 +1134,7 @@
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "xci_name": "ddr3_re2_auto_ds_1",
-                "xci_path": "ip\\ddr3_re2_auto_ds_1\\ddr3_re2_auto_ds_1.xci",
+                "xci_path": "ip/ddr3_re2_auto_ds_1/ddr3_re2_auto_ds_1.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m01_couplers/auto_ds",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -1209,7 +1157,7 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "xci_name": "ddr3_re2_auto_pc_1",
-                "xci_path": "ip\\ddr3_re2_auto_pc_1\\ddr3_re2_auto_pc_1.xci",
+                "xci_path": "ip/ddr3_re2_auto_pc_1/ddr3_re2_auto_pc_1.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m01_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -1318,7 +1266,7 @@
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "xci_name": "ddr3_re2_auto_ds_2",
-                "xci_path": "ip\\ddr3_re2_auto_ds_2\\ddr3_re2_auto_ds_2.xci",
+                "xci_path": "ip/ddr3_re2_auto_ds_2/ddr3_re2_auto_ds_2.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m02_couplers/auto_ds",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -1341,7 +1289,7 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "xci_name": "ddr3_re2_auto_pc_2",
-                "xci_path": "ip\\ddr3_re2_auto_pc_2\\ddr3_re2_auto_pc_2.xci",
+                "xci_path": "ip/ddr3_re2_auto_pc_2/ddr3_re2_auto_pc_2.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m02_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -1506,7 +1454,7 @@
               "auto_ds": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "xci_name": "ddr3_re2_auto_ds_3",
-                "xci_path": "ip\\ddr3_re2_auto_ds_3\\ddr3_re2_auto_ds_3.xci",
+                "xci_path": "ip/ddr3_re2_auto_ds_3/ddr3_re2_auto_ds_3.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m04_couplers/auto_ds",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -1529,7 +1477,7 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "xci_name": "ddr3_re2_auto_pc_3",
-                "xci_path": "ip\\ddr3_re2_auto_pc_3\\ddr3_re2_auto_pc_3.xci",
+                "xci_path": "ip/ddr3_re2_auto_pc_3/ddr3_re2_auto_pc_3.xci",
                 "inst_hier_path": "microblaze_0_axi_periph/m04_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -1736,7 +1684,7 @@
       "microblaze_0_axi_intc": {
         "vlnv": "xilinx.com:ip:axi_intc:4.1",
         "xci_name": "ddr3_re2_microblaze_0_axi_intc_0",
-        "xci_path": "ip\\ddr3_re2_microblaze_0_axi_intc_0\\ddr3_re2_microblaze_0_axi_intc_0.xci",
+        "xci_path": "ip/ddr3_re2_microblaze_0_axi_intc_0/ddr3_re2_microblaze_0_axi_intc_0.xci",
         "inst_hier_path": "microblaze_0_axi_intc",
         "parameters": {
           "C_HAS_FAST": {
@@ -1747,25 +1695,25 @@
       "microblaze_0_xlconcat": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "ddr3_re2_microblaze_0_xlconcat_0",
-        "xci_path": "ip\\ddr3_re2_microblaze_0_xlconcat_0\\ddr3_re2_microblaze_0_xlconcat_0.xci",
+        "xci_path": "ip/ddr3_re2_microblaze_0_xlconcat_0/ddr3_re2_microblaze_0_xlconcat_0.xci",
         "inst_hier_path": "microblaze_0_xlconcat"
       },
       "mdm_1": {
         "vlnv": "xilinx.com:ip:mdm:3.2",
         "xci_name": "ddr3_re2_mdm_1_0",
-        "xci_path": "ip\\ddr3_re2_mdm_1_0\\ddr3_re2_mdm_1_0.xci",
+        "xci_path": "ip/ddr3_re2_mdm_1_0/ddr3_re2_mdm_1_0.xci",
         "inst_hier_path": "mdm_1"
       },
       "rst_mig_7series_0_197M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "ddr3_re2_rst_mig_7series_0_197M_0",
-        "xci_path": "ip\\ddr3_re2_rst_mig_7series_0_197M_0\\ddr3_re2_rst_mig_7series_0_197M_0.xci",
+        "xci_path": "ip/ddr3_re2_rst_mig_7series_0_197M_0/ddr3_re2_rst_mig_7series_0_197M_0.xci",
         "inst_hier_path": "rst_mig_7series_0_197M"
       },
       "axi_timer_0": {
         "vlnv": "xilinx.com:ip:axi_timer:2.0",
         "xci_name": "ddr3_re2_axi_timer_0_0",
-        "xci_path": "ip\\ddr3_re2_axi_timer_0_0\\ddr3_re2_axi_timer_0_0.xci",
+        "xci_path": "ip/ddr3_re2_axi_timer_0_0/ddr3_re2_axi_timer_0_0.xci",
         "inst_hier_path": "axi_timer_0",
         "parameters": {
           "enable_timer2": {
@@ -1776,7 +1724,7 @@
       "axi_uartlite_0": {
         "vlnv": "xilinx.com:ip:axi_uartlite:2.0",
         "xci_name": "ddr3_re2_axi_uartlite_0_0",
-        "xci_path": "ip\\ddr3_re2_axi_uartlite_0_0\\ddr3_re2_axi_uartlite_0_0.xci",
+        "xci_path": "ip/ddr3_re2_axi_uartlite_0_0/ddr3_re2_axi_uartlite_0_0.xci",
         "inst_hier_path": "axi_uartlite_0",
         "parameters": {
           "C_BAUDRATE": {
@@ -1787,7 +1735,7 @@
       "axi_gpio_0": {
         "vlnv": "xilinx.com:ip:axi_gpio:2.0",
         "xci_name": "ddr3_re2_axi_gpio_0_0",
-        "xci_path": "ip\\ddr3_re2_axi_gpio_0_0\\ddr3_re2_axi_gpio_0_0.xci",
+        "xci_path": "ip/ddr3_re2_axi_gpio_0_0/ddr3_re2_axi_gpio_0_0.xci",
         "inst_hier_path": "axi_gpio_0",
         "parameters": {
           "C_ALL_INPUTS_2": {
@@ -1807,7 +1755,7 @@
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "ddr3_re2_clk_wiz_0_0",
-        "xci_path": "ip\\ddr3_re2_clk_wiz_0_0\\ddr3_re2_clk_wiz_0_0.xci",
+        "xci_path": "ip/ddr3_re2_clk_wiz_0_0/ddr3_re2_clk_wiz_0_0.xci",
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLKOUT1_JITTER": {
@@ -1851,6 +1799,66 @@
           },
           "PRIM_SOURCE": {
             "value": "Single_ended_clock_capable_pin"
+          }
+        }
+      },
+      "v_tpg_0": {
+        "vlnv": "xilinx.com:ip:v_tpg:8.2",
+        "xci_name": "ddr3_re2_v_tpg_0_0",
+        "xci_path": "ip/ddr3_re2_v_tpg_0_0/ddr3_re2_v_tpg_0_0.xci",
+        "inst_hier_path": "v_tpg_0",
+        "interface_ports": {
+          "s_axi_CTRL": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Slave",
+            "memory_map_ref": "s_axi_CTRL"
+          }
+        },
+        "addressing": {
+          "memory_maps": {
+            "s_axi_CTRL": {
+              "address_blocks": {
+                "Reg": {
+                  "base_address": "0",
+                  "range": "64K",
+                  "width": "16",
+                  "usage": "register",
+                  "offset_base_param": "C_S_AXI_CTRL_BASEADDR",
+                  "offset_high_param": "C_S_AXI_CTRL_HIGHADDR"
+                }
+              }
+            }
+          }
+        }
+      },
+      "v_axi4s_vid_out_0": {
+        "vlnv": "xilinx.com:ip:v_axi4s_vid_out:4.0",
+        "xci_name": "ddr3_re2_v_axi4s_vid_out_0_1",
+        "xci_path": "ip/ddr3_re2_v_axi4s_vid_out_0_1/ddr3_re2_v_axi4s_vid_out_0_1.xci",
+        "inst_hier_path": "v_axi4s_vid_out_0",
+        "parameters": {
+          "C_NATIVE_COMPONENT_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "hdmi_tx_0": {
+        "vlnv": "realdigital.org:realdigital:hdmi_tx:1.0",
+        "xci_name": "ddr3_re2_hdmi_tx_0_1",
+        "xci_path": "ip/ddr3_re2_hdmi_tx_0_1/ddr3_re2_hdmi_tx_0_1.xci",
+        "inst_hier_path": "hdmi_tx_0",
+        "parameters": {
+          "C_BLUE_WIDTH": {
+            "value": "16"
+          },
+          "C_GREEN_WIDTH": {
+            "value": "16"
+          },
+          "C_RED_WIDTH": {
+            "value": "16"
+          },
+          "MODE": {
+            "value": "HDMI"
           }
         }
       }
@@ -2061,6 +2069,30 @@
         "ports": [
           "reset_rtl_0",
           "mig_7series_0/sys_rst"
+        ]
+      },
+      "v_axi4s_vid_out_0_locked": {
+        "ports": [
+          "v_axi4s_vid_out_0/locked",
+          "hdmi_tx_0/pix_clk_locked"
+        ]
+      },
+      "v_axi4s_vid_out_0_vid_hsync": {
+        "ports": [
+          "v_axi4s_vid_out_0/vid_hsync",
+          "hdmi_tx_0/hsync"
+        ]
+      },
+      "v_axi4s_vid_out_0_vid_vblank": {
+        "ports": [
+          "v_axi4s_vid_out_0/vid_vblank",
+          "hdmi_tx_0/vde"
+        ]
+      },
+      "v_axi4s_vid_out_0_vid_vsync": {
+        "ports": [
+          "v_axi4s_vid_out_0/vid_vsync",
+          "hdmi_tx_0/vsync"
         ]
       }
     },

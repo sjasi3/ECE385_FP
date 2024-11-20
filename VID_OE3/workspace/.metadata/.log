@@ -1,0 +1,30 @@
+!SESSION 2024-11-20 04:51:36.806 -----------------------------------------------
+eclipse.buildId=2022.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.osgi 4 0 2024-11-20 04:51:37.127
+!MESSAGE Bundle reference:file:org.apache.log4j_1.2.15.v201012070815.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2024-11-20 04:51:37.146
+!MESSAGE Bundle reference:file:org.slf4j.impl.log4j12_1.7.2.v20131105-2200.jar not found.
+
+!ENTRY org.eclipse.ui 4 4 2024-11-20 04:51:47.928
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-11-20 04:51:53.312
+!MESSAGE Opening file dialog using preferences. Current path: /alottadata/tools/Xilinx/Vitis/2022.2/data/embeddedsw/lib/fixed_hwplatforms, Local preference: scw_hwspec, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-20 04:54:48.258
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-3: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-20 04:57:48.272
+!MESSAGE XSCT Command: [::hsi::utils::openhw /tmp/hwspec_mb_ddr3_top9634076169674402970/mb_ddr3_top.xsa], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-20 05:00:48.286
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-16
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-11-20 05:06:48.313
+!MESSAGE XSCT Command: [::hsi::utils::openhw /tmp/hwspec_mb_ddr3_top9634076169674402970/mb_ddr3_top.xsa], Thread: ModalContext

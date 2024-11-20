@@ -1,0 +1,14 @@
+vhdl xil_defaultlib  \
+"../../../bd/vid_oe1/ip/vid_oe1_axi_vdma_0_0/sim/vid_oe1_axi_vdma_0_0.vhd" \
+"../../../bd/vid_oe1/ip/vid_oe1_axi_smc_0/bd_0/ip/ip_1/sim/bd_fa44_psr_aclk_0.vhd" \
+"../../../bd/vid_oe1/ip/vid_oe1_rst_mig_7series_0_83M_0/sim/vid_oe1_rst_mig_7series_0_83M_0.vhd" \
+"../../../bd/vid_oe1/ip/vid_oe1_microblaze_0_1/sim/vid_oe1_microblaze_0_1.vhd" \
+"../../../bd/vid_oe1/ip/vid_oe1_dlmb_v10_0/sim/vid_oe1_dlmb_v10_0.vhd" \
+"../../../bd/vid_oe1/ip/vid_oe1_ilmb_v10_0/sim/vid_oe1_ilmb_v10_0.vhd" \
+"../../../bd/vid_oe1/ip/vid_oe1_dlmb_bram_if_cntlr_0/sim/vid_oe1_dlmb_bram_if_cntlr_0.vhd" \
+"../../../bd/vid_oe1/ip/vid_oe1_ilmb_bram_if_cntlr_0/sim/vid_oe1_ilmb_bram_if_cntlr_0.vhd" \
+"../../../bd/vid_oe1/ip/vid_oe1_mdm_1_0/sim/vid_oe1_mdm_1_0.vhd" \
+"../../../bd/vid_oe1/ip/vid_oe1_v_tc_0_0/sim/vid_oe1_v_tc_0_0.vhd" \
+"../../../bd/vid_oe1/ip/vid_oe1_axi_uartlite_0_0/sim/vid_oe1_axi_uartlite_0_0.vhd" \
+
+nosort

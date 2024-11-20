@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Nov 19 22:52:45 2024
+# Process ID: 23360
+# Current directory: /home/sean/Downloads/git/ECE385_FP/ip_repo/edit_frame_buffer_v1_0.runs/hdmi_tx_0_synth_1
+# Command line: vivado -log hdmi_tx_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source hdmi_tx_0.tcl
+# Log file: /home/sean/Downloads/git/ECE385_FP/ip_repo/edit_frame_buffer_v1_0.runs/hdmi_tx_0_synth_1/hdmi_tx_0.vds
+# Journal file: /home/sean/Downloads/git/ECE385_FP/ip_repo/edit_frame_buffer_v1_0.runs/hdmi_tx_0_synth_1/vivado.jou
+# Running On: SgoSkzD, OS: Linux, CPU Frequency: 4463.393 MHz, CPU Physical cores: 12, Host memory: 33545 MB
+#-----------------------------------------------------------
+source hdmi_tx_0.tcl -notrace

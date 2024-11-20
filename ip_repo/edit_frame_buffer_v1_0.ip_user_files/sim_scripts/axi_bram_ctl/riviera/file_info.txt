@@ -1,0 +1,6 @@
+xpm_cdc.sv,systemverilog,xpm,../../../../../../../../../../alottadata/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv,
+xpm_memory.sv,systemverilog,xpm,../../../../../../../../../../alottadata/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv,
+xpm_VCOMP.vhd,vhdl,xpm,../../../../../../../../../../alottadata/tools/Xilinx/Vivado/2022.2/data/ip/xpm/xpm_VCOMP.vhd,
+axi_bram_ctrl_v4_1_rfs.vhd,vhdl,axi_bram_ctrl_v4_1_7,../../../ipstatic/hdl/axi_bram_ctrl_v4_1_rfs.vhd,
+axi_bram_ctl.vhd,vhdl,xil_defaultlib,../../../../frame_buffer_1_0/src/axi_bram_ctl/sim/axi_bram_ctl.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

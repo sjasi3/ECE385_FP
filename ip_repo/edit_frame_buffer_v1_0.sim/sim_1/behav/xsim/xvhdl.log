@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/sean/Downloads/git/ECE385_FP/ip_repo/frame_buffer_1_0/src/axi_bram_ctl/sim/axi_bram_ctl.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'axi_bram_ctl'

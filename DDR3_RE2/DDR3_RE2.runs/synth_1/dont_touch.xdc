@@ -15,33 +15,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_mi
 # IP: bd/ddr3_re2/ip/ddr3_re2_xbar_0/ddr3_re2_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_xbar_0 || ORIG_REF_NAME==ddr3_re2_xbar_0} -quiet] -quiet
 
-# IP: bd/ddr3_re2/ip/ddr3_re2_microblaze_0_axi_periph_0/ddr3_re2_microblaze_0_axi_periph_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_microblaze_0_axi_periph_0 || ORIG_REF_NAME==ddr3_re2_microblaze_0_axi_periph_0} -quiet] -quiet
-
-# IP: bd/ddr3_re2/ip/ddr3_re2_microblaze_0_axi_intc_0/ddr3_re2_microblaze_0_axi_intc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_microblaze_0_axi_intc_0 || ORIG_REF_NAME==ddr3_re2_microblaze_0_axi_intc_0} -quiet] -quiet
-
-# IP: bd/ddr3_re2/ip/ddr3_re2_microblaze_0_xlconcat_0/ddr3_re2_microblaze_0_xlconcat_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_microblaze_0_xlconcat_0 || ORIG_REF_NAME==ddr3_re2_microblaze_0_xlconcat_0} -quiet] -quiet
-
-# IP: bd/ddr3_re2/ip/ddr3_re2_mdm_1_0/ddr3_re2_mdm_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_mdm_1_0 || ORIG_REF_NAME==ddr3_re2_mdm_1_0} -quiet] -quiet
-
-# IP: bd/ddr3_re2/ip/ddr3_re2_rst_mig_7series_0_197M_0/ddr3_re2_rst_mig_7series_0_197M_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_rst_mig_7series_0_197M_0 || ORIG_REF_NAME==ddr3_re2_rst_mig_7series_0_197M_0} -quiet] -quiet
-
-# IP: bd/ddr3_re2/ip/ddr3_re2_axi_timer_0_0/ddr3_re2_axi_timer_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_axi_timer_0_0 || ORIG_REF_NAME==ddr3_re2_axi_timer_0_0} -quiet] -quiet
-
-# IP: bd/ddr3_re2/ip/ddr3_re2_axi_uartlite_0_0/ddr3_re2_axi_uartlite_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_axi_uartlite_0_0 || ORIG_REF_NAME==ddr3_re2_axi_uartlite_0_0} -quiet] -quiet
-
-# IP: bd/ddr3_re2/ip/ddr3_re2_axi_gpio_0_0/ddr3_re2_axi_gpio_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_axi_gpio_0_0 || ORIG_REF_NAME==ddr3_re2_axi_gpio_0_0} -quiet] -quiet
-
-# IP: bd/ddr3_re2/ip/ddr3_re2_clk_wiz_0_0/ddr3_re2_clk_wiz_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_clk_wiz_0_0 || ORIG_REF_NAME==ddr3_re2_clk_wiz_0_0} -quiet] -quiet
-
 # IP: bd/ddr3_re2/ip/ddr3_re2_auto_pc_4/ddr3_re2_auto_pc_4.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_auto_pc_4 || ORIG_REF_NAME==ddr3_re2_auto_pc_4} -quiet] -quiet
 
@@ -78,4 +51,31 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_au
 # IP: bd/ddr3_re2/ip/ddr3_re2_auto_pc_3/ddr3_re2_auto_pc_3.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_auto_pc_3 || ORIG_REF_NAME==ddr3_re2_auto_pc_3} -quiet] -quiet
 
-# XDC: c:/Users/sjasi3/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ddr3_re2_ooc.xdc
+# IP: bd/ddr3_re2/ip/ddr3_re2_microblaze_0_axi_periph_0/ddr3_re2_microblaze_0_axi_periph_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_microblaze_0_axi_periph_0 || ORIG_REF_NAME==ddr3_re2_microblaze_0_axi_periph_0} -quiet] -quiet
+
+# IP: bd/ddr3_re2/ip/ddr3_re2_microblaze_0_axi_intc_0/ddr3_re2_microblaze_0_axi_intc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_microblaze_0_axi_intc_0 || ORIG_REF_NAME==ddr3_re2_microblaze_0_axi_intc_0} -quiet] -quiet
+
+# IP: bd/ddr3_re2/ip/ddr3_re2_microblaze_0_xlconcat_0/ddr3_re2_microblaze_0_xlconcat_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_microblaze_0_xlconcat_0 || ORIG_REF_NAME==ddr3_re2_microblaze_0_xlconcat_0} -quiet] -quiet
+
+# IP: bd/ddr3_re2/ip/ddr3_re2_mdm_1_0/ddr3_re2_mdm_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_mdm_1_0 || ORIG_REF_NAME==ddr3_re2_mdm_1_0} -quiet] -quiet
+
+# IP: bd/ddr3_re2/ip/ddr3_re2_rst_mig_7series_0_197M_0/ddr3_re2_rst_mig_7series_0_197M_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_rst_mig_7series_0_197M_0 || ORIG_REF_NAME==ddr3_re2_rst_mig_7series_0_197M_0} -quiet] -quiet
+
+# IP: bd/ddr3_re2/ip/ddr3_re2_axi_timer_0_0/ddr3_re2_axi_timer_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_axi_timer_0_0 || ORIG_REF_NAME==ddr3_re2_axi_timer_0_0} -quiet] -quiet
+
+# IP: bd/ddr3_re2/ip/ddr3_re2_axi_uartlite_0_0/ddr3_re2_axi_uartlite_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_axi_uartlite_0_0 || ORIG_REF_NAME==ddr3_re2_axi_uartlite_0_0} -quiet] -quiet
+
+# IP: bd/ddr3_re2/ip/ddr3_re2_axi_gpio_0_0/ddr3_re2_axi_gpio_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_axi_gpio_0_0 || ORIG_REF_NAME==ddr3_re2_axi_gpio_0_0} -quiet] -quiet
+
+# IP: bd/ddr3_re2/ip/ddr3_re2_clk_wiz_0_0/ddr3_re2_clk_wiz_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==ddr3_re2_clk_wiz_0_0 || ORIG_REF_NAME==ddr3_re2_clk_wiz_0_0} -quiet] -quiet
+
+# XDC: /home/sean/Downloads/git/ECE385_FP/DDR3_RE2/DDR3_RE2.gen/sources_1/bd/ddr3_re2/ddr3_re2_ooc.xdc

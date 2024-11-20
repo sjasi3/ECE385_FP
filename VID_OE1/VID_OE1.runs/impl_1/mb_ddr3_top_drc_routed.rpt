@@ -1,0 +1,88 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+| Date         : Tue Nov 19 22:14:49 2024
+| Host         : SgoSkzD running 64-bit Gentoo Linux
+| Command      : report_drc -file mb_ddr3_top_drc_routed.rpt -pb mb_ddr3_top_drc_routed.pb -rpx mb_ddr3_top_drc_routed.rpx
+| Design       : mb_ddr3_top
+| Device       : xc7s50csga324-1
+| Speed File   : -1
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 8
++-----------+----------+-----------------------------------------------------+------------+
+| Rule      | Severity | Description                                         | Violations |
++-----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| DPIP-1    | Warning  | Input pipelining                                    | 3          |
+| REQP-1709 | Warning  | Clock output buffering                              | 1          |
+| REQP-165  | Advisory | writefirst                                          | 1          |
+| REQP-181  | Advisory | writefirst                                          | 2          |
++-----------+----------+-----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+DPIP-1#1 Warning
+Input pipelining  
+DSP mb_ddr3_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_313/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_442/mac_muladd_16ns_8ns_23ns_24_4_1_U19/vid_oe1_v_tpg_0_0_mac_muladd_16ns_8ns_23ns_24_4_1_DSP48_6_U/p_reg_reg input mb_ddr3_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_313/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_442/mac_muladd_16ns_8ns_23ns_24_4_1_U19/vid_oe1_v_tpg_0_0_mac_muladd_16ns_8ns_23ns_24_4_1_DSP48_6_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#2 Warning
+Input pipelining  
+DSP mb_ddr3_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_313/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_442/mac_muladd_16ns_8s_23s_24_4_1_U21/vid_oe1_v_tpg_0_0_mac_muladd_16ns_8s_23s_24_4_1_DSP48_8_U/p_reg_reg input mb_ddr3_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_313/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_442/mac_muladd_16ns_8s_23s_24_4_1_U21/vid_oe1_v_tpg_0_0_mac_muladd_16ns_8s_23s_24_4_1_DSP48_8_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#3 Warning
+Input pipelining  
+DSP mb_ddr3_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_313/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_442/mac_muladd_16s_16s_16ns_16_4_1_U12/vid_oe1_v_tpg_0_0_mac_muladd_16s_16s_16ns_16_4_1_DSP48_1_U/p_reg_reg input mb_ddr3_i/v_tpg_0/inst/grp_v_tpgHlsDataFlow_fu_313/tpgBackground_U0/grp_tpgBackground_Pipeline_VITIS_LOOP_520_2_fu_442/mac_muladd_16s_16s_16ns_16_4_1_U12/vid_oe1_v_tpg_0_0_mac_muladd_16s_16s_16ns_16_4_1_DSP48_1_U/p_reg_reg/C[47:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+REQP-1709#1 Warning
+Clock output buffering  
+PLLE2_ADV connectivity violation. The signal mb_ddr3_i/mig_7series_0/u_vid_oe1_mig_7series_0_0_mig/u_ddr3_infrastructure/pll_clk3_out on the mb_ddr3_i/mig_7series_0/u_vid_oe1_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i/CLKOUT3 pin of mb_ddr3_i/mig_7series_0/u_vid_oe1_mig_7series_0_0_mig/u_ddr3_infrastructure/plle2_i does not drive the same kind of BUFFER load as the other CLKOUT pins. Routing from the different buffer types will not be phase aligned.
+Related violations: <none>
+
+REQP-165#1 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (mb_ddr3_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_1) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-181#1 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (mb_ddr3_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+REQP-181#2 Advisory
+writefirst  
+Synchronous clocking is detected for BRAM (mb_ddr3_i/axi_vdma_0/U0/I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg_0) in SDP mode with WRITE_FIRST write-mode. This is the preferred mode for best power characteristics, however it may exhibit address collisions if the same address appears on both read and write ports resulting in unknown or corrupted read data. It is suggested to confirm via simulation that an address collision never occurs and if so it is suggested to try and avoid this situation. If address collisions cannot be avoided, the write-mode may be set to READ_FIRST which guarantees that the read data is the prior contents of the memory at the cost of additional power in the design. See the FPGA Memory Resources User Guide for additional information.
+Related violations: <none>
+
+

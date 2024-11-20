@@ -1,0 +1,335 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Tue Nov 19 22:03:12 2024
+# Process ID: 27765
+# Current directory: /home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.runs/vid_oe1_hdmi_tx_0_0_synth_1
+# Command line: vivado -log vid_oe1_hdmi_tx_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vid_oe1_hdmi_tx_0_0.tcl
+# Log file: /home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.runs/vid_oe1_hdmi_tx_0_0_synth_1/vid_oe1_hdmi_tx_0_0.vds
+# Journal file: /home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.runs/vid_oe1_hdmi_tx_0_0_synth_1/vivado.jou
+# Running On: SgoSkzD, OS: Linux, CPU Frequency: 4253.379 MHz, CPU Physical cores: 12, Host memory: 33545 MB
+#-----------------------------------------------------------
+source vid_oe1_hdmi_tx_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sean/Downloads/git/ECE385_FP/hdmi_tx_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/alottadata/tools/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: vid_oe1_hdmi_tx_0_0
+Command: synth_design -top vid_oe1_hdmi_tx_0_0 -part xc7s50csga324-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
+INFO: [Device 21-403] Loading part xc7s50csga324-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28021
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/alottadata/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN0' becomes localparam in 'encode' with formal parameter declaration list [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:145]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN1' becomes localparam in 'encode' with formal parameter declaration list [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:146]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN2' becomes localparam in 'encode' with formal parameter declaration list [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:147]
+WARNING: [Synth 8-11065] parameter 'CTRLTOKEN3' becomes localparam in 'encode' with formal parameter declaration list [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:148]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2160.422 ; gain = 369.801 ; free physical = 8333 ; free virtual = 12809
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1177.857; parent = 1042.149; children = 135.708
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3810.273; parent = 2166.363; children = 1643.910
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'vid_oe1_hdmi_tx_0_0' [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ip/vid_oe1_hdmi_tx_0_0/synth/vid_oe1_hdmi_tx_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_v1_0' [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/hdmi_tx_v1_0.v:70]
+INFO: [Synth 8-6157] synthesizing module 'srldelay' [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/srldelay.v:70]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/alottadata/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:131644]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (0#1) [/alottadata/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:131644]
+INFO: [Synth 8-6155] done synthesizing module 'srldelay' (0#1) [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/srldelay.v:70]
+INFO: [Synth 8-6157] synthesizing module 'encode' [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode' (0#1) [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'encode__parameterized0' [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized0' (0#1) [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'encode__parameterized1' [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:79]
+INFO: [Synth 8-6155] done synthesizing module 'encode__parameterized1' (0#1) [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:79]
+INFO: [Synth 8-6157] synthesizing module 'serdes_10_to_1' [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/serdes_10_to_1.v:43]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2' [/alottadata/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94875]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2' (0#1) [/alottadata/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94875]
+INFO: [Synth 8-6157] synthesizing module 'OSERDESE2__parameterized0' [/alottadata/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94875]
+INFO: [Synth 8-6155] done synthesizing module 'OSERDESE2__parameterized0' (0#1) [/alottadata/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:94875]
+INFO: [Synth 8-6155] done synthesizing module 'serdes_10_to_1' (0#1) [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/serdes_10_to_1.v:43]
+INFO: [Synth 8-6157] synthesizing module 'OBUFDS' [/alottadata/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:90676]
+INFO: [Synth 8-6155] done synthesizing module 'OBUFDS' (0#1) [/alottadata/tools/Xilinx/Vivado/2022.2/scripts/rt/data/unisim_comp.v:90676]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_v1_0' (0#1) [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/hdmi_tx_v1_0.v:70]
+INFO: [Synth 8-6155] done synthesizing module 'vid_oe1_hdmi_tx_0_0' (0#1) [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ip/vid_oe1_hdmi_tx_0_0/synth/vid_oe1_hdmi_tx_0_0.v:53]
+WARNING: [Synth 8-6014] Unused sequential element ade_q_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:174]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:175]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_q_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:176]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_qq_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:177]
+WARNING: [Synth 8-6014] Unused sequential element adin_q_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:184]
+WARNING: [Synth 8-6014] Unused sequential element adin_reg_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:185]
+WARNING: [Synth 8-6014] Unused sequential element ade_q_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:174]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:175]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_q_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:176]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_qq_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:177]
+WARNING: [Synth 8-6014] Unused sequential element adin_q_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:184]
+WARNING: [Synth 8-6014] Unused sequential element adin_reg_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:185]
+WARNING: [Synth 8-6014] Unused sequential element ade_q_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:174]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:175]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_q_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:176]
+WARNING: [Synth 8-6014] Unused sequential element ade_reg_qq_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:177]
+WARNING: [Synth 8-6014] Unused sequential element adin_q_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:184]
+WARNING: [Synth 8-6014] Unused sequential element adin_reg_reg was removed.  [/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.gen/sources_1/bd/vid_oe1/ipshared/afa8/hdl/encode.v:185]
+WARNING: [Synth 8-7129] Port adin[3] in module encode__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[2] in module encode__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[1] in module encode__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[0] in module encode__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ade in module encode__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[3] in module encode__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[2] in module encode__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[1] in module encode__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[0] in module encode__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ade in module encode__parameterized0 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[3] in module encode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[2] in module encode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[1] in module encode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port adin[0] in module encode is either unconnected or has no load
+WARNING: [Synth 8-7129] Port ade in module encode is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2236.328 ; gain = 445.707 ; free physical = 7999 ; free virtual = 12477
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1177.857; parent = 1042.149; children = 135.708
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3880.242; parent = 2236.332; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2254.141 ; gain = 463.520 ; free physical = 7947 ; free virtual = 12424
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1177.857; parent = 1042.149; children = 135.708
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3898.055; parent = 2254.145; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2254.141 ; gain = 463.520 ; free physical = 7936 ; free virtual = 12413
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1177.857; parent = 1042.149; children = 135.708
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3898.055; parent = 2254.145; children = 1643.910
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2260.078 ; gain = 0.000 ; free physical = 7943 ; free virtual = 12420
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2409.922 ; gain = 0.000 ; free physical = 7969 ; free virtual = 12447
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2409.922 ; gain = 0.000 ; free physical = 7961 ; free virtual = 12440
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/alottadata/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7928 ; free virtual = 12411
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1177.857; parent = 1042.149; children = 135.708
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7s50csga324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7924 ; free virtual = 12407
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1177.857; parent = 1042.149; children = 135.708
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7920 ; free virtual = 12403
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1177.857; parent = 1042.149; children = 135.708
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7936 ; free virtual = 12443
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1177.857; parent = 1042.149; children = 135.708
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   5 Input    5 Bit       Adders := 6     
+	   4 Input    5 Bit       Adders := 3     
+	   8 Input    4 Bit       Adders := 6     
+	   2 Input    4 Bit       Adders := 3     
++---XORs : 
+	   2 Input      1 Bit         XORs := 42    
++---Registers : 
+	               10 Bit    Registers := 3     
+	                9 Bit    Registers := 3     
+	                8 Bit    Registers := 3     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 9     
+	                1 Bit    Registers := 18    
++---Muxes : 
+	   5 Input   10 Bit        Muxes := 3     
+	   2 Input   10 Bit        Muxes := 6     
+	   2 Input    8 Bit        Muxes := 3     
+	   2 Input    5 Bit        Muxes := 12    
+	   2 Input    4 Bit        Muxes := 3     
+	   2 Input    1 Bit        Muxes := 21    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 120 (col length:60)
+BRAMs: 150 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 8009 ; free virtual = 12514
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1177.857; parent = 1042.149; children = 135.708
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7735 ; free virtual = 12241
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1250.142; parent = 1115.344; children = 135.708
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7730 ; free virtual = 12236
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1250.239; parent = 1115.441; children = 135.708
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7707 ; free virtual = 12212
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1252.922; parent = 1118.124; children = 135.708
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7762 ; free virtual = 12290
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1256.218; parent = 1119.664; children = 136.554
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7770 ; free virtual = 12283
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1256.296; parent = 1119.710; children = 136.586
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7764 ; free virtual = 12277
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1256.317; parent = 1119.731; children = 136.586
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7771 ; free virtual = 12279
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1256.327; parent = 1119.741; children = 136.586
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7771 ; free virtual = 12279
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1256.327; parent = 1119.741; children = 136.586
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7772 ; free virtual = 12280
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1256.327; parent = 1119.741; children = 136.586
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+----------+------+
+|      |Cell      |Count |
++------+----------+------+
+|1     |LUT2      |     9|
+|2     |LUT3      |    37|
+|3     |LUT4      |    23|
+|4     |LUT5      |    76|
+|5     |LUT6      |    99|
+|6     |OSERDESE2 |     8|
+|8     |SRL16E    |    27|
+|9     |FDCE      |    42|
+|10    |FDRE      |    87|
+|11    |OBUFDS    |     4|
++------+----------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7772 ; free virtual = 12280
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1256.346; parent = 1119.760; children = 136.586
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4021.820; parent = 2377.910; children = 1643.910
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 2409.922 ; gain = 463.520 ; free physical = 7820 ; free virtual = 12328
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2409.922 ; gain = 619.301 ; free physical = 7821 ; free virtual = 12329
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2409.922 ; gain = 0.000 ; free physical = 7817 ; free virtual = 12324
+INFO: [Netlist 29-17] Analyzing 4 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2409.922 ; gain = 0.000 ; free physical = 7852 ; free virtual = 12360
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: d453de2c
+INFO: [Common 17-83] Releasing license: Synthesis
+45 Infos, 38 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 2409.922 ; gain = 873.551 ; free physical = 8056 ; free virtual = 12564
+INFO: [Common 17-1381] The checkpoint '/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.runs/vid_oe1_hdmi_tx_0_0_synth_1/vid_oe1_hdmi_tx_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP vid_oe1_hdmi_tx_0_0, cache-ID = b95278439af9fbf9
+INFO: [Coretcl 2-1174] Renamed 9 cell refs.
+INFO: [Common 17-1381] The checkpoint '/home/sean/Downloads/git/ECE385_FP/VID_OE1/VID_OE1.runs/vid_oe1_hdmi_tx_0_0_synth_1/vid_oe1_hdmi_tx_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file vid_oe1_hdmi_tx_0_0_utilization_synth.rpt -pb vid_oe1_hdmi_tx_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Nov 19 22:03:43 2024...

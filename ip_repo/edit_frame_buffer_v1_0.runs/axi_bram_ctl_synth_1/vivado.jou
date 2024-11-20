@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Wed Nov 20 01:41:58 2024
+# Process ID: 20580
+# Current directory: /home/sean/Downloads/git/ECE385_FP/ip_repo/edit_frame_buffer_v1_0.runs/axi_bram_ctl_synth_1
+# Command line: vivado -log axi_bram_ctl.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source axi_bram_ctl.tcl
+# Log file: /home/sean/Downloads/git/ECE385_FP/ip_repo/edit_frame_buffer_v1_0.runs/axi_bram_ctl_synth_1/axi_bram_ctl.vds
+# Journal file: /home/sean/Downloads/git/ECE385_FP/ip_repo/edit_frame_buffer_v1_0.runs/axi_bram_ctl_synth_1/vivado.jou
+# Running On: SgoSkzD, OS: Linux, CPU Frequency: 3612.693 MHz, CPU Physical cores: 12, Host memory: 33545 MB
+#-----------------------------------------------------------
+source axi_bram_ctl.tcl -notrace

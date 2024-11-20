@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="axi_bram_ctl_synth_1" LaunchDir="/home/sean/Downloads/git/ECE385_FP/VID_OE2/VID_OE2.tmp/frame_buffer_v1_0_project/frame_buffer_v1_0_project.runs/axi_bram_ctl_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="vram_synth_1" LaunchDir="/home/sean/Downloads/git/ECE385_FP/VID_OE2/VID_OE2.tmp/frame_buffer_v1_0_project/frame_buffer_v1_0_project.runs/vram_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
