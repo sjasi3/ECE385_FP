@@ -52,7 +52,7 @@
 # #########################################################
 
 
-create_clock -period 8 -name vid_io_out_clk [get_ports vid_io_out_clk]
+create_clock -period 38.400 -name vid_io_out_clk [get_ports vid_io_out_clk]
 
 create_clock -period 12 -name aclk [get_ports aclk]
 

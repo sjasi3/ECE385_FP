@@ -1,0 +1,29 @@
+00:49:05 **** Incremental Build of configuration Debug for project mb_vid_oe4 ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/sean/Downloads/git/ECE385_FP/VID_OE4/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'configureStartVTC':
+../src/helloworld.c:58:22: warning: unused variable 'SignalCfgPtr' [-Wunused-variable]
+   58 |         XVtc_Signal *SignalCfgPtr;
+      |                      ^~~~~~~~~~~~
+../src/helloworld.c: In function 'configureStartTPG':
+../src/helloworld.c:169:18: warning: 'tpgInst' may be used uninitialized [-Wmaybe-uninitialized]
+  169 |         Status = XV_tpg_CfgInitialize(tpgInst, tpg_Config, tpg_Config->BaseAddress);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: mb_vid_oe4.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/sean/Downloads/git/ECE385_FP/VID_OE4/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mcpu=v11.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "mb_vid_oe4.elf" ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mb_vid_oe4.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mb_vid_oe4.elf  |tee "mb_vid_oe4.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  14724	    372	   3288	  18384	   47d0	mb_vid_oe4.elf
+Finished building: mb_vid_oe4.elf.size
+ 
+
+00:49:06 Build Finished (took 168ms)
+

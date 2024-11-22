@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Wed Nov 20 03:58:19 2024
+| Date         : Thu Nov 21 22:23:37 2024
 | Host         : SgoSkzD running 64-bit Gentoo Linux
 | Command      : report_utilization -file vid_oe3_rgb2dvi_0_0_utilization_synth.rpt -pb vid_oe3_rgb2dvi_0_0_utilization_synth.pb
 | Design       : vid_oe3_rgb2dvi_0_0
@@ -31,8 +31,8 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  157 |     0 |          0 |     32600 |  0.48 |
-|   LUT as Logic          |  157 |     0 |          0 |     32600 |  0.48 |
+| Slice LUTs*             |  158 |     0 |          0 |     32600 |  0.48 |
+|   LUT as Logic          |  158 |     0 |          0 |     32600 |  0.48 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
 | Slice Registers         |  134 |     0 |          0 |     65200 |  0.21 |
 |   Register as Flip Flop |  134 |     0 |          0 |     65200 |  0.21 |
@@ -156,8 +156,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 | LUT2      |   22 |                 LUT |
 | FDSE      |   15 |        Flop & Latch |
 | OSERDESE2 |    8 |                  IO |
+| LUT1      |    5 |                 LUT |
 | OBUFDS    |    4 |                  IO |
-| LUT1      |    4 |                 LUT |
 | FDPE      |    2 |        Flop & Latch |
 +-----------+------+---------------------+
 

@@ -20,3 +20,54 @@ platform generate -quick
 platform active {mb_ddr3_top}
 platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/VID_OE3/mb_ddr3_top.xsa}
 platform generate
+platform active {mb_ddr3_top}
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/VID_OE3/mb_ddr3_top.xsa}
+platform clean
+platform generate
+platform active {mb_ddr3_top}
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/VID_OE3/mb_ddr3_top.xsa}
+platform clean
+platform generate
+platform clean
+platform generate
+platform active {mb_ddr3_top}
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/VID_OE3/mb_ddr3_top.xsa}
+platform clean
+platform generate
+platform clean
+platform generate
+platform clean
+platform generate
+platform clean
+platform clean
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/VID_OE3/mb_ddr3_top.xsa}
+platform generate
+platform clean
+platform generate
+platform clean
+platform clean
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/VID_OE3/mb_ddr3_top.xsa}
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/VID_OE3/mb_ddr3_top.xsa}
+platform generate
+platform clean
+platform generate
+platform clean
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/VID_OE3/mb_ddr3_top.xsa}
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/VID_OE3/mb_ddr3_top.xsa}
+platform generate
+platform clean
+platform generate
+platform clean
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/VID_OE3/mb_ddr3_top.xsa}
+platform clean
+platform generate
+platform clean
+platform generate
+platform active {mb_ddr3_top}
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/VID_OE3/mb_ddr3_top.xsa}
+platform clean
+platform generate
+platform clean
+platform generate
+platform clean
+platform generate

@@ -175,7 +175,7 @@ int configureStartTPG()
 
 	// Must RESET the Tpg since it's a HLS IP (This must be done through GPIO on IP reset port)
 	// RESET HERE!
-
+	xil_printf("Passed\n");
 	XV_tpg_Set_height(tpgInst, vMode.height);
 	XV_tpg_Set_width(tpgInst, vMode.width);
 	XV_tpg_Set_colorFormat(tpgInst, 0);
@@ -197,8 +197,12 @@ int main()
 
     print("Hello World\n\r");
 
-    configureStartVTC();
-    configureStartTPG();
+    if(configureStartVTC()) {
+    	xil_printf("failed");
+    }
+    if(configureStartTPG()) {
+    	xil_printf("failed");
+    }
 
     print("Successfully ran Hello World application");
 

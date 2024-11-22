@@ -1,8 +1,254 @@
-Nothing to build in platform 'mb_ddr3_top'
 
-20:35:28 **** Incremental Build of configuration Debug for project mb_vid_oe3 ****
+22:58:41 Build Finished (took 4s.123ms)
+
+22:58:41 **** Clean-only build of configuration Debug for project mb_vid_oe3 ****
+make clean 
+rm -rf ./src/helloworld.o ./src/platform.o ./src/helloworld.d ./src/platform.d mb_vid_oe3.elf.size  mb_vid_oe3.elf
+ 
+22:58:41 **** Clean-only build of configuration Debug for project mb_vid_oe3_system ****
+make clean 
+rm -rf ./_sds
+rm -rf package
+rm -f system.bif
+22:58:41 **** Build of project mb_ddr3_top ****
+buildplatform.sh 42185 mb_ddr3_top  
+XSDB Server Channel: tcfchan#9
+Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
+make --no-print-directory seq_libs
+
+Finished building libraries sequentially.
+
+make -j 30 --no-print-directory par_libs
+
+Running Make include in microblaze_0/libsrc/cpu_v2_16/src
+
+Running Make include in microblaze_0/libsrc/intc_v3_15/src
+
+make -C microblaze_0/libsrc/cpu_v2_16/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COM
+PILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multiply
+-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribut
+e-patterns"
+
+Running Make include in microblaze_0/libsrc/standalone_v8_0/src
+
+Running Make include in microblaze_0/libsrc/tmrctr_v4_9/src
+
+Running Make include in microblaze_0/libsrc/uartlite_v3_7/src
+
+Running Make include in microblaze_0/libsrc/video_common_v4_13/src
+
+make -C microblaze_0/libsrc/intc_v3_15/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
+MPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multipl
+y-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribu
+te-patterns"
+
+Running Make include in microblaze_0/libsrc/vtc_v8_4/src
+
+make -C microblaze_0/libsrc/standalone_v8_0/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar
+" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-mu
+ltiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-dis
+tribute-patterns"
+
+Running Make include in microblaze_0/libsrc/v_tpg_v8_4/src
+
+make -C microblaze_0/libsrc/tmrctr_v4_9/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "C
+OMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multip
+ly-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distrib
+ute-patterns"
+
+make -C microblaze_0/libsrc/uartlite_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" 
+"COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-mult
+iply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distr
+ibute-patterns"
+
+make -C microblaze_0/libsrc/video_common_v4_13/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb
+-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl
+-multiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-
+distribute-patterns"
+
+make -C microblaze_0/libsrc/vtc_v8_4/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multiply-
+high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute
+-patterns"
+
+make -C microblaze_0/libsrc/v_tpg_v8_4/src -s include  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
+MPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multipl
+y-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribu
+te-patterns"
+
+Running Make libs in microblaze_0/libsrc/intc_v3_15/src
+
+make -C microblaze_0/libsrc/intc_v3_15/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+LER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multiply-h
+igh -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-
+patterns"
+
+Running Make libs in microblaze_0/libsrc/cpu_v2_16/src
+
+make -C microblaze_0/libsrc/cpu_v2_16/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPIL
+ER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multiply-hi
+gh -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-p
+atterns"
+
+Running Make libs in microblaze_0/libsrc/standalone_v8_0/src
+
+Running Make libs in microblaze_0/libsrc/tmrctr_v4_9/src
+
+make -C microblaze_0/libsrc/standalone_v8_0/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "
+COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multi
+ply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distri
+bute-patterns"
+
+make -C microblaze_0/libsrc/tmrctr_v4_9/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMP
+ILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multiply-
+high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute
+-patterns"
+
+Running Make libs in microblaze_0/libsrc/uartlite_v3_7/src
+
+Running Make libs in microblaze_0/libsrc/video_common_v4_13/src
+
+Running Make libs in microblaze_0/libsrc/vtc_v8_4/src
+
+make -C microblaze_0/libsrc/uartlite_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "CO
+MPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multipl
+y-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribu
+te-patterns"
+
+Running Make libs in microblaze_0/libsrc/v_tpg_v8_4/src
+
+make -C microblaze_0/libsrc/video_common_v4_13/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar
+" "COMPILER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-mu
+ltiply-high -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-dis
+tribute-patterns"
+
+make -C microblaze_0/libsrc/vtc_v8_4/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
+R_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multiply-hig
+h -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-pa
+tterns"
+
+make -C microblaze_0/libsrc/v_tpg_v8_4/src -s libs  "SHELL=/bin/sh" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPI
+LER_FLAGS=  -O2 -c -mcpu=v11.0 -mhard-float -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift -mxl-multiply-h
+igh -mxl-pattern-compare" "EXTRA_COMPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-
+patterns"
+
+In file included from xv_tpg.h:16,
+                 from xv_tpg_intr.c:29:
+xv_tpg_intr.c: In function 'XVTpg_SetCallback':
+../../../include/xil_assert.h:118:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  118 |         return 0;                                  \
+      |                ^
+xv_tpg_intr.c:60:9: note: in expansion of macro 'Xil_AssertNonvoid'
+   60 |         Xil_AssertNonvoid(InstancePtr != NULL);
+      |         ^~~~~~~~~~~~~~~~~
+xv_tpg_intr.c:54:6: note: declared here
+   54 | void XVTpg_SetCallback(XV_tpg *InstancePtr, u32 HandlerType,
+      |      ^~~~~~~~~~~~~~~~~
+In file included from xv_tpg.h:16,
+                 from xv_tpg_intr.c:29:
+../../../include/xil_assert.h:118:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  118 |         return 0;                                  \
+      |                ^
+xv_tpg_intr.c:61:9: note: in expansion of macro 'Xil_AssertNonvoid'
+   61 |         Xil_AssertNonvoid(HandlerType >= (XVTPG_HANDLER_DONE));
+      |         ^~~~~~~~~~~~~~~~~
+xv_tpg_intr.c:54:6: note: declared here
+   54 | void XVTpg_SetCallback(XV_tpg *InstancePtr, u32 HandlerType,
+      |      ^~~~~~~~~~~~~~~~~
+In file included from xv_tpg.h:16,
+                 from xv_tpg_intr.c:29:
+../../../include/xil_assert.h:118:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  118 |         return 0;                                  \
+      |                ^
+xv_tpg_intr.c:62:9: note: in expansion of macro 'Xil_AssertNonvoid'
+   62 |         Xil_AssertNonvoid(CallbackFunc != NULL);
+      |         ^~~~~~~~~~~~~~~~~
+xv_tpg_intr.c:54:6: note: declared here
+   54 | void XVTpg_SetCallback(XV_tpg *InstancePtr, u32 HandlerType,
+      |      ^~~~~~~~~~~~~~~~~
+In file included from xv_tpg.h:16,
+                 from xv_tpg_intr.c:29:
+../../../include/xil_assert.h:118:16: warning: 'return' with a value, in function returning void [-Wreturn-type]
+  118 |         return 0;                                  \
+      |                ^
+xv_tpg_intr.c:63:9: note: in expansion of macro 'Xil_AssertNonvoid'
+   63 |         Xil_AssertNonvoid(CallbackRef != NULL);
+      |         ^~~~~~~~~~~~~~~~~
+xv_tpg_intr.c:54:6: note: declared here
+   54 | void XVTpg_SetCallback(XV_tpg *InstancePtr, u32 HandlerType,
+      |      ^~~~~~~~~~~~~~~~~
+xv_tpg_intr.c:57:13: warning: variable 'Status' set but not used [-Wunused-but-set-variable]
+   57 |         u32 Status;
+      |             ^~~~~~
+microblaze_sleep.c:81:9: note: '#pragma message: For the sleep routines, assembly instructions are used'
+   81 | #pragma message ("For the sleep routines, assembly instructions are used")
+      |         ^~~~~~~
+DEBUG NON_LTO_OBJECTS is ../../../lib/microblaze_interrupt_handler.o
+
+Finished building libraries parallelly.
+
+make --no-print-directory archive
+
+mb-ar -r  microblaze_0/lib/libxil.a microblaze_0/lib/_exit.o microblaze_0/lib/errno.o microblaze_0/lib/fcntl.o microblaze_0/lib
+/hw_exception_handler.o microblaze_0/lib/inbyte.o microblaze_0/lib/microblaze_disable_dcache.o microblaze_0/lib/microblaze_disa
+ble_exceptions.o microblaze_0/lib/microblaze_disable_icache.o microblaze_0/lib/microblaze_disable_interrupts.o microblaze_0/lib
+/microblaze_enable_dcache.o microblaze_0/lib/microblaze_enable_exceptions.o microblaze_0/lib/microblaze_enable_icache.o microbl
+aze_0/lib/microblaze_enable_interrupts.o microblaze_0/lib/microblaze_exception_handler.o microblaze_0/lib/microblaze_flush_cach
+e_ext.o microblaze_0/lib/microblaze_flush_cache_ext_range.o microblaze_0/lib/microblaze_flush_dcache.o microblaze_0/lib/microbl
+aze_flush_dcache_range.o microblaze_0/lib/microblaze_init_dcache_range.o microblaze_0/lib/microblaze_init_icache_range.o microb
+laze_0/lib/microblaze_interrupt_handler.o microblaze_0/lib/microblaze_interrupts_g.o microblaze_0/lib/microblaze_invalidate_cac
+he_ext.o microblaze_0/lib/microblaze_invalidate_cache_ext_range.o microblaze_0/lib/microblaze_invalidate_dcache.o microblaze_0/
+lib/microblaze_invalidate_dcache_range.o microblaze_0/lib/microblaze_invalidate_icache.o microblaze_0/lib/microblaze_invalidate
+_icache_range.o microblaze_0/lib/microblaze_scrub.o microblaze_0/lib/microblaze_selftest.o microblaze_0/lib/microblaze_sleep.o 
+microblaze_0/lib/microblaze_update_dcache.o microblaze_0/lib/microblaze_update_icache.o microblaze_0/lib/outbyte.o microblaze_0
+/lib/print.o microblaze_0/lib/pvr.o microblaze_0/lib/xil_assert.o microblaze_0/lib/xil_cache.o microblaze_0/lib/xil_clocking.o 
+microblaze_0/lib/xil_exception.o microblaze_0/lib/xil_mem.o microblaze_0/lib/xil_misc_psreset_api.o microblaze_0/lib/xil_printf
+.o microblaze_0/lib/xil_sleepcommon.o microblaze_0/lib/xil_testcache.o microblaze_0/lib/xil_testio.o microblaze_0/lib/xil_testm
+em.o microblaze_0/lib/xil_util.o microblaze_0/lib/xintc.o microblaze_0/lib/xintc_g.o microblaze_0/lib/xintc_intr.o microblaze_0
+/lib/xintc_l.o microblaze_0/lib/xintc_options.o microblaze_0/lib/xintc_selftest.o microblaze_0/lib/xinterrupt_wrap.o microblaze
+_0/lib/xio.o microblaze_0/lib/xplatform_info.o microblaze_0/lib/xtmrctr.o microblaze_0/lib/xtmrctr_g.o microblaze_0/lib/xtmrctr
+_intr.o microblaze_0/lib/xtmrctr_l.o microblaze_0/lib/xtmrctr_options.o microblaze_0/lib/xtmrctr_selftest.o microblaze_0/lib/xt
+mrctr_sinit.o microblaze_0/lib/xtmrctr_stats.o microblaze_0/lib/xuartlite.o microblaze_0/lib/xuartlite_g.o microblaze_0/lib/xua
+rtlite_intr.o microblaze_0/lib/xuartlite_l.o microblaze_0/lib/xuartlite_selftest.o microblaze_0/lib/xuartlite_sinit.o microblaz
+e_0/lib/xuartlite_stats.o microblaze_0/lib/xv_tpg.o microblaze_0/lib/xv_tpg_g.o microblaze_0/lib/xv_tpg_intr.o microblaze_0/lib
+/xv_tpg_linux.o microblaze_0/lib/xv_tpg_sinit.o microblaze_0/lib/xvidc.o microblaze_0/lib/xvidc_edid.o microblaze_0/lib/xvidc_e
+did_ext.o microblaze_0/lib/xvidc_parse_edid.o microblaze_0/lib/xvidc_timings_table.o microblaze_0/lib/xvtc.o microblaze_0/lib/x
+vtc_g.o microblaze_0/lib/xvtc_intr.o microblaze_0/lib/xvtc_selftest.o microblaze_0/lib/xvtc_sinit.o
+
+/alottadata/tools/Xilinx/Vitis/2022.2/gnu/microblaze/lin/bin/../x86_64-oesdk-linux/usr/bin/microblaze-xilinx-elf/microblaze-xilinx-elf-ar.real: creating microblaze_0/lib/libxil.a
+Finished building libraries
+
+22:58:46 **** Build of configuration Debug for project mb_vid_oe3 ****
 make all 
-make: Nothing to be done for 'all'.
-20:35:29 **** Incremental Build of configuration Debug for project mb_vid_oe3_system ****
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'configureStartVTC':
+../src/helloworld.c:58:22: warning: unused variable 'SignalCfgPtr' [-Wunused-variable]
+   58 |         XVtc_Signal *SignalCfgPtr;
+      |                      ^~~~~~~~~~~~
+../src/helloworld.c: In function 'configureStartTPG':
+../src/helloworld.c:169:18: warning: 'tpgInst' may be used uninitialized [-Wmaybe-uninitialized]
+  169 |         Status = XV_tpg_CfgInitialize(tpgInst, tpg_Config, tpg_Config->BaseAddress);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: mb_vid_oe3.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "mb_vid_oe3.elf" ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mb_vid_oe3.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mb_vid_oe3.elf  |tee "mb_vid_oe3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13708	    444	   3288	  17440	   4420	mb_vid_oe3.elf
+Finished building: mb_vid_oe3.elf.size
+ 
+22:58:46 **** Build of configuration Debug for project mb_vid_oe3_system ****
 make all 
 Skipping SD card image generation. Reason: The system project only has applications for microblaze processors.

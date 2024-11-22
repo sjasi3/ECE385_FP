@@ -78,3 +78,939 @@ Reason: xsct server communication channel is not established.
 20:35:21 INFO  : The file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit' stored in project is removed.
 20:35:21 INFO  : The updated bitstream files are copied from platform to folder '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream' in project 'mb_vid_oe3'.
 20:35:28 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+21:22:54 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/IDE.log'.
+21:22:55 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/temp_xsdb_launch_script.tcl
+21:22:57 INFO  : XSCT server has started successfully.
+21:22:57 INFO  : Platform repository initialization has completed.
+21:22:57 INFO  : Registering command handlers for Vitis TCF services
+21:22:58 INFO  : plnx-install-location is set to ''
+21:22:58 INFO  : Successfully done setting XSCT server connection channel  
+21:22:58 INFO  : Successfully done query RDI_DATADIR 
+21:22:58 INFO  : Successfully done setting workspace for the tool. 
+21:28:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:28:24 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:28:24 INFO  : 'jtag frequency' command is executed.
+21:28:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:28:25 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+21:28:25 INFO  : Context for processor 'microblaze_0' is selected.
+21:28:25 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+21:28:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:28:25 INFO  : Context for processor 'microblaze_0' is selected.
+21:28:25 INFO  : System reset is completed.
+21:28:28 INFO  : 'after 3000' command is executed.
+21:28:28 INFO  : Context for processor 'microblaze_0' is selected.
+21:28:28 ERROR : Cannot stop MicroBlaze. MicroBlaze is held in reset
+21:28:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+21:28:28 ERROR : Cannot stop MicroBlaze. MicroBlaze is held in reset
+21:28:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:28:45 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:28:45 INFO  : 'jtag frequency' command is executed.
+21:28:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:28:46 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+21:28:46 INFO  : Context for processor 'microblaze_0' is selected.
+21:28:46 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+21:28:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:28:46 INFO  : Context for processor 'microblaze_0' is selected.
+21:28:46 INFO  : System reset is completed.
+21:28:49 INFO  : 'after 3000' command is executed.
+21:28:49 INFO  : Context for processor 'microblaze_0' is selected.
+21:28:49 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+21:28:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+21:28:49 INFO  : Context for processor 'microblaze_0' is selected.
+21:28:49 INFO  : 'con' command is executed.
+21:28:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:28:49 INFO  : Disconnected from the channel tcfchan#1.
+21:28:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:28:59 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:28:59 INFO  : 'jtag frequency' command is executed.
+21:29:02 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+21:29:02 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+21:29:02 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+21:29:02 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+21:29:12 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+21:29:21 INFO  : Result from executing command 'removePlatformRepo': 
+21:29:30 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+21:29:30 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:29:36 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+21:29:36 WARN  : Failed to closehw "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa"
+Reason: Cannot close hw design '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+Design is not opened in the current session.
+
+21:29:37 INFO  : The hardware specification used by project 'mb_vid_oe3' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:29:37 INFO  : The file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit' stored in project is removed.
+21:29:37 INFO  : The updated bitstream files are copied from platform to folder '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream' in project 'mb_vid_oe3'.
+21:29:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:29:48 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:29:48 INFO  : 'jtag frequency' command is executed.
+21:29:52 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (No clock)
+21:29:52 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (No clock)
+21:29:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+21:29:52 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (No clock)
+21:30:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:30:05 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:30:05 INFO  : 'jtag frequency' command is executed.
+21:30:08 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+21:30:08 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+21:30:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+21:30:08 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+21:30:28 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/IDE.log'.
+21:30:28 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/temp_xsdb_launch_script.tcl
+21:30:29 INFO  : XSCT server has started successfully.
+21:30:29 INFO  : Successfully done setting XSCT server connection channel  
+21:30:29 INFO  : plnx-install-location is set to ''
+21:30:29 INFO  : Successfully done setting workspace for the tool. 
+21:30:29 INFO  : Successfully done query RDI_DATADIR 
+21:30:29 INFO  : Platform repository initialization has completed.
+21:30:29 INFO  : Registering command handlers for Vitis TCF services
+21:30:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:30:31 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:30:31 INFO  : 'jtag frequency' command is executed.
+21:30:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:30:33 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+21:30:33 INFO  : Context for processor 'microblaze_0' is selected.
+21:30:33 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+21:30:33 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:30:33 INFO  : Context for processor 'microblaze_0' is selected.
+21:30:33 INFO  : System reset is completed.
+21:30:36 INFO  : 'after 3000' command is executed.
+21:30:36 INFO  : Context for processor 'microblaze_0' is selected.
+21:30:36 ERROR : Cannot stop MicroBlaze. MicroBlaze is held in reset
+21:30:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+21:30:36 ERROR : Cannot stop MicroBlaze. MicroBlaze is held in reset
+21:30:45 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+21:30:51 INFO  : Result from executing command 'removePlatformRepo': 
+21:30:56 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+21:30:56 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:31:04 INFO  : Result from executing command 'removePlatformRepo': 
+21:31:09 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+21:31:09 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:31:13 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+21:31:28 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+21:31:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:31:31 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:31:31 INFO  : 'jtag frequency' command is executed.
+21:31:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:31:32 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+21:31:32 INFO  : Context for processor 'microblaze_0' is selected.
+21:31:32 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+21:31:32 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:31:32 INFO  : Context for processor 'microblaze_0' is selected.
+21:31:32 INFO  : System reset is completed.
+21:31:35 INFO  : 'after 3000' command is executed.
+21:31:35 INFO  : Context for processor 'microblaze_0' is selected.
+21:31:35 ERROR : Cannot stop MicroBlaze. MicroBlaze is held in reset
+21:31:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+21:31:35 ERROR : Cannot stop MicroBlaze. MicroBlaze is held in reset
+21:31:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:31:42 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:31:42 INFO  : 'jtag frequency' command is executed.
+21:31:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:31:43 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+21:31:43 INFO  : Context for processor 'microblaze_0' is selected.
+21:31:43 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+21:31:43 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:31:43 INFO  : Context for processor 'microblaze_0' is selected.
+21:31:43 INFO  : System reset is completed.
+21:31:46 INFO  : 'after 3000' command is executed.
+21:31:46 INFO  : Context for processor 'microblaze_0' is selected.
+21:31:47 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+21:31:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+21:31:47 INFO  : Context for processor 'microblaze_0' is selected.
+21:31:47 INFO  : 'con' command is executed.
+21:31:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:31:47 INFO  : Disconnected from the channel tcfchan#1.
+21:31:56 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:31:56 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:31:56 INFO  : 'jtag frequency' command is executed.
+21:31:59 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+21:31:59 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+21:31:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+21:31:59 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+21:32:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:32:08 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:32:08 INFO  : 'jtag frequency' command is executed.
+21:32:11 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (No clock)
+21:32:11 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (No clock)
+21:32:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+21:32:11 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (No clock)
+21:32:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:32:21 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:32:21 INFO  : 'jtag frequency' command is executed.
+21:32:24 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+21:32:24 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+21:32:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+21:32:24 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+21:37:01 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/IDE.log'.
+21:37:01 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/temp_xsdb_launch_script.tcl
+21:37:02 INFO  : XSCT server has started successfully.
+21:37:02 INFO  : plnx-install-location is set to ''
+21:37:02 INFO  : Successfully done setting XSCT server connection channel  
+21:37:02 INFO  : Successfully done query RDI_DATADIR 
+21:37:02 INFO  : Successfully done setting workspace for the tool. 
+21:37:02 INFO  : Platform repository initialization has completed.
+21:37:03 INFO  : Registering command handlers for Vitis TCF services
+21:37:19 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+21:37:26 INFO  : Result from executing command 'removePlatformRepo': 
+21:37:31 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+21:37:31 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:37:36 INFO  : Result from executing command 'removePlatformRepo': 
+21:38:00 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+21:38:00 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:38:12 INFO  : Result from executing command 'removePlatformRepo': 
+21:38:20 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+21:38:20 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:38:23 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+21:38:24 INFO  : The hardware specification used by project 'mb_vid_oe3' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:38:24 INFO  : The file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit' stored in project is removed.
+21:38:24 INFO  : The updated bitstream files are copied from platform to folder '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream' in project 'mb_vid_oe3'.
+21:38:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:38:28 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:38:28 INFO  : 'jtag frequency' command is executed.
+21:38:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:38:29 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+21:38:29 INFO  : Context for processor 'microblaze_0' is selected.
+21:38:29 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+21:38:29 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:38:29 INFO  : Context for processor 'microblaze_0' is selected.
+21:38:29 INFO  : System reset is completed.
+21:38:32 INFO  : 'after 3000' command is executed.
+21:38:32 INFO  : Context for processor 'microblaze_0' is selected.
+21:38:32 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+21:38:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+21:38:32 INFO  : Context for processor 'microblaze_0' is selected.
+21:38:32 INFO  : 'con' command is executed.
+21:38:32 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:38:32 INFO  : Disconnected from the channel tcfchan#7.
+21:49:46 INFO  : Result from executing command 'removePlatformRepo': 
+21:49:52 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+21:49:57 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+21:50:03 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+21:50:03 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:50:15 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+21:50:15 INFO  : The hardware specification used by project 'mb_vid_oe3' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:50:15 INFO  : The file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit' stored in project is removed.
+21:50:15 INFO  : The updated bitstream files are copied from platform to folder '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream' in project 'mb_vid_oe3'.
+21:50:22 INFO  : Result from executing command 'removePlatformRepo': 
+21:50:29 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+21:50:29 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:50:33 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+21:50:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:50:41 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:50:41 INFO  : 'jtag frequency' command is executed.
+21:50:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:50:42 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+21:50:42 INFO  : Context for processor 'microblaze_0' is selected.
+21:50:42 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+21:50:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:50:42 INFO  : Context for processor 'microblaze_0' is selected.
+21:50:42 INFO  : System reset is completed.
+21:50:45 INFO  : 'after 3000' command is executed.
+21:50:45 INFO  : Context for processor 'microblaze_0' is selected.
+21:50:45 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+21:50:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+21:50:46 INFO  : Context for processor 'microblaze_0' is selected.
+21:50:46 INFO  : 'con' command is executed.
+21:50:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:50:46 INFO  : Disconnected from the channel tcfchan#13.
+21:51:12 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+21:51:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:51:17 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:51:17 INFO  : 'jtag frequency' command is executed.
+21:51:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:51:18 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+21:51:18 INFO  : Context for processor 'microblaze_0' is selected.
+21:51:18 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+21:51:18 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:51:18 INFO  : Context for processor 'microblaze_0' is selected.
+21:51:18 INFO  : System reset is completed.
+21:51:21 INFO  : 'after 3000' command is executed.
+21:51:21 INFO  : Context for processor 'microblaze_0' is selected.
+21:51:21 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+21:51:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+21:51:21 INFO  : Context for processor 'microblaze_0' is selected.
+21:51:21 INFO  : 'con' command is executed.
+21:51:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:51:21 INFO  : Disconnected from the channel tcfchan#14.
+21:52:06 INFO  : Result from executing command 'removePlatformRepo': 
+21:52:10 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+21:52:53 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+21:53:18 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+21:53:22 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+21:53:22 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:53:30 INFO  : Result from executing command 'removePlatformRepo': 
+21:53:39 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+21:53:39 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+21:53:42 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+21:53:42 INFO  : The hardware specification used by project 'mb_vid_oe3' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:53:42 INFO  : The file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit' stored in project is removed.
+21:53:43 INFO  : The updated bitstream files are copied from platform to folder '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream' in project 'mb_vid_oe3'.
+21:53:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:53:46 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:53:46 INFO  : 'jtag frequency' command is executed.
+21:53:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:53:47 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+21:53:47 INFO  : Context for processor 'microblaze_0' is selected.
+21:53:47 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+21:53:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:53:47 INFO  : Context for processor 'microblaze_0' is selected.
+21:53:47 INFO  : System reset is completed.
+21:53:50 INFO  : 'after 3000' command is executed.
+21:53:50 INFO  : Context for processor 'microblaze_0' is selected.
+21:53:50 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+21:53:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+21:53:50 INFO  : Context for processor 'microblaze_0' is selected.
+21:53:50 INFO  : 'con' command is executed.
+21:53:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:53:50 INFO  : Disconnected from the channel tcfchan#20.
+21:55:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:55:09 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+21:55:09 INFO  : 'jtag frequency' command is executed.
+21:55:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+21:55:11 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+21:55:11 INFO  : Context for processor 'microblaze_0' is selected.
+21:55:11 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+21:55:11 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+21:55:11 INFO  : Context for processor 'microblaze_0' is selected.
+21:55:11 INFO  : System reset is completed.
+21:55:14 INFO  : 'after 3000' command is executed.
+21:55:14 INFO  : Context for processor 'microblaze_0' is selected.
+21:55:14 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+21:55:14 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+21:55:14 INFO  : Context for processor 'microblaze_0' is selected.
+21:55:14 INFO  : 'con' command is executed.
+21:55:14 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+21:55:14 INFO  : Disconnected from the channel tcfchan#21.
+22:03:11 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+22:03:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:03:15 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+22:03:15 INFO  : 'jtag frequency' command is executed.
+22:03:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:03:17 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+22:03:17 INFO  : Context for processor 'microblaze_0' is selected.
+22:03:17 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+22:03:17 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:03:17 INFO  : Context for processor 'microblaze_0' is selected.
+22:03:17 INFO  : System reset is completed.
+22:03:20 INFO  : 'after 3000' command is executed.
+22:03:20 INFO  : Context for processor 'microblaze_0' is selected.
+22:03:20 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+22:03:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+22:03:20 INFO  : Context for processor 'microblaze_0' is selected.
+22:03:20 INFO  : 'con' command is executed.
+22:03:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:03:20 INFO  : Disconnected from the channel tcfchan#22.
+22:13:07 INFO  : Result from executing command 'removePlatformRepo': 
+22:13:12 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+22:13:20 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+22:13:25 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+22:13:25 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+22:13:32 INFO  : Result from executing command 'removePlatformRepo': 
+22:13:38 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+22:13:38 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+22:13:41 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+22:13:41 INFO  : The hardware specification used by project 'mb_vid_oe3' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:13:41 INFO  : The file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit' stored in project is removed.
+22:13:41 INFO  : The updated bitstream files are copied from platform to folder '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream' in project 'mb_vid_oe3'.
+22:13:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:13:45 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+22:13:45 INFO  : 'jtag frequency' command is executed.
+22:13:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:13:46 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+22:13:46 INFO  : Context for processor 'microblaze_0' is selected.
+22:13:46 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+22:13:46 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:13:46 INFO  : Context for processor 'microblaze_0' is selected.
+22:13:46 INFO  : System reset is completed.
+22:13:49 INFO  : 'after 3000' command is executed.
+22:13:49 INFO  : Context for processor 'microblaze_0' is selected.
+22:13:49 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+22:13:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+22:13:49 INFO  : Context for processor 'microblaze_0' is selected.
+22:13:49 INFO  : 'con' command is executed.
+22:13:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:13:49 INFO  : Disconnected from the channel tcfchan#27.
+22:32:36 INFO  : Result from executing command 'removePlatformRepo': 
+22:32:41 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+22:32:47 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+22:32:52 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+22:32:52 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+22:33:00 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+22:33:01 INFO  : The hardware specification used by project 'mb_vid_oe3' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+22:33:01 INFO  : The file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit' stored in project is removed.
+22:33:01 INFO  : The updated bitstream files are copied from platform to folder '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream' in project 'mb_vid_oe3'.
+22:33:13 INFO  : Result from executing command 'removePlatformRepo': 
+22:33:18 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+22:33:18 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+22:33:21 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+22:33:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:33:24 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+22:33:24 INFO  : 'jtag frequency' command is executed.
+22:33:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:33:25 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+22:33:25 INFO  : Context for processor 'microblaze_0' is selected.
+22:33:25 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+22:33:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:33:25 INFO  : Context for processor 'microblaze_0' is selected.
+22:33:25 INFO  : System reset is completed.
+22:33:28 INFO  : 'after 3000' command is executed.
+22:33:28 INFO  : Context for processor 'microblaze_0' is selected.
+22:33:28 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+22:33:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+22:33:28 INFO  : Context for processor 'microblaze_0' is selected.
+22:33:28 INFO  : 'con' command is executed.
+22:33:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:33:28 INFO  : Disconnected from the channel tcfchan#33.
+22:33:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:33:33 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+22:33:33 INFO  : 'jtag frequency' command is executed.
+22:33:36 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+22:33:36 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+22:33:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+22:33:36 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+22:33:52 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/IDE.log'.
+22:33:52 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/temp_xsdb_launch_script.tcl
+22:33:53 INFO  : XSCT server has started successfully.
+22:33:53 INFO  : Successfully done setting XSCT server connection channel  
+22:33:53 INFO  : plnx-install-location is set to ''
+22:33:53 INFO  : Successfully done setting workspace for the tool. 
+22:33:53 INFO  : Successfully done query RDI_DATADIR 
+22:33:53 INFO  : Platform repository initialization has completed.
+22:33:53 INFO  : Registering command handlers for Vitis TCF services
+22:34:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:34:05 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+22:34:05 INFO  : 'jtag frequency' command is executed.
+22:34:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:34:06 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+22:34:06 INFO  : Context for processor 'microblaze_0' is selected.
+22:34:06 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+22:34:06 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:34:06 INFO  : Context for processor 'microblaze_0' is selected.
+22:34:06 INFO  : System reset is completed.
+22:34:09 INFO  : 'after 3000' command is executed.
+22:34:09 INFO  : Context for processor 'microblaze_0' is selected.
+22:34:09 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+22:34:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+22:34:09 INFO  : Context for processor 'microblaze_0' is selected.
+22:34:09 INFO  : 'con' command is executed.
+22:34:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:34:09 INFO  : Disconnected from the channel tcfchan#1.
+22:34:25 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+22:34:31 INFO  : Result from executing command 'removePlatformRepo': 
+22:34:36 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+22:34:36 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+22:34:39 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+22:34:39 WARN  : Failed to closehw "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa"
+Reason: Cannot close hw design '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+Design is not opened in the current session.
+
+22:34:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:34:46 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+22:34:46 INFO  : 'jtag frequency' command is executed.
+22:34:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:34:47 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+22:34:47 INFO  : Context for processor 'microblaze_0' is selected.
+22:34:47 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+22:34:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:34:47 INFO  : Context for processor 'microblaze_0' is selected.
+22:34:47 INFO  : System reset is completed.
+22:34:50 INFO  : 'after 3000' command is executed.
+22:34:50 INFO  : Context for processor 'microblaze_0' is selected.
+22:34:50 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+22:34:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+22:34:50 INFO  : Context for processor 'microblaze_0' is selected.
+22:34:50 INFO  : 'con' command is executed.
+22:34:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:34:50 INFO  : Launch script is exported to file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3_system/_ide/scripts/systemdebugger_mb_vid_oe3_system_standalone.tcl'
+22:35:07 INFO  : Disconnected from the channel tcfchan#4.
+22:35:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:35:07 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+22:35:07 INFO  : 'jtag frequency' command is executed.
+22:35:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:35:08 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+22:35:08 INFO  : Context for processor 'microblaze_0' is selected.
+22:35:08 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+22:35:08 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:35:08 INFO  : Context for processor 'microblaze_0' is selected.
+22:35:08 INFO  : System reset is completed.
+22:35:11 INFO  : 'after 3000' command is executed.
+22:35:11 INFO  : Context for processor 'microblaze_0' is selected.
+22:35:11 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+22:35:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+22:35:11 INFO  : Context for processor 'microblaze_0' is selected.
+22:35:11 INFO  : 'con' command is executed.
+22:35:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:35:11 INFO  : Launch script is exported to file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3_system/_ide/scripts/systemdebugger_mb_vid_oe3_system_standalone.tcl'
+22:58:07 INFO  : Result from executing command 'removePlatformRepo': 
+22:58:26 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+22:58:26 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+22:58:38 INFO  : Result from executing command 'removePlatformRepo': 
+22:58:43 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+22:58:43 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+22:58:46 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+22:59:14 ERROR : XSCT server calls should not be made from TCF thread.
+java.lang.RuntimeException: XSCT server calls should not be made from TCF thread.
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueAndWait(XSDBCommandManager.java:392) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.executeAndRespond(XsdbCommandUtils.java:325) [com.xilinx.sdk.xsdb_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.populateDesignProps(HwPlatform.java:521) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.isZynq(HwPlatform.java:1101) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.getArchFamily(HwPlatform.java:587) [com.xilinx.sdk.hw_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readCrossTriggerModel(BaseLaunchConfigModel.java:174) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readAndSetAttributes(BaseLaunchConfigModel.java:156) [com.xilinx.sdk.tcf.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.ui.SdsLaunchConfigModel.newInstance(SdsLaunchConfigModel.java:109) [com.xilinx.sdx.sdsoc.debug.ui_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.createConfigModel(SdsTcfLaunchDelegate.java:85) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.generateReports(SdsTcfLaunchDelegate.java:641) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.onDisconnected(SdsTcfLaunchDelegate.java:615) [com.xilinx.sdx.sdsoc.debug_1.0.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.ui.model.TCFModelManager$1.onDisconnected(TCFModelManager.java:79) [org.eclipse.tcf.debug.ui_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.onDisconnected(TCFLaunch.java:532) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch$43.onChannelClosed(TCFLaunch.java:1643) [org.eclipse.tcf.debug_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:858) [org.eclipse.tcf.core_1.7.0.202210132147.jar:?]
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98) [org.eclipse.tcf_1.7.0.202210132147.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+22:59:14 INFO  : Disconnected from the channel tcfchan#5.
+22:59:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:59:14 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+22:59:14 INFO  : 'jtag frequency' command is executed.
+22:59:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+22:59:15 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+22:59:15 INFO  : Context for processor 'microblaze_0' is selected.
+22:59:15 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+22:59:15 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+22:59:15 INFO  : Context for processor 'microblaze_0' is selected.
+22:59:15 INFO  : System reset is completed.
+22:59:18 INFO  : 'after 3000' command is executed.
+22:59:18 INFO  : Context for processor 'microblaze_0' is selected.
+22:59:19 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+22:59:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+22:59:19 INFO  : Context for processor 'microblaze_0' is selected.
+22:59:19 INFO  : 'con' command is executed.
+22:59:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+22:59:19 INFO  : Launch script is exported to file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3_system/_ide/scripts/systemdebugger_mb_vid_oe3_system_standalone.tcl'
+23:02:28 INFO  : Disconnected from the channel tcfchan#10.
+23:02:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:02:28 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+23:02:28 INFO  : 'jtag frequency' command is executed.
+23:02:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:02:30 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+23:02:30 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:30 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+23:02:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:02:30 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:30 INFO  : System reset is completed.
+23:02:33 INFO  : 'after 3000' command is executed.
+23:02:33 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:33 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+23:02:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+23:02:33 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:33 INFO  : 'con' command is executed.
+23:02:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:02:33 INFO  : Launch script is exported to file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3_system/_ide/scripts/systemdebugger_mb_vid_oe3_system_standalone.tcl'
+23:02:40 INFO  : Disconnected from the channel tcfchan#11.
+23:02:40 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:02:40 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+23:02:40 INFO  : 'jtag frequency' command is executed.
+23:02:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+23:02:42 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit"
+23:02:42 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:42 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+23:02:42 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+23:02:42 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:42 INFO  : System reset is completed.
+23:02:45 INFO  : 'after 3000' command is executed.
+23:02:45 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:45 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf' is downloaded to processor 'microblaze_0'.
+23:02:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/Debug/mb_vid_oe3.elf
+----------------End of Script----------------
+
+23:02:45 INFO  : Context for processor 'microblaze_0' is selected.
+23:02:45 INFO  : 'con' command is executed.
+23:02:45 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+23:02:45 INFO  : Launch script is exported to file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3_system/_ide/scripts/systemdebugger_mb_vid_oe3_system_standalone.tcl'
+23:35:52 INFO  : Disconnected from the channel tcfchan#12.

@@ -2,13 +2,13 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Wed Nov 20 19:58:07 2024
-# Process ID: 28031
+# Start of session at: Thu Nov 21 22:52:18 2024
+# Process ID: 22914
 # Current directory: /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.runs/vid_oe3_v_tc_0_0_synth_1
 # Command line: vivado -log vid_oe3_v_tc_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vid_oe3_v_tc_0_0.tcl
 # Log file: /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.runs/vid_oe3_v_tc_0_0_synth_1/vid_oe3_v_tc_0_0.vds
 # Journal file: /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.runs/vid_oe3_v_tc_0_0_synth_1/vivado.jou
-# Running On: SgoSkzD, OS: Linux, CPU Frequency: 3774.928 MHz, CPU Physical cores: 12, Host memory: 33545 MB
+# Running On: SgoSkzD, OS: Linux, CPU Frequency: 4217.670 MHz, CPU Physical cores: 12, Host memory: 33545 MB
 #-----------------------------------------------------------
 source vid_oe3_v_tc_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -22,12 +22,12 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7s50'
 INFO: [Device 21-403] Loading part xc7s50csga324-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 28146
+INFO: [Synth 8-7075] Helper process launched with PID 23055
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/alottadata/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2170.297 ; gain = 369.801 ; free physical = 13450 ; free virtual = 17885
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1214.319; parent = 1069.939; children = 144.380
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3797.121; parent = 2176.238; children = 1620.883
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2172.301 ; gain = 371.738 ; free physical = 9292 ; free virtual = 14965
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1213.702; parent = 1069.063; children = 144.639
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3819.184; parent = 2175.273; children = 1643.910
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'vid_oe3_v_tc_0_0' [/home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_v_tc_0_0/synth/vid_oe3_v_tc_0_0.vhd:97]
 	Parameter C_HAS_AXI4_LITE bound to: 1 - type: integer 
@@ -35,8 +35,8 @@ INFO: [Synth 8-638] synthesizing module 'vid_oe3_v_tc_0_0' [/home/sean/Downloads
 	Parameter C_ARBITRARY_RES_EN bound to: 0 - type: integer 
 	Parameter C_VID_PPC bound to: 4 - type: integer 
 	Parameter C_GEN_INTERLACED bound to: 0 - type: integer 
-	Parameter C_GEN_HACTIVE_SIZE bound to: 640 - type: integer 
-	Parameter C_GEN_VACTIVE_SIZE bound to: 480 - type: integer 
+	Parameter C_GEN_HACTIVE_SIZE bound to: 1280 - type: integer 
+	Parameter C_GEN_VACTIVE_SIZE bound to: 720 - type: integer 
 	Parameter C_GEN_CPARITY bound to: 0 - type: integer 
 	Parameter C_GEN_FIELDID_POLARITY bound to: 1 - type: integer 
 	Parameter C_GEN_VBLANK_POLARITY bound to: 1 - type: integer 
@@ -46,23 +46,23 @@ INFO: [Synth 8-638] synthesizing module 'vid_oe3_v_tc_0_0' [/home/sean/Downloads
 	Parameter C_GEN_AVIDEO_POLARITY bound to: 1 - type: integer 
 	Parameter C_GEN_ACHROMA_POLARITY bound to: 1 - type: integer 
 	Parameter C_GEN_VIDEO_FORMAT bound to: 2 - type: integer 
-	Parameter C_GEN_HFRAME_SIZE bound to: 800 - type: integer 
-	Parameter C_GEN_F0_VFRAME_SIZE bound to: 525 - type: integer 
-	Parameter C_GEN_F1_VFRAME_SIZE bound to: 525 - type: integer 
-	Parameter C_GEN_HSYNC_START bound to: 656 - type: integer 
-	Parameter C_GEN_HSYNC_END bound to: 752 - type: integer 
-	Parameter C_GEN_F0_VBLANK_HSTART bound to: 656 - type: integer 
-	Parameter C_GEN_F0_VBLANK_HEND bound to: 656 - type: integer 
-	Parameter C_GEN_F0_VSYNC_VSTART bound to: 489 - type: integer 
-	Parameter C_GEN_F0_VSYNC_VEND bound to: 491 - type: integer 
-	Parameter C_GEN_F0_VSYNC_HSTART bound to: 656 - type: integer 
-	Parameter C_GEN_F0_VSYNC_HEND bound to: 656 - type: integer 
-	Parameter C_GEN_F1_VBLANK_HSTART bound to: 656 - type: integer 
-	Parameter C_GEN_F1_VBLANK_HEND bound to: 656 - type: integer 
-	Parameter C_GEN_F1_VSYNC_VSTART bound to: 489 - type: integer 
-	Parameter C_GEN_F1_VSYNC_VEND bound to: 491 - type: integer 
-	Parameter C_GEN_F1_VSYNC_HSTART bound to: 656 - type: integer 
-	Parameter C_GEN_F1_VSYNC_HEND bound to: 656 - type: integer 
+	Parameter C_GEN_HFRAME_SIZE bound to: 1650 - type: integer 
+	Parameter C_GEN_F0_VFRAME_SIZE bound to: 750 - type: integer 
+	Parameter C_GEN_F1_VFRAME_SIZE bound to: 750 - type: integer 
+	Parameter C_GEN_HSYNC_START bound to: 1390 - type: integer 
+	Parameter C_GEN_HSYNC_END bound to: 1430 - type: integer 
+	Parameter C_GEN_F0_VBLANK_HSTART bound to: 1390 - type: integer 
+	Parameter C_GEN_F0_VBLANK_HEND bound to: 1390 - type: integer 
+	Parameter C_GEN_F0_VSYNC_VSTART bound to: 724 - type: integer 
+	Parameter C_GEN_F0_VSYNC_VEND bound to: 729 - type: integer 
+	Parameter C_GEN_F0_VSYNC_HSTART bound to: 1390 - type: integer 
+	Parameter C_GEN_F0_VSYNC_HEND bound to: 1390 - type: integer 
+	Parameter C_GEN_F1_VBLANK_HSTART bound to: 1390 - type: integer 
+	Parameter C_GEN_F1_VBLANK_HEND bound to: 1390 - type: integer 
+	Parameter C_GEN_F1_VSYNC_VSTART bound to: 724 - type: integer 
+	Parameter C_GEN_F1_VSYNC_VEND bound to: 729 - type: integer 
+	Parameter C_GEN_F1_VSYNC_HSTART bound to: 1390 - type: integer 
+	Parameter C_GEN_F1_VSYNC_HEND bound to: 1390 - type: integer 
 	Parameter C_FSYNC_HSTART0 bound to: 0 - type: integer 
 	Parameter C_FSYNC_VSTART0 bound to: 0 - type: integer 
 	Parameter C_FSYNC_HSTART1 bound to: 0 - type: integer 
@@ -95,8 +95,8 @@ INFO: [Synth 8-638] synthesizing module 'vid_oe3_v_tc_0_0' [/home/sean/Downloads
 	Parameter C_FSYNC_VSTART14 bound to: 0 - type: integer 
 	Parameter C_FSYNC_HSTART15 bound to: 0 - type: integer 
 	Parameter C_FSYNC_VSTART15 bound to: 0 - type: integer 
-	Parameter C_MAX_PIXELS bound to: 4096 - type: integer 
-	Parameter C_MAX_LINES bound to: 4096 - type: integer 
+	Parameter C_MAX_PIXELS bound to: 2048 - type: integer 
+	Parameter C_MAX_LINES bound to: 2048 - type: integer 
 	Parameter C_NUM_FSYNCS bound to: 1 - type: integer 
 	Parameter C_INTERLACE_EN bound to: 0 - type: integer 
 	Parameter C_GEN_AUTO_SWITCH bound to: 0 - type: integer 
@@ -132,7 +132,6 @@ INFO: [Synth 8-226] default block is never used [/home/sean/Downloads/git/ECE385
 INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (0#1) [/home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
 INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (0#1) [/home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
 INFO: [Synth 8-256] done synthesizing module 'vid_oe3_v_tc_0_0' (0#1) [/home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_v_tc_0_0/synth/vid_oe3_v_tc_0_0.vhd:97]
-WARNING: [Synth 8-7129] Port gen_v0chroma_start[11] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v0chroma_start[10] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v0chroma_start[9] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v0chroma_start[8] in module tc_generator is either unconnected or has no load
@@ -144,7 +143,6 @@ WARNING: [Synth 8-7129] Port gen_v0chroma_start[3] in module tc_generator is eit
 WARNING: [Synth 8-7129] Port gen_v0chroma_start[2] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v0chroma_start[1] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v0chroma_start[0] in module tc_generator is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gen_v1total[11] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1total[10] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1total[9] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1total[8] in module tc_generator is either unconnected or has no load
@@ -156,7 +154,6 @@ WARNING: [Synth 8-7129] Port gen_v1total[3] in module tc_generator is either unc
 WARNING: [Synth 8-7129] Port gen_v1total[2] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1total[1] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1total[0] in module tc_generator is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gen_v1fp_start[11] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1fp_start[10] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1fp_start[9] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1fp_start[8] in module tc_generator is either unconnected or has no load
@@ -168,7 +165,6 @@ WARNING: [Synth 8-7129] Port gen_v1fp_start[3] in module tc_generator is either 
 WARNING: [Synth 8-7129] Port gen_v1fp_start[2] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1fp_start[1] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1fp_start[0] in module tc_generator is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gen_v1sync_start[11] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1sync_start[10] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1sync_start[9] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1sync_start[8] in module tc_generator is either unconnected or has no load
@@ -180,7 +176,6 @@ WARNING: [Synth 8-7129] Port gen_v1sync_start[3] in module tc_generator is eithe
 WARNING: [Synth 8-7129] Port gen_v1sync_start[2] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1sync_start[1] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1sync_start[0] in module tc_generator is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gen_v1bp_start[11] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1bp_start[10] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1bp_start[9] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1bp_start[8] in module tc_generator is either unconnected or has no load
@@ -192,7 +187,6 @@ WARNING: [Synth 8-7129] Port gen_v1bp_start[3] in module tc_generator is either 
 WARNING: [Synth 8-7129] Port gen_v1bp_start[2] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1bp_start[1] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1bp_start[0] in module tc_generator is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gen_v1active_start[11] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1active_start[10] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1active_start[9] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1active_start[8] in module tc_generator is either unconnected or has no load
@@ -204,7 +198,6 @@ WARNING: [Synth 8-7129] Port gen_v1active_start[3] in module tc_generator is eit
 WARNING: [Synth 8-7129] Port gen_v1active_start[2] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1active_start[1] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1active_start[0] in module tc_generator is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gen_v1chroma_start[11] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1chroma_start[10] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1chroma_start[9] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1chroma_start[8] in module tc_generator is either unconnected or has no load
@@ -216,7 +209,6 @@ WARNING: [Synth 8-7129] Port gen_v1chroma_start[3] in module tc_generator is eit
 WARNING: [Synth 8-7129] Port gen_v1chroma_start[2] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1chroma_start[1] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1chroma_start[0] in module tc_generator is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[11] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[10] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[9] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[8] in module tc_generator is either unconnected or has no load
@@ -228,30 +220,38 @@ WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[3] in module tc_generator is ei
 WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[2] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[1] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1fp_start_hori[0] in module tc_generator is either unconnected or has no load
-WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[11] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[10] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[9] in module tc_generator is either unconnected or has no load
 WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[8] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[7] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[6] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[5] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[4] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[3] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[2] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[1] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1sync_start_hori[0] in module tc_generator is either unconnected or has no load
+WARNING: [Synth 8-7129] Port gen_v1bp_start_hori[10] in module tc_generator is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2290.203 ; gain = 489.707 ; free physical = 13391 ; free virtual = 17841
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1214.319; parent = 1069.939; children = 144.380
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3911.090; parent = 2290.207; children = 1620.883
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2290.238 ; gain = 489.676 ; free physical = 9315 ; free virtual = 14992
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1213.702; parent = 1069.063; children = 144.639
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3934.152; parent = 2290.242; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2308.016 ; gain = 507.520 ; free physical = 13347 ; free virtual = 17796
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1214.319; parent = 1069.939; children = 144.380
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3928.902; parent = 2308.020; children = 1620.883
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2308.051 ; gain = 507.488 ; free physical = 9281 ; free virtual = 14958
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1213.702; parent = 1069.063; children = 144.639
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3951.965; parent = 2308.055; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2308.016 ; gain = 507.520 ; free physical = 13342 ; free virtual = 17791
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1214.319; parent = 1069.939; children = 144.380
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 3928.902; parent = 2308.020; children = 1620.883
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2308.051 ; gain = 507.488 ; free physical = 9275 ; free virtual = 14953
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1213.702; parent = 1069.063; children = 144.639
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 3951.965; parent = 2308.055; children = 1643.910
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2308.016 ; gain = 0.000 ; free physical = 13308 ; free virtual = 17757
+Netlist sorting complete. Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2308.051 ; gain = 0.000 ; free physical = 9218 ; free virtual = 14895
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -269,26 +269,26 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/vid_oe3_v_tc
 INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.766 ; gain = 0.000 ; free physical = 13359 ; free virtual = 17809
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2460.801 ; gain = 0.000 ; free physical = 9280 ; free virtual = 14986
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2458.766 ; gain = 0.000 ; free physical = 13353 ; free virtual = 17805
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2460.801 ; gain = 0.000 ; free physical = 9270 ; free virtual = 14979
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [/alottadata/tools/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13391 ; free virtual = 17862
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1214.319; parent = 1069.939; children = 144.380
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9287 ; free virtual = 14979
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1213.702; parent = 1069.063; children = 144.639
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13399 ; free virtual = 17870
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1214.319; parent = 1069.939; children = 144.380
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9286 ; free virtual = 14977
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1213.702; parent = 1069.063; children = 144.639
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -296,9 +296,9 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.runs/vid_oe3_v_tc_0_0_synth_1/dont_touch.xdc, line 9).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/xpm_cdc_single_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13395 ; free virtual = 17866
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1214.319; parent = 1069.939; children = 144.380
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9284 ; free virtual = 14975
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1213.702; parent = 1069.063; children = 144.639
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
 ---------------------------------------------------------------------------------------------------
@@ -311,17 +311,17 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13212 ; free virtual = 17685
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1214.319; parent = 1069.939; children = 144.380
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9262 ; free virtual = 14955
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1213.702; parent = 1069.063; children = 144.639
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input   12 Bit       Adders := 3     
-	   3 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 6     
+	   3 Input   11 Bit       Adders := 1     
 	   2 Input   10 Bit       Adders := 1     
 	   2 Input    1 Bit       Adders := 1     
 +---XORs : 
@@ -331,7 +331,7 @@ Detailed RTL Component Info :
 	               34 Bit    Registers := 3     
 	               32 Bit    Registers := 103   
 	               17 Bit    Registers := 1     
-	               12 Bit    Registers := 18    
+	               11 Bit    Registers := 21    
 	               10 Bit    Registers := 1     
 	                9 Bit    Registers := 1     
 	                7 Bit    Registers := 6     
@@ -344,10 +344,10 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input   32 Bit        Muxes := 82    
 	   4 Input   32 Bit        Muxes := 2     
-	   4 Input   28 Bit        Muxes := 17    
+	   4 Input   27 Bit        Muxes := 17    
 	   2 Input   17 Bit        Muxes := 1     
-	   2 Input   12 Bit        Muxes := 15    
-	   3 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 16    
+	   3 Input   11 Bit        Muxes := 1     
 	   4 Input   10 Bit        Muxes := 1     
 	   2 Input    9 Bit        Muxes := 1     
 	   2 Input    7 Bit        Muxes := 2     
@@ -377,33 +377,33 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13529 ; free virtual = 18009
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1217.938; parent = 1069.939; children = 148.266
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9483 ; free virtual = 15212
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1218.652; parent = 1070.114; children = 148.538
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13751 ; free virtual = 18227
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1340.194; parent = 1186.940; children = 153.254
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9703 ; free virtual = 15400
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1339.153; parent = 1185.566; children = 153.587
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13745 ; free virtual = 18221
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1345.461; parent = 1192.207; children = 153.254
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9697 ; free virtual = 15394
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1344.002; parent = 1190.415; children = 153.587
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13733 ; free virtual = 18209
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1346.668; parent = 1193.414; children = 153.254
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9682 ; free virtual = 15379
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1345.138; parent = 1191.551; children = 153.587
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -421,49 +421,49 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13710 ; free virtual = 18186
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1347.044; parent = 1193.790; children = 153.254
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9650 ; free virtual = 15346
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1345.734; parent = 1192.147; children = 153.587
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13707 ; free virtual = 18183
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1347.044; parent = 1193.790; children = 153.254
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9648 ; free virtual = 15344
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1345.734; parent = 1192.147; children = 153.587
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13695 ; free virtual = 18171
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1347.224; parent = 1193.970; children = 153.254
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9644 ; free virtual = 15340
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1345.943; parent = 1192.356; children = 153.587
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13696 ; free virtual = 18172
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1347.245; parent = 1193.991; children = 153.254
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9643 ; free virtual = 15339
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1345.965; parent = 1192.378; children = 153.587
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13695 ; free virtual = 18171
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1347.276; parent = 1194.022; children = 153.254
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9643 ; free virtual = 15339
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1346.012; parent = 1192.425; children = 153.587
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13694 ; free virtual = 18170
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1347.276; parent = 1194.022; children = 153.254
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9643 ; free virtual = 15339
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1346.012; parent = 1192.425; children = 153.587
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -497,44 +497,44 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |    45|
-|2     |LUT1   |    43|
-|3     |LUT2   |    80|
-|4     |LUT3   |   586|
-|5     |LUT4   |    94|
-|6     |LUT5   |   122|
-|7     |LUT6   |   427|
+|1     |CARRY4 |    27|
+|2     |LUT1   |    11|
+|3     |LUT2   |    87|
+|4     |LUT3   |   595|
+|5     |LUT4   |   125|
+|6     |LUT5   |   138|
+|7     |LUT6   |   411|
 |8     |MUXF7  |   160|
 |9     |SRL16E |     5|
-|10    |FDRE   |  3044|
-|11    |FDSE   |   199|
+|10    |FDRE   |  2878|
+|11    |FDSE   |   282|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13694 ; free virtual = 18170
-Synthesis current peak Physical Memory [PSS] (MB): peak = 1347.276; parent = 1194.022; children = 153.254
-Synthesis current peak Virtual Memory [VSS] (MB): peak = 4047.637; parent = 2426.754; children = 1620.883
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9644 ; free virtual = 15341
+Synthesis current peak Physical Memory [PSS] (MB): peak = 1346.012; parent = 1192.425; children = 153.587
+Synthesis current peak Virtual Memory [VSS] (MB): peak = 4072.699; parent = 2428.789; children = 1643.910
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 922 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 2458.766 ; gain = 507.520 ; free physical = 13745 ; free virtual = 18221
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 2458.766 ; gain = 658.270 ; free physical = 13744 ; free virtual = 18220
+Synthesis finished with 0 errors, 0 critical warnings and 888 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 2460.801 ; gain = 507.488 ; free physical = 9711 ; free virtual = 15408
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 2460.801 ; gain = 660.238 ; free physical = 9711 ; free virtual = 15408
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2458.766 ; gain = 0.000 ; free physical = 13848 ; free virtual = 18325
-INFO: [Netlist 29-17] Analyzing 205 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2460.801 ; gain = 0.000 ; free physical = 9819 ; free virtual = 15515
+INFO: [Netlist 29-17] Analyzing 187 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2458.766 ; gain = 0.000 ; free physical = 13810 ; free virtual = 18287
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2460.801 ; gain = 0.000 ; free physical = 9738 ; free virtual = 15461
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: 896c4f5e
+Synth Design complete, checksum: 1e993278
 INFO: [Common 17-83] Releasing license: Synthesis
 43 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 2458.766 ; gain = 922.395 ; free physical = 14012 ; free virtual = 18502
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:26 . Memory (MB): peak = 2460.801 ; gain = 917.488 ; free physical = 9951 ; free virtual = 15675
 INFO: [Common 17-1381] The checkpoint '/home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.runs/vid_oe3_v_tc_0_0_synth_1/vid_oe3_v_tc_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP vid_oe3_v_tc_0_0, cache-ID = 75904fa714e4cb9e
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP vid_oe3_v_tc_0_0, cache-ID = fed9d52a04062b40
 INFO: [Coretcl 2-1174] Renamed 12 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.runs/vid_oe3_v_tc_0_0_synth_1/vid_oe3_v_tc_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file vid_oe3_v_tc_0_0_utilization_synth.rpt -pb vid_oe3_v_tc_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Nov 20 19:58:40 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 21 22:52:52 2024...

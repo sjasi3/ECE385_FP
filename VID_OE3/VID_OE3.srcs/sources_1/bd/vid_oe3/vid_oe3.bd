@@ -57,7 +57,9 @@
       "v_axi4s_vid_out_0": "",
       "v_tpg_0": "",
       "v_tc_0": "",
-      "rgb2dvi_0": ""
+      "rgb2dvi_0": "",
+      "xlconstant_0": "",
+      "xlconstant_1": ""
     },
     "interface_ports": {
       "ddr3": {
@@ -1915,10 +1917,10 @@
             "value": "BUFG"
           },
           "CLKOUT1_JITTER": {
-            "value": "261.632"
+            "value": "185.047"
           },
           "CLKOUT1_PHASE_ERROR": {
-            "value": "199.417"
+            "value": "100.585"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
             "value": "24.9999"
@@ -1927,10 +1929,10 @@
             "value": "BUFG"
           },
           "CLKOUT2_JITTER": {
-            "value": "182.112"
+            "value": "130.073"
           },
           "CLKOUT2_PHASE_ERROR": {
-            "value": "199.417"
+            "value": "100.585"
           },
           "CLKOUT2_REQUESTED_OUT_FREQ": {
             "value": "124.9995"
@@ -1962,35 +1964,38 @@
           "ENABLE_CLOCK_MONITOR": {
             "value": "false"
           },
+          "FEEDBACK_SOURCE": {
+            "value": "FDBK_AUTO"
+          },
           "MMCM_BANDWIDTH": {
             "value": "OPTIMIZED"
           },
           "MMCM_CLKFBOUT_MULT_F": {
-            "value": "21"
+            "value": "12.000"
           },
           "MMCM_CLKIN2_PERIOD": {
-            "value": "10.000"
+            "value": "10.0"
           },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "35"
+            "value": "40.000"
           },
           "MMCM_CLKOUT1_DIVIDE": {
-            "value": "7"
+            "value": "8"
           },
           "MMCM_COMPENSATION": {
             "value": "ZHOLD"
           },
           "MMCM_DIVCLK_DIVIDE": {
-            "value": "2"
+            "value": "1"
           },
           "NUM_OUT_CLKS": {
             "value": "2"
           },
           "PRIMITIVE": {
-            "value": "PLL"
+            "value": "MMCM"
           },
           "PRIM_SOURCE": {
-            "value": "No_buffer"
+            "value": "Single_ended_clock_capable_pin"
           }
         }
       },
@@ -2055,10 +2060,16 @@
         "inst_hier_path": "v_tc_0",
         "parameters": {
           "VIDEO_MODE": {
-            "value": "480p"
+            "value": "720p"
           },
           "enable_detection": {
             "value": "false"
+          },
+          "max_clocks_per_line": {
+            "value": "2048"
+          },
+          "max_lines_per_frame": {
+            "value": "2048"
           }
         }
       },
@@ -2070,8 +2081,28 @@
         "parameters": {
           "kGenerateSerialClk": {
             "value": "false"
+          },
+          "kRstActiveHigh": {
+            "value": "false"
           }
         }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "vid_oe3_xlconstant_0_0",
+        "xci_path": "ip/vid_oe3_xlconstant_0_0/vid_oe3_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "vid_oe3_xlconstant_0_1",
+        "xci_path": "ip/vid_oe3_xlconstant_0_1/vid_oe3_xlconstant_0_1.xci",
+        "inst_hier_path": "xlconstant_1"
       }
     },
     "interface_nets": {
@@ -2200,7 +2231,6 @@
       "clk_wiz_0_clk_125MHz": {
         "ports": [
           "clk_wiz_0/clk_125MHz",
-          "v_axi4s_vid_out_0/vid_io_out_clk",
           "rgb2dvi_0/SerialClk"
         ]
       },
@@ -2208,13 +2238,14 @@
         "ports": [
           "clk_wiz_0/clk_25MHz",
           "v_tc_0/clk",
-          "rgb2dvi_0/PixelClk"
+          "rgb2dvi_0/PixelClk",
+          "v_axi4s_vid_out_0/vid_io_out_clk"
         ]
       },
       "clk_wiz_0_locked": {
         "ports": [
           "clk_wiz_0/locked",
-          "rgb2dvi_0/aRst"
+          "rgb2dvi_0/aRst_n"
         ]
       },
       "mdm_1_debug_sys_rst": {
@@ -2311,6 +2342,26 @@
         "ports": [
           "v_axi4s_vid_out_0/vtg_ce",
           "v_tc_0/gen_clken"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "v_axi4s_vid_out_0/fid",
+          "v_axi4s_vid_out_0/vid_io_out_reset",
+          "v_tc_0/sof_state",
+          "v_tc_0/fsync_in"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "xlconstant_1/dout",
+          "v_axi4s_vid_out_0/aclken",
+          "v_axi4s_vid_out_0/aresetn",
+          "v_axi4s_vid_out_0/vid_io_out_ce",
+          "v_tc_0/clken",
+          "v_tc_0/s_axi_aclken",
+          "v_tc_0/resetn"
         ]
       }
     },

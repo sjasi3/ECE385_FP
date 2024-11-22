@@ -53,7 +53,7 @@ output   ap_done;
 output   ap_idle;
 output   ap_ready;
 input  [0:0] sof;
-input  [9:0] width_load_cast1;
+input  [10:0] width_load_cast1;
 input  [23:0] ovrlayYUV_dout;
 input  [4:0] ovrlayYUV_num_data_valid;
 input  [4:0] ovrlayYUV_fifo_cap;
@@ -69,7 +69,7 @@ output  [0:0] m_axis_video_TUSER;
 output  [0:0] m_axis_video_TLAST;
 output  [0:0] m_axis_video_TID;
 output  [0:0] m_axis_video_TDEST;
-input  [10:0] sub;
+input  [11:0] sub;
 input  [15:0] counter_loc_1_out_i;
 output  [15:0] counter_loc_1_out_o;
 output   counter_loc_1_out_o_ap_vld;
@@ -111,11 +111,11 @@ reg    ap_block_pp0_stage0_subdone;
 reg    ap_condition_pp0_exit_iter0_state2;
 reg   [0:0] ap_phi_mux_tmp_user_V_phi_fu_182_p4;
 wire   [15:0] add_ln960_fu_235_p2;
-reg   [9:0] j_fu_108;
-wire   [9:0] j_2_fu_220_p2;
+reg   [10:0] j_fu_108;
+wire   [10:0] j_2_fu_220_p2;
 reg    ap_block_pp0_stage0_01001;
 wire    ap_CS_fsm_state4;
-wire   [10:0] zext_ln936_fu_211_p1;
+wire   [11:0] zext_ln936_fu_211_p1;
 wire   [7:0] pix_444_V_fu_266_p1;
 wire   [7:0] pix_rgb_V_2_fu_270_p4;
 wire   [8:0] p_Result_1_fu_298_p3;
@@ -178,7 +178,7 @@ end
 
 always @ (posedge ap_clk) begin
     if (((ap_start == 1'b1) & (1'b1 == ap_CS_fsm_state1))) begin
-        j_fu_108 <= 10'd0;
+        j_fu_108 <= 11'd0;
     end else if (((icmp_ln936_fu_215_p2 == 1'd0) & (1'b0 == ap_block_pp0_stage0_11001) & (1'b1 == ap_CS_fsm_pp0_stage0) & (ap_enable_reg_pp0_iter0 == 1'b1))) begin
         j_fu_108 <= j_2_fu_220_p2;
     end
@@ -408,7 +408,7 @@ assign counter = (counter_loc_1_out_i + 16'd1);
 
 assign icmp_ln936_fu_215_p2 = ((j_fu_108 == width_load_cast1) ? 1'b1 : 1'b0);
 
-assign j_2_fu_220_p2 = (j_fu_108 + 10'd1);
+assign j_2_fu_220_p2 = (j_fu_108 + 11'd1);
 
 assign m_axis_video_TDATA = {{tmp_fu_331_p3}, {sext_ln880_fu_313_p1[7:0]}};
 

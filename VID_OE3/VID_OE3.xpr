@@ -95,20 +95,32 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_mig_7series_0_0/vid_oe3_mig_7series_0_0.xci">
-          <Proxy FileSetName="vid_oe3_mig_7series_0_0"/>
+        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_xbar_1/vid_oe3_xbar_1.xci">
+          <Proxy FileSetName="vid_oe3_xbar_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_microblaze_0_0/vid_oe3_microblaze_0_0.xci">
           <Proxy FileSetName="vid_oe3_microblaze_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_xbar_1/vid_oe3_xbar_1.xci">
-          <Proxy FileSetName="vid_oe3_xbar_1"/>
+        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_mig_7series_0_0/vid_oe3_mig_7series_0_0.xci">
+          <Proxy FileSetName="vid_oe3_mig_7series_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_microblaze_0_axi_intc_1/vid_oe3_microblaze_0_axi_intc_1.xci">
-          <Proxy FileSetName="vid_oe3_microblaze_0_axi_intc_1"/>
+        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_v_tc_0_0/vid_oe3_v_tc_0_0.xci">
+          <Proxy FileSetName="vid_oe3_v_tc_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_rgb2dvi_0_0/vid_oe3_rgb2dvi_0_0.xci">
+          <Proxy FileSetName="vid_oe3_rgb2dvi_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_v_axi4s_vid_out_0_0/vid_oe3_v_axi4s_vid_out_0_0.xci">
+          <Proxy FileSetName="vid_oe3_v_axi4s_vid_out_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_clk_wiz_0_0/vid_oe3_clk_wiz_0_0.xci">
+          <Proxy FileSetName="vid_oe3_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_mdm_1_1/vid_oe3_mdm_1_1.xci">
           <Proxy FileSetName="vid_oe3_mdm_1_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_axi_timer_0_0/vid_oe3_axi_timer_0_0.xci">
+          <Proxy FileSetName="vid_oe3_axi_timer_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_rst_mig_7series_0_83M_1/vid_oe3_rst_mig_7series_0_83M_1.xci">
           <Proxy FileSetName="vid_oe3_rst_mig_7series_0_83M_1"/>
@@ -116,23 +128,8 @@
         <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_axi_uartlite_0_1/vid_oe3_axi_uartlite_0_1.xci">
           <Proxy FileSetName="vid_oe3_axi_uartlite_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_axi_timer_0_0/vid_oe3_axi_timer_0_0.xci">
-          <Proxy FileSetName="vid_oe3_axi_timer_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_clk_wiz_0_0/vid_oe3_clk_wiz_0_0.xci">
-          <Proxy FileSetName="vid_oe3_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_v_axi4s_vid_out_0_0/vid_oe3_v_axi4s_vid_out_0_0.xci">
-          <Proxy FileSetName="vid_oe3_v_axi4s_vid_out_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_v_tpg_0_0/vid_oe3_v_tpg_0_0.xci">
-          <Proxy FileSetName="vid_oe3_v_tpg_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_v_tc_0_0/vid_oe3_v_tc_0_0.xci">
-          <Proxy FileSetName="vid_oe3_v_tc_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_rgb2dvi_0_0/vid_oe3_rgb2dvi_0_0.xci">
-          <Proxy FileSetName="vid_oe3_rgb2dvi_0_0"/>
+        <CompFileExtendedInfo CompFileName="vid_oe3.bd" FileRelPathName="ip/vid_oe3_microblaze_0_axi_intc_1/vid_oe3_microblaze_0_axi_intc_1.xci">
+          <Proxy FileSetName="vid_oe3_microblaze_0_axi_intc_1"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/imports/DDR3_provided_files/mb_ddr3_top.sv">
@@ -144,16 +141,11 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/vid_oe3/ip/vid_oe3_mig_7series_0_0/mig_a.prj">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="ScopedToCell" Val="vid_oe3_mig_7series_0_0"/>
-        </FileInfo>
-      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="mb_ddr3_top"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="dataflowViewerSettings" Val="min_width=16"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -232,12 +224,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="vid_oe3_v_tpg_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vid_oe3_v_tpg_0_0" RelGenDir="$PGENDIR/vid_oe3_v_tpg_0_0">
-      <Config>
-        <Option Name="TopModule" Val="vid_oe3_v_tpg_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="vid_oe3_rgb2dvi_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/vid_oe3_rgb2dvi_0_0" RelGenDir="$PGENDIR/vid_oe3_rgb2dvi_0_0">
       <Config>
         <Option Name="TopModule" Val="vid_oe3_rgb2dvi_0_0"/>
@@ -303,12 +289,11 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="19">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7s50csga324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mb_ddr3_top.dcp" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7s50csga324-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="true" IncrementalCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mb_ddr3_top.dcp" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
@@ -343,27 +328,16 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="vid_oe3_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="vid_oe3_clk_wiz_0_0" Part="xc7s50csga324-1" ConstrsSet="vid_oe3_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vid_oe3_clk_wiz_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/vid_oe3_clk_wiz_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/vid_oe3_clk_wiz_0_0_synth_1">
+    <Run Id="vid_oe3_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="vid_oe3_clk_wiz_0_0" Part="xc7s50csga324-1" ConstrsSet="vid_oe3_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/vid_oe3_clk_wiz_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/vid_oe3_clk_wiz_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
     <Run Id="vid_oe3_v_tc_0_0_synth_1" Type="Ft3:Synth" SrcSet="vid_oe3_v_tc_0_0" Part="xc7s50csga324-1" ConstrsSet="vid_oe3_v_tc_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vid_oe3_v_tc_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/vid_oe3_v_tc_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/vid_oe3_v_tc_0_0_synth_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vid_oe3_v_tpg_0_0_synth_1" Type="Ft3:Synth" SrcSet="vid_oe3_v_tpg_0_0" Part="xc7s50csga324-1" ConstrsSet="vid_oe3_v_tpg_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/vid_oe3_v_tpg_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/vid_oe3_v_tpg_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/vid_oe3_v_tpg_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
         <Step Id="synth_design"/>
@@ -443,7 +417,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7s50csga324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7s50csga324-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>
@@ -456,7 +430,6 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
@@ -530,23 +503,6 @@
       <RQSFiles/>
     </Run>
     <Run Id="vid_oe3_v_tc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s50csga324-1" ConstrsSet="vid_oe3_v_tc_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vid_oe3_v_tc_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/vid_oe3_v_tc_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/vid_oe3_v_tc_0_0_impl_1">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2022"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-      <RQSFiles/>
-    </Run>
-    <Run Id="vid_oe3_v_tpg_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7s50csga324-1" ConstrsSet="vid_oe3_v_tpg_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="vid_oe3_v_tpg_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/vid_oe3_v_tpg_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/vid_oe3_v_tpg_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2022"/>
         <Step Id="init_design"/>

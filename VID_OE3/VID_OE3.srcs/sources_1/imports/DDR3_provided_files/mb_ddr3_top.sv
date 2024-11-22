@@ -47,7 +47,7 @@ module mb_ddr3_top
         .ddr3_ras_n(ddr3_ras_n),
         .ddr3_reset_n(ddr3_reset_n),
         .ddr3_we_n(ddr3_we_n),
-        .reset_rtl_0(~reset_rtl_0),
+        .reset_rtl_0(reset_rtl_0),
         .hdmi_tx_0_clk_n(hdmi_tmds_clk_n),
         .hdmi_tx_0_clk_p(hdmi_tmds_clk_p),
         .hdmi_tx_0_data_n(hdmi_tmds_data_n),

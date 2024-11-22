@@ -1,6 +1,34 @@
-20:35:28 **** Incremental Build of configuration Debug for project mb_vid_oe3 ****
+22:58:46 **** Build of configuration Debug for project mb_vid_oe3 ****
 make all 
-make: Nothing to be done for 'all'.
+Building file: ../src/helloworld.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'configureStartVTC':
+../src/helloworld.c:58:22: warning: unused variable 'SignalCfgPtr' [-Wunused-variable]
+   58 |         XVtc_Signal *SignalCfgPtr;
+      |                      ^~~~~~~~~~~~
+../src/helloworld.c: In function 'configureStartTPG':
+../src/helloworld.c:169:18: warning: 'tpgInst' may be used uninitialized [-Wmaybe-uninitialized]
+  169 |         Status = XV_tpg_CfgInitialize(tpgInst, tpg_Config, tpg_Config->BaseAddress);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: MicroBlaze gcc compiler
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: mb_vid_oe3.elf
+Invoking: MicroBlaze gcc linker
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "mb_vid_oe3.elf" ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: mb_vid_oe3.elf
+ 
+Invoking: MicroBlaze Print Size
+mb-size mb_vid_oe3.elf  |tee "mb_vid_oe3.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  13708	    444	   3288	  17440	   4420	mb_vid_oe3.elf
+Finished building: mb_vid_oe3.elf.size
+ 
 
-20:35:28 Build Finished (took 66ms)
+22:58:46 Build Finished (took 167ms)
 
