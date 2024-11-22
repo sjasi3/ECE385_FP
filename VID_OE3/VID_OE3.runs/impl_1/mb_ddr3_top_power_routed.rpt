@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date             : Wed Nov 20 04:15:38 2024
+| Date             : Wed Nov 20 20:02:54 2024
 | Host             : SgoSkzD running 64-bit Gentoo Linux
 | Command          : report_power -file mb_ddr3_top_power_routed.rpt -pb mb_ddr3_top_power_summary_routed.pb -rpx mb_ddr3_top_power_routed.rpx
 | Design           : mb_ddr3_top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.144        |
+| Total On-Chip Power (W)  | 1.111        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.065        |
+| Dynamic (W)              | 1.032        |
 | Device Static (W)        | 0.079        |
 | Effective TJA (C/W)      | 4.9          |
-| Max Ambient (C)          | 79.3         |
-| Junction Temperature (C) | 30.7         |
+| Max Ambient (C)          | 79.5         |
+| Junction Temperature (C) | 30.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,25 +52,25 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.063 |       27 |       --- |             --- |
-| Slice Logic              |     0.031 |    50168 |       --- |             --- |
-|   LUT as Logic           |     0.027 |    18840 |     32600 |           57.79 |
-|   Register               |     0.001 |    20737 |     65200 |           31.81 |
+| Clocks                   |     0.062 |       27 |       --- |             --- |
+| Slice Logic              |     0.031 |    50149 |       --- |             --- |
+|   LUT as Logic           |     0.027 |    18793 |     32600 |           57.65 |
+|   Register               |     0.002 |    20734 |     65200 |           31.80 |
 |   CARRY4                 |     0.001 |      811 |      8150 |            9.95 |
 |   LUT as Distributed RAM |    <0.001 |      752 |      9600 |            7.83 |
-|   LUT as Shift Register  |    <0.001 |      731 |      9600 |            7.61 |
+|   LUT as Shift Register  |    <0.001 |      733 |      9600 |            7.64 |
 |   F7/F8 Muxes            |    <0.001 |      408 |     32600 |            1.25 |
 |   Others                 |    <0.001 |     1693 |       --- |             --- |
-| Signals                  |     0.039 |    37592 |       --- |             --- |
+| Signals                  |     0.040 |    37584 |       --- |             --- |
 | Block RAM                |     0.066 |     25.5 |        75 |           34.00 |
-| MMCM                     |     0.230 |        2 |         5 |           40.00 |
-| PLL                      |     0.116 |        1 |         5 |           20.00 |
+| MMCM                     |     0.099 |        1 |         5 |           20.00 |
+| PLL                      |     0.215 |        2 |         5 |           40.00 |
 | DSPs                     |     0.009 |       19 |       120 |           15.83 |
 | I/O                      |     0.394 |       59 |       210 |           28.10 |
 | PHASER                   |     0.113 |       14 |       --- |             --- |
 | XADC                     |     0.004 |        1 |       --- |             --- |
 | Static Power             |     0.079 |          |           |                 |
-| Total                    |     1.144 |          |           |                 |
+| Total                    |     1.111 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,8 +80,8 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.253 |       0.241 |      0.012 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.306 |       0.293 |      0.013 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.260 |       0.247 |      0.012 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.284 |       0.271 |      0.013 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.041 |       0.040 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -138,7 +138,7 @@ Table of Contents
 | clk_125MHz_vid_oe3_clk_wiz_0_0                                                                                                                            | mb_ddr3_i/clk_wiz_0/inst/clk_125MHz_vid_oe3_clk_wiz_0_0                                                                                                                                                                       |             8.0 |
 | clk_25MHz_vid_oe3_clk_wiz_0_0                                                                                                                             | mb_ddr3_i/clk_wiz_0/inst/clk_25MHz_vid_oe3_clk_wiz_0_0                                                                                                                                                                        |            40.0 |
 | clk_pll_i                                                                                                                                                 | mb_ddr3_i/mig_7series_0/u_vid_oe3_mig_7series_0_0_mig/u_ddr3_infrastructure/clk_pll_i                                                                                                                                         |            12.0 |
-| clkfbout_vid_oe3_clk_wiz_0_0                                                                                                                              | mb_ddr3_i/clk_wiz_0/inst/clkfbout_vid_oe3_clk_wiz_0_0                                                                                                                                                                         |            48.0 |
+| clkfbout_vid_oe3_clk_wiz_0_0                                                                                                                              | mb_ddr3_i/clk_wiz_0/inst/clkfbout_vid_oe3_clk_wiz_0_0                                                                                                                                                                         |            24.0 |
 | freq_refclk                                                                                                                                               | mb_ddr3_i/mig_7series_0/u_vid_oe3_mig_7series_0_0_mig/u_ddr3_infrastructure/freq_refclk                                                                                                                                       |             1.5 |
 | iserdes_clkdiv                                                                                                                                            | mb_ddr3_i/mig_7series_0/u_vid_oe3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_C.ddr_byte_lane_C/iserdes_clkdiv            |            12.0 |
 | iserdes_clkdiv_1                                                                                                                                          | mb_ddr3_i/mig_7series_0/u_vid_oe3_mig_7series_0_0_mig/u_memc_ui_top_axi/mem_intfc0/ddr_phy_top0/u_ddr_mc_phy_wrapper/u_ddr_mc_phy/ddr_phy_4lanes_0.u_ddr_phy_4lanes/ddr_byte_lane_D.ddr_byte_lane_D/iserdes_clkdiv            |            12.0 |
@@ -171,19 +171,19 @@ Table of Contents
 +-------------------------------------+-----------+
 | Name                                | Power (W) |
 +-------------------------------------+-----------+
-| mb_ddr3_top                         |     1.065 |
-|   mb_ddr3_i                         |     1.065 |
+| mb_ddr3_top                         |     1.032 |
+|   mb_ddr3_i                         |     1.032 |
 |     axi_timer_0                     |     0.002 |
 |       U0                            |     0.002 |
-|     clk_wiz_0                       |     0.130 |
-|       inst                          |     0.130 |
-|     microblaze_0                    |     0.076 |
-|       U0                            |     0.076 |
+|     clk_wiz_0                       |     0.099 |
+|       inst                          |     0.099 |
+|     microblaze_0                    |     0.077 |
+|       U0                            |     0.077 |
 |     microblaze_0_axi_intc           |     0.001 |
 |       U0                            |     0.001 |
-|     microblaze_0_axi_periph         |     0.040 |
+|     microblaze_0_axi_periph         |     0.039 |
 |       m00_couplers                  |     0.005 |
-|       m01_couplers                  |     0.005 |
+|       m01_couplers                  |     0.006 |
 |       m02_couplers                  |     0.004 |
 |       m04_couplers                  |     0.005 |
 |       m05_couplers                  |     0.005 |
@@ -192,11 +192,11 @@ Table of Contents
 |       s02_couplers                  |     0.002 |
 |       xbar                          |     0.008 |
 |     mig_7series_0                   |     0.631 |
-|       u_vid_oe3_mig_7series_0_0_mig |     0.629 |
+|       u_vid_oe3_mig_7series_0_0_mig |     0.630 |
 |     rgb2dvi_0                       |     0.131 |
 |       U0                            |     0.131 |
-|     v_axi4s_vid_out_0               |     0.006 |
-|       inst                          |     0.006 |
+|     v_axi4s_vid_out_0               |     0.005 |
+|       inst                          |     0.005 |
 |     v_tc_0                          |     0.004 |
 |       U0                            |     0.004 |
 |     v_tpg_0                         |     0.042 |

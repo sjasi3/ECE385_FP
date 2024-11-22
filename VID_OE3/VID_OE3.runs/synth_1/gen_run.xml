@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1732097408">
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1732154284" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/mb_ddr3_top.dcp">
   <File Type="VDS-TIMINGSUMMARY" Name="mb_ddr3_top_timing_summary_synth.rpt"/>
   <File Type="RDS-DCP" Name="mb_ddr3_top.dcp"/>
   <File Type="RDS-UTIL-PB" Name="mb_ddr3_top_utilization_synth.pb"/>
   <File Type="RDS-UTIL" Name="mb_ddr3_top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="mb_ddr3_top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="mb_ddr3_top.vds"/>
+  <File Type="REPORTS-TCL" Name="mb_ddr3_top_reports.tcl"/>
   <File Type="VDS-TIMING-PB" Name="mb_ddr3_top_timing_summary_synth.pb"/>
   <File Type="PA-TCL" Name="mb_ddr3_top.tcl"/>
-  <File Type="REPORTS-TCL" Name="mb_ddr3_top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="mb_ddr3_top.vds"/>
-  <File Type="RDS-PROPCONSTRS" Name="mb_ddr3_top_drc_synth.rpt"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/vid_oe3/vid_oe3.bd">
@@ -56,41 +56,33 @@
   </FileSet>
   <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
     <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/mb_ddr3_top.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_pc_4"/>
   <BlockFileSet Type="BlockSrcs" Name="vid_oe3_rst_mig_7series_0_83M_1"/>
   <BlockFileSet Type="BlockSrcs" Name="vid_oe3_axi_timer_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="vid_oe3_axi_uartlite_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="vid_oe3_mdm_1_1"/>
   <BlockFileSet Type="BlockSrcs" Name="vid_oe3_microblaze_0_axi_intc_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_pc_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_pc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_pc_5"/>
   <BlockFileSet Type="BlockSrcs" Name="vid_oe3_xbar_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_us_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_ds_3"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_ds_0"/>
   <BlockFileSet Type="BlockSrcs" Name="vid_oe3_rgb2dvi_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="vid_oe3_v_tpg_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="vid_oe3_v_tc_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_ds_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_us_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_pc_2"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_ds_4"/>
+  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_clk_wiz_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="vid_oe3_v_axi4s_vid_out_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="vid_oe3_microblaze_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_us_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_ds_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="vid_oe3_auto_pc_3"/>
   <BlockFileSet Type="BlockSrcs" Name="vid_oe3_mig_7series_0_0"/>
 </GenRun>

@@ -36,9 +36,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==vid_oe3_axi
 # IP: bd/vid_oe3/ip/vid_oe3_axi_timer_0_0/vid_oe3_axi_timer_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==vid_oe3_axi_timer_0_0 || ORIG_REF_NAME==vid_oe3_axi_timer_0_0} -quiet] -quiet
 
-# IP: bd/vid_oe3/ip/vid_oe3_rgb2dvi_0_0/vid_oe3_rgb2dvi_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==vid_oe3_rgb2dvi_0_0 || ORIG_REF_NAME==vid_oe3_rgb2dvi_0_0} -quiet] -quiet
-
 # IP: bd/vid_oe3/ip/vid_oe3_clk_wiz_0_0/vid_oe3_clk_wiz_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==vid_oe3_clk_wiz_0_0 || ORIG_REF_NAME==vid_oe3_clk_wiz_0_0} -quiet] -quiet
 
@@ -50,6 +47,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==vid_oe3_v_t
 
 # IP: bd/vid_oe3/ip/vid_oe3_v_tc_0_0/vid_oe3_v_tc_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==vid_oe3_v_tc_0_0 || ORIG_REF_NAME==vid_oe3_v_tc_0_0} -quiet] -quiet
+
+# IP: bd/vid_oe3/ip/vid_oe3_rgb2dvi_0_0/vid_oe3_rgb2dvi_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==vid_oe3_rgb2dvi_0_0 || ORIG_REF_NAME==vid_oe3_rgb2dvi_0_0} -quiet] -quiet
 
 # IP: bd/vid_oe3/ip/vid_oe3_auto_pc_5/vid_oe3_auto_pc_5.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==vid_oe3_auto_pc_5 || ORIG_REF_NAME==vid_oe3_auto_pc_5} -quiet] -quiet

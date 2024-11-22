@@ -70,8 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_msg_config -id {Common 17-41} -limit 10000000
-set_msg_config -id {HDL-1065} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -111,9 +109,6 @@ set_property used_in_implementation false [get_files -all /home/sean/Downloads/g
 set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_axi_uartlite_0_1/vid_oe3_axi_uartlite_0_1.xdc]
 set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_axi_timer_0_0/vid_oe3_axi_timer_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_axi_timer_0_0/vid_oe3_axi_timer_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_rgb2dvi_0_0/src/rgb2dvi.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_rgb2dvi_0_0/src/rgb2dvi_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_clk_wiz_0_0/vid_oe3_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_clk_wiz_0_0/vid_oe3_clk_wiz_0_0.xdc]
 set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_clk_wiz_0_0/vid_oe3_clk_wiz_0_0_late.xdc]
@@ -124,6 +119,9 @@ set_property used_in_implementation false [get_files -all /home/sean/Downloads/g
 set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_v_tpg_0_0/vid_oe3_v_tpg_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_v_tc_0_0/vid_oe3_v_tc_0_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_v_tc_0_0/vid_oe3_v_tc_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_rgb2dvi_0_0/src/rgb2dvi.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_rgb2dvi_0_0/src/rgb2dvi_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_rgb2dvi_0_0/src/rgb2dvi_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_auto_pc_5/vid_oe3_auto_pc_5_ooc.xdc]
 set_property used_in_synthesis false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_auto_us_0/vid_oe3_auto_us_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_auto_us_0/vid_oe3_auto_us_0_clocks.xdc]
@@ -172,6 +170,8 @@ set_property used_in_implementation false [get_files /home/sean/Downloads/git/EC
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.srcs/utils_1/imports/synth_1/mb_ddr3_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

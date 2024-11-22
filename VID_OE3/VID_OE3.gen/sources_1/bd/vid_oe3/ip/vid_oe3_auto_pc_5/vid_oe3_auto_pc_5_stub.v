@@ -3,8 +3,8 @@
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 // Date        : Wed Nov 20 03:59:02 2024
 // Host        : SgoSkzD running 64-bit Gentoo Linux
-// Command     : write_verilog -force -mode synth_stub
-//               /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_auto_pc_5/vid_oe3_auto_pc_5_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top vid_oe3_auto_pc_5 -prefix
+//               vid_oe3_auto_pc_5_ vid_oe3_auto_pc_5_stub.v
 // Design      : vid_oe3_auto_pc_5
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7s50csga324-1

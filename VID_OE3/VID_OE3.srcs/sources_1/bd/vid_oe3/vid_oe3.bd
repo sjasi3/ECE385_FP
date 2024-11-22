@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF0E08A92C4F85AB9",
+      "boundary_crc": "0xF0E08A92813C071A",
       "device": "xc7s50csga324-1",
       "gen_directory": "../../../../VID_OE3.gen/sources_1/bd/vid_oe3",
       "name": "vid_oe3",
@@ -1911,23 +1911,47 @@
         "xci_path": "ip/vid_oe3_clk_wiz_0_0/vid_oe3_clk_wiz_0_0.xci",
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
           "CLKOUT1_JITTER": {
-            "value": "252.027"
+            "value": "261.632"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "199.417"
           },
           "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "25"
+            "value": "24.9999"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
           },
           "CLKOUT2_JITTER": {
-            "value": "202.568"
+            "value": "182.112"
           },
           "CLKOUT2_PHASE_ERROR": {
-            "value": "277.428"
+            "value": "199.417"
           },
           "CLKOUT2_REQUESTED_OUT_FREQ": {
-            "value": "125"
+            "value": "124.9995"
           },
           "CLKOUT2_USED": {
             "value": "true"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
           },
           "CLK_OUT1_PORT": {
             "value": "clk_25MHz"
@@ -1938,17 +1962,32 @@
           "ENABLE_CLOCK_MONITOR": {
             "value": "false"
           },
+          "MMCM_BANDWIDTH": {
+            "value": "OPTIMIZED"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "21"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.000"
+          },
           "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "44.875"
+            "value": "35"
           },
           "MMCM_CLKOUT1_DIVIDE": {
-            "value": "9"
+            "value": "7"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "2"
           },
           "NUM_OUT_CLKS": {
             "value": "2"
           },
           "PRIMITIVE": {
-            "value": "MMCM"
+            "value": "PLL"
           },
           "PRIM_SOURCE": {
             "value": "No_buffer"

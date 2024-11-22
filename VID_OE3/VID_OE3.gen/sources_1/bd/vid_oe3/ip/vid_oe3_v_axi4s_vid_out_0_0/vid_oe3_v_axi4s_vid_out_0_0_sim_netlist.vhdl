@@ -1,7 +1,7 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
--- Date        : Wed Nov 20 03:57:13 2024
+-- Date        : Wed Nov 20 19:58:34 2024
 -- Host        : SgoSkzD running 64-bit Gentoo Linux
 -- Command     : write_vhdl -force -mode funcsim
 --               /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_v_axi4s_vid_out_0_0/vid_oe3_v_axi4s_vid_out_0_0_sim_netlist.vhdl
@@ -14985,7 +14985,7 @@ architecture STRUCTURE of vid_oe3_v_axi4s_vid_out_0_0 is
   attribute X_INTERFACE_INFO of vid_io_out_ce : signal is "xilinx.com:signal:clockenable:1.0 vid_io_out_ce_intf CE";
   attribute X_INTERFACE_PARAMETER of vid_io_out_ce : signal is "XIL_INTERFACENAME vid_io_out_ce_intf, POLARITY ACTIVE_HIGH";
   attribute X_INTERFACE_INFO of vid_io_out_clk : signal is "xilinx.com:signal:clock:1.0 vid_io_out_clk_intf CLK";
-  attribute X_INTERFACE_PARAMETER of vid_io_out_clk : signal is "XIL_INTERFACENAME vid_io_out_clk_intf, ASSOCIATED_BUSIF vid_io_out, FREQ_HZ 124710149, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN vid_oe3_mig_7series_0_0_ui_clk, INSERT_VIP 0";
+  attribute X_INTERFACE_PARAMETER of vid_io_out_clk : signal is "XIL_INTERFACENAME vid_io_out_clk_intf, ASSOCIATED_BUSIF vid_io_out, FREQ_HZ 124999500, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN vid_oe3_mig_7series_0_0_ui_clk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of vid_io_out_reset : signal is "xilinx.com:signal:reset:1.0 vid_io_out_reset_intf RST";
   attribute X_INTERFACE_PARAMETER of vid_io_out_reset : signal is "XIL_INTERFACENAME vid_io_out_reset_intf, POLARITY ACTIVE_HIGH, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of vid_vblank : signal is "xilinx.com:interface:vid_io:1.0 vid_io_out VBLANK";

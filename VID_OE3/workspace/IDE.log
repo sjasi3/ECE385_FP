@@ -33,3 +33,48 @@ Reason: xsct server communication channel is not established.
 Reason: xsct server communication channel is not established.
 05:06:48 ERROR : (XSDB Server)which: no xlsclients in (/alottadata/tools/Xilinx/Vitis/2022.2/gnu/microblaze/lin/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/microblaze/linux_toolchain/lin64_be/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/arm/lin/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/aarch64/lin/aarch64-none/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/aarch64/lin/aarch64-linux/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/alottadata/tools/Xilinx/Vitis/2022.2/tps/lnx64/cmake-3.21.4/bin::/alottadata/tools/Xilinx/Vivado/2022.2/gnu/microblaze/lin/bin:/alottadata/tools/Xilinx/Vitis/2022.2/bin:/alottadata/tools/Xilinx/Vitis/2022.2/tps/lnx64/jre11.0.11_9/bin:/alottadata/tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64:/alottadata/tools/Xilinx/Vitis/2022.2/aietools/bin:/alottadata/tools/Xilinx/Vivado/2022.2/bin:/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/python-3.8.3:/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/python-3.8.3/bin:/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/python-3.8.3/lib:/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/python-3.8.3/lib/python3.8/site-packages::/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/bin:/alottadata/tools/Xilinx/Vitis_HLS/2022.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/bin:/usr/lib/llvm/18/bin)
 
+16:15:32 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/IDE.log'.
+16:15:33 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/temp_xsdb_launch_script.tcl
+16:15:33 INFO  : Platform repository initialization has completed.
+16:15:33 ERROR : (XSDB Server)which: no xlsclients in (/alottadata/tools/Xilinx/Vitis/2022.2/gnu/microblaze/lin/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/microblaze/linux_toolchain/lin64_be/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/arm/lin/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/aarch64/lin/aarch64-none/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/aarch64/lin/aarch64-linux/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/alottadata/tools/Xilinx/Vitis/2022.2/tps/lnx64/cmake-3.21.4/bin::/alottadata/tools/Xilinx/Vivado/2022.2/gnu/microblaze/lin/bin:/alottadata/tools/Xilinx/Vitis/2022.2/bin:/alottadata/tools/Xilinx/Vitis/2022.2/tps/lnx64/jre11.0.11_9/bin:/alottadata/tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64:/alottadata/tools/Xilinx/Vitis/2022.2/aietools/bin:/alottadata/tools/Xilinx/Vivado/2022.2/bin:/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/python-3.8.3:/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/python-3.8.3/bin:/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/python-3.8.3/lib:/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/python-3.8.3/lib/python3.8/site-packages::/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/bin:/alottadata/tools/Xilinx/Vitis_HLS/2022.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/bin:/usr/lib/llvm/18/bin)
+
+16:15:34 INFO  : Registering command handlers for Vitis TCF services
+16:18:33 ERROR : Timed out. 180 seconds have elapsed while waiting for XSCT server to launch.
+16:18:33 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/temp_xsdb_launch_script.tcl
+16:18:33 ERROR : Failed to call init_repo
+Reason: xsct server communication channel is not established.
+16:18:33 ERROR : Exception raised in executing the command =Failed to call init_repo
+Reason: xsct server communication channel is not established. 
+16:18:33 ERROR : (XSDB Server)which: no xlsclients in (/alottadata/tools/Xilinx/Vitis/2022.2/gnu/microblaze/lin/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/microblaze/linux_toolchain/lin64_le/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/microblaze/linux_toolchain/lin64_be/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/arm/lin/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/aarch64/lin/aarch64-none/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/aarch64/lin/aarch64-linux/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/armr5/lin/gcc-arm-none-eabi/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-none-eabi/bin:/alottadata/tools/Xilinx/Vitis/2022.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:/alottadata/tools/Xilinx/Vitis/2022.2/tps/lnx64/cmake-3.21.4/bin::/alottadata/tools/Xilinx/Vivado/2022.2/gnu/microblaze/lin/bin:/alottadata/tools/Xilinx/Vitis/2022.2/bin:/alottadata/tools/Xilinx/Vitis/2022.2/tps/lnx64/jre11.0.11_9/bin:/alottadata/tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64:/alottadata/tools/Xilinx/Vitis/2022.2/aietools/bin:/alottadata/tools/Xilinx/Vivado/2022.2/bin:/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/python-3.8.3:/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/python-3.8.3/bin:/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/python-3.8.3/lib:/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/python-3.8.3/lib/python3.8/site-packages::/alottadata/tools/Xilinx/Vivado/2022.2/tps/lnx64/jre11.0.11_9/bin:/alottadata/tools/Xilinx/Vitis_HLS/2022.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/opt/bin:/usr/lib/llvm/18/bin)
+
+16:19:48 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/IDE.log'.
+16:19:49 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/temp_xsdb_launch_script.tcl
+16:19:49 INFO  : Registering command handlers for Vitis TCF services
+16:19:49 INFO  : Platform repository initialization has completed.
+16:19:51 INFO  : XSCT server has started successfully.
+16:19:51 INFO  : plnx-install-location is set to ''
+16:19:51 INFO  : Successfully done setting XSCT server connection channel  
+16:19:51 INFO  : Successfully done query RDI_DATADIR 
+16:19:51 INFO  : Successfully done setting workspace for the tool. 
+16:20:20 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+16:20:20 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+16:20:20 WARN  : An unexpected exception occurred in the module 'platform project logging'
+16:20:20 INFO  : Platform 'mb_ddr3_top' is added to custom repositories.
+16:20:21 INFO  : Platform 'mb_ddr3_top' is added to custom repositories.
+20:05:17 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/IDE.log'.
+20:05:17 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/temp_xsdb_launch_script.tcl
+20:05:18 INFO  : Platform repository initialization has completed.
+20:05:18 INFO  : Registering command handlers for Vitis TCF services
+20:05:19 INFO  : XSCT server has started successfully.
+20:05:19 INFO  : Successfully done setting XSCT server connection channel  
+20:05:19 INFO  : plnx-install-location is set to ''
+20:05:19 INFO  : Successfully done query RDI_DATADIR 
+20:05:19 INFO  : Successfully done setting workspace for the tool. 
+20:09:22 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+20:35:17 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+20:35:17 INFO  : Result from executing command 'getPlatforms': mb_ddr3_top|/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_ddr3_top/export/mb_ddr3_top/mb_ddr3_top.xpfm;xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+20:35:20 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...
+20:35:21 INFO  : The hardware specification used by project 'mb_vid_oe3' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:35:21 INFO  : The file '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream/mb_ddr3_top.bit' stored in project is removed.
+20:35:21 INFO  : The updated bitstream files are copied from platform to folder '/home/sean/Downloads/git/ECE385_FP/VID_OE3/workspace/mb_vid_oe3/_ide/bitstream' in project 'mb_vid_oe3'.
+20:35:28 INFO  : Checking for BSP changes to sync application flags for project 'mb_vid_oe3'...

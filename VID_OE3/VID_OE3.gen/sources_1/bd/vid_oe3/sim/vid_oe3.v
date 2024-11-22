@@ -1,7 +1,7 @@
 //Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-//Date        : Wed Nov 20 03:56:13 2024
+//Date        : Wed Nov 20 19:57:42 2024
 //Host        : SgoSkzD running 64-bit Gentoo Linux
 //Command     : generate_target vid_oe3.bd
 //Design      : vid_oe3
@@ -3257,29 +3257,29 @@ module vid_oe3
     reset_rtl_0,
     uart_rxd,
     uart_txd);
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 SYS_CLK " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SYS_CLK, CAN_DEBUG false, FREQ_HZ 100000000" *) input SYS_CLK_clk_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 SYS_CLK " *) input SYS_CLK_clk_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ddr3, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) output [12:0]ddr3_addr;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) output [2:0]ddr3_ba;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) output ddr3_cas_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) output [0:0]ddr3_ck_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) output [0:0]ddr3_ck_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) output [0:0]ddr3_cke;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) output [1:0]ddr3_dm;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) inout [15:0]ddr3_dq;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) inout [1:0]ddr3_dqs_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) inout [1:0]ddr3_dqs_p;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) output [0:0]ddr3_odt;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) output ddr3_ras_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) output ddr3_reset_n;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 " *) output ddr3_we_n;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_tx_0 " *) output hdmi_tx_0_clk_n;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_tx_0 " *) output hdmi_tx_0_clk_p;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_tx_0 " *) output [2:0]hdmi_tx_0_data_n;
-  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_tx_0 " *) output [2:0]hdmi_tx_0_data_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 SYS_CLK CLK_N" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME SYS_CLK, CAN_DEBUG false, FREQ_HZ 100000000" *) input SYS_CLK_clk_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:diff_clock:1.0 SYS_CLK CLK_P" *) input SYS_CLK_clk_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 ADDR" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME ddr3, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250" *) output [12:0]ddr3_addr;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 BA" *) output [2:0]ddr3_ba;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 CAS_N" *) output ddr3_cas_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 CK_N" *) output [0:0]ddr3_ck_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 CK_P" *) output [0:0]ddr3_ck_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 CKE" *) output [0:0]ddr3_cke;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 DM" *) output [1:0]ddr3_dm;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 DQ" *) inout [15:0]ddr3_dq;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 DQS_N" *) inout [1:0]ddr3_dqs_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 DQS_P" *) inout [1:0]ddr3_dqs_p;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 ODT" *) output [0:0]ddr3_odt;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 RAS_N" *) output ddr3_ras_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 RESET_N" *) output ddr3_reset_n;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:ddrx:1.0 ddr3 WE_N" *) output ddr3_we_n;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_tx_0 CLK_N" *) output hdmi_tx_0_clk_n;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_tx_0 CLK_P" *) output hdmi_tx_0_clk_p;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_tx_0 DATA_N" *) output [2:0]hdmi_tx_0_data_n;
+  (* X_INTERFACE_INFO = "digilentinc.com:interface:tmds:1.0 hdmi_tx_0 DATA_P" *) output [2:0]hdmi_tx_0_data_p;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST.RESET_RTL_0 RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST.RESET_RTL_0, INSERT_VIP 0, POLARITY ACTIVE_HIGH" *) input reset_rtl_0;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart " *) input uart_rxd;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart " *) output uart_txd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart RxD" *) input uart_rxd;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart TxD" *) output uart_txd;
 
   wire SYS_CLK_0_1_CLK_N;
   wire SYS_CLK_0_1_CLK_P;

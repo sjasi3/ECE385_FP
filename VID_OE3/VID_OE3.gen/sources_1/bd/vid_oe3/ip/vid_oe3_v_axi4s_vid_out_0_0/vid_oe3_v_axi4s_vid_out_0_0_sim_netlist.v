@@ -1,7 +1,7 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-// Date        : Wed Nov 20 03:57:13 2024
+// Date        : Wed Nov 20 19:58:34 2024
 // Host        : SgoSkzD running 64-bit Gentoo Linux
 // Command     : write_verilog -force -mode funcsim
 //               /home/sean/Downloads/git/ECE385_FP/VID_OE3/VID_OE3.gen/sources_1/bd/vid_oe3/ip/vid_oe3_v_axi4s_vid_out_0_0/vid_oe3_v_axi4s_vid_out_0_0_sim_netlist.v
@@ -56,7 +56,7 @@ module vid_oe3_v_axi4s_vid_out_0_0
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TUSER" *) input s_axis_video_tuser;
   (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TLAST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME video_in, TDATA_NUM_BYTES 3, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 83333333, PHASE 0, CLK_DOMAIN vid_oe3_mig_7series_0_0_ui_clk, LAYERED_METADATA undef, INSERT_VIP 0" *) input s_axis_video_tlast;
   input fid;
-  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 vid_io_out_clk_intf CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_out_clk_intf, ASSOCIATED_BUSIF vid_io_out, FREQ_HZ 124710149, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN vid_oe3_mig_7series_0_0_ui_clk, INSERT_VIP 0" *) input vid_io_out_clk;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 vid_io_out_clk_intf CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_out_clk_intf, ASSOCIATED_BUSIF vid_io_out, FREQ_HZ 124999500, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN vid_oe3_mig_7series_0_0_ui_clk, INSERT_VIP 0" *) input vid_io_out_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clockenable:1.0 vid_io_out_ce_intf CE" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_out_ce_intf, POLARITY ACTIVE_HIGH" *) input vid_io_out_ce;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 vid_io_out_reset_intf RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_out_reset_intf, POLARITY ACTIVE_HIGH, INSERT_VIP 0" *) input vid_io_out_reset;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_io_out ACTIVE_VIDEO" *) output vid_active_video;
