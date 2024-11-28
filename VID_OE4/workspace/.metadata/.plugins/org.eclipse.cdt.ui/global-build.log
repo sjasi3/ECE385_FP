@@ -1,6 +1,6 @@
 Nothing to build in platform 'mb_ddr3_top'
 
-00:49:05 **** Incremental Build of configuration Debug for project mb_vid_oe4 ****
+00:39:24 **** Incremental Build of configuration Debug for project mb_vid_oe4 ****
 make all 
 Building file: ../src/helloworld.c
 Invoking: MicroBlaze gcc compiler
@@ -26,6 +26,6 @@ mb-size mb_vid_oe4.elf  |tee "mb_vid_oe4.elf.size"
   14724	    372	   3288	  18384	   47d0	mb_vid_oe4.elf
 Finished building: mb_vid_oe4.elf.size
  
-00:49:06 **** Incremental Build of configuration Debug for project mb_vid_oe4_system ****
+00:39:24 **** Incremental Build of configuration Debug for project mb_vid_oe4_system ****
 make all 
 Skipping SD card image generation. Reason: The system project only has applications for microblaze processors.

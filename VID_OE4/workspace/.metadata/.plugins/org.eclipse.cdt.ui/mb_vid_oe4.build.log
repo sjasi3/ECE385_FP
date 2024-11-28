@@ -1,4 +1,4 @@
-00:49:05 **** Incremental Build of configuration Debug for project mb_vid_oe4 ****
+00:39:24 **** Incremental Build of configuration Debug for project mb_vid_oe4 ****
 make all 
 Building file: ../src/helloworld.c
 Invoking: MicroBlaze gcc compiler
@@ -25,5 +25,5 @@ mb-size mb_vid_oe4.elf  |tee "mb_vid_oe4.elf.size"
 Finished building: mb_vid_oe4.elf.size
  
 
-00:49:06 Build Finished (took 168ms)
+00:39:24 Build Finished (took 166ms)
 

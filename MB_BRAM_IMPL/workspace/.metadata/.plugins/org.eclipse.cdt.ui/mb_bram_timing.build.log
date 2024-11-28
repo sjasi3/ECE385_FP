@@ -1,0 +1,6 @@
+20:31:31 **** Incremental Build of configuration Debug for project mb_bram_timing ****
+make all 
+make: Nothing to be done for 'all'.
+
+20:31:31 Build Finished (took 66ms)
+

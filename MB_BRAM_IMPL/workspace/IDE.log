@@ -1,0 +1,1487 @@
+19:39:14 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/IDE.log'.
+19:39:15 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/temp_xsdb_launch_script.tcl
+19:39:15 INFO  : Registering command handlers for Vitis TCF services
+19:39:15 INFO  : Platform repository initialization has completed.
+19:39:17 INFO  : XSCT server has started successfully.
+19:39:17 INFO  : Successfully done setting XSCT server connection channel  
+19:39:17 INFO  : plnx-install-location is set to ''
+19:39:17 INFO  : Successfully done query RDI_DATADIR 
+19:39:17 INFO  : Successfully done setting workspace for the tool. 
+19:40:05 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+19:40:05 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+19:40:05 WARN  : An unexpected exception occurred in the module 'platform project logging'
+19:40:05 INFO  : Platform 'mb_ddr3_top' is added to custom repositories.
+19:40:06 INFO  : Platform 'mb_ddr3_top' is added to custom repositories.
+19:40:19 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+19:40:19 INFO  : Result from executing command 'getPlatforms': mb_ddr3_top|/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/mb_ddr3_top.xpfm;xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+19:40:22 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+19:47:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:47:04 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:47:04 INFO  : 'jtag frequency' command is executed.
+19:47:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:47:06 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_bram_timing/_ide/bitstream/mb_ddr3_top.bit"
+19:47:06 INFO  : Context for processor 'microblaze_0' is selected.
+19:47:06 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+19:47:06 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:47:06 INFO  : Context for processor 'microblaze_0' is selected.
+19:47:06 INFO  : System reset is completed.
+19:47:09 INFO  : 'after 3000' command is executed.
+19:47:09 INFO  : Context for processor 'microblaze_0' is selected.
+19:47:09 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_bram_timing/Debug/mb_bram_timing.elf' is downloaded to processor 'microblaze_0'.
+19:47:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_bram_timing/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_bram_timing/Debug/mb_bram_timing.elf
+----------------End of Script----------------
+
+19:47:09 INFO  : Context for processor 'microblaze_0' is selected.
+19:47:09 INFO  : 'con' command is executed.
+19:47:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:47:09 INFO  : Disconnected from the channel tcfchan#2.
+19:52:07 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+19:52:07 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+19:53:18 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+19:53:18 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+19:55:52 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+19:55:52 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+19:57:10 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+19:57:10 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+19:57:21 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:57:21 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:57:21 INFO  : 'jtag frequency' command is executed.
+19:57:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:57:22 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+19:57:22 INFO  : Context for processor 'microblaze_0' is selected.
+19:57:22 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+19:57:22 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:57:22 INFO  : Context for processor 'microblaze_0' is selected.
+19:57:22 INFO  : System reset is completed.
+19:57:25 INFO  : 'after 3000' command is executed.
+19:57:25 INFO  : Context for processor 'microblaze_0' is selected.
+19:57:25 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+19:57:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+19:57:25 INFO  : Context for processor 'microblaze_0' is selected.
+19:57:25 INFO  : 'con' command is executed.
+19:57:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:57:25 INFO  : Disconnected from the channel tcfchan#3.
+19:57:50 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+19:57:51 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+19:57:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:57:55 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:57:55 INFO  : 'jtag frequency' command is executed.
+19:57:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:57:57 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+19:57:57 INFO  : Context for processor 'microblaze_0' is selected.
+19:57:57 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+19:57:57 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:57:57 INFO  : Context for processor 'microblaze_0' is selected.
+19:57:57 INFO  : System reset is completed.
+19:58:00 INFO  : 'after 3000' command is executed.
+19:58:00 INFO  : Context for processor 'microblaze_0' is selected.
+19:58:00 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+19:58:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+19:58:00 INFO  : Context for processor 'microblaze_0' is selected.
+19:58:00 INFO  : 'con' command is executed.
+19:58:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:58:00 INFO  : Disconnected from the channel tcfchan#4.
+19:58:48 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+19:58:49 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+19:58:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:58:53 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:58:53 INFO  : 'jtag frequency' command is executed.
+19:58:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:58:54 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+19:58:54 INFO  : Context for processor 'microblaze_0' is selected.
+19:58:54 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+19:58:54 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:58:54 INFO  : Context for processor 'microblaze_0' is selected.
+19:58:54 INFO  : System reset is completed.
+19:58:57 INFO  : 'after 3000' command is executed.
+19:58:57 INFO  : Context for processor 'microblaze_0' is selected.
+19:58:57 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+19:58:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+19:58:57 INFO  : Context for processor 'microblaze_0' is selected.
+19:58:57 INFO  : 'con' command is executed.
+19:58:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:58:57 INFO  : Disconnected from the channel tcfchan#5.
+19:59:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:59:14 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:59:14 INFO  : 'jtag frequency' command is executed.
+19:59:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:59:15 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+19:59:15 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:15 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+19:59:15 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:59:15 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:15 INFO  : System reset is completed.
+19:59:18 INFO  : 'after 3000' command is executed.
+19:59:18 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:18 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+19:59:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+19:59:18 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:18 INFO  : 'con' command is executed.
+19:59:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:59:18 INFO  : Disconnected from the channel tcfchan#6.
+19:59:29 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+19:59:29 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+19:59:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:59:35 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:59:35 INFO  : 'jtag frequency' command is executed.
+19:59:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:59:36 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+19:59:36 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:36 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+19:59:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:59:36 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:36 INFO  : System reset is completed.
+19:59:39 INFO  : 'after 3000' command is executed.
+19:59:39 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:39 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+19:59:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+19:59:39 INFO  : Context for processor 'microblaze_0' is selected.
+19:59:39 INFO  : 'con' command is executed.
+19:59:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:59:39 INFO  : Disconnected from the channel tcfchan#7.
+20:00:27 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:00:27 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:00:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:00:31 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:00:31 INFO  : 'jtag frequency' command is executed.
+20:00:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:00:32 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:00:32 INFO  : Context for processor 'microblaze_0' is selected.
+20:00:32 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:00:32 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:00:32 INFO  : Context for processor 'microblaze_0' is selected.
+20:00:32 INFO  : System reset is completed.
+20:00:35 INFO  : 'after 3000' command is executed.
+20:00:35 INFO  : Context for processor 'microblaze_0' is selected.
+20:00:35 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:00:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:00:35 INFO  : Context for processor 'microblaze_0' is selected.
+20:00:35 INFO  : 'con' command is executed.
+20:00:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:00:35 INFO  : Disconnected from the channel tcfchan#8.
+20:00:47 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:00:47 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:00:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:00:52 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:00:52 INFO  : 'jtag frequency' command is executed.
+20:00:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:00:53 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:00:53 INFO  : Context for processor 'microblaze_0' is selected.
+20:00:53 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:00:53 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:00:53 INFO  : Context for processor 'microblaze_0' is selected.
+20:00:53 INFO  : System reset is completed.
+20:00:56 INFO  : 'after 3000' command is executed.
+20:00:56 INFO  : Context for processor 'microblaze_0' is selected.
+20:00:56 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:00:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:00:56 INFO  : Context for processor 'microblaze_0' is selected.
+20:00:56 INFO  : 'con' command is executed.
+20:00:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:00:56 INFO  : Disconnected from the channel tcfchan#9.
+20:01:09 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:01:09 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:01:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:01:20 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:01:20 INFO  : 'jtag frequency' command is executed.
+20:01:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:01:22 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:01:22 INFO  : Context for processor 'microblaze_0' is selected.
+20:01:22 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:01:22 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:01:22 INFO  : Context for processor 'microblaze_0' is selected.
+20:01:22 INFO  : System reset is completed.
+20:01:25 INFO  : 'after 3000' command is executed.
+20:01:25 INFO  : Context for processor 'microblaze_0' is selected.
+20:01:25 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:01:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:01:25 INFO  : Context for processor 'microblaze_0' is selected.
+20:01:25 INFO  : 'con' command is executed.
+20:01:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:01:25 INFO  : Disconnected from the channel tcfchan#10.
+20:01:42 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:01:42 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:01:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:01:50 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:01:50 INFO  : 'jtag frequency' command is executed.
+20:01:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:01:51 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:01:51 INFO  : Context for processor 'microblaze_0' is selected.
+20:01:51 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:01:51 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:01:51 INFO  : Context for processor 'microblaze_0' is selected.
+20:01:51 INFO  : System reset is completed.
+20:01:54 INFO  : 'after 3000' command is executed.
+20:01:54 INFO  : Context for processor 'microblaze_0' is selected.
+20:01:54 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:01:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:01:54 INFO  : Context for processor 'microblaze_0' is selected.
+20:01:54 INFO  : 'con' command is executed.
+20:01:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:01:54 INFO  : Disconnected from the channel tcfchan#11.
+20:07:15 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:07:16 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:07:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:07:20 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:07:20 INFO  : 'jtag frequency' command is executed.
+20:07:21 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:07:22 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:07:22 INFO  : Context for processor 'microblaze_0' is selected.
+20:07:22 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:07:22 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:07:22 INFO  : Context for processor 'microblaze_0' is selected.
+20:07:22 INFO  : System reset is completed.
+20:07:25 INFO  : 'after 3000' command is executed.
+20:07:25 INFO  : Context for processor 'microblaze_0' is selected.
+20:07:25 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:07:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:07:25 INFO  : Context for processor 'microblaze_0' is selected.
+20:07:25 INFO  : 'con' command is executed.
+20:07:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:07:25 INFO  : Disconnected from the channel tcfchan#12.
+20:07:48 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:07:48 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:07:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:07:52 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:07:52 INFO  : 'jtag frequency' command is executed.
+20:07:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:07:53 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:07:53 INFO  : Context for processor 'microblaze_0' is selected.
+20:07:53 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:07:53 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:07:53 INFO  : Context for processor 'microblaze_0' is selected.
+20:07:53 INFO  : System reset is completed.
+20:07:56 INFO  : 'after 3000' command is executed.
+20:07:56 INFO  : Context for processor 'microblaze_0' is selected.
+20:07:56 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:07:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:07:56 INFO  : Context for processor 'microblaze_0' is selected.
+20:07:56 INFO  : 'con' command is executed.
+20:07:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:07:56 INFO  : Disconnected from the channel tcfchan#13.
+20:08:03 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:08:03 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:08:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:08:08 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:08:08 INFO  : 'jtag frequency' command is executed.
+20:08:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:08:10 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:08:10 INFO  : Context for processor 'microblaze_0' is selected.
+20:08:10 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:08:10 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:08:10 INFO  : Context for processor 'microblaze_0' is selected.
+20:08:10 INFO  : System reset is completed.
+20:08:13 INFO  : 'after 3000' command is executed.
+20:08:13 INFO  : Context for processor 'microblaze_0' is selected.
+20:08:13 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:08:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:08:13 INFO  : Context for processor 'microblaze_0' is selected.
+20:08:13 INFO  : 'con' command is executed.
+20:08:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:08:13 INFO  : Disconnected from the channel tcfchan#14.
+20:08:39 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:08:39 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:08:50 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:08:51 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:08:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:08:54 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:08:54 INFO  : 'jtag frequency' command is executed.
+20:08:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:08:55 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:08:55 INFO  : Context for processor 'microblaze_0' is selected.
+20:08:55 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:08:55 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:08:55 INFO  : Context for processor 'microblaze_0' is selected.
+20:08:55 INFO  : System reset is completed.
+20:08:58 INFO  : 'after 3000' command is executed.
+20:08:58 INFO  : Context for processor 'microblaze_0' is selected.
+20:08:58 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:08:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:08:58 INFO  : Context for processor 'microblaze_0' is selected.
+20:08:58 INFO  : 'con' command is executed.
+20:08:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:08:58 INFO  : Disconnected from the channel tcfchan#15.
+20:09:26 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:09:26 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:09:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:09:33 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:09:33 INFO  : 'jtag frequency' command is executed.
+20:09:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:09:34 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:09:34 INFO  : Context for processor 'microblaze_0' is selected.
+20:09:34 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:09:34 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:09:34 INFO  : Context for processor 'microblaze_0' is selected.
+20:09:34 INFO  : System reset is completed.
+20:09:37 INFO  : 'after 3000' command is executed.
+20:09:37 INFO  : Context for processor 'microblaze_0' is selected.
+20:09:37 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:09:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:09:37 INFO  : Context for processor 'microblaze_0' is selected.
+20:09:37 INFO  : 'con' command is executed.
+20:09:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:09:37 INFO  : Disconnected from the channel tcfchan#16.
+20:11:39 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:11:39 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:11:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:11:43 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:11:43 INFO  : 'jtag frequency' command is executed.
+20:11:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:11:45 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:11:45 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:45 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:11:45 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:11:45 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:45 INFO  : System reset is completed.
+20:11:48 INFO  : 'after 3000' command is executed.
+20:11:48 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:48 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:11:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:11:48 INFO  : Context for processor 'microblaze_0' is selected.
+20:11:48 INFO  : 'con' command is executed.
+20:11:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:11:48 INFO  : Disconnected from the channel tcfchan#17.
+20:12:54 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:12:54 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:13:09 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:13:09 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:13:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:13:14 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:13:14 INFO  : 'jtag frequency' command is executed.
+20:13:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:13:15 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:13:15 INFO  : Context for processor 'microblaze_0' is selected.
+20:13:15 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:13:15 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:13:15 INFO  : Context for processor 'microblaze_0' is selected.
+20:13:15 INFO  : System reset is completed.
+20:13:18 INFO  : 'after 3000' command is executed.
+20:13:18 INFO  : Context for processor 'microblaze_0' is selected.
+20:13:18 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:13:18 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:13:18 INFO  : Context for processor 'microblaze_0' is selected.
+20:13:18 INFO  : 'con' command is executed.
+20:13:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:13:18 INFO  : Disconnected from the channel tcfchan#18.
+20:13:24 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:13:25 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:13:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:13:35 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:13:35 INFO  : 'jtag frequency' command is executed.
+20:13:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:13:36 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:13:36 INFO  : Context for processor 'microblaze_0' is selected.
+20:13:36 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:13:36 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:13:36 INFO  : Context for processor 'microblaze_0' is selected.
+20:13:36 INFO  : System reset is completed.
+20:13:39 INFO  : 'after 3000' command is executed.
+20:13:39 INFO  : Context for processor 'microblaze_0' is selected.
+20:13:39 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:13:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:13:39 INFO  : Context for processor 'microblaze_0' is selected.
+20:13:39 INFO  : 'con' command is executed.
+20:13:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:13:39 INFO  : Disconnected from the channel tcfchan#19.
+20:15:12 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:15:12 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:15:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:15:18 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:15:18 INFO  : 'jtag frequency' command is executed.
+20:15:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:15:20 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:15:20 INFO  : Context for processor 'microblaze_0' is selected.
+20:15:20 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:15:20 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:15:20 INFO  : Context for processor 'microblaze_0' is selected.
+20:15:20 INFO  : System reset is completed.
+20:15:23 INFO  : 'after 3000' command is executed.
+20:15:23 INFO  : Context for processor 'microblaze_0' is selected.
+20:15:23 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:15:23 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:15:23 INFO  : Context for processor 'microblaze_0' is selected.
+20:15:23 INFO  : 'con' command is executed.
+20:15:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:15:23 INFO  : Disconnected from the channel tcfchan#20.
+20:15:40 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:15:41 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:15:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:15:42 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:15:42 INFO  : 'jtag frequency' command is executed.
+20:15:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:15:44 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:15:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:15:44 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:15:44 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:15:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:15:44 INFO  : System reset is completed.
+20:15:47 INFO  : 'after 3000' command is executed.
+20:15:47 INFO  : Context for processor 'microblaze_0' is selected.
+20:15:47 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:15:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:15:47 INFO  : Context for processor 'microblaze_0' is selected.
+20:15:47 INFO  : 'con' command is executed.
+20:15:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:15:47 INFO  : Disconnected from the channel tcfchan#21.
+20:16:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:16:07 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:16:07 INFO  : 'jtag frequency' command is executed.
+20:16:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:16:08 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:16:08 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:08 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:16:08 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:16:08 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:08 INFO  : System reset is completed.
+20:16:11 INFO  : 'after 3000' command is executed.
+20:16:11 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:11 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:16:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:16:11 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:11 INFO  : 'con' command is executed.
+20:16:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:16:11 INFO  : Disconnected from the channel tcfchan#22.
+20:16:14 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:16:15 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:16:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:16:22 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:16:22 INFO  : 'jtag frequency' command is executed.
+20:16:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:16:24 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:16:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:24 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:16:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:16:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:24 INFO  : System reset is completed.
+20:16:27 INFO  : 'after 3000' command is executed.
+20:16:27 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:27 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:16:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:16:27 INFO  : Context for processor 'microblaze_0' is selected.
+20:16:27 INFO  : 'con' command is executed.
+20:16:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:16:27 INFO  : Disconnected from the channel tcfchan#23.
+20:17:44 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:17:45 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:17:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:17:52 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:17:52 INFO  : 'jtag frequency' command is executed.
+20:17:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:17:54 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:17:54 INFO  : Context for processor 'microblaze_0' is selected.
+20:17:54 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:17:54 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:17:54 INFO  : Context for processor 'microblaze_0' is selected.
+20:17:54 INFO  : System reset is completed.
+20:17:57 INFO  : 'after 3000' command is executed.
+20:17:57 INFO  : Context for processor 'microblaze_0' is selected.
+20:17:57 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:17:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:17:57 INFO  : Context for processor 'microblaze_0' is selected.
+20:17:57 INFO  : 'con' command is executed.
+20:17:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:17:57 INFO  : Disconnected from the channel tcfchan#24.
+20:18:15 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:18:15 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:18:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:18:18 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:18:18 INFO  : 'jtag frequency' command is executed.
+20:18:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:18:19 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:18:19 INFO  : Context for processor 'microblaze_0' is selected.
+20:18:19 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:18:19 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:18:19 INFO  : Context for processor 'microblaze_0' is selected.
+20:18:19 INFO  : System reset is completed.
+20:18:22 INFO  : 'after 3000' command is executed.
+20:18:22 INFO  : Context for processor 'microblaze_0' is selected.
+20:18:22 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:18:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:18:22 INFO  : Context for processor 'microblaze_0' is selected.
+20:18:22 INFO  : 'con' command is executed.
+20:18:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:18:22 INFO  : Disconnected from the channel tcfchan#25.
+20:18:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:18:29 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:18:29 INFO  : 'jtag frequency' command is executed.
+20:18:32 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+20:18:32 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+20:18:32 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:18:32 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+     2  MicroBlaze Debug Module at USER2
+        3  MicroBlaze #0 (Running)
+20:18:41 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:18:41 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:18:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:18:45 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:18:45 INFO  : 'jtag frequency' command is executed.
+20:18:48 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+20:18:48 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+20:18:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:18:48 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+20:19:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:19:51 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:19:51 INFO  : 'jtag frequency' command is executed.
+20:19:54 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1* xc7s50
+20:19:54 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1* xc7s50
+20:19:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:19:54 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1* xc7s50
+20:19:59 ERROR : (XSDB Server)child process exited abnormally
+
+20:20:02 ERROR : (XSDB Server)Invalid reset type
+
+20:21:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:21:12 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:21:12 INFO  : 'jtag frequency' command is executed.
+20:21:15 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1* xc7s50
+20:21:15 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1* xc7s50
+20:21:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+20:21:15 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1* xc7s50
+20:22:08 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/IDE.log'.
+20:22:09 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/temp_xsdb_launch_script.tcl
+20:22:10 INFO  : XSCT server has started successfully.
+20:22:10 INFO  : Successfully done setting XSCT server connection channel  
+20:22:10 INFO  : plnx-install-location is set to ''
+20:22:10 INFO  : Successfully done setting workspace for the tool. 
+20:22:10 INFO  : Successfully done query RDI_DATADIR 
+20:22:10 INFO  : Platform repository initialization has completed.
+20:22:10 INFO  : Registering command handlers for Vitis TCF services
+20:22:45 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:22:45 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:22:57 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:22:57 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:23:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:23:08 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:23:08 INFO  : 'jtag frequency' command is executed.
+20:23:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:23:09 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:23:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:09 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:23:09 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:23:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:09 INFO  : System reset is completed.
+20:23:12 INFO  : 'after 3000' command is executed.
+20:23:12 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:12 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:23:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:23:12 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:12 INFO  : 'con' command is executed.
+20:23:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:23:12 INFO  : Disconnected from the channel tcfchan#1.
+20:23:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:23:25 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:23:25 INFO  : 'jtag frequency' command is executed.
+20:23:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:23:26 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:23:26 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:26 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:23:26 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:23:26 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:26 INFO  : System reset is completed.
+20:23:29 INFO  : 'after 3000' command is executed.
+20:23:29 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:29 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:23:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:23:29 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:29 INFO  : 'con' command is executed.
+20:23:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:23:29 INFO  : Disconnected from the channel tcfchan#2.
+20:23:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:23:44 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:23:44 INFO  : 'jtag frequency' command is executed.
+20:23:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:23:45 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:23:45 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:45 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:23:45 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:23:45 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:45 INFO  : System reset is completed.
+20:23:48 INFO  : 'after 3000' command is executed.
+20:23:48 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:48 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:23:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:23:48 INFO  : Context for processor 'microblaze_0' is selected.
+20:23:48 INFO  : 'con' command is executed.
+20:23:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:23:48 INFO  : Disconnected from the channel tcfchan#3.
+20:24:09 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/IDE.log'.
+20:24:09 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/temp_xsdb_launch_script.tcl
+20:24:10 INFO  : XSCT server has started successfully.
+20:24:10 INFO  : Successfully done setting XSCT server connection channel  
+20:24:10 INFO  : plnx-install-location is set to ''
+20:24:10 INFO  : Successfully done query RDI_DATADIR 
+20:24:10 INFO  : Successfully done setting workspace for the tool. 
+20:24:10 INFO  : Platform repository initialization has completed.
+20:24:10 INFO  : Registering command handlers for Vitis TCF services
+20:24:43 INFO  : Hardware specification for platform project 'mb_ddr3_top' is updated.
+20:24:47 INFO  : Result from executing command 'removePlatformRepo': 
+20:24:54 INFO  : Result from executing command 'getProjects': mb_ddr3_top
+20:24:54 INFO  : Result from executing command 'getPlatforms': xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+20:25:00 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:25:01 INFO  : The hardware specification used by project 'mb_timer' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:25:01 INFO  : The file '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit' stored in project is removed.
+20:25:01 INFO  : The updated bitstream files are copied from platform to folder '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream' in project 'mb_timer'.
+20:25:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:25:04 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:25:04 INFO  : 'jtag frequency' command is executed.
+20:25:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:25:05 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:25:06 INFO  : Context for processor 'microblaze_0' is selected.
+20:25:06 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:25:06 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:25:06 INFO  : Context for processor 'microblaze_0' is selected.
+20:25:06 INFO  : System reset is completed.
+20:25:09 INFO  : 'after 3000' command is executed.
+20:25:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:25:09 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:25:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:25:09 INFO  : Context for processor 'microblaze_0' is selected.
+20:25:09 INFO  : 'con' command is executed.
+20:25:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:25:09 INFO  : Disconnected from the channel tcfchan#3.
+20:25:19 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:25:20 INFO  : The hardware specification used by project 'mb_bram_timing' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+20:25:20 INFO  : The file '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_bram_timing/_ide/bitstream/mb_ddr3_top.bit' stored in project is removed.
+20:25:20 INFO  : The updated bitstream files are copied from platform to folder '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_bram_timing/_ide/bitstream' in project 'mb_bram_timing'.
+20:25:20 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:25:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:25:24 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:25:24 INFO  : 'jtag frequency' command is executed.
+20:25:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:25:26 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:25:26 INFO  : Context for processor 'microblaze_0' is selected.
+20:25:26 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:25:26 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:25:26 INFO  : Context for processor 'microblaze_0' is selected.
+20:25:26 INFO  : System reset is completed.
+20:25:29 INFO  : 'after 3000' command is executed.
+20:25:29 INFO  : Context for processor 'microblaze_0' is selected.
+20:25:29 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:25:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:25:29 INFO  : Context for processor 'microblaze_0' is selected.
+20:25:29 INFO  : 'con' command is executed.
+20:25:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:25:29 INFO  : Disconnected from the channel tcfchan#4.
+20:26:42 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:26:43 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:26:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:26:49 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:26:49 INFO  : 'jtag frequency' command is executed.
+20:26:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:26:50 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:26:50 INFO  : Context for processor 'microblaze_0' is selected.
+20:26:50 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:26:50 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:26:50 INFO  : Context for processor 'microblaze_0' is selected.
+20:26:50 INFO  : System reset is completed.
+20:26:53 INFO  : 'after 3000' command is executed.
+20:26:53 INFO  : Context for processor 'microblaze_0' is selected.
+20:26:53 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:26:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:26:53 INFO  : Context for processor 'microblaze_0' is selected.
+20:26:53 INFO  : 'con' command is executed.
+20:26:53 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:26:53 INFO  : Disconnected from the channel tcfchan#5.
+20:27:13 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:27:14 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:27:18 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:27:19 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:27:29 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:27:29 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:27:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:27:35 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:27:35 INFO  : 'jtag frequency' command is executed.
+20:27:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:27:37 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:27:37 INFO  : Context for processor 'microblaze_0' is selected.
+20:27:37 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:27:37 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:27:37 INFO  : Context for processor 'microblaze_0' is selected.
+20:27:37 INFO  : System reset is completed.
+20:27:40 INFO  : 'after 3000' command is executed.
+20:27:40 INFO  : Context for processor 'microblaze_0' is selected.
+20:27:40 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:27:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:27:40 INFO  : Context for processor 'microblaze_0' is selected.
+20:27:40 INFO  : 'con' command is executed.
+20:27:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:27:40 INFO  : Disconnected from the channel tcfchan#6.
+20:28:17 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:28:17 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:28:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:28:20 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:28:20 INFO  : 'jtag frequency' command is executed.
+20:28:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:28:21 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:28:21 INFO  : Context for processor 'microblaze_0' is selected.
+20:28:21 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:28:21 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:28:21 INFO  : Context for processor 'microblaze_0' is selected.
+20:28:21 INFO  : System reset is completed.
+20:28:24 INFO  : 'after 3000' command is executed.
+20:28:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:28:24 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:28:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:28:24 INFO  : Context for processor 'microblaze_0' is selected.
+20:28:24 INFO  : 'con' command is executed.
+20:28:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:28:24 INFO  : Disconnected from the channel tcfchan#7.
+20:29:02 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:29:02 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:29:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:29:06 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:29:06 INFO  : 'jtag frequency' command is executed.
+20:29:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:29:07 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:29:07 INFO  : Context for processor 'microblaze_0' is selected.
+20:29:07 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:29:07 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:29:07 INFO  : Context for processor 'microblaze_0' is selected.
+20:29:07 INFO  : System reset is completed.
+20:29:10 INFO  : 'after 3000' command is executed.
+20:29:10 INFO  : Context for processor 'microblaze_0' is selected.
+20:29:11 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:29:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:29:11 INFO  : Context for processor 'microblaze_0' is selected.
+20:29:11 INFO  : 'con' command is executed.
+20:29:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:29:11 INFO  : Disconnected from the channel tcfchan#8.
+20:29:31 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:29:31 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:29:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:29:36 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:29:36 INFO  : 'jtag frequency' command is executed.
+20:29:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:29:38 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:29:38 INFO  : Context for processor 'microblaze_0' is selected.
+20:29:38 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:29:38 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:29:38 INFO  : Context for processor 'microblaze_0' is selected.
+20:29:38 INFO  : System reset is completed.
+20:29:41 INFO  : 'after 3000' command is executed.
+20:29:41 INFO  : Context for processor 'microblaze_0' is selected.
+20:29:41 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:29:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:29:41 INFO  : Context for processor 'microblaze_0' is selected.
+20:29:41 INFO  : 'con' command is executed.
+20:29:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:29:41 INFO  : Disconnected from the channel tcfchan#9.
+20:30:21 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:30:21 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:30:29 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:30:29 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:30:29 INFO  : 'jtag frequency' command is executed.
+20:30:29 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:30:30 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:30:30 INFO  : Context for processor 'microblaze_0' is selected.
+20:30:30 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:30:30 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:30:30 INFO  : Context for processor 'microblaze_0' is selected.
+20:30:30 INFO  : System reset is completed.
+20:30:33 INFO  : 'after 3000' command is executed.
+20:30:33 INFO  : Context for processor 'microblaze_0' is selected.
+20:30:34 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:30:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:30:34 INFO  : Context for processor 'microblaze_0' is selected.
+20:30:34 INFO  : 'con' command is executed.
+20:30:34 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:30:34 INFO  : Disconnected from the channel tcfchan#10.
+20:30:49 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:30:49 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:30:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:30:55 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:30:55 INFO  : 'jtag frequency' command is executed.
+20:30:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:30:56 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:30:56 INFO  : Context for processor 'microblaze_0' is selected.
+20:30:56 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:30:56 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:30:56 INFO  : Context for processor 'microblaze_0' is selected.
+20:30:56 INFO  : System reset is completed.
+20:30:59 INFO  : 'after 3000' command is executed.
+20:30:59 INFO  : Context for processor 'microblaze_0' is selected.
+20:31:00 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:31:00 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:31:00 INFO  : Context for processor 'microblaze_0' is selected.
+20:31:00 INFO  : 'con' command is executed.
+20:31:00 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:31:00 INFO  : Disconnected from the channel tcfchan#11.
+20:31:31 INFO  : Checking for BSP changes to sync application flags for project 'mb_bram_timing'...
+20:31:31 INFO  : Checking for BSP changes to sync application flags for project 'mb_timer'...
+20:31:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:31:39 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+20:31:39 INFO  : 'jtag frequency' command is executed.
+20:31:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+20:31:40 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit"
+20:31:40 INFO  : Context for processor 'microblaze_0' is selected.
+20:31:40 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa'.
+20:31:40 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+20:31:40 INFO  : Context for processor 'microblaze_0' is selected.
+20:31:40 INFO  : System reset is completed.
+20:31:43 INFO  : 'after 3000' command is executed.
+20:31:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:31:44 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf' is downloaded to processor 'microblaze_0'.
+20:31:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/_ide/bitstream/mb_ddr3_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/hw/mb_ddr3_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_timer/Debug/mb_timer.elf
+----------------End of Script----------------
+
+20:31:44 INFO  : Context for processor 'microblaze_0' is selected.
+20:31:44 INFO  : 'con' command is executed.
+20:31:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+20:31:44 INFO  : Disconnected from the channel tcfchan#12.
