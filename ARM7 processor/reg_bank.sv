@@ -109,5 +109,6 @@ module reg_bank(
   always_comb
     begin
       case(SR1MUXOUT)
+        1'b0: 
       
       
