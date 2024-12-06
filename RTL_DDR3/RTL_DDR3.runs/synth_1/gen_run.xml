@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1733520558">
+  <File Type="PA-TCL" Name="rtl_ddr3_top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="rtl_ddr3_top_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="rtl_ddr3_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="rtl_ddr3_top.vds"/>
+  <File Type="RDS-UTIL" Name="rtl_ddr3_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="rtl_ddr3_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="rtl_ddr3_top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="rtl_ddr3_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="rtl_ddr3_top_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/imports/rtl_ddr3_src/hex_driver.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl_ddr3_src/hex_driver.sv"/>
+        <Attr Name="ImportTime" Val="1706613854"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl_ddr3_src/ram_reader.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl_ddr3_src/ram_reader.sv"/>
+        <Attr Name="ImportTime" Val="1731704482"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl_ddr3_src/sdcard_init.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl_ddr3_src/sdcard_init.sv"/>
+        <Attr Name="ImportTime" Val="1731704408"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl_ddr3_src/Common.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl_ddr3_src/Common.vhd"/>
+        <Attr Name="ImportTime" Val="1605560640"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl_ddr3_src/SDCard.vhd">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl_ddr3_src/SDCard.vhd"/>
+        <Attr Name="ImportTime" Val="1719962040"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/imports/rtl_ddr3_src/rtl_ddr3_top.sv">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl_ddr3_src/rtl_ddr3_top.sv"/>
+        <Attr Name="ImportTime" Val="1731704346"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/ip/mig_7series_0/mig_a.prj">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="mig_7series_0"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="rtl_ddr3_top"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/imports/rtl_ddr3_src/urbana_ddr3.xdc">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PPRDIR/../rtl_ddr3_src/urbana_ddr3.xdc"/>
+        <Attr Name="ImportTime" Val="1732076770"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2022">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="mig_7series_0"/>
+</GenRun>

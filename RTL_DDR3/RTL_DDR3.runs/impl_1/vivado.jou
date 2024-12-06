@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Dec  6 15:30:10 2024
+# Process ID: 11676
+# Current directory: C:/Users/sjasi3/ECE385_FP/RTL_DDR3/RTL_DDR3.runs/impl_1
+# Command line: vivado.exe -log rtl_ddr3_top.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source rtl_ddr3_top.tcl -notrace
+# Log file: C:/Users/sjasi3/ECE385_FP/RTL_DDR3/RTL_DDR3.runs/impl_1/rtl_ddr3_top.vdi
+# Journal file: C:/Users/sjasi3/ECE385_FP/RTL_DDR3/RTL_DDR3.runs/impl_1\vivado.jou
+# Running On: ECEB-3022-01, OS: Windows, CPU Frequency: 3000 MHz, CPU Physical cores: 6, Host memory: 33554 MB
+#-----------------------------------------------------------
+source rtl_ddr3_top.tcl -notrace
