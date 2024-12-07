@@ -19,6 +19,27 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+// 1 1 0 0 0 0 0 0 0 0
+// 1 1 0 0 0 0 0 0 0 0
+// 0 0 0 0 0 0 0 0 0 0
+// 0 0 0 0 0 0 0 0 0 0
+// 0 0 0 0 0 0 0 0 0 0
+// 1 1 0 0 0 0 0 0 0 0
+// 1 1 0 0 0 0 0 0 0 0
+// 0 0 0 0 0 0 0 0 0 0
+// 0 0 0 0 0 0 0 0 0 0
+// 0 0 0 0 0 0 0 0 0 0
+// 1 1 0 0 0 0 0 0 0 0
+// 1 1 0 0 0 0 0 0 0 0
+// 0 0 0 0 0 0 0 0 0 0
+// 0 0 0 0 0 0 0 0 0 0
+// 0 0 0 0 0 0 0 0 0 0
+// 1 1 0 0 0 0 0 0 0 0
+// 1 1 0 0 0 0 0 0 0 0
+// 0 0 0 0 0 0 0 0 0 0
+// 0 0 0 0 0 0 0 0 0 0
+// 0 0 0 0 0 0 0 0 0 0
+
 // Take the keycode and determine what happens
 module tetris_top(
         input logic [31:0] keycode
@@ -34,7 +55,7 @@ module tetris_top(
     // - 8:     Determines the color
     // - 11:    X position, 11 is used instead of 10 for valid detection
     // - 40:    Y position
-    logic [10:0][2:0] grid[40];                             // This will be the game grid
+    logic [10:0][2:0] grid[20];                             // This will be the game grid
     logic [2:0] eBl[4];                                     // Four spaces on the grid to check validity
 
     // Piece and Rotation

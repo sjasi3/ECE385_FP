@@ -35,7 +35,7 @@ module FPL_TB(
     logic [3:0] Xso[4];
     logic [5:0] Yso[4];
     logic [2:0] Color;
-    logic [10:0][2:0] grid[40];
+    logic [10:0][2:0] grid[20];
 
     FPL falling_logic (
         .X(X),
@@ -58,7 +58,7 @@ module FPL_TB(
     end
     
     task clear();
-        for(int line = 0; line < 40; line++) begin
+        for(int line = 0; line < 20; line++) begin
             grid[line] = 4'b0;
         end
     endtask
@@ -75,7 +75,7 @@ module FPL_TB(
     task grid_disp();
         //for (int xP = 0; xP < 10; xP++) begin
         write();
-        for (int yP = 0; yP < 40; yP++) begin
+        for (int yP = 0; yP < 20; yP++) begin
             for (int xP = 0; xP < 11; xP++) begin
                 $write("%d\t",grid[yP][xP]);
             end

@@ -19,8 +19,52 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
 module FSMC(
-
+    input logic clk,
+    input logic rst,
+    input logic valid,
+    input logic place,
+    
+    output logic fall,
+    output logic moverot,
+    output logic halt,
+    output logic lost,
+    output logic remove
     );
+    enum [31:0] {
+        setup,                          // Set up new game
+        halt,                           // Stop the game entirely
+        reset,                          // Reset the game
+        place,                          // Place falling block down
+        fall,                           // Make piece fall
+        newblk,                         // Set up new block
+        update,                         // Update X, Y to the next position
+        lose
+        } cstate, nstate;
+    parameter delay = 0;
+
+    // TODO: Figure out the order which the FSM should operate
+    always_comb begin
+        unique case (cstate)
+            halt:   begin end
+            reset:  nstate = setup;     // Set up new game
+            setup:  nstate = update;    // Start updating values
+            place:  nstate = remove;    // Place the block
+            remove: nstate = shift;     // Remove blocks that form full row
+            newblk: nstate = update;    // Set up a new block for falling
+            shift:  nstate = draw;      // Shift everything down by 1
+            draw:   nstate = update;    // NOTE: Might need wait states
+            fall:   nstate = update;    // Set nY = -1
+            update: nstate = update;    // Update the X and Y position
+            lose:   begin end
+        endcase
+    end
+
+    // TODO: Clock synced updating
+    always_ff @(posedge clk) begin
+        cstate = nstate;
+        unique case (nstate)
+            
+        endcase
+    end
 endmodule
