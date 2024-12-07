@@ -72,5 +72,11 @@ module KPL(
             end
         endcase
     end
+    always_ff @(posedge frame_clk) //make sure the frame clock is instantiated correctly
+    begin: Move_Ball
+        X<= nX;
+        Y<= nY;
+        rType<= nrTypw;
+    end
     
 endmodule
