@@ -1,0 +1,34 @@
+06:10:27 DEBUG : Logs will be stored at '/home/sean/Documents/Vivado/lab6_2_redo/workspace/IDE.log'.
+06:10:36 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Documents/Vivado/lab6_2_redo/workspace/temp_xsdb_launch_script.tcl
+06:10:38 INFO  : Registering command handlers for Vitis TCF services
+06:10:48 INFO  : Platform repository initialization has completed.
+06:10:53 INFO  : XSCT server has started successfully.
+06:10:55 INFO  : Successfully done setting XSCT server connection channel  
+06:10:55 INFO  : plnx-install-location is set to ''
+06:10:55 INFO  : Successfully done query RDI_DATADIR 
+06:10:55 INFO  : Successfully done setting workspace for the tool. 
+07:13:39 DEBUG : Logs will be stored at '/home/sean/Documents/Vivado/lab6_2_redo/workspace/IDE.log'.
+07:14:03 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Documents/Vivado/lab6_2_redo/workspace/temp_xsdb_launch_script.tcl
+07:14:05 INFO  : Registering command handlers for Vitis TCF services
+07:14:16 INFO  : Platform repository initialization has completed.
+07:14:30 INFO  : XSCT server has started successfully.
+07:14:30 ERROR : Exception raised in executing the command =null 
+07:14:30 ERROR : Exception raised in executing the command =null 
+07:23:01 DEBUG : Logs will be stored at '/home/sean/Documents/Vivado/lab6_2_redo/workspace/IDE.log'.
+07:23:02 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Documents/Vivado/lab6_2_redo/workspace/temp_xsdb_launch_script.tcl
+07:23:02 INFO  : Registering command handlers for Vitis TCF services
+07:23:02 INFO  : Platform repository initialization has completed.
+07:23:03 INFO  : XSCT server has started successfully.
+07:23:03 INFO  : plnx-install-location is set to ''
+07:23:03 INFO  : Successfully done setting XSCT server connection channel  
+07:23:27 INFO  : Successfully done setting workspace for the tool. 
+07:23:27 INFO  : Successfully done query RDI_DATADIR 
+07:25:00 DEBUG : Logs will be stored at '/home/sean/Documents/Vivado/lab6_2_redo/workspace/IDE.log'.
+07:25:00 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Documents/Vivado/lab6_2_redo/workspace/temp_xsdb_launch_script.tcl
+07:25:01 INFO  : Registering command handlers for Vitis TCF services
+07:25:01 INFO  : Platform repository initialization has completed.
+07:25:01 INFO  : XSCT server has started successfully.
+07:25:02 INFO  : plnx-install-location is set to ''
+07:25:02 INFO  : Successfully done setting XSCT server connection channel  
+07:25:02 INFO  : Successfully done query RDI_DATADIR 
+07:25:02 INFO  : Successfully done setting workspace for the tool. 

@@ -1,0 +1,6 @@
+/*mb_ddr3_top*/
+the_ROM_image:
+{
+   <bitstream> 
+   <elf> 
+}

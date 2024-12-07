@@ -1,0 +1,6 @@
+2024-11-26T20:31:31.261200255-20:31:31 **** Incremental Build of configuration Debug for project mb_bram_timing_system ****
+000-make all 
+000-Skipping SD card image generation. Reason: The system project only has applications for microblaze processors.
+00255-
+20:31:31 Build Finished (took 67ms)
+

@@ -1,0 +1,21 @@
+2024-11-26T20:31:31.34756700255-20:31:31 **** Incremental Build of configuration Debug for project mb_timer ****
+000-make all 
+000-Building file: ../src/helloworld.c
+000-Invoking: MicroBlaze gcc compiler
+000-mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bspinclude/include -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+000-Finished building: ../src/helloworld.c
+000- 
+000-Building target: mb_timer.elf
+000-Invoking: MicroBlaze gcc linker
+000-mb-gcc -Wl,-T -Wl,../src/lscript.ld -L/home/sean/Downloads/git/ECE385_FP/MB_BRAM_IMPL/workspace/mb_ddr3_top/export/mb_ddr3_top/sw/mb_ddr3_top/standalone_microblaze_0/bsplib/lib -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mno-xl-soft-div -mcpu=v11.0 -mno-xl-soft-mul -mxl-multiply-high -mhard-float -Wl,--no-relax -Wl,--gc-sections -o "mb_timer.elf" ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-Finished building target: mb_timer.elf
+000- 
+000-Invoking: MicroBlaze Print Size
+000-mb-size mb_timer.elf  |tee "mb_timer.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  70904	   1800	   3192	  75896	  12878	mb_timer.elf
+000-Finished building: mb_timer.elf.size
+000- 
+00255-
+20:31:31 Build Finished (took 166ms)
+
