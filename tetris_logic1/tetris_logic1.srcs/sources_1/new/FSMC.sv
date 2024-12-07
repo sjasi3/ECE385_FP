@@ -61,10 +61,21 @@ module FSMC(
     end
 
     // TODO: Clock synced updating
+    // NOTE: Update variables here
     always_ff @(posedge clk) begin
         cstate = nstate;
         unique case (nstate)
-            
+            halt:   begin end
+            reset:  begin end
+            setup:  begin end
+            place:  begin end
+            remove: begin end
+            newblk: begin end
+            shift:  begin end
+            draw:   begin end
+            fall:   begin end
+            update: begin end
+            lose:   begin end
         endcase
     end
 endmodule
