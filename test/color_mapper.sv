@@ -75,4 +75,10 @@ module display_logic_with_color (
             Red = 4'h0; Green = 4'h0; Blue = 4'h0; // Background
         end
     end
+    always_ff @(posedge block_stop) begin
+        if (block_on) begin
+            block_grid[DrawY][DrawX] = 1'b1;
+            color_grid[DrawY][DrawX] = BlockColor;
+        end
+    end
 endmodule
