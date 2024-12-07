@@ -28,7 +28,7 @@ module FPL(
         input logic [5:0] Y,            // Need 40 so 6 bits
         input logic [3:0] pType,        // Determines the shape out of 7 shapes
         input logic [1:0] rType,        // Determines the rotation of the shape
-
+        input logic frame_clk,          //add clock to update the position of falling block
         output logic [3:0] Xso[4],      // Contains the 4 X coordinates
         output logic [5:0] Yso[4]       // Contains the 4 Y coordinates
     );
@@ -188,15 +188,19 @@ module FPL(
         end
     endcase
 
-    Xso[0] = Xs[0] + X;
-    Yso[0] = Ys[0] + Y;
-    Xso[1] = Xs[1] + X;
-    Yso[1] = Ys[1] + Y;
-    Xso[2] = Xs[2] + X;
-    Yso[2] = Ys[2] + Y;
-    Xso[3] = Xs[3] + X;
-    Yso[3] = Ys[3] + Y;
+    always_ff @(posedge frame_clk) //make sure the frame clock is instantiated correctly
+    begin: Move_Ball
+        Xso[0] <= Xs[0] + X;
+        Yso[0] <= Ys[0] + Y;
+        Xso[1] <= Xs[1] + X;
+        Yso[1] <= Ys[1] + Y;
+        Xso[2] <= Xs[2] + X;
+        Yso[2] <= Ys[2] + Y;
+        Xso[3] <= Xs[3] + X;
+        Yso[3] <= Ys[3] + Y;
 
     end
+
+    
 
 endmodule
