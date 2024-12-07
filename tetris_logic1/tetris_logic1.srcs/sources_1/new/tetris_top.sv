@@ -30,6 +30,7 @@ module tetris_top(
 
     // Grid for determine validity and gamestate
     logic [10:0][2:0] grid[40];                             // This will be the game grid
+    logic eBl[4];                                           // Four spaces on the grid to check validity
 
     // Piece and Rotation
     logic [2:0] pType, npType;
@@ -80,10 +81,24 @@ module tetris_top(
         .Yso(Yso)
         );
 
+    // Always update eBl
+    always_comb begin
+        eBl[0] = grid[Yso[0]][Xso[0]];
+        eBl[1] = grid[Yso[1]][Xso[1]];
+        eBl[2] = grid[Yso[2]][Xso[2]];
+        eBl[3] = grid[Yso[3]][Xso[3]];
+    end
+
     // Valid should detect a couple things:
     //  - Piece is not out of bounds
     //  - Piece is not intersecting another piece
     VPPL valid_piece_position_logic (
+        .Xsi(Xso),
+        .Ysi(Yso),
+        .eBl(eBl),
+
+        .valid(valid),
+        .place(place)
         );
 
     // Sets the rotation of the block
