@@ -12,9 +12,9 @@ var WshShell = new ActiveXObject( "WScript.Shell" );
 var ProcEnv = WshShell.Environment( "Process" );
 var PathVal = ProcEnv("PATH");
 if ( PathVal.length == 0 ) {
-  PathVal = "/home/sean/.var/app/com.github.corna.Vivado/data/xilinx-install/Vitis/2022.2/bin:/home/sean/.var/app/com.github.corna.Vivado/data/xilinx-install/Vivado/2022.2/ids_lite/ISE/bin/lin64;/home/sean/.var/app/com.github.corna.Vivado/data/xilinx-install/Vivado/2022.2/bin;";
+  PathVal = "/alottadata/tools/Xilinx/Vitis/2022.2/bin:/alottadata/tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64;/alottadata/tools/Xilinx/Vivado/2022.2/bin;";
 } else {
-  PathVal = "/home/sean/.var/app/com.github.corna.Vivado/data/xilinx-install/Vitis/2022.2/bin:/home/sean/.var/app/com.github.corna.Vivado/data/xilinx-install/Vivado/2022.2/ids_lite/ISE/bin/lin64;/home/sean/.var/app/com.github.corna.Vivado/data/xilinx-install/Vivado/2022.2/bin;" + PathVal;
+  PathVal = "/alottadata/tools/Xilinx/Vitis/2022.2/bin:/alottadata/tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64;/alottadata/tools/Xilinx/Vivado/2022.2/bin;" + PathVal;
 }
 
 ProcEnv("PATH") = PathVal;
