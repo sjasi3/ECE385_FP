@@ -32,12 +32,12 @@ module tetris_top(
     logic [10:0][2:0] grid[40];                             // This will be the game grid
 
     // Piece and Rotation
-    logic [2:0] pType;
-    logic [1:0] rType;
+    logic [2:0] pType, npType;
+    logic [1:0] rType, nrType;
 
     // NOTE: Modify this to move falling piece position
-    logic [3:0] X;                                          // X position on grid +: right, -: left
-    logic [5:0] Y;                                          // Y position on grid +: down,  -: up
+    logic [3:0] X, nX;                                      // X position on grid +: right, -: left
+    logic [5:0] Y, nY;                                      // Y position on grid +: down,  -: up
 
     // NOTE: DO NOT MODIFY THESE, ONLY FOR READING
     logic [3:0] Xso[4];                                     // Block X positions
@@ -53,15 +53,16 @@ module tetris_top(
     //  - In bounds
     // States:
     //  - Pause GAME
-    //  - Move piece down
-    //  - Move piece according to keypress
+    //  - Update piece values
     //  - Fall delay
+    //  - Move piece down
     //  - Clear line
     //  - Check valid   NOTE: because of the fall delay, this should not be
     //                          noticeable in gameplay
     //      - Invalid bounds (left right): Undo last move
     //      - Invalid piece landed: Undo last move and create new falling
     //          piece
+    //      - Should be checked on every clock cycle
     //  - Set falling piece placement
     //  - New falling piece
     FSMC FSM_controller (
@@ -88,6 +89,13 @@ module tetris_top(
     // Sets the rotation of the block
     //  - Should go to default rotation for each new falling piece
     KPL keyboard_piece_logic (
+        .keycode(keycode),
+        .X(X),
+        .Y(Y),
+        .rType(rType),
+        .nX(nX),
+        .nY(nY),
+        .nrType(nrType)
         );
 
 

@@ -13,10 +13,10 @@ Command: link_design -top tetris_top -part xc7s50csga324-1
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7s50csga324-1
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1786.168 ; gain = 0.000 ; free physical = 16044 ; free virtual = 21938
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1786.043 ; gain = 0.000 ; free physical = 15402 ; free virtual = 21781
 INFO: [Project 1-479] Netlist was created with Vivado 2022.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1855.918 ; gain = 0.000 ; free physical = 15965 ; free virtual = 21862
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1855.793 ; gain = 0.000 ; free physical = 15304 ; free virtual = 21682
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -32,13 +32,13 @@ INFO: [DRC 23-27] Running DRC with 8 threads
 INFO: [Project 1-461] DRC finished with 0 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 
-Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.24 . Memory (MB): peak = 1950.699 ; gain = 94.781 ; free physical = 15952 ; free virtual = 21849
+Time (s): cpu = 00:00:00.22 ; elapsed = 00:00:00.24 . Memory (MB): peak = 1950.574 ; gain = 94.781 ; free physical = 15298 ; free virtual = 21676
 
 Starting Cache Timing Information Task
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 Ending Cache Timing Information Task | Checksum: 62aca7c1
 
-Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2257.449 ; gain = 306.750 ; free physical = 15705 ; free virtual = 21603
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2257.324 ; gain = 306.750 ; free physical = 14995 ; free virtual = 21373
 
 Starting Logic Optimization Task
 
@@ -47,39 +47,39 @@ INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 INFO: [Opt 31-49] Retargeted 0 cell(s).
 Phase 1 Retarget | Checksum: 62aca7c1
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2536.371 ; gain = 0.000 ; free physical = 15381 ; free virtual = 21279
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2536.246 ; gain = 0.000 ; free physical = 14763 ; free virtual = 21141
 INFO: [Opt 31-389] Phase Retarget created 0 cells and removed 0 cells
 
 Phase 2 Constant propagation
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
 Phase 2 Constant propagation | Checksum: 62aca7c1
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2536.371 ; gain = 0.000 ; free physical = 15381 ; free virtual = 21279
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2536.246 ; gain = 0.000 ; free physical = 14763 ; free virtual = 21141
 INFO: [Opt 31-389] Phase Constant propagation created 0 cells and removed 0 cells
 
 Phase 3 Sweep
 Phase 3 Sweep | Checksum: 62aca7c1
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2536.371 ; gain = 0.000 ; free physical = 15381 ; free virtual = 21279
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2536.246 ; gain = 0.000 ; free physical = 14763 ; free virtual = 21141
 INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 0 cells
 
 Phase 4 BUFG optimization
 Phase 4 BUFG optimization | Checksum: 62aca7c1
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2568.387 ; gain = 32.016 ; free physical = 15381 ; free virtual = 21279
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2568.262 ; gain = 32.016 ; free physical = 14762 ; free virtual = 21141
 INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
 
 Phase 5 Shift Register Optimization
 INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
 Phase 5 Shift Register Optimization | Checksum: 62aca7c1
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2568.387 ; gain = 32.016 ; free physical = 15381 ; free virtual = 21279
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2568.262 ; gain = 32.016 ; free physical = 14762 ; free virtual = 21141
 INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
 
 Phase 6 Post Processing Netlist
 Phase 6 Post Processing Netlist | Checksum: 62aca7c1
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2568.387 ; gain = 32.016 ; free physical = 15381 ; free virtual = 21279
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2568.262 ; gain = 32.016 ; free physical = 14762 ; free virtual = 21141
 INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
 Opt_design Change Summary
 =========================
@@ -100,31 +100,31 @@ Opt_design Change Summary
 
 Starting Connectivity Check Task
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.387 ; gain = 0.000 ; free physical = 15381 ; free virtual = 21279
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.262 ; gain = 0.000 ; free physical = 14762 ; free virtual = 21141
 Ending Logic Optimization Task | Checksum: 62aca7c1
 
-Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2568.387 ; gain = 32.016 ; free physical = 15381 ; free virtual = 21279
+Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2568.262 ; gain = 32.016 ; free physical = 14762 ; free virtual = 21141
 
 Starting Power Optimization Task
 INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
 Ending Power Optimization Task | Checksum: 62aca7c1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2568.387 ; gain = 0.000 ; free physical = 15381 ; free virtual = 21279
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2568.262 ; gain = 0.000 ; free physical = 14762 ; free virtual = 21141
 
 Starting Final Cleanup Task
 Ending Final Cleanup Task | Checksum: 62aca7c1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.387 ; gain = 0.000 ; free physical = 15381 ; free virtual = 21279
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.262 ; gain = 0.000 ; free physical = 14762 ; free virtual = 21141
 
 Starting Netlist Obfuscation Task
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.387 ; gain = 0.000 ; free physical = 15381 ; free virtual = 21279
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.262 ; gain = 0.000 ; free physical = 14762 ; free virtual = 21141
 Ending Netlist Obfuscation Task | Checksum: 62aca7c1
 
-Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.387 ; gain = 0.000 ; free physical = 15381 ; free virtual = 21279
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2568.262 ; gain = 0.000 ; free physical = 14762 ; free virtual = 21141
 INFO: [Common 17-83] Releasing license: Implementation
 21 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 opt_design completed successfully
-opt_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 2568.387 ; gain = 712.469 ; free physical = 15381 ; free virtual = 21279
+opt_design: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2568.262 ; gain = 712.469 ; free physical = 14762 ; free virtual = 21141
 INFO: [Common 17-1381] The checkpoint '/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.runs/impl_1/tetris_top_opt.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_drc -file tetris_top_drc_opted.rpt -pb tetris_top_drc_opted.pb -rpx tetris_top_drc_opted.rpx
 Command: report_drc -file tetris_top_drc_opted.rpt -pb tetris_top_drc_opted.pb -rpx tetris_top_drc_opted.rpx
@@ -151,20 +151,20 @@ INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 
 Phase 1 Placer Initialization
 
 Phase 1.1 Placer Initialization Netlist Sorting
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2693.250 ; gain = 0.000 ; free physical = 15372 ; free virtual = 21270
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2693.125 ; gain = 0.000 ; free physical = 14737 ; free virtual = 21116
 Phase 1.1 Placer Initialization Netlist Sorting | Checksum: 00000000
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2693.250 ; gain = 0.000 ; free physical = 15372 ; free virtual = 21270
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2693.125 ; gain = 0.000 ; free physical = 14737 ; free virtual = 21116
 Phase 1 Placer Initialization | Checksum: 00000000
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2693.250 ; gain = 0.000 ; free physical = 15372 ; free virtual = 21270
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2693.125 ; gain = 0.000 ; free physical = 14737 ; free virtual = 21116
 ERROR: [Place 30-494] The design is empty
 Resolution: Check if opt_design has removed all the leaf cells of your design.  Check whether you have instantiated and connected all of the top level ports.
 Ending Placer Task | Checksum: 00000000
 
-Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2693.250 ; gain = 0.000 ; free physical = 15372 ; free virtual = 21270
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2693.125 ; gain = 0.000 ; free physical = 14737 ; free virtual = 21116
 INFO: [Common 17-83] Releasing license: Implementation
 37 Infos, 0 Warnings, 0 Critical Warnings and 2 Errors encountered.
 place_design failed
 ERROR: [Common 17-69] Command failed: Placer could not place all instances
-INFO: [Common 17-206] Exiting Vivado at Fri Dec  6 22:58:24 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat Dec  7 01:35:04 2024...

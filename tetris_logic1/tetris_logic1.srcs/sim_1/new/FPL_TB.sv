@@ -99,7 +99,7 @@ module FPL_TB(
         @(posedge clk) begin
             X <= 0;
             Y <= 0;
-            pType <= O;
+            pType <= S;
             rType <= up;
         end
         @(posedge clk) begin
@@ -109,7 +109,7 @@ module FPL_TB(
         @(posedge clk) begin
             X <= 0;
             Y <= 0;
-            pType <= O;
+            pType <= Z;
             rType <= up;
         end
         @(posedge clk) begin
@@ -119,7 +119,7 @@ module FPL_TB(
         @(posedge clk) begin
             X <= 4;
             Y <= 16;
-            pType <= O;
+            pType <= S;
             rType <= up;
         end
         @(posedge clk) begin
@@ -127,7 +127,7 @@ module FPL_TB(
         end
 
         @(posedge clk) begin
-            X <= 1;
+            X <= 5;
             Y <= 1;
             pType <= O;
             rType <= up;

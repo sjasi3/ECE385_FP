@@ -70,10 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-17711-SgoSkzD/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -90,6 +86,9 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
   /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/FPL.sv
+  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/FSMC.sv
+  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/KPL.sv
+  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/VPPL.sv
   /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/tetris_top.sv
 }
 OPTRACE "Adding files" END { }
@@ -102,6 +101,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
 set_param ips.enableIPCacheLiteLoad 1
+
+read_checkpoint -auto_incremental -incremental /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/utils_1/imports/synth_1/tetris_top.dcp
 close [open __synthesis_is_running__ w]
 
 OPTRACE "synth_design" START { }

@@ -57,16 +57,16 @@ module FPL(
             Ys[3] = 1;
         end
         I:  begin
-            Xs[0] = (rType == up || rType == down) ? 0 : -1;
-            Ys[0] = (rType == up || rType == down) ? -2 : 0;
+            Xs[0] = 0;
+            Ys[0] = 0;
 
-            Xs[1] = 0;
+            Xs[1] = (rType == up || rType == down) ? 0 : 1;
             Ys[1] = (rType == up || rType == down) ? -1 : 0;
 
-            Xs[2] = (rType == up || rType == down) ? 0 : -2;
-            Ys[2] = 0;
+            Xs[2] = (rType == up || rType == down) ? 0 : -1;
+            Ys[2] = (rType == up || rType == down) ? -2 : 0;
 
-            Xs[3] = (rType == up || rType == down) ? 0 : -3;
+            Xs[3] = (rType == up || rType == down) ? 0 : -2;
             Ys[3] = (rType == up || rType == down) ? 1 : 0;
         end
         S:  begin
