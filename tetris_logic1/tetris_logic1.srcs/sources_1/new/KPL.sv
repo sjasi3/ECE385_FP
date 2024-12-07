@@ -45,6 +45,7 @@ module KPL(
                 nX <= X;
                 nY <= Y;
                 nrType <= rType;
+                nmType <= nmType;
             end
         endcase
     end

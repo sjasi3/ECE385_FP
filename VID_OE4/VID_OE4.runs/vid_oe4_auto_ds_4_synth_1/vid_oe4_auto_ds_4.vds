@@ -1,0 +1,27 @@
+#-----------------------------------------------------------
+# Vivado v2022.2 (64-bit)
+# SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
+# IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+# Start of session at: Fri Dec  6 15:55:07 2024
+# Process ID: 18500
+# Current directory: C:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.runs/vid_oe4_auto_ds_4_synth_1
+# Command line: vivado.exe -log vid_oe4_auto_ds_4.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source vid_oe4_auto_ds_4.tcl
+# Log file: C:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.runs/vid_oe4_auto_ds_4_synth_1/vid_oe4_auto_ds_4.vds
+# Journal file: C:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.runs/vid_oe4_auto_ds_4_synth_1\vivado.jou
+# Running On: ECEB-3022-01, OS: Windows, CPU Frequency: 3000 MHz, CPU Physical cores: 6, Host memory: 33554 MB
+#-----------------------------------------------------------
+source vid_oe4_auto_ds_4.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/sjasi3/ECE385_FP/hdmi_tx_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/sjasi3/ECE385_FP/digilent'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/sjasi3/ECE385_FP/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: vid_oe4_auto_ds_4
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry f428e86cbd39b916 to dir: C:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.runs/vid_oe4_auto_ds_4_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.cache/ip/2022.2/f/4/f428e86cbd39b916/vid_oe4_auto_ds_0.dcp to C:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.runs/vid_oe4_auto_ds_4_synth_1/vid_oe4_auto_ds_4.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.cache/ip/2022.2/f/4/f428e86cbd39b916/vid_oe4_auto_ds_0_sim_netlist.v to C:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.runs/vid_oe4_auto_ds_4_synth_1/vid_oe4_auto_ds_4_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.cache/ip/2022.2/f/4/f428e86cbd39b916/vid_oe4_auto_ds_0_sim_netlist.vhdl to C:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.runs/vid_oe4_auto_ds_4_synth_1/vid_oe4_auto_ds_4_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.cache/ip/2022.2/f/4/f428e86cbd39b916/vid_oe4_auto_ds_0_stub.v to C:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.runs/vid_oe4_auto_ds_4_synth_1/vid_oe4_auto_ds_4_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.cache/ip/2022.2/f/4/f428e86cbd39b916/vid_oe4_auto_ds_0_stub.vhdl to C:/Users/sjasi3/ECE385_FP/VID_OE4/VID_OE4.runs/vid_oe4_auto_ds_4_synth_1/vid_oe4_auto_ds_4_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP vid_oe4_auto_ds_4, cache-ID = f428e86cbd39b916.
+INFO: [Common 17-206] Exiting Vivado at Fri Dec  6 15:55:21 2024...

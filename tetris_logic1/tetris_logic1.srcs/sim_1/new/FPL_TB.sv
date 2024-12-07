@@ -21,6 +21,7 @@
 
 enum logic [2:0] { NA, O, I, S, Z, L, J, T } pTypes;  // All the shapes X unplaced
 enum logic [1:0] { up, down, left, right } rTypes;    // Possible rotations
+enum logic [1:0] { Fa, Le, Ri } mTypes;                 // Possible movements
 `define SPECIAL 0
 
 module FPL_TB(
@@ -75,7 +76,7 @@ module FPL_TB(
         //for (int xP = 0; xP < 10; xP++) begin
         write();
         for (int yP = 0; yP < 40; yP++) begin
-            for (int xP = 0; xP < 10; xP++) begin
+            for (int xP = 0; xP < 11; xP++) begin
                 $write("%d\t",grid[yP][xP]);
             end
             $write("\n");

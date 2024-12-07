@@ -1,4 +1,0 @@
-Running: xsim.dir/FPL_TB_behav/xsimk -simmode gui -wdb FPL_TB_behav.wdb -simrunnum 0 -socket 52091
-Design successfully loaded
-Design Loading Memory Usage: 28856 KB (Peak: 29512 KB)
-Design Loading CPU Usage: 20 ms

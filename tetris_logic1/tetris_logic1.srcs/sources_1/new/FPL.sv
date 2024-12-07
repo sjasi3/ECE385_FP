@@ -34,6 +34,7 @@ module FPL(
     );
     enum logic [2:0] { NA, O, I, S, Z, L, J, T } pTypes;    // All the shapes X unplaced
     enum logic [1:0] { up, down, left, right } rTypes;      // Possible rotations
+    enum logic [1:0] { Fa, Le, Ri } mTypes;                 // Possible movements
 
     // In all rotations (Xs, Ys) = (0, 0) is the center piece
     // Horizontal   +: Left, -: Right

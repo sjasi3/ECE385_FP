@@ -34,16 +34,27 @@ module VPPL(
     output logic valid,
     output logic place
     );
+    enum logic [1:0] { Fa, Le, Ri } mTypes;                 // Possible movements
     // NOTE: To check if the block wraps, check Xsi[0] (center) make sure all
     // blocks are within 4 blocks distance
     always_comb begin
         valid = 1;
         place = 0;
-        if(Xsi[0] - Xsi[1] > 4) valid = 0;
-        if(Xsi[0] - Xsi[2] > 4) valid = 0;
-        if(Xsi[0] - Xsi[3] > 4) valid = 0;
-        if(last_movement == falling) begin
-            if(eBl[0] > 0 | eBl[1] > 0 | eBl[2] > 0 | eBl[3] > 0) place = 1;
+
+        // Out of bounds errors
+        // This will happen if too far left or too far right
+        if(Xsi[0] > 10) valid = 0;
+        if(Xsi[1] > 10) valid = 0;
+        if(Xsi[2] > 10) valid = 0;
+        if(Xsi[3] > 10) valid = 0;
+
+        // Block intersection error
+        // This will happen when falling or going left right
+        if(last_movement == Fa) begin
+            if(eBl[0] > 0 | eBl[1] > 0 | eBl[2] > 0 | eBl[3] > 0) begin
+                place = 1;                                  // Place the piece
+                valid = 0;                                  // Undo the last move
+            end
         end else begin
             if(eBl[0] > 0 | eBl[1] > 0 | eBl[2] > 0 | eBl[3] > 0) valid = 0;
         end

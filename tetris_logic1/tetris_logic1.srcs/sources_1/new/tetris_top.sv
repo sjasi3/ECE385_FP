@@ -25,12 +25,17 @@ module tetris_top(
     );
 
     // Setup enums for defining piece and rotation
-    enum logic [2:0] { NA, O, I, S, Z, L, J, T } pTypes;    // All the shapes X unplaced
+    enum logic [2:0] { NA, O, I, S, Z, L, J, T } pTypes;    // Possible shapes NA: unplaced
     enum logic [1:0] { up, down, left, right } rTypes;      // Possible rotations
+    enum logic [1:0] { Fa, Le, Ri } mTypes;                 // Possible movements
 
     // Grid for determine validity and gamestate
+    // Grid size is 8x11x40
+    // - 8:     Determines the color
+    // - 11:    X position, 11 is used instead of 10 for valid detection
+    // - 40:    Y position
     logic [10:0][2:0] grid[40];                             // This will be the game grid
-    logic eBl[4];                                           // Four spaces on the grid to check validity
+    logic [2:0] eBl[4];                                     // Four spaces on the grid to check validity
 
     // Piece and Rotation
     logic [2:0] pType, npType;
@@ -69,6 +74,13 @@ module tetris_top(
     FSMC FSM_controller (
         );
 
+        always_comb begin
+            if(valid) begin
+                X <= nX;
+                Y <= nY;
+            end
+        end
+
     // Determines the position of the falling piece (Xso, Yso)[4]
     // Xso and Yso should never be changed, only X and Y
     FPL falling_piece_logic (
@@ -96,6 +108,7 @@ module tetris_top(
         .Xsi(Xso),
         .Ysi(Yso),
         .eBl(eBl),
+        .last_movement(mType),
 
         .valid(valid),
         .place(place)
