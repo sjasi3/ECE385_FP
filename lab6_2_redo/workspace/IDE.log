@@ -49,3 +49,233 @@
 18:23:44 INFO  : Result from executing command 'getProjects': mb_usb_hdmi_top
 18:23:44 INFO  : Result from executing command 'getPlatforms': mb_usb_hdmi_top|/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/mb_usb_hdmi_top.xpfm;xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
 18:23:48 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+18:27:32 INFO  : Checking for BSP changes to sync application flags for project 'mb_usb'...
+18:37:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+18:37:38 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+18:37:38 INFO  : 'jtag frequency' command is executed.
+18:37:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+18:37:40 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+18:37:40 INFO  : Context for processor 'microblaze_0' is selected.
+18:37:40 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+18:37:40 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+18:37:40 INFO  : Context for processor 'microblaze_0' is selected.
+18:37:40 INFO  : System reset is completed.
+18:37:43 INFO  : 'after 3000' command is executed.
+18:37:43 INFO  : Context for processor 'microblaze_0' is selected.
+18:37:43 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+18:37:43 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+18:37:43 INFO  : Context for processor 'microblaze_0' is selected.
+18:37:43 INFO  : 'con' command is executed.
+18:37:43 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+18:37:43 INFO  : Disconnected from the channel tcfchan#2.
+19:18:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:18:46 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:18:46 INFO  : 'jtag frequency' command is executed.
+19:18:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:18:47 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+19:18:47 INFO  : Context for processor 'microblaze_0' is selected.
+19:18:47 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+19:18:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:18:47 INFO  : Context for processor 'microblaze_0' is selected.
+19:18:47 INFO  : System reset is completed.
+19:18:50 INFO  : 'after 3000' command is executed.
+19:18:50 INFO  : Context for processor 'microblaze_0' is selected.
+19:18:50 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+19:18:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+19:18:50 INFO  : Context for processor 'microblaze_0' is selected.
+19:18:50 INFO  : 'con' command is executed.
+19:18:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:18:50 INFO  : Disconnected from the channel tcfchan#3.
+19:18:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:18:58 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:18:58 INFO  : 'jtag frequency' command is executed.
+19:19:01 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+19:19:01 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+19:19:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+19:19:01 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+19:21:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:21:35 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:21:35 INFO  : 'jtag frequency' command is executed.
+19:21:38 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+19:21:38 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+19:21:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+19:21:38 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+19:21:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:21:51 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:21:51 INFO  : 'jtag frequency' command is executed.
+19:21:54 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+19:21:54 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+19:21:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+19:21:54 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1  xc7s50
+19:22:11 ERROR : (XSDB Server)invalid command name "start"
+
+19:22:12 ERROR : (XSDB Server)Invalid reset type
+
+19:22:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:22:38 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:22:38 INFO  : 'jtag frequency' command is executed.
+19:22:41 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1* xc7s50
+  2  whole scan chain (ftdi_write_data_submit failed: all fine)
+19:22:41 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1* xc7s50
+  2  whole scan chain (ftdi_write_data_submit failed: all fine)
+19:22:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+19:22:41 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1* xc7s50
+  2  whole scan chain (ftdi_write_data_submit failed: all fine)
+19:22:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:22:49 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:22:49 INFO  : 'jtag frequency' command is executed.
+19:22:52 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1* xc7s50
+  2  whole scan chain (ftdi_write_data_submit failed: all fine)
+19:22:52 ERROR : Exception occured while running Program Device.
+java.lang.RuntimeException: no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1* xc7s50
+  2  whole scan chain (ftdi_write_data_submit failed: all fine)
+19:22:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+19:22:52 ERROR : no targets found with "jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"". available targets:
+  1* xc7s50
+  2  whole scan chain (ftdi_write_data_submit failed: all fine)
+19:23:13 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/IDE.log'.
+19:23:13 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/temp_xsdb_launch_script.tcl
+19:23:14 INFO  : XSCT server has started successfully.
+19:23:14 INFO  : plnx-install-location is set to ''
+19:23:14 INFO  : Successfully done setting XSCT server connection channel  
+19:23:14 INFO  : Successfully done query RDI_DATADIR 
+19:23:14 INFO  : Successfully done setting workspace for the tool. 
+19:23:14 INFO  : Platform repository initialization has completed.
+19:23:15 INFO  : Registering command handlers for Vitis TCF services
+19:23:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:23:22 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:23:22 INFO  : 'jtag frequency' command is executed.
+19:23:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:23:24 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+19:23:24 INFO  : Context for processor 'microblaze_0' is selected.
+19:23:24 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+19:23:24 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:23:24 INFO  : Context for processor 'microblaze_0' is selected.
+19:23:24 INFO  : System reset is completed.
+19:23:27 INFO  : 'after 3000' command is executed.
+19:23:27 INFO  : Context for processor 'microblaze_0' is selected.
+19:23:27 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+19:23:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+19:23:27 INFO  : Context for processor 'microblaze_0' is selected.
+19:23:27 INFO  : 'con' command is executed.
+19:23:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:23:27 INFO  : Disconnected from the channel tcfchan#1.
+19:25:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+19:25:45 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+19:25:45 INFO  : 'jtag frequency' command is executed.
+19:25:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+19:25:47 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit"
+19:25:47 INFO  : Context for processor 'microblaze_0' is selected.
+19:25:47 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa'.
+19:25:47 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+19:25:47 INFO  : Context for processor 'microblaze_0' is selected.
+19:25:47 INFO  : System reset is completed.
+19:25:50 INFO  : 'after 3000' command is executed.
+19:25:50 INFO  : Context for processor 'microblaze_0' is selected.
+19:25:50 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/Debug/mb_usb.elf' is downloaded to processor 'microblaze_0'.
+19:25:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/_ide/bitstream/mb_usb_hdmi_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb_hdmi_top/export/mb_usb_hdmi_top/hw/mb_usb_hdmi_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/workspace/mb_usb/Debug/mb_usb.elf
+----------------End of Script----------------
+
+19:25:50 INFO  : Context for processor 'microblaze_0' is selected.
+19:25:50 INFO  : 'con' command is executed.
+19:25:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+19:25:50 INFO  : Disconnected from the channel tcfchan#2.

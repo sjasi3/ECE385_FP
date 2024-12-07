@@ -1,0 +1,8 @@
+0.7
+2020.2
+Oct 14 2022
+05:07:14
+/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.sim/sim_1/behav/xsim/glbl.v,1665704903,verilog,,,,glbl,,uvm,,,,,,
+/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sim_1/new/FPL_TB.sv,1733551979,systemVerilog,,,,FPL_TB,,uvm,,,,,,
+/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/FPL.sv,1733549338,systemVerilog,/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sim_1/new/FPL_TB.sv,/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sim_1/new/FPL_TB.sv,,$unit_FPL_sv_813253024;FPL,,uvm,,,,,,
+/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/tetris_top.sv,1733547039,systemVerilog,,,,tetris_top,,uvm,,,,,,
