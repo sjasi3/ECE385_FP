@@ -7,8 +7,7 @@ module ball (
     output logic [9:0] BallY,
     output logic [9:0] BallS,
     output logic [1:0] RotateDirection, // New output to restore rotation direction
-    output  logic [479:0][639:0] block_grid, // Stopped blocks grid
-    output  logic [479:0][639:0][1:0] color_grid, // Color grid for stopped blocks
+    output logic ball_stopped
 );
     parameter [9:0] Ball_X_Center = 320;  // Center position on the X axis
     parameter [9:0] Ball_Y_Center = 240;  // Center position on the Y axis
