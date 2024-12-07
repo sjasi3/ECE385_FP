@@ -31,7 +31,7 @@ module KPL(
     input logic [3:0] X,
     input logic [5:0] Y,
     input logic [1:0] rType,
-
+    input logic frame_clk,
     output logic [3:0] nX,
     output logic [5:0] nY,
     output logic [1:0] nrType
