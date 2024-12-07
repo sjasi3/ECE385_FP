@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "/home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.runs/synth_1/mb_usb_hdmi_top.tcl"
+  variable script "/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.runs/synth_1/mb_usb_hdmi_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,7 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param gui.addressMap 0
+set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -78,72 +78,72 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.cache/wt [current_project]
-set_property parent.project_path /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.xpr [current_project]
+set_property webtalk.parent_dir /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.cache/wt [current_project]
+set_property parent.project_path /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths /home/sean/Documents/Vivado/hdmi_tx_1.0 [current_project]
+set_property ip_repo_paths /home/sean/Downloads/git/ECE385_FP/hdmi_tx_1.0 [current_project]
 update_ip_catalog
-set_property ip_output_repo /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.cache/ip [current_project]
+set_property ip_output_repo /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib -sv {
-  /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.srcs/sources_1/imports/lab6_2_provided_redo/design_source/Color_Mapper.sv
-  /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.srcs/sources_1/imports/lab6_2_provided_redo/design_source/VGA_controller.sv
-  /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.srcs/sources_1/imports/lab6_2_provided_redo/design_source/ball.sv
-  /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.srcs/sources_1/imports/lab6_2_provided_redo/design_source/hex_driver.sv
-  /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.srcs/sources_1/imports/lab6_2_provided_redo/design_source/mb_usb_hdmi_top.sv
+  /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.srcs/sources_1/imports/lab6_2_provided_redo/design_source/Color_Mapper.sv
+  /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.srcs/sources_1/imports/lab6_2_provided_redo/design_source/VGA_controller.sv
+  /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.srcs/sources_1/imports/lab6_2_provided_redo/design_source/ball.sv
+  /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.srcs/sources_1/imports/lab6_2_provided_redo/design_source/hex_driver.sv
+  /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.srcs/sources_1/imports/lab6_2_provided_redo/design_source/mb_usb_hdmi_top.sv
 }
-read_ip -quiet /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_ooc.xdc]
+read_ip -quiet /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.srcs/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/ip/clk_wiz_0_1/clk_wiz_0_ooc.xdc]
 
-add_files /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.srcs/sources_1/bd/mb_usb/mb_usb.bd
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/mb_usb_microblaze_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/mb_usb_microblaze_0_0_ooc_debug.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/mb_usb_microblaze_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_dlmb_v10_0/mb_usb_dlmb_v10_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_ilmb_v10_0/mb_usb_ilmb_v10_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_dlmb_bram_if_cntlr_0/mb_usb_dlmb_bram_if_cntlr_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_ilmb_bram_if_cntlr_0/mb_usb_ilmb_bram_if_cntlr_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_lmb_bram_0/mb_usb_lmb_bram_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_xbar_0/mb_usb_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_axi_intc_0/mb_usb_microblaze_0_axi_intc_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_axi_intc_0/mb_usb_microblaze_0_axi_intc_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_axi_intc_0/mb_usb_microblaze_0_axi_intc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_mdm_1_0/mb_usb_mdm_1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_mdm_1_0/mb_usb_mdm_1_0_ooc_trace.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_quad_spi_0_1/mb_usb_axi_quad_spi_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_quad_spi_0_1/mb_usb_axi_quad_spi_0_1.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_quad_spi_0_1/mb_usb_axi_quad_spi_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_quad_spi_0_1/mb_usb_axi_quad_spi_0_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_0/mb_usb_axi_gpio_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_0/mb_usb_axi_gpio_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_0/mb_usb_axi_gpio_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_1/mb_usb_axi_gpio_0_1_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_1/mb_usb_axi_gpio_0_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_1/mb_usb_axi_gpio_0_1.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_2/mb_usb_axi_gpio_0_2_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_2/mb_usb_axi_gpio_0_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_2/mb_usb_axi_gpio_0_2.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_uartlite_0_0/mb_usb_axi_uartlite_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_uartlite_0_0/mb_usb_axi_uartlite_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_uartlite_0_0/mb_usb_axi_uartlite_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_timer_0_0/mb_usb_axi_timer_0_0.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_timer_0_0/mb_usb_axi_timer_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/mb_usb_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/data/mb_bootloop_le.elf]
+add_files /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.srcs/sources_1/bd/mb_usb/mb_usb.bd
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/mb_usb_microblaze_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/mb_usb_microblaze_0_0_ooc_debug.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/mb_usb_microblaze_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_dlmb_v10_0/mb_usb_dlmb_v10_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_ilmb_v10_0/mb_usb_ilmb_v10_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_dlmb_bram_if_cntlr_0/mb_usb_dlmb_bram_if_cntlr_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_ilmb_bram_if_cntlr_0/mb_usb_ilmb_bram_if_cntlr_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_lmb_bram_0/mb_usb_lmb_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_xbar_0/mb_usb_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_axi_intc_0/mb_usb_microblaze_0_axi_intc_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_axi_intc_0/mb_usb_microblaze_0_axi_intc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_axi_intc_0/mb_usb_microblaze_0_axi_intc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_mdm_1_0/mb_usb_mdm_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_mdm_1_0/mb_usb_mdm_1_0_ooc_trace.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_quad_spi_0_1/mb_usb_axi_quad_spi_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_quad_spi_0_1/mb_usb_axi_quad_spi_0_1.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_quad_spi_0_1/mb_usb_axi_quad_spi_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_quad_spi_0_1/mb_usb_axi_quad_spi_0_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_0/mb_usb_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_0/mb_usb_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_0/mb_usb_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_1/mb_usb_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_1/mb_usb_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_1/mb_usb_axi_gpio_0_1.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_2/mb_usb_axi_gpio_0_2_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_2/mb_usb_axi_gpio_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_2/mb_usb_axi_gpio_0_2.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_uartlite_0_0/mb_usb_axi_uartlite_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_uartlite_0_0/mb_usb_axi_uartlite_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_uartlite_0_0/mb_usb_axi_uartlite_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_timer_0_0/mb_usb_axi_timer_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_timer_0_0/mb_usb_axi_timer_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/mb_usb_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/data/mb_bootloop_le.elf]
 
-read_ip -quiet /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
+read_ip -quiet /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -154,8 +154,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc
-set_property used_in_implementation false [get_files /home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
+read_xdc /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc
+set_property used_in_implementation false [get_files /home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
 
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]

@@ -7,9 +7,9 @@
 # 
 
 if [ -z "$PATH" ]; then
-  PATH=/home/sean/.var/app/com.github.corna.Vivado/data/xilinx-install/Vitis/2022.2/bin:/home/sean/.var/app/com.github.corna.Vivado/data/xilinx-install/Vivado/2022.2/ids_lite/ISE/bin/lin64:/home/sean/.var/app/com.github.corna.Vivado/data/xilinx-install/Vivado/2022.2/bin
+  PATH=/alottadata/tools/Xilinx/Vitis/2022.2/bin:/alottadata/tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64:/alottadata/tools/Xilinx/Vivado/2022.2/bin
 else
-  PATH=/home/sean/.var/app/com.github.corna.Vivado/data/xilinx-install/Vitis/2022.2/bin:/home/sean/.var/app/com.github.corna.Vivado/data/xilinx-install/Vivado/2022.2/ids_lite/ISE/bin/lin64:/home/sean/.var/app/com.github.corna.Vivado/data/xilinx-install/Vivado/2022.2/bin:$PATH
+  PATH=/alottadata/tools/Xilinx/Vitis/2022.2/bin:/alottadata/tools/Xilinx/Vivado/2022.2/ids_lite/ISE/bin/lin64:/alottadata/tools/Xilinx/Vivado/2022.2/bin:$PATH
 fi
 export PATH
 
@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/sean/Documents/Vivado/lab6_2_redo/lab6_2_redo.runs/synth_1'
+HD_PWD='/home/sean/Downloads/git/ECE385_FP/lab6_2_redo/lab6_2_redo.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log
