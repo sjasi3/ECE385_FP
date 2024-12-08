@@ -1,5 +1,5 @@
 module bg_example (
-	input logic vga_clk,
+	//input logic vga_clk,
 	input logic [9:0] DrawX, DrawY,
 	input logic blank,
   input  logic [4:0] gridX, gridY,
