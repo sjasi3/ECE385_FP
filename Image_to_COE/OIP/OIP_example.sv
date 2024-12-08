@@ -1,4 +1,4 @@
-module butterfly_example (
+module OIP_example (
 	input logic vga_clk,
 	input logic [9:0] DrawX, DrawY,
 	input logic blank,
@@ -6,7 +6,7 @@ module butterfly_example (
 );
 
 logic [14:0] rom_address;
-logic [3:0] rom_q;
+logic [7:0] rom_q;
 
 logic [3:0] palette_red, palette_green, palette_blue;
 
@@ -31,13 +31,13 @@ always_ff @ (posedge vga_clk) begin
 	end
 end
 
-butterfly_rom butterfly_rom (
+OIP_rom OIP_rom (
 	.clka   (negedge_vga_clk),
 	.addra (rom_address),
 	.douta       (rom_q)
 );
 
-butterfly_palette butterfly_palette (
+OIP_palette OIP_palette (
 	.index (rom_q),
 	.red   (palette_red),
 	.green (palette_green),

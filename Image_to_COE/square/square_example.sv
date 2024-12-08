@@ -1,4 +1,4 @@
-module butterfly_example (
+module square_example (
 	input logic vga_clk,
 	input logic [9:0] DrawX, DrawY,
 	input logic blank,
@@ -31,13 +31,13 @@ always_ff @ (posedge vga_clk) begin
 	end
 end
 
-butterfly_rom butterfly_rom (
+square_rom square_rom (
 	.clka   (negedge_vga_clk),
 	.addra (rom_address),
 	.douta       (rom_q)
 );
 
-butterfly_palette butterfly_palette (
+square_palette square_palette (
 	.index (rom_q),
 	.red   (palette_red),
 	.green (palette_green),
