@@ -22,8 +22,7 @@ assign negedge_vga_clk = ~vga_clk;
 assign rom_address = ((DrawX * 100) / 640) + (((DrawY * 180) / 480) * 100);
 
 logic px_on;
-logic grid_size;
-assign grid_size=64;
+
 	 
    
 
@@ -32,9 +31,9 @@ assign grid_size=64;
     always_comb
     begin:Ball_on_proc
       if ((DrawX >= (gridX*64) &&
-           (DrawX <= gridX*64 + grid_size) &&
-           (DrawY >= gridY) &&
-           (DrawY <= gridY + grid_size))
+	   (DrawX < gridX*64 + 64) &&
+	   (DrawY >= gridY*480/18) &&
+	   (DrawY < (gridY+1)*480/18))
        )
            px_on = 1'b1;
         else 
