@@ -1,45 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="impl_1" LaunchPart="xc7s50csga324-1" LaunchTime="1733556863">
-  <File Type="PA-TCL" Name="tetris_top.tcl"/>
-  <File Type="REPORTS-TCL" Name="tetris_top_reports.tcl"/>
-  <File Type="BITSTR-MSK" Name="tetris_top.msk"/>
-  <File Type="RDI-RDI" Name="tetris_top.vdi"/>
-  <File Type="BG-BIT" Name="tetris_top.bit"/>
-  <File Type="BG-DRC" Name="tetris_top.drc"/>
-  <File Type="BG-BGN" Name="tetris_top.bgn"/>
-  <File Type="BG-BIN" Name="tetris_top.bin"/>
-  <File Type="BITSTR-RBT" Name="tetris_top.rbt"/>
-  <File Type="BITSTR-NKY" Name="tetris_top.nky"/>
-  <File Type="BITSTR-BMM" Name="tetris_top_bd.bmm"/>
-  <File Type="BITSTR-MMI" Name="tetris_top.mmi"/>
-  <File Type="BITSTR-SYSDEF" Name="tetris_top.sysdef"/>
+  <File Type="ROUTE-TIMING-PB" Name="tetris_top_timing_summary_routed.pb"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="tetris_top_routed_bb.dcp"/>
+  <File Type="ROUTE-ERROR-DCP" Name="tetris_top_routed_error.dcp"/>
+  <File Type="OPT-DRC" Name="tetris_top_drc_opted.rpt"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="tetris_top.ltx"/>
-  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-DRC" Name="tetris_top_drc_opted.rpt"/>
-  <File Type="OPT-HWDEF" Name="tetris_top.hwdef"/>
-  <File Type="PLACE-PRE-SIMILARITY" Name="tetris_top_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DCP" Name="tetris_top_routed.dcp"/>
-  <File Type="ROUTE-ERROR-DCP" Name="tetris_top_routed_error.dcp"/>
-  <File Type="ROUTE-BLACKBOX-DCP" Name="tetris_top_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMING-PB" Name="tetris_top_timing_summary_routed.pb"/>
-  <File Type="OPT-DCP" Name="tetris_top_opt.dcp"/>
-  <File Type="PLACE-DCP" Name="tetris_top_placed.dcp"/>
-  <File Type="PWROPT-DCP" Name="tetris_top_pwropt.dcp"/>
-  <File Type="POSTPLACE-PWROPT-DCP" Name="tetris_top_postplace_pwropt.dcp"/>
-  <File Type="PHYSOPT-DCP" Name="tetris_top_physopt.dcp"/>
-  <File Type="POSTROUTE-PHYSOPT-DCP" Name="tetris_top_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="tetris_top_postroute_physopt_bb.dcp"/>
+  <File Type="BITSTR-SYSDEF" Name="tetris_top.sysdef"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="tetris_top_postroute_physopt.dcp"/>
+  <File Type="BITSTR-MMI" Name="tetris_top.mmi"/>
+  <File Type="BITSTR-BMM" Name="tetris_top_bd.bmm"/>
+  <File Type="PHYSOPT-DCP" Name="tetris_top_physopt.dcp"/>
+  <File Type="BG-BGN" Name="tetris_top.bgn"/>
+  <File Type="OPT-DCP" Name="tetris_top_opt.dcp"/>
+  <File Type="OPT-HWDEF" Name="tetris_top.hwdef"/>
+  <File Type="BG-BIT" Name="tetris_top.bit"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="BG-DRC" Name="tetris_top.drc"/>
+  <File Type="ROUTE-DCP" Name="tetris_top_routed.dcp"/>
+  <File Type="RBD_FILE" Name="tetris_top.rbd"/>
+  <File Type="BG-BIN" Name="tetris_top.bin"/>
+  <File Type="PLACE-DCP" Name="tetris_top_placed.dcp"/>
+  <File Type="BITSTR-MSK" Name="tetris_top.msk"/>
+  <File Type="PWROPT-DCP" Name="tetris_top_pwropt.dcp"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="tetris_top_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BITSTR-RBT" Name="tetris_top.rbt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="tetris_top_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-NKY" Name="tetris_top.nky"/>
+  <File Type="RDI-RDI" Name="tetris_top.vdi"/>
   <File Type="PDI-FILE" Name="tetris_top.pdi"/>
   <File Type="RCFI_FILE" Name="tetris_top.rcfi"/>
   <File Type="CFI_FILE" Name="tetris_top.cfi"/>
   <File Type="RNPI_FILE" Name="tetris_top.rnpi"/>
   <File Type="NPI_FILE" Name="tetris_top.npi"/>
-  <File Type="RBD_FILE" Name="tetris_top.rbd"/>
   <File Type="ROUTE-RQS" Name="tetris_top_routed.rqs"/>
   <File Type="POSTROUTE-PHYSOPT-RQS" Name="tetris_top_postroute_physopted.rqs"/>
-  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
   <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <File Type="PA-TCL" Name="tetris_top.tcl"/>
+  <File Type="REPORTS-TCL" Name="tetris_top_reports.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/FPL.sv">

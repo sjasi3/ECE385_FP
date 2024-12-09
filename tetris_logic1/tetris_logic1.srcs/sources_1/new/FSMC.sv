@@ -19,6 +19,9 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+// 10**6 clocks before 1 second
+`define ONE_SECOND_PER_N_CLOCK  1000000
+
 module FSMC(
     input logic clk,
     input logic rst,
@@ -31,6 +34,9 @@ module FSMC(
     output logic lost,
     output logic remove
     );
+    
+    logic [19:0] counter;
+
     enum [31:0] {
         setup,                          // Set up new game
         halt,                           // Stop the game entirely
@@ -47,6 +53,32 @@ module FSMC(
     always_comb begin
         unique case (cstate)
             halt:   begin end
+            reset:  begin end
+            setup:  begin
+                counter <= 0;
+                fall <= 0;
+                moverot <= 0;
+                lost <= 0;
+                remove <= 0;
+            end
+            place:  begin end
+            remove: begin end
+            newblk: begin end 
+            shift:  begin end
+            draw:   begin end
+            fall:   begin end
+            update: begin end
+            lose:   begin end
+        endcase
+    end
+
+    // TODO: Clock synced updating
+    // NOTE: Update variables here
+    // FIXME: I dont think I need a draw state, it should just always draw
+    always_ff @(posedge clk) begin
+        counter++;
+        unique case (nstate)
+            halt:   begin end
             reset:  nstate = setup;     // Set up new game
             setup:  nstate = update;    // Start updating values
             place:  nstate = remove;    // Place the block
@@ -55,27 +87,21 @@ module FSMC(
             shift:  nstate = draw;      // Shift everything down by 1
             draw:   nstate = update;    // NOTE: Might need wait states
             fall:   nstate = update;    // Set nY = -1
-            update: nstate = update;    // Update the X and Y position
+            update: begin
+                nstate = draw;          // Update the X and Y position
+                if(counter > ONE_SECOND_PER_N_CLOCK) begin
+                    nstate = fall;
+                end
+                if(valid) begin
+                    nstate = draw;
+                end
+            end
             lose:   begin end
         endcase
-    end
 
-    // TODO: Clock synced updating
-    // NOTE: Update variables here
-    always_ff @(posedge clk) begin
+        // These states are determined regardless of previous state
+        if(rst) nstate = reset;
+
         cstate = nstate;
-        unique case (nstate)
-            halt:   begin end
-            reset:  begin end
-            setup:  begin end
-            place:  begin end
-            remove: begin end
-            newblk: begin end
-            shift:  begin end
-            draw:   begin end
-            fall:   begin end
-            update: begin end
-            lose:   begin end
-        endcase
     end
 endmodule

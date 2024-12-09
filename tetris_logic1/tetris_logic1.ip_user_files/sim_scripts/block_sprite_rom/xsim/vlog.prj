@@ -1,0 +1,6 @@
+verilog xil_defaultlib  \
+"../../../../tetris_logic1.gen/sources_1/ip/block_sprite_rom/sim/block_sprite_rom.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort

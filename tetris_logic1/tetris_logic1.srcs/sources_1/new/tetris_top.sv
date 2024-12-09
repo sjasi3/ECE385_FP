@@ -93,8 +93,19 @@ module tetris_top(
     //  - Set falling piece placement
     //  - New falling piece
     FSMC FSM_controller (
+        .clk(clk),
+        .rst(reset),
+        .valid(valid),
+        .place(place),
+    
+        .fall(fall),
+        .moverot(moverot),
+        .halt(halt),
+        .lost(lost),
+        .remove(remove)
         );
 
+    // FSM Actions
         always_comb begin
             if(valid) begin
                 X <= nX;
