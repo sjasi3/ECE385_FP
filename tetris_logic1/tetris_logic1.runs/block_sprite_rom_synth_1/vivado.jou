@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Sun Dec  8 23:44:52 2024
-# Process ID: 5771
+# Start of session at: Mon Dec  9 11:01:55 2024
+# Process ID: 13825
 # Current directory: /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.runs/block_sprite_rom_synth_1
 # Command line: vivado -log block_sprite_rom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source block_sprite_rom.tcl
 # Log file: /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.runs/block_sprite_rom_synth_1/block_sprite_rom.vds
 # Journal file: /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.runs/block_sprite_rom_synth_1/vivado.jou
-# Running On: SgoSkzD, OS: Linux, CPU Frequency: 3550.519 MHz, CPU Physical cores: 12, Host memory: 33545 MB
+# Running On: SgoSkzD, OS: Linux, CPU Frequency: 3554.193 MHz, CPU Physical cores: 12, Host memory: 33545 MB
 #-----------------------------------------------------------
 source block_sprite_rom.tcl -notrace

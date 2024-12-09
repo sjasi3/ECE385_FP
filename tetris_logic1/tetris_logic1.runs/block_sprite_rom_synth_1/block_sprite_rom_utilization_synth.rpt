@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Sun Dec  8 23:45:20 2024
+| Date         : Mon Dec  9 11:02:22 2024
 | Host         : SgoSkzD running 64-bit Gentoo Linux
 | Command      : report_utilization -file block_sprite_rom_utilization_synth.rpt -pb block_sprite_rom_utilization_synth.pb
 | Design       : block_sprite_rom

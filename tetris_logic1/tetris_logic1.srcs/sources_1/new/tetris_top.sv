@@ -42,7 +42,14 @@
 
 // Take the keycode and determine what happens
 module tetris_top(
-        input logic [31:0] keycode
+    input logic clk,
+    input logic reset_rtl_0,
+    
+    //HDMI
+    output logic hdmi_tmds_clk_n,
+    output logic hdmi_tmds_clk_p,
+    output logic [2:0]hdmi_tmds_data_n,
+    output logic [2:0]hdmi_tmds_data_p
     );
 
     // Setup enums for defining piece and rotation
@@ -58,6 +65,11 @@ module tetris_top(
     logic [10:0][2:0] grid[20];                             // This will be the game grid
     logic [2:0] eBl[4];                                     // Four spaces on the grid to check validity
 
+    logic [31:0] keycode;
+
+    // Logic vars
+    logic place, valid;
+
     // Piece and Rotation
     logic [2:0] pType, npType;
     logic [1:0] rType, nrType;
@@ -69,6 +81,7 @@ module tetris_top(
     // NOTE: DO NOT MODIFY THESE, ONLY FOR READING
     logic [3:0] Xso[4];                                     // Block X positions
     logic [5:0] Yso[4];                                     // Block Y positions
+    logic [3:0] funny_cnt;
 
     // Fail States:
     //  - Intersects another piece
@@ -106,8 +119,22 @@ module tetris_top(
         );
 
     // FSM Actions
-        always_comb begin
-            if(valid) begin
+        always_ff @(posedge vsync) begin
+            grid[4][0] = 1;
+            grid[4][1] = 2;
+            grid[4][2] = 3;
+            grid[5][1] = 4;
+            grid[4][4] = 5;
+            grid[5][4] = 6;
+            grid[funny_cnt-1][4] = 0;
+            grid[funny_cnt][4]++;
+            valid = 0;
+            funny_cnt++;
+            if(funny_cnt >= 10) Y++;
+            X = 4; 
+            pType = T;
+            rType = up;
+            if(reset_ah) begin
                 X <= nX;
                 Y <= nY;
             end
@@ -158,5 +185,147 @@ module tetris_top(
         .nrType(nrType)
         );
 
+    // NOTE: All drawing componenets are here
+    // Set up drawing stuff
+    logic clk_25MHz, clk_125MHz;
+    logic locked;
+    logic [9:0] drawX, drawY;
+    logic [9:0] gridX, gridY;
+
+    logic hsync, vsync, vde;
+    logic [3:0] red, green, blue;
+    logic [3:0] bgred, bggreen, bgblue;
+    logic [3:0] fgred, fggreen, fgblue;
+    logic reset_ah;
+    logic [2:0] eGrid;
+    
+    assign reset_ah = reset_rtl_0;
+
+    // BG or FG calculator
+    always_comb begin
+        red <= bgred;
+        green <= bggreen;
+        blue = bgblue;
+        if(drawX >= 40 && drawY >= 40 && drawX < 240 && drawY < 440)
+        begin
+            gridX = (drawX - 40)/20;
+            gridY = (drawY - 40)/20;
+            eGrid = grid[gridY][gridX];
+            if(Xso[0] == gridX && Yso[0] == gridY) eGrid = pType;
+            if(Xso[1] == gridX && Yso[1] == gridY) eGrid = pType;
+            if(Xso[2] == gridX && Yso[2] == gridY) eGrid = pType;
+            if(Xso[3] == gridX && Yso[3] == gridY) eGrid = pType;
+            case (eGrid) 
+                0: begin 
+                    red <= bgred;
+                    green <= bggreen;
+                    blue <= bgblue;
+                end
+                1: begin
+                    red <= fgred;
+                    green <= 0;
+                    blue <= 0;
+                end
+                2: begin
+                    red <= 0;
+                    green <= fggreen;
+                    blue <= 0;
+                end
+                3: begin
+                    red <= 0;
+                    green <= 0;
+                    blue <= fgblue;
+                end
+                4: begin
+                    red <= fgred;
+                    green <= fggreen;
+                    blue <= fgblue * 0;
+                end
+                5: begin
+                    red <= fgred;
+                    green <= 0;
+                    blue <= fgblue;
+                end
+                6: begin
+                    red <= fgred;
+                    green <= fggreen >> 1;
+                    blue <= 0;
+                end
+                7: begin
+                    red <= fgred;
+                    green <= fggreen >> 2;
+                    blue <= fgblue >> 1;
+                end
+            endcase
+        end
+    end
+
+    //clock wizard configured with a 1x and 5x clock for HDMI
+    clk_wiz_0 clk_wiz (
+        .clk_25MHz(clk_25MHz),
+        .clk_125MHz(clk_125MHz),
+        .reset(reset_ah),
+        .locked(locked),
+        .clk_in1(clk)
+    );
+    
+    //VGA Sync signal generator
+    vga_controller vga (
+        .pixel_clk(clk_25MHz),
+        .reset(reset_ah),
+        .hs(hsync),
+        .vs(vsync),
+        .active_nblank(vde),
+        .drawX(drawX),
+        .drawY(drawY)
+    );    
+
+    //Real Digital VGA to HDMI converter
+    hdmi_tx_0 vga_to_hdmi (
+        //Clocking and Reset
+        .pix_clk(clk_25MHz),
+        .pix_clkx5(clk_125MHz),
+        .pix_clk_locked(locked),
+        //Reset is active LOW
+        .rst(reset_ah),
+        //Color and Sync Signals
+        .red(red),
+        .green(green),
+        .blue(blue),
+        .hsync(hsync),
+        .vsync(vsync),
+        .vde(vde),
+        
+        //aux Data (unused)
+        .aux0_din(4'b0),
+        .aux1_din(4'b0),
+        .aux2_din(4'b0),
+        .ade(1'b0),
+        
+        //Differential outputs
+        .TMDS_CLK_P(hdmi_tmds_clk_p),          
+        .TMDS_CLK_N(hdmi_tmds_clk_n),          
+        .TMDS_DATA_P(hdmi_tmds_data_p),         
+        .TMDS_DATA_N(hdmi_tmds_data_n)          
+    );
+
+    bg_example bg(
+        .vga_clk(clk_25MHz),
+        .DrawX(drawX),
+        .DrawY(drawY),
+        .blank(vde),
+        .red(bgred),
+        .green(bggreen),
+        .blue(bgblue)
+        );
+        block_sprite_example (
+        .vga_clk(clk_25MHz),
+        .DrawX(drawX),
+        .DrawY(drawY),
+        .blank(vde),
+        .red(fgred),
+        .green(fggreen),
+        .blue(fgblue)
+        );
 
 endmodule

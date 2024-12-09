@@ -31,11 +31,19 @@ module KPL(
     input logic [3:0] X,
     input logic [5:0] Y,
     input logic [1:0] rType,
+    input logic [1:0] mType,
 
     output logic [3:0] nX,
     output logic [5:0] nY,
-    output logic [1:0] nrType
+    output logic [1:0] nrType,
+    output logic [1:0] nmType
     );
+    
+    // Setup enums for defining piece and rotation
+    enum logic [2:0] { NA, O, I, S, Z, L, J, T } pTypes;    // Possible shapes NA: unplaced
+    enum logic [1:0] { up, down, left, right } rTypes;      // Possible rotations
+    enum logic [1:0] { Fa, Le, Ri } mTypes;                 // Possible movements
+
     // TODO: Need to make sure this does not repeat more than once
     always_comb begin
         // TODO: Implement keycodes and their actions
