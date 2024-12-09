@@ -68,7 +68,7 @@ module tetris_top(
     logic [31:0] keycode;
 
     // Logic vars
-    logic place, valid;
+    logic place, valid, fall, moverot, halt, lost, remove;
 
     // Piece and Rotation
     logic [2:0] pType, npType;
@@ -119,26 +119,32 @@ module tetris_top(
         );
 
     // FSM Actions
-        always_ff @(posedge vsync) begin
-            grid[4][0] = 1;
-            grid[4][1] = 2;
-            grid[4][2] = 3;
-            grid[5][1] = 4;
-            grid[4][4] = 5;
-            grid[5][4] = 6;
-            grid[funny_cnt-1][4] = 0;
-            grid[funny_cnt][4]++;
-            valid = 0;
-            funny_cnt++;
-            if(funny_cnt >= 10) Y++;
-            X = 4; 
-            pType = T;
-            rType = up;
-            if(reset_ah) begin
-                X <= nX;
-                Y <= nY;
-            end
+    always_comb begin
+        /* grid[4][0] = 1;                     // This was used for testing
+        grid[4][1] = 2;
+        grid[4][2] = 3;
+        grid[5][1] = 4;
+        grid[4][4] = 5;
+        grid[5][4] = 6; */
+        /* grid[funny_cnt-1][4] = 0;
+        grid[funny_cnt][4]++;
+        valid = 0;
+        funny_cnt++;
+        if(funny_cnt >= 10) Y++;
+        X = 4; 
+        pType = T;
+        rType = up; */
+        pType = T;
+        rType = up;
+        X <= 4;
+        if (fall) begin
+            nY = Y + 1;
         end
+        /* if(moverot) begin */
+            Y = nY;
+            rType = nrType;
+        /* end */
+    end
 
     // Determines the position of the falling piece (Xso, Yso)[4]
     // Xso and Yso should never be changed, only X and Y
@@ -180,8 +186,9 @@ module tetris_top(
         .X(X),
         .Y(Y),
         .rType(rType),
+
         .nX(nX),
-        .nY(nY),
+        /* .nY(nY), */
         .nrType(nrType)
         );
 
@@ -206,17 +213,21 @@ module tetris_top(
         red <= bgred;
         green <= bggreen;
         blue = bgblue;
-        if(drawX >= 40 && drawY >= 40 && drawX < 240 && drawY < 440)
+        if (drawX >= 40 && drawY >= 40 && drawX < 240 && drawY < 440)
         begin
-            gridX = (drawX - 40)/20;
-            gridY = (drawY - 40)/20;
+            gridX = (drawX - 40) / 20;
+            gridY = (drawY - 40) / 20;
             eGrid = grid[gridY][gridX];
-            if(Xso[0] == gridX && Yso[0] == gridY) eGrid = pType;
-            if(Xso[1] == gridX && Yso[1] == gridY) eGrid = pType;
-            if(Xso[2] == gridX && Yso[2] == gridY) eGrid = pType;
-            if(Xso[3] == gridX && Yso[3] == gridY) eGrid = pType;
-            case (eGrid) 
-                0: begin 
+            if (Xso[0] == gridX && Yso[0] == gridY) eGrid = pType;
+            else begin; end
+            if (Xso[1] == gridX && Yso[1] == gridY) eGrid = pType;
+            else begin; end
+            if (Xso[2] == gridX && Yso[2] == gridY) eGrid = pType;
+            else begin; end
+            if (Xso[3] == gridX && Yso[3] == gridY) eGrid = pType;
+            else begin; end
+            case (eGrid)
+                0: begin
                     red <= bgred;
                     green <= bggreen;
                     blue <= bgblue;
@@ -256,8 +267,11 @@ module tetris_top(
                     green <= fggreen >> 2;
                     blue <= fgblue >> 1;
                 end
+                default: begin
+                end
             endcase
         end
+        else begin; end
     end
 
     //clock wizard configured with a 1x and 5x clock for HDMI
@@ -303,10 +317,10 @@ module tetris_top(
         .ade(1'b0),
         
         //Differential outputs
-        .TMDS_CLK_P(hdmi_tmds_clk_p),          
-        .TMDS_CLK_N(hdmi_tmds_clk_n),          
-        .TMDS_DATA_P(hdmi_tmds_data_p),         
-        .TMDS_DATA_N(hdmi_tmds_data_n)          
+        .TMDS_CLK_P(hdmi_tmds_clk_p),
+        .TMDS_CLK_N(hdmi_tmds_clk_n),
+        .TMDS_DATA_P(hdmi_tmds_data_p),
+        .TMDS_DATA_N(hdmi_tmds_data_n)
     );
 
     bg_example bg(
@@ -318,7 +332,8 @@ module tetris_top(
         .green(bggreen),
         .blue(bgblue)
         );
-        block_sprite_example (
+
+    block_sprite_example sprite_drawing (
         .vga_clk(clk_25MHz),
         .DrawX(drawX),
         .DrawY(drawY),
