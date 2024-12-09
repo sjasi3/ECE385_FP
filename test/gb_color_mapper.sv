@@ -1,4 +1,4 @@
-module  color_mapper ( input  logic [9:0] BallX, BallY, DrawX, DrawY, Ball_size,
+module  color_mapper ( input  logic [9:0] gridX, gridY, DrawX, DrawY,
                        output logic [3:0]  Red, Green, Blue,
                        input logic blank,
                        input logic clk );
