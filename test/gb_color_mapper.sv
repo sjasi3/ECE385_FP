@@ -1,27 +1,15 @@
-module bg_example (
-	//input logic vga_clk,
-	input logic [9:0] DrawX, DrawY,
-	input logic blank,
-  input  logic [4:0] gridX, gridY,
-  input  logic  [9:0][2:0] grid[18],
-	output logic [3:0] red, green, blue
-);
-
-logic [14:0] rom_address;
-logic [3:0] rom_q;
-
-logic [3:0] palette_red, palette_green, palette_blue;
-
-logic negedge_vga_clk;
-
-// read from ROM on negedge, set pixel on posedge
-assign negedge_vga_clk = ~vga_clk;
+module  color_mapper ( input  logic [9:0] BallX, BallY, DrawX, DrawY, Ball_size,
+                       output logic [3:0]  Red, Green, Blue,
+                       input logic blank,
+                       input logic clk );
+    
+    logic pix_on;
+    
+    logic [3:0] red, green, blue;
 
 // address into the rom = (x*xDim)/640 + ((y*yDim)/480) * xDim
 // this will stretch out the sprite across the entire screen
-assign rom_address = ((DrawX * 100) / 640) + (((DrawY * 180) / 480) * 100);
 
-logic px_on;
 
 	 
    
@@ -42,10 +30,7 @@ logic px_on;
 
   
 always_comb begin
-	red = 4'h0;
-	green = 4'h0;
-	blue = 4'h0;
-
+	
   if ((px_on == 1'b1)) begin
           case(grid[gridX][gridY])
             3'b000:   //red
@@ -96,24 +81,21 @@ always_comb begin
               green = 4'h4;
               blue = 4'h7;
             end 
-	else if (blank) begin
-		red = palette_red;
-		green = palette_green;
-		blue = palette_blue;
-	end
+ else begin 
+            Red = red; 
+            Green = green;
+            Blue = blue;
+        end  
 end
 
-bg_rom bg_rom (
-	.clka   (negedge_vga_clk),
-	.addra (rom_address),
-	.douta       (rom_q)
-);
-
-bg_palette bg_palette (
-	.index (rom_q),
-	.red   (palette_red),
-	.green (palette_green),
-	.blue  (palette_blue)
-);
+bg_example bg_example(
+        .vga_clk(clk),
+        .DrawX(DrawX),
+        .DrawY(DrawY),
+        .blank(blank),
+        .red(red),
+        .green(green),
+        .blue(blue)
+      );
 
 endmodule
