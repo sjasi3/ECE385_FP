@@ -1,8 +1,8 @@
 module row_clearing_logic (
     input logic clk,                               // Clock signal
     input logic Reset,
-    input  logic [19:0][9:0] block_grid[2:0],         // Current grid with blocks
-    output logic [19:0][9:0] updated_block_grid[2:0], // Updated grid after clearing
+    input  logic [10:0][2:0] block_grid[20],         // Current grid with blocks
+    output logic [10:0][3:0] updated_block_grid[20], // Updated grid after clearing
 );
     always_ff @(posedge clk or posedge Reset) begin
         if (Reset) begin
