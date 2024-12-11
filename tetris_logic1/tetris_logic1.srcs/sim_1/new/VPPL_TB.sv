@@ -149,8 +149,8 @@ module VPPL_TB(
         end
 
         @(posedge clk) begin
-            X <= 5;
-            Y <= 1;
+            X <= 8;
+            Y <= 16;
             pType <= O;
             rType <= up;
             mType <= Le;
@@ -161,7 +161,7 @@ module VPPL_TB(
 
         @(posedge clk) begin
             X <= 5;
-            Y <= 10;
+            Y <= 20;
             pType <= L;
             rType <= up;
             mType <= Le;

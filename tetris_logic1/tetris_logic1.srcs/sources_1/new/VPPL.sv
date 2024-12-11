@@ -27,7 +27,7 @@
 // If invalid from Ysi valid and place block
 module VPPL(
     input logic [3:0] Xsi[4],
-    input logic [5:0] Ysi[4],
+    input logic [4:0] Ysi[4],
     input logic [2:0] eBl[4],
     input logic last_movement,
 
@@ -43,20 +43,25 @@ module VPPL(
 
         // Out of bounds errors
         // This will happen if too far left or too far right
-        if(Xsi[0] > 10) valid = 0;
-        if(Xsi[1] > 10) valid = 0;
-        if(Xsi[2] > 10) valid = 0;
-        if(Xsi[3] > 10) valid = 0;
+        for (int i = 0; i < 4; i++) begin
+            if (Xsi[i] >= 10) valid = 0;
+        end
+
+        // Special case for Ysi > 20 allow anything above 0x1C
+        for (int i = 0; i < 4; i++) begin
+            if (Ysi[i] >= 20 && Ysi[i] < 5'H1C) valid = 0;
+        end
 
         // Block intersection error
         // This will happen when falling or going left right
-        if(last_movement == Fa) begin
-            if(eBl[0] > 0 | eBl[1] > 0 | eBl[2] > 0 | eBl[3] > 0) begin
-                place = 1;                                  // Place the piece
-                valid = 0;                                  // Undo the last move
-            end
-        end else begin
-            if(eBl[0] > 0 | eBl[1] > 0 | eBl[2] > 0 | eBl[3] > 0) valid = 0;
-        end
+        // if(last_movement == Fa) begin
+        //     if(eBl[0] > 0 | eBl[1] > 0 | eBl[2] > 0 | eBl[3] > 0) begin
+        //         place = 1;                                  // Place the piece
+        //         valid = 0;                                  // Undo the last move
+        //     end
+        // end else begin
+        if(eBl[0] > 0 | eBl[1] > 0 | eBl[2] > 0 | eBl[3] > 0) valid = 0;
+        // end
+        // valid = 0;
     end
 endmodule

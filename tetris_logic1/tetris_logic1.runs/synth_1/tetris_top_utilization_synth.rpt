@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Mon Dec  9 15:55:03 2024
+| Date         : Wed Dec 11 01:21:29 2024
 | Host         : SgoSkzD running 64-bit Gentoo Linux
 | Command      : report_utilization -file tetris_top_utilization_synth.rpt -pb tetris_top_utilization_synth.pb
 | Design       : tetris_top
@@ -31,14 +31,14 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |  933 |     0 |          0 |     32600 |  2.86 |
-|   LUT as Logic          |  933 |     0 |          0 |     32600 |  2.86 |
+| Slice LUTs*             | 1123 |     0 |          0 |     32600 |  3.44 |
+|   LUT as Logic          | 1123 |     0 |          0 |     32600 |  3.44 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         |   30 |     0 |          0 |     65200 |  0.05 |
-|   Register as Flip Flop |   30 |     0 |          0 |     65200 |  0.05 |
+| Slice Registers         |  140 |     0 |          0 |     65200 |  0.21 |
+|   Register as Flip Flop |  140 |     0 |          0 |     65200 |  0.21 |
 |   Register as Latch     |    0 |     0 |          0 |     65200 |  0.00 |
-| F7 Muxes                |    0 |     0 |          0 |     16300 |  0.00 |
-| F8 Muxes                |    0 |     0 |          0 |      8150 |  0.00 |
+| F7 Muxes                |   12 |     0 |          0 |     16300 |  0.07 |
+| F8 Muxes                |    3 |     0 |          0 |      8150 |  0.04 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
@@ -56,10 +56,10 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 0     |          Yes |           - |          Set |
-| 22    |          Yes |           - |        Reset |
+| 10    |          Yes |           - |          Set |
+| 118   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 8     |          Yes |       Reset |            - |
+| 12    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -93,7 +93,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-----------------------------+------+-------+------------+-----------+-------+
 |          Site Type          | Used | Fixed | Prohibited | Available | Util% |
 +-----------------------------+------+-------+------------+-----------+-------+
-| Bonded IOB                  |    1 |     0 |          0 |       210 |  0.48 |
+| Bonded IOB                  |   10 |     0 |          0 |       210 |  4.76 |
 | Bonded IPADs                |    0 |     0 |          0 |         2 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |          0 |         5 |  0.00 |
 | PHASER_REF                  |    0 |     0 |          0 |         5 |  0.00 |
@@ -148,31 +148,52 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     |  287 |                 LUT |
-| LUT2     |  252 |                 LUT |
-| LUT3     |  200 |                 LUT |
-| CARRY4   |  193 |          CarryLogic |
-| LUT5     |  182 |                 LUT |
-| LUT4     |  128 |                 LUT |
+| LUT6     |  405 |                 LUT |
+| LUT2     |  248 |                 LUT |
+| LUT5     |  243 |                 LUT |
+| LUT3     |  203 |                 LUT |
+| CARRY4   |  199 |          CarryLogic |
+| LUT4     |  157 |                 LUT |
+| FDCE     |  118 |        Flop & Latch |
 | LUT1     |   93 |                 LUT |
-| FDCE     |   22 |        Flop & Latch |
-| FDRE     |    8 |        Flop & Latch |
+| MUXF7    |   12 |               MuxFx |
+| FDRE     |   12 |        Flop & Latch |
+| FDPE     |   10 |        Flop & Latch |
+| OBUF     |    5 |                  IO |
+| IBUF     |    5 |                  IO |
+| MUXF8    |    3 |               MuxFx |
 | DSP48E1  |    3 |    Block Arithmetic |
-| IBUF     |    1 |                  IO |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+------------------+------+
-|     Ref Name     | Used |
-+------------------+------+
-| hdmi_tx_0        |    1 |
-| clk_wiz_0        |    1 |
-| block_sprite_rom |    1 |
-| bg_rom           |    1 |
-+------------------+------+
++--------------------------------+------+
+|            Ref Name            | Used |
++--------------------------------+------+
+| mb_usb_xbar_0                  |    1 |
+| mb_usb_rst_clk_wiz_1_100M_0    |    1 |
+| mb_usb_microblaze_0_axi_intc_0 |    1 |
+| mb_usb_microblaze_0_0          |    1 |
+| mb_usb_mdm_1_0                 |    1 |
+| mb_usb_lmb_bram_0              |    1 |
+| mb_usb_ilmb_v10_0              |    1 |
+| mb_usb_ilmb_bram_if_cntlr_0    |    1 |
+| mb_usb_dlmb_v10_0              |    1 |
+| mb_usb_dlmb_bram_if_cntlr_0    |    1 |
+| mb_usb_clk_wiz_1_0             |    1 |
+| mb_usb_axi_uartlite_0_0        |    1 |
+| mb_usb_axi_timer_0_0           |    1 |
+| mb_usb_axi_quad_spi_0_0        |    1 |
+| mb_usb_axi_gpio_0_2            |    1 |
+| mb_usb_axi_gpio_0_1            |    1 |
+| mb_usb_axi_gpio_0_0            |    1 |
+| hdmi_tx_0                      |    1 |
+| clk_wiz_0                      |    1 |
+| block_sprite_rom               |    1 |
+| bg_rom                         |    1 |
++--------------------------------+------+
 
 
 9. Instantiated Netlists

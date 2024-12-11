@@ -19,94 +19,109 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module FSMC(
+module FSMC (
     input logic clk,
     input logic rst,
     input logic valid,
     input logic place,
-    
+    input logic above,
+
     output logic fall,
     output logic moverot,
     output logic halt,
     output logic lost,
     output logic clkplace,
     output logic remove
-    );
-    
+);
+
     logic [31:0] counter;
+    logic shift;
 
-    enum logic [31:0] {
-        s_setup,                        // Set up new game
-        s_halt,                         // Stop the game entirely
-        s_reset,                        // Reset the game
-        s_place,                        // Place falling block down
-        s_remove,                       // Remove full rows
-        s_draw,                         // Draw the next thingy
-        s_shift,                        // Shift blocks
-        s_fall,                         // Make piece fall
-        s_newblk,                       // Set up new block
-        s_update,                       // Update X, Y to the next position
-        s_lose
-        } cstate, nstate;
-    parameter delay = 0;
+    // State Definitions
+    typedef enum logic [3:0] {
+        s_setup,   // Set up new game
+        s_halt,    // Stop the game
+        s_reset,   // Reset the game
+        s_place,   // Place the block
+        s_remove,  // Remove full rows
+        s_newblk,  // Set up new block
+        s_shift,   // Shift blocks
+        s_fall,    // Make piece fall
+        s_update,  // Update block position
+        s_lose     // Game lost
+    } state_t;
 
-    // TODO: Figure out the order which the FSM should operate
-    always_comb begin
-        counter <= 0;
-        fall <= 0;
-        moverot <= 0;
-        lost <= 0;
-        remove <= 0;
-        clkplace <= 0;
-        unique case (cstate)
-            s_halt:     begin end
-            s_reset:    begin end
-            s_setup:    begin end
-            s_place:    begin end
-            s_remove:   begin end
-            s_newblk:   begin end 
-            s_shift:    begin end
-            s_draw:     begin end
-            s_fall:     begin
-                fall <= 1;
+    state_t cstate, nstate;
+
+    // Parameter for Counter Threshold
+    parameter CLOCK_RATE = 100_000_000; // Clock frequency in Hz
+    parameter FALL_DELAY = CLOCK_RATE / 2; // Half a second delay
+    // State Machine (Sequential)
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            cstate <= s_reset;
+            counter <= 0;
+        end else begin
+            cstate <= nstate;
+
+            // Update Counter
+            if (cstate == s_update)
+                counter <= counter + 1;
+            else
                 counter <= 0;
+
+            // Default output values
+            fall <= 0;
+            moverot <= 0;
+            lost <= 0;
+            clkplace <= 0;
+            remove <= 0;
+
+            // State-specific output logic
+            case (cstate)
+                s_fall: begin
+                    fall <= 1; // Trigger fall
+                end
+                s_update: begin
+                    if (valid) moverot <= 1;
+                end
+                s_place: begin
+                    clkplace <= 1;
+                end
+                s_remove: begin
+                    remove <= 1;
+                end
+                s_shift: begin
+                    shift <= 1;
+                end
+                s_lose: begin
+                    lost <= 1;
+                end
+                // Add additional state-specific logic here
+            endcase
+        end
+    end
+
+    // State Machine (Combinational)
+    always_comb begin
+        nstate = cstate; // Default to remain in current state
+        case (cstate)
+            s_reset:   nstate = s_setup;    // Transition to setup
+            s_setup:   nstate = s_update;   // Transition to update
+            s_update:  begin
+                if (counter >= FALL_DELAY) 
+                    nstate = s_fall; // Fall after delay
+                if (above)
+                    nstate = s_lose;
             end
-            s_update:   begin
-                if (valid) moverot <= 1;
-                else moverot <= 0;
-                if (place) clkplace <= 1;
-                else clkplace <= 0;
-            end
-            s_lose:     begin end
+            s_fall:    nstate = valid ? s_update : s_place; // Check if valid or place
+            s_place:   nstate = s_remove;   // Transition to remove after placing
+            s_remove:  nstate = s_shift;    // Remove rows and shift
+            s_shift:   nstate = s_newblk;   // Transition to setup new block
+            s_newblk:  nstate = s_update;   // Setup new block and update
+            s_lose:    nstate = s_halt;     // Halt on losing
+            s_halt:    nstate = s_halt;     // Remain in halt
         endcase
     end
 
-    // TODO: Clock synced updating
-    // NOTE: Update variables here
-    // FIXME: I dont think I need a draw state, it should just always draw
-    always_ff @(posedge clk) begin
-        counter = counter + 1;
-        case (nstate)
-            /* s_halt:   begin end */
-            s_reset:  nstate <= s_setup;    // Set up new game
-            s_setup:  nstate <= s_update;   // Start updating values
-            s_place:  nstate <= s_remove;   // Place the block
-            s_remove: nstate <= s_shift;    // Remove blocks that form full row
-            s_newblk: nstate <= s_update;   // Set up a new block for falling
-            s_shift:  nstate <= s_draw;     // Shift everything down by 1
-            s_draw:   nstate <= s_update;   // NOTE: Might need wait states
-            s_fall:   nstate <= s_update;   // Set nY = -1
-            s_update: begin
-                // nstate = s_draw;            // Update the X and Y position
-                if (counter > 1000000) nstate <= s_fall;
-                else nstate <= s_update;
-            end
-            default: nstate <= s_reset;
-            /* s_lose:   begin end */
-        endcase
-
-        // These states are determined regardless of previous state
-        if (rst) nstate = s_reset;
-        else cstate = nstate;
-    end
 endmodule

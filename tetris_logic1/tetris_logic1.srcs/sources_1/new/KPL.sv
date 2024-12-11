@@ -48,10 +48,15 @@ module KPL(
     always_comb begin
         // TODO: Implement keycodes and their actions
         case (keycode)
+            8'h5C: begin
+                nX <= X - 1;
+            end
+            8'h5E: begin
+                nX <= X + 1;
+            end
             // Any other button press should do nothing
             default: begin
                 nX <= X;
-                nY <= Y;
                 nrType <= rType;
                 nmType <= nmType;
             end

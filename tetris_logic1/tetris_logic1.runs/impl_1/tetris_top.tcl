@@ -115,8 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -126,8 +124,6 @@ set rc [catch {
   create_msg_db init_design.pb
   set_param xicom.use_bs_reader 1
   set_param chipscope.maxJobs 3
-  set_param checkpoint.writeSynthRtdsInDcp 1
-  set_param synth.incrementalSynthesisCache ./.Xil/Vivado-5840-SgoSkzD/incrSyn
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7s50csga324-1
   set_property design_mode GateLvl [current_fileset]
@@ -140,21 +136,27 @@ OPTRACE "set parameters" START { }
   update_ip_catalog
   set_property ip_output_repo /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
   add_files -quiet /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/tetris_top.dcp
+  set_msg_config -source 4 -id {BD 41-1661} -limit 0
+  set_param project.isImplRun true
+  add_files /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/bd/mb_usb/mb_usb.bd
   read_ip -quiet /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
   read_ip -quiet /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_ip -quiet /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/block_sprite_rom/block_sprite_rom.xci
   read_ip -quiet /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/bg_rom/bg_rom.xci
+  set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
   read_xdc /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
+  set_param project.isImplRun true
   link_design -top tetris_top -part xc7s50csga324-1 
 OPTRACE "link_design" END { }
+  set_param project.isImplRun false
 OPTRACE "gray box cells" START { }
 OPTRACE "gray box cells" END { }
 OPTRACE "init_design_reports" START { REPORT }
@@ -314,8 +316,9 @@ set rc [catch {
   create_msg_db write_bitstream.pb
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }
-  set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+  set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
   catch { write_mem_info -force -no_partial_mmi tetris_top.mmi }
+  catch { write_bmm -force tetris_top_bd.bmm }
 OPTRACE "write_bitstream setup" END { }
 OPTRACE "write_bitstream" START { }
   write_bitstream -force tetris_top.bit 

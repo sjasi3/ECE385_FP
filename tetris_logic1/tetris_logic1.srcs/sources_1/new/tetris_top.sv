@@ -49,7 +49,19 @@ module tetris_top(
     output logic hdmi_tmds_clk_n,
     output logic hdmi_tmds_clk_p,
     output logic [2:0]hdmi_tmds_data_n,
-    output logic [2:0]hdmi_tmds_data_p
+    output logic [2:0]hdmi_tmds_data_p,
+
+    //USB signals
+    input logic [0:0] gpio_usb_int_tri_i,
+    output logic gpio_usb_rst_tri_o,
+    input logic usb_spi_miso,
+    output logic usb_spi_mosi,
+    output logic usb_spi_sclk,
+    output logic usb_spi_ss,
+    
+    //UART
+    input logic uart_rtl_0_rxd,
+    output logic uart_rtl_0_txd
     );
 
     // Setup enums for defining piece and rotation
@@ -68,7 +80,7 @@ module tetris_top(
     logic [31:0] keycode;
 
     // Logic vars
-    logic place, valid, fall, moverot, halt, lost, remove;
+    logic place, valid, fall, moverot, halt, lost, remove, above, clkplace;
 
     // Piece and Rotation
     logic [2:0] pType, npType;
@@ -76,11 +88,11 @@ module tetris_top(
 
     // NOTE: Modify this to move falling piece position
     logic [3:0] X, nX;                                      // X position on grid +: right, -: left
-    logic [5:0] Y, nY;                                      // Y position on grid +: down,  -: up
+    logic [4:0] Y, nY;                                      // Y position on grid +: down,  -: up
 
     // NOTE: DO NOT MODIFY THESE, ONLY FOR READING
-    logic [3:0] Xso[4];                                     // Block X positions
-    logic [5:0] Yso[4];                                     // Block Y positions
+    logic [3:0] Xso[4], nXso[4];                            // Block X positions
+    logic [4:0] Yso[4], nYso[4];                            // Block Y positions
     logic [3:0] funny_cnt;
 
     // Fail States:
@@ -107,44 +119,85 @@ module tetris_top(
     //  - New falling piece
     FSMC FSM_controller (
         .clk(clk),
-        .rst(reset),
+        .rst(reset_rtl_0),
         .valid(valid),
         .place(place),
+        .above(above),
     
         .fall(fall),
         .moverot(moverot),
         .halt(halt),
         .lost(lost),
+        .clkplace(clkplace),
         .remove(remove)
         );
 
+    // Vertical frame synced
     // FSM Actions
-    always_comb begin
-        /* grid[4][0] = 1;                     // This was used for testing
-        grid[4][1] = 2;
-        grid[4][2] = 3;
-        grid[5][1] = 4;
-        grid[4][4] = 5;
-        grid[5][4] = 6; */
-        /* grid[funny_cnt-1][4] = 0;
-        grid[funny_cnt][4]++;
-        valid = 0;
-        funny_cnt++;
-        if(funny_cnt >= 10) Y++;
-        X = 4; 
-        pType = T;
-        rType = up; */
-        pType = T;
-        rType = up;
-        X <= 4;
-        if (fall) begin
-            nY = Y + 1;
+    always_ff @(posedge clk or posedge reset_rtl_0) begin
+        if(reset_rtl_0) begin
+            Y = -1;
+            nY = Y;
+            pType = T;
+            rType = up;
+            X = 4;
+            nX = X;
+            for (int i = 0; i < 20; i++) begin
+                for (int j = 0; j < 10; j++) begin
+                    grid[i][j] = 0;
+                end
+            end
         end
-        /* if(moverot) begin */
-            Y = nY;
-            rType = nrType;
-        /* end */
+        else begin
+        // grid[4][0] = 1;                     // This was used for testing
+        // grid[4][1] = 2;
+        // grid[4][2] = 3;
+        // grid[5][1] = 4;
+        // grid[4][4] = 5;
+        // grid[5][4] = 6;
+        // grid[funny_cnt-1][4] = 0;
+        // grid[funny_cnt][4]++;
+        // valid = 0;
+        // funny_cnt++;
+        // if(funny_cnt >= 10) Y++;
+        // X = 4; 
+        // pType = T;
+        // rType = up;
+        // fell <= 0;
+        if (clkplace) begin
+            if ( Yso[0] > 20 | Yso[1] > 20 | Yso[2] > 20 | Yso[3] > 20 ) above = 1;
+            grid[Yso[0]][Xso[0]] = pType;
+            grid[Yso[1]][Xso[1]] = pType;
+            grid[Yso[2]][Xso[2]] = pType;
+            grid[Yso[3]][Xso[3]] = pType;
+            Y = 0;
+            nY = Y+1;
+        end
+        if (fall) begin
+            if (valid) begin
+                nY = Y + 1;
+                // fell = 1;
+            end
+        end
+        if (moverot && ~fall) begin
+            if (valid) begin
+                X = nX;
+                Y = nY;
+                rType = nrType;
+            end
+        end
     end
+    end
+
+    FPL next_place (
+        .X(nX),
+        .Y(nY),
+        .pType(pType),
+        .rType(nrType),
+
+        .Xso(nXso),
+        .Yso(nYso)
+        );
 
     // Determines the position of the falling piece (Xso, Yso)[4]
     // Xso and Yso should never be changed, only X and Y
@@ -160,18 +213,18 @@ module tetris_top(
 
     // Always update eBl
     always_comb begin
-        eBl[0] = grid[Yso[0]][Xso[0]];
-        eBl[1] = grid[Yso[1]][Xso[1]];
-        eBl[2] = grid[Yso[2]][Xso[2]];
-        eBl[3] = grid[Yso[3]][Xso[3]];
+        eBl[0] = grid[nYso[0]][nXso[0]];
+        eBl[1] = grid[nYso[1]][nXso[1]];
+        eBl[2] = grid[nYso[2]][nXso[2]];
+        eBl[3] = grid[nYso[3]][nXso[3]];
     end
 
     // Valid should detect a couple things:
     //  - Piece is not out of bounds
     //  - Piece is not intersecting another piece
     VPPL valid_piece_position_logic (
-        .Xsi(Xso),
-        .Ysi(Yso),
+        .Xsi(nXso),
+        .Ysi(nYso),
         .eBl(eBl),
         .last_movement(mType),
 
@@ -342,5 +395,24 @@ module tetris_top(
         .green(fggreen),
         .blue(fgblue)
         );
+
+    // MicroBlaze Stuff
+    logic [31:0] keycode0_gpio, keycode1_gpio;
+    mb_usb mb_block_i (
+        .clk(clk),
+        .gpio_usb_int_tri_i(gpio_usb_int_tri_i),
+        .gpio_usb_keycode_0_tri_o(keycode0_gpio),
+        .gpio_usb_keycode_1_tri_o(keycode1_gpio),
+        .gpio_usb_rst_tri_o(gpio_usb_rst_tri_o),
+        .reset(reset_ah),
+        .uart_rtl_0_rxd(uart_rtl_0_rxd),
+        .uart_rtl_0_txd(uart_rtl_0_txd),
+        .usb_spi_miso(usb_spi_miso),
+        .usb_spi_mosi(usb_spi_mosi),
+        .usb_spi_sclk(usb_spi_sclk),
+        .usb_spi_ss(usb_spi_ss)
+    );
+
+    assign keycode = keycode0_gpio[7:0];
 
 endmodule

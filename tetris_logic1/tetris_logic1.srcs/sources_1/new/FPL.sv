@@ -19,18 +19,18 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-
+// REFERENCE: https://strategywiki.org/wiki/Tetris/Rotation_systems
 // This module will determine:
 //      - Where the piece moves next
 //      - What rotation the piece will have
 module FPL(
         input logic [3:0] X,            // Need 10 so 4 bits
-        input logic [5:0] Y,            // Need 40 so 6 bits
+        input logic [4:0] Y,            // Need 20 so 5 bits
         input logic [3:0] pType,        // Determines the shape out of 7 shapes
         input logic [1:0] rType,        // Determines the rotation of the shape
 
         output logic [3:0] Xso[4],      // Contains the 4 X coordinates
-        output logic [5:0] Yso[4]       // Contains the 4 Y coordinates
+        output logic [4:0] Yso[4]       // Contains the 4 Y coordinates
     );
     enum logic [2:0] { NA, O, I, S, Z, L, J, T } pTypes;    // All the shapes X unplaced
     enum logic [1:0] { up, down, left, right } rTypes;      // Possible rotations
@@ -41,6 +41,11 @@ module FPL(
     // Vertical     +: Down, -: Up
     logic [3:0] Xs[4];
     logic [5:0] Ys[4];
+
+    // NOTE: Most pieces actually only have 2 rotations, vertical, and
+    // horizontal. The exception to this is the L piece, J piece, and T piece
+    // which have 4 rotations each. To see visual example, see the REFERENCE
+    // listed in the comment above this module
     always_comb
     begin
         unique case (pType)

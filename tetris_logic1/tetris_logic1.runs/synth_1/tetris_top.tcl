@@ -72,10 +72,6 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param xicom.use_bs_reader 1
 set_param chipscope.maxJobs 3
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-5840-SgoSkzD/incrSyn
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -85,7 +81,7 @@ set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
 set_property webtalk.parent_dir /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.cache/wt [current_project]
 set_property parent.project_path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.xpr [current_project]
-set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
+set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
 set_property ip_repo_paths /home/sean/Downloads/git/ECE385_FP/hdmi_tx_1.0 [current_project]
@@ -108,6 +104,48 @@ read_verilog -library xil_defaultlib -sv {
   /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/block_sprite/block_sprite_palette.sv
   /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/tetris_top.sv
 }
+add_files /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/bd/mb_usb/mb_usb.bd
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/mb_usb_microblaze_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/mb_usb_microblaze_0_0_ooc_debug.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/mb_usb_microblaze_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_dlmb_v10_0/mb_usb_dlmb_v10_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_ilmb_v10_0/mb_usb_ilmb_v10_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_dlmb_bram_if_cntlr_0/mb_usb_dlmb_bram_if_cntlr_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_ilmb_bram_if_cntlr_0/mb_usb_ilmb_bram_if_cntlr_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_lmb_bram_0/mb_usb_lmb_bram_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_xbar_0/mb_usb_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_axi_intc_0/mb_usb_microblaze_0_axi_intc_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_axi_intc_0/mb_usb_microblaze_0_axi_intc_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_axi_intc_0/mb_usb_microblaze_0_axi_intc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_mdm_1_0/mb_usb_mdm_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_mdm_1_0/mb_usb_mdm_1_0_ooc_trace.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_clk_wiz_1_0/mb_usb_clk_wiz_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_rst_clk_wiz_1_100M_0/mb_usb_rst_clk_wiz_1_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_0/mb_usb_axi_gpio_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_0/mb_usb_axi_gpio_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_0/mb_usb_axi_gpio_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_quad_spi_0_0/mb_usb_axi_quad_spi_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_quad_spi_0_0/mb_usb_axi_quad_spi_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_quad_spi_0_0/mb_usb_axi_quad_spi_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_quad_spi_0_0/mb_usb_axi_quad_spi_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_uartlite_0_0/mb_usb_axi_uartlite_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_uartlite_0_0/mb_usb_axi_uartlite_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_uartlite_0_0/mb_usb_axi_uartlite_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_1/mb_usb_axi_gpio_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_1/mb_usb_axi_gpio_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_1/mb_usb_axi_gpio_0_1.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_2/mb_usb_axi_gpio_0_2_board.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_2/mb_usb_axi_gpio_0_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_gpio_0_2/mb_usb_axi_gpio_0_2.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_timer_0_0/mb_usb_axi_timer_0_0.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_axi_timer_0_0/mb_usb_axi_timer_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/mb_usb_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_0/data/mb_bootloop_le.elf]
+
 read_ip -quiet /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/hdmi_tx_0/hdmi_tx_0.xci
 
 read_ip -quiet /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
@@ -133,6 +171,8 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 read_xdc /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc
 set_property used_in_implementation false [get_files /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc]
 
+read_xdc dont_touch.xdc
+set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 
 read_checkpoint -auto_incremental -incremental /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/utils_1/imports/synth_1/tetris_top.dcp
