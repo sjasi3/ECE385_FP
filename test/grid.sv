@@ -59,6 +59,72 @@ module grid (
                     end
                 end
             end
+
+         for (int row = 19; row >= 0; row--) begin
+                logic full_row = 1'b1; // Assume the row is full
+                for (int col = 0; col < 10; col++) begin
+                    if (!grid[row][col]) begin
+                        full_row = 1'b0; // Row is not full
+                    end
+                end
+
+                // If the row is full, clear it and shift rows above down
+                if (full_row) begin
+                    for (int r = row; r > 0; r--) begin
+                        for (int c=0; c<10; c++) begin
+                        
+                        grid[r][c]<= grid[r - 1][c];
+                       end 
+                    end
+                    for (int c=0; c<10; c++) begin
+                    grid[0][c]<= 3'b000; // Clear the topmost ro
+                    end
+                end
+            end
+
+         for (int row = 19; row >= 0; row--) begin
+                logic full_row = 1'b1; // Assume the row is full
+                for (int col = 0; col < 10; col++) begin
+                    if (!grid[row][col]) begin
+                        full_row = 1'b0; // Row is not full
+                    end
+                end
+
+                // If the row is full, clear it and shift rows above down
+                if (full_row) begin
+                    for (int r = row; r > 0; r--) begin
+                        for (int c=0; c<10; c++) begin
+                        
+                        grid[r][c]<= grid[r - 1][c];
+                       end 
+                    end
+                    for (int c=0; c<10; c++) begin
+                    grid[0][c]<= 3'b000; // Clear the topmost ro
+                    end
+                end
+            end
+
+         for (int row = 19; row >= 0; row--) begin
+                logic full_row = 1'b1; // Assume the row is full
+                for (int col = 0; col < 10; col++) begin
+                    if (!grid[row][col]) begin
+                        full_row = 1'b0; // Row is not full
+                    end
+                end
+
+                // If the row is full, clear it and shift rows above down
+                if (full_row) begin
+                    for (int r = row; r > 0; r--) begin
+                        for (int c=0; c<10; c++) begin
+                        
+                        grid[r][c]<= grid[r - 1][c];
+                       end 
+                    end
+                    for (int c=0; c<10; c++) begin
+                    grid[0][c]<= 3'b000; // Clear the topmost ro
+                    end
+                end
+            end
         end
 
 
