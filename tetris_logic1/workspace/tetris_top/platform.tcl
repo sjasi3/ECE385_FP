@@ -194,3 +194,5 @@ platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetr
 platform generate -domains 
 platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
 platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 

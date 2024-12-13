@@ -90,6 +90,9 @@ module FSMC (
 
             // State-specific output logic
             case (cstate)
+                s_setup: begin
+                    lost <= 0;
+                end
                 s_fall: begin
                     fall <= 1; // Trigger fall
                 end

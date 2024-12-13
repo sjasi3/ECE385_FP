@@ -2,12 +2,12 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Dec 13 09:02:08 2024
-# Process ID: 32723
+# Start of session at: Fri Dec 13 09:14:48 2024
+# Process ID: 18597
 # Current directory: /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1
 # Command line: vivado -log tetris_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tetris_top.tcl
 # Log file: /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/tetris_top.vds
 # Journal file: /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/vivado.jou
-# Running On: SgoSkzD, OS: Linux, CPU Frequency: 3548.916 MHz, CPU Physical cores: 12, Host memory: 33545 MB
+# Running On: SgoSkzD, OS: Linux, CPU Frequency: 3566.029 MHz, CPU Physical cores: 12, Host memory: 33545 MB
 #-----------------------------------------------------------
 source tetris_top.tcl -notrace

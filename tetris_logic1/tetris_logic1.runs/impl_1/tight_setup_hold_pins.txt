@@ -1,19 +1,7 @@
-+====================+===================+========================+
-| Launch Setup Clock | Launch Hold Clock | Pin                    |
-+====================+===================+========================+
-| clk                | clk               | pType_reg[2]/D         |
-| clk                | clk               | pType_reg[1]/D         |
-| clk                | clk               | grid_reg[7][3][2]_C/D  |
-| clk                | clk               | grid_reg[7][3][0]_C/D  |
-| clk                | clk               | grid_reg[9][1][1]_P/D  |
-| clk                | clk               | grid_reg[8][0][2]_C/D  |
-| clk                | clk               | grid_reg[7][5][0]_P/D  |
-| clk                | clk               | grid_reg[13][3][0]_P/D |
-| clk                | clk               | grid_reg[0][2][1]_C/D  |
-| clk                | clk               | grid_reg[0][9][1]_C/D  |
-| clk                | clk               | grid_reg[0][2][2]_C/D  |
-| clk                | clk               | grid_reg[13][5][1]_P/D |
-| clk                | clk               | grid_reg[0][2][0]_C/D  |
-| clk                | clk               | grid_reg[15][0][2]_C/D |
-| clk                | clk               | grid_reg[16][3][0]_C/D |
-+--------------------+-------------------+------------------------+
++====================+===================+===================+
+| Launch Setup Clock | Launch Hold Clock | Pin               |
++====================+===================+===================+
+| clk                | clk               | pType_reg[2]/D    |
+| clk                | clk               | pType_reg[1]/D    |
+| clk                | clk               | npType_reg[1]_C/D |
++--------------------+-------------------+-------------------+
