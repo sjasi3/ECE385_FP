@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
-| Date             : Fri Dec 13 14:02:18 2024
-| Host             : ECEB-4072-09 running 64-bit major release  (build 9200)
+| Date             : Fri Dec 13 14:45:27 2024
+| Host             : ECEB-3022-15 running 64-bit major release  (build 9200)
 | Command          : report_power -file tetris_top_power_routed.rpt -pb tetris_top_power_summary_routed.pb -rpx tetris_top_power_routed.rpx
 | Design           : tetris_top
 | Device           : xc7s50csga324-1
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 0.538        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.461        |
+| Dynamic (W)              | 0.460        |
 | Device Static (W)        | 0.077        |
 | Effective TJA (C/W)      | 4.9          |
 | Max Ambient (C)          | 82.3         |
@@ -53,15 +53,15 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.026 |       12 |       --- |             --- |
-| Slice Logic              |     0.030 |    17513 |       --- |             --- |
-|   LUT as Logic           |     0.026 |     8939 |     32600 |           27.42 |
+| Slice Logic              |     0.031 |    17586 |       --- |             --- |
+|   LUT as Logic           |     0.027 |     8995 |     32600 |           27.59 |
 |   CARRY4                 |     0.002 |      696 |      8150 |            8.54 |
 |   LUT as Distributed RAM |    <0.001 |      172 |      9600 |            1.79 |
-|   Register               |    <0.001 |     4112 |     65200 |            6.31 |
-|   F7/F8 Muxes            |    <0.001 |      587 |     32600 |            1.80 |
+|   Register               |    <0.001 |     4171 |     65200 |            6.40 |
+|   F7/F8 Muxes            |    <0.001 |      583 |     32600 |            1.79 |
 |   LUT as Shift Register  |    <0.001 |      112 |      9600 |            1.17 |
-|   Others                 |     0.000 |      902 |       --- |             --- |
-| Signals                  |     0.042 |    12637 |       --- |             --- |
+|   Others                 |     0.000 |      903 |       --- |             --- |
+| Signals                  |     0.041 |    12761 |       --- |             --- |
 | Block RAM                |     0.002 |     42.5 |        75 |           56.67 |
 | MMCM                     |     0.212 |        2 |         5 |           40.00 |
 | DSPs                     |     0.003 |        8 |       120 |            6.67 |
@@ -152,14 +152,14 @@ Table of Contents
 +------------------------------+-----------+
 | Name                         | Power (W) |
 +------------------------------+-----------+
-| tetris_top                   |     0.461 |
-|   FSM_controller             |     0.001 |
+| tetris_top                   |     0.460 |
+|   FSM_controller             |     0.002 |
 |   bg                         |     0.004 |
 |     bg_rom                   |     0.002 |
 |       U0                     |     0.002 |
 |   clk_wiz                    |     0.106 |
 |     inst                     |     0.106 |
-|   mb_block_i                 |     0.139 |
+|   mb_block_i                 |     0.138 |
 |     clk_wiz_1                |     0.106 |
 |       inst                   |     0.106 |
 |     gpio_usb_keycode         |     0.003 |
@@ -172,8 +172,9 @@ Table of Contents
 |       xbar                   |     0.001 |
 |     spi_usb                  |     0.004 |
 |       U0                     |     0.004 |
-|     timer_usb_axi            |     0.004 |
-|       U0                     |     0.004 |
+|     timer_usb_axi            |     0.003 |
+|       U0                     |     0.003 |
+|   start_drawing              |     0.001 |
 |   valid_piece_position_logic |     0.001 |
 |   vga                        |     0.004 |
 |   vga_to_hdmi                |     0.133 |

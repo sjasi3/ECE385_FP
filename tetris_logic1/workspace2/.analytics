@@ -1,0 +1,10 @@
+timestamp=[2024-12-13 14:31:15], mode=WORKBENCH_START, duration=0:00:04.539, duration_ms=4539, data={}
+timestamp=[2024-12-13 14:31:15], mode=WORKBENCH_UI_INIT, duration=0:00:00.422, duration_ms=422, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2024-12-13 14:31:17], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:01.190, duration_ms=1190, data={}
+timestamp=[2024-12-13 14:32:03], mode=APP_CREATION, duration=0:00:06.614, duration_ms=6614, data={name=mb_usb, project_type=sdk, os=standalone, processor=microblaze, runtime=cpp, platform=tetris_top, application_type=application}
+timestamp=[2024-12-13 14:32:35], mode=PLATFORM_GENERATION, duration=0:00:08.319, duration_ms=8319, data={name=tetris_top}
+timestamp=[2024-12-13 14:32:38], mode=BUILD, duration=0:00:03.270, duration_ms=3270, data={name=mb_usb, configuration=Debug, clean_build=false}
+timestamp=[2024-12-13 14:32:39], mode=BUILD, duration=0:00:00.235, duration_ms=235, data={name=mb_usb_system, configuration=Debug, clean_build=false}
+timestamp=[2024-12-13 14:46:24], mode=PLATFORM_GENERATION, duration=0:00:09.709, duration_ms=9709, data={name=tetris_top}
+timestamp=[2024-12-13 14:46:27], mode=BUILD, duration=0:00:02.259, duration_ms=2259, data={name=mb_usb, configuration=Debug, clean_build=false}
+timestamp=[2024-12-13 14:46:28], mode=BUILD, duration=0:00:00.198, duration_ms=198, data={name=mb_usb_system, configuration=Debug, clean_build=false}

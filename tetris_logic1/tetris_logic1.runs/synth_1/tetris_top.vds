@@ -2,13 +2,13 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Dec 13 13:55:30 2024
-# Process ID: 23408
+# Start of session at: Fri Dec 13 14:39:46 2024
+# Process ID: 21132
 # Current directory: C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1
 # Command line: vivado.exe -log tetris_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source tetris_top.tcl
 # Log file: C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/tetris_top.vds
 # Journal file: C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1\vivado.jou
-# Running On: ECEB-4072-09, OS: Windows, CPU Frequency: 3000 MHz, CPU Physical cores: 6, Host memory: 33554 MB
+# Running On: ECEB-3022-15, OS: Windows, CPU Frequency: 3000 MHz, CPU Physical cores: 6, Host memory: 33554 MB
 #-----------------------------------------------------------
 source tetris_top.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -26,7 +26,7 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 26960
+INFO: [Synth 8-7075] Helper process launched with PID 9100
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 WARNING: [Synth 8-11121] redeclaration of ANSI port 'nr' is not allowed [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/KPL.sv:49]
 INFO: [Synth 8-11241] undeclared symbol 'Q_fb', assumed default net type 'wire' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/random_generator.sv:47]
@@ -34,7 +34,7 @@ INFO: [Synth 8-11241] undeclared symbol 'random16', assumed default net type 'wi
 WARNING: [Synth 8-6901] identifier 'keycode0_gpio' is used before its declaration [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/tetris_top.sv:207]
 WARNING: [Synth 8-10180] variable 'full_row' must explicitly be declared as automatic or static [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/tetris_top.sv:225]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1852.516 ; gain = 410.695
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1851.285 ; gain = 409.055
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'tetris_top' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/tetris_top.sv:44]
 INFO: [Synth 8-6157] synthesizing module 'FSMC' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/FSMC.sv:22]
@@ -162,17 +162,17 @@ WARNING: [Synth 8-7071] port 'nY' of module 'KPL' is unconnected for instance 'k
 WARNING: [Synth 8-7023] instance 'keyboard_piece_logic' of module 'KPL' has 10 connections declared, but only 9 given [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/tetris_top.sv:369]
 INFO: [Synth 8-226] default block is never used [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/tetris_top.sv:418]
 INFO: [Synth 8-226] default block is never used [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/tetris_top.sv:476]
-INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/clk_wiz_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/clk_wiz_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/clk_wiz_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/sources_1/imports/design_source/VGA_controller.sv:26]
 INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/sources_1/imports/design_source/VGA_controller.sv:26]
 WARNING: [Synth 8-7071] port 'sync' of module 'vga_controller' is unconnected for instance 'vga' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/tetris_top.sv:539]
 WARNING: [Synth 8-7023] instance 'vga' of module 'vga_controller' has 8 connections declared, but only 7 given [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/tetris_top.sv:539]
-INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/hdmi_tx_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'hdmi_tx_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/hdmi_tx_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'hdmi_tx_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/hdmi_tx_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'bg_example' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/sources_1/imports/bg/bg_example.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'bg_rom' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/bg_rom_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'bg_rom' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/bg_rom_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'bg_rom' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/bg_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'bg_rom' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/bg_rom_stub.v:5]
 WARNING: [Synth 8-7071] port 'wea' of module 'bg_rom' is unconnected for instance 'bg_rom' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/sources_1/imports/bg/bg_example.sv:34]
 WARNING: [Synth 8-7071] port 'dina' of module 'bg_rom' is unconnected for instance 'bg_rom' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/sources_1/imports/bg/bg_example.sv:34]
 WARNING: [Synth 8-7023] instance 'bg_rom' of module 'bg_rom' has 5 connections declared, but only 3 given [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/sources_1/imports/bg/bg_example.sv:34]
@@ -180,8 +180,8 @@ INFO: [Synth 8-6157] synthesizing module 'bg_palette' [C:/Users/sjasi3/ECE385_FP
 INFO: [Synth 8-6155] done synthesizing module 'bg_palette' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/sources_1/imports/bg/bg_palette.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'bg_example' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/sources_1/imports/bg/bg_example.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'block_sprite_example' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/block_sprite/block_sprite_example.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'block_sprite_rom' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/block_sprite_rom_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'block_sprite_rom' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/block_sprite_rom_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'block_sprite_rom' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/block_sprite_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'block_sprite_rom' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/block_sprite_rom_stub.v:5]
 WARNING: [Synth 8-7071] port 'wea' of module 'block_sprite_rom' is unconnected for instance 'block_sprite_rom' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/block_sprite/block_sprite_example.sv:34]
 WARNING: [Synth 8-7071] port 'dina' of module 'block_sprite_rom' is unconnected for instance 'block_sprite_rom' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/block_sprite/block_sprite_example.sv:34]
 WARNING: [Synth 8-7023] instance 'block_sprite_rom' of module 'block_sprite_rom' has 5 connections declared, but only 3 given [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/block_sprite/block_sprite_example.sv:34]
@@ -189,32 +189,31 @@ INFO: [Synth 8-6157] synthesizing module 'block_sprite_palette' [C:/Users/sjasi3
 INFO: [Synth 8-6155] done synthesizing module 'block_sprite_palette' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/block_sprite/block_sprite_palette.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'block_sprite_example' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/block_sprite/block_sprite_example.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'start_example' [C:/Users/sjasi3/ECE385_FP/Image_to_COE/start/start_example.sv:1]
-INFO: [Synth 8-6157] synthesizing module 'start_rom' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/start_rom_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'start_rom' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/start_rom_stub.v:5]
-WARNING: [Synth 8-7071] port 'ena' of module 'start_rom' is unconnected for instance 'start_rom' [C:/Users/sjasi3/ECE385_FP/Image_to_COE/start/start_example.sv:34]
+INFO: [Synth 8-6157] synthesizing module 'start_rom' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/start_rom_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'start_rom' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/start_rom_stub.v:5]
 WARNING: [Synth 8-7071] port 'wea' of module 'start_rom' is unconnected for instance 'start_rom' [C:/Users/sjasi3/ECE385_FP/Image_to_COE/start/start_example.sv:34]
 WARNING: [Synth 8-7071] port 'dina' of module 'start_rom' is unconnected for instance 'start_rom' [C:/Users/sjasi3/ECE385_FP/Image_to_COE/start/start_example.sv:34]
-WARNING: [Synth 8-7023] instance 'start_rom' of module 'start_rom' has 6 connections declared, but only 3 given [C:/Users/sjasi3/ECE385_FP/Image_to_COE/start/start_example.sv:34]
+WARNING: [Synth 8-7023] instance 'start_rom' of module 'start_rom' has 5 connections declared, but only 3 given [C:/Users/sjasi3/ECE385_FP/Image_to_COE/start/start_example.sv:34]
 INFO: [Synth 8-6157] synthesizing module 'start_palette' [C:/Users/sjasi3/ECE385_FP/Image_to_COE/start/start_palette.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'start_palette' (0#1) [C:/Users/sjasi3/ECE385_FP/Image_to_COE/start/start_palette.sv:1]
 INFO: [Synth 8-6155] done synthesizing module 'start_example' (0#1) [C:/Users/sjasi3/ECE385_FP/Image_to_COE/start/start_example.sv:1]
 INFO: [Synth 8-6157] synthesizing module 'mb_usb' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:936]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_uartlite_0_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_uartlite_0_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_axi_uartlite_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_clk_wiz_1_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_clk_wiz_1_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_gpio_0_2' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_gpio_0_2' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_axi_gpio_0_2_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_gpio_0_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_gpio_0_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_axi_gpio_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_gpio_0_1' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_gpio_0_1' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_axi_gpio_0_1_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_mdm_1_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_mdm_1_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_mdm_1_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_microblaze_0_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_microblaze_0_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_microblaze_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_microblaze_0_axi_intc_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_microblaze_0_axi_intc_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_microblaze_0_axi_intc_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_uartlite_0_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_uartlite_0_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_axi_uartlite_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_clk_wiz_1_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_clk_wiz_1_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_gpio_0_2' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_gpio_0_2' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_axi_gpio_0_2_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_gpio_0_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_gpio_0_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_axi_gpio_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_gpio_0_1' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_gpio_0_1' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_axi_gpio_0_1_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_mdm_1_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_mdm_1_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_mdm_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_microblaze_0_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_microblaze_0_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_microblaze_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_microblaze_0_axi_intc_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_microblaze_0_axi_intc_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_microblaze_0_axi_intc_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_microblaze_0_axi_intc_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'mb_usb_microblaze_0_axi_periph_0' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1632]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1CNVJ1L' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:12]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1CNVJ1L' (0#1) [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:12]
@@ -232,27 +231,27 @@ INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_1Y6O2J1' [c:/Users/sj
 INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_1Y6O2J1' (0#1) [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:804]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_16FJ1YW' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2956]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_16FJ1YW' (0#1) [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2956]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_xbar_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_xbar_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_xbar_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_xbar_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_xbar_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_xbar_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_xbar_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_xbar_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'mb_usb_xbar_0' is unconnected for instance 'xbar' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2681]
 WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'mb_usb_xbar_0' is unconnected for instance 'xbar' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2681]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'mb_usb_xbar_0' has 40 connections declared, but only 38 given [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2681]
 INFO: [Synth 8-6155] done synthesizing module 'mb_usb_microblaze_0_axi_periph_0' (0#1) [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1632]
 INFO: [Synth 8-6157] synthesizing module 'microblaze_0_local_memory_imp_4XV58R' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2722]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_dlmb_bram_if_cntlr_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_dlmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_dlmb_v10_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_dlmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_dlmb_v10_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_dlmb_bram_if_cntlr_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_dlmb_bram_if_cntlr_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_dlmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_dlmb_v10_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_dlmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_dlmb_v10_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_dlmb_v10_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_usb_dlmb_v10_0' is unconnected for instance 'dlmb_v10' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2868]
 WARNING: [Synth 8-7023] instance 'dlmb_v10' of module 'mb_usb_dlmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2868]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_ilmb_bram_if_cntlr_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_ilmb_bram_if_cntlr_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_ilmb_v10_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_ilmb_v10_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_ilmb_v10_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_ilmb_bram_if_cntlr_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_ilmb_bram_if_cntlr_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_ilmb_bram_if_cntlr_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_ilmb_v10_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_ilmb_v10_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_ilmb_v10_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_ilmb_v10_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'LMB_Rst' of module 'mb_usb_ilmb_v10_0' is unconnected for instance 'ilmb_v10' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2914]
 WARNING: [Synth 8-7023] instance 'ilmb_v10' of module 'mb_usb_ilmb_v10_0' has 25 connections declared, but only 24 given [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2914]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_lmb_bram_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_lmb_bram_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_lmb_bram_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_lmb_bram_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_lmb_bram_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_lmb_bram_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_lmb_bram_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'rsta_busy' of module 'mb_usb_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2939]
 WARNING: [Synth 8-7071] port 'rstb_busy' of module 'mb_usb_lmb_bram_0' is unconnected for instance 'lmb_bram' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2939]
 WARNING: [Synth 8-7023] instance 'lmb_bram' of module 'mb_usb_lmb_bram_0' has 16 connections declared, but only 14 given [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:2939]
@@ -261,21 +260,21 @@ INFO: [Synth 8-6157] synthesizing module 'mb_usb_microblaze_0_xlconcat_0' [c:/Us
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'mb_usb_microblaze_0_xlconcat_0' (0#1) [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/ip/mb_usb_microblaze_0_xlconcat_0/synth/mb_usb_microblaze_0_xlconcat_0.v:53]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_rst_clk_wiz_1_100M_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_rst_clk_wiz_1_100M_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_rst_clk_wiz_1_100M_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_rst_clk_wiz_1_100M_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_rst_clk_wiz_1_100M_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_rst_clk_wiz_1_100M_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'mb_usb_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1568]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'mb_usb_rst_clk_wiz_1_100M_0' is unconnected for instance 'rst_clk_wiz_1_100M' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1568]
 WARNING: [Synth 8-7023] instance 'rst_clk_wiz_1_100M' of module 'mb_usb_rst_clk_wiz_1_100M_0' has 10 connections declared, but only 8 given [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1568]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_quad_spi_0_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_axi_quad_spi_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_quad_spi_0_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_quad_spi_0_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_axi_quad_spi_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_quad_spi_0_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_axi_quad_spi_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'io0_t' of module 'mb_usb_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1577]
 WARNING: [Synth 8-7071] port 'io1_o' of module 'mb_usb_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1577]
 WARNING: [Synth 8-7071] port 'io1_t' of module 'mb_usb_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1577]
 WARNING: [Synth 8-7071] port 'sck_t' of module 'mb_usb_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1577]
 WARNING: [Synth 8-7071] port 'ss_t' of module 'mb_usb_axi_quad_spi_0_0' is unconnected for instance 'spi_usb' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1577]
 WARNING: [Synth 8-7023] instance 'spi_usb' of module 'mb_usb_axi_quad_spi_0_0' has 33 connections declared, but only 28 given [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1577]
-INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_timer_0_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_axi_timer_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_timer_0_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-23408-ECEB-4072-09/realtime/mb_usb_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mb_usb_axi_timer_0_0' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_axi_timer_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'mb_usb_axi_timer_0_0' (0#1) [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/.Xil/Vivado-21132-ECEB-3022-15/realtime/mb_usb_axi_timer_0_0_stub.v:5]
 WARNING: [Synth 8-7071] port 'generateout0' of module 'mb_usb_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1606]
 WARNING: [Synth 8-7071] port 'generateout1' of module 'mb_usb_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1606]
 WARNING: [Synth 8-7071] port 'pwm0' of module 'mb_usb_axi_timer_0_0' is unconnected for instance 'timer_usb_axi' [c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/synth/mb_usb.v:1606]
@@ -508,18 +507,18 @@ WARNING: [Synth 8-7129] Port In102[0] in module xlconcat_v2_1_4_xlconcat is eith
 WARNING: [Synth 8-7129] Port In103[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2111.859 ; gain = 670.039
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2113.062 ; gain = 670.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2111.859 ; gain = 670.039
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2113.062 ; gain = 670.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2111.859 ; gain = 670.039
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2113.062 ; gain = 670.832
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.126 . Memory (MB): peak = 2111.859 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.126 . Memory (MB): peak = 2113.062 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -578,25 +577,25 @@ Parsing XDC File [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/syn
 Finished Parsing XDC File [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2185.617 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2200.105 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.043 . Memory (MB): peak = 2185.617 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 2200.105 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/spi_usb' at clock pin 'ext_spi_clk' is different from the actual clock period '10.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '20.000' specified during out-of-context synthesis of instance 'mb_block_i/microblaze_0_local_memory/lmb_bram' at clock pin 'clka' is different from the actual clock period '10.000', this can lead to different synthesis results.
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-11241] undeclared symbol 'REGCCE', assumed default net type 'wire' [C:/Xilinx/Vivado/2022.2/data/verilog/src/unimacro/BRAM_SINGLE_MACRO.v:2170]
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2186.859 ; gain = 745.039
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2200.242 ; gain = 758.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7s50csga324-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2186.859 ; gain = 745.039
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2200.242 ; gain = 758.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -645,7 +644,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for sprite_drawing/block_sprite_rom. 
 Applied set_property KEEP_HIERARCHY = SOFT for bg/bg_rom. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for start_drawing/start_rom. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2186.859 ; gain = 745.039
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2200.242 ; gain = 758.012
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'cstate_reg' in module 'FSMC'
 ---------------------------------------------------------------------------------------------------
@@ -668,7 +667,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'cstate_reg' in module 'FSMC
 INFO: [Synth 8-3354] encoded FSM with state register 'cstate_reg' using encoding 'sequential' in module 'FSMC'
 WARNING: [Synth 8-327] inferring latch for variable 'hold_reg' [C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/FSMC.sv:141]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2186.859 ; gain = 745.039
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 2200.242 ; gain = 758.012
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -768,7 +767,7 @@ DSP Report: Generating DSP rom_address, operation Mode is: C+A*(B:0x140).
 DSP Report: operator rom_address is absorbed into DSP rom_address.
 DSP Report: operator rom_address0 is absorbed into DSP rom_address.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 2380.344 ; gain = 938.523
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2386.004 ; gain = 943.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -795,19 +794,19 @@ Start Applying XDC Timing Constraints
 WARNING: [Synth 8-565] redefining clock 'clk'
 WARNING: [Synth 8-565] redefining clock 'clk'
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 2380.344 ; gain = 938.523
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:10 ; elapsed = 00:01:15 . Memory (MB): peak = 2386.004 ; gain = 943.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:30 ; elapsed = 00:01:36 . Memory (MB): peak = 2380.344 ; gain = 938.523
+Finished Timing Optimization : Time (s): cpu = 00:01:27 ; elapsed = 00:01:32 . Memory (MB): peak = 2386.004 ; gain = 943.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:34 ; elapsed = 00:01:39 . Memory (MB): peak = 2380.344 ; gain = 938.523
+Finished Technology Mapping : Time (s): cpu = 00:01:31 ; elapsed = 00:01:36 . Memory (MB): peak = 2386.004 ; gain = 943.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -824,7 +823,6 @@ Start Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-4442] BlackBox module \start_drawing/start_rom  has unconnected pin ena
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \start_drawing/start_rom  has unconnected pin wea[0]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \start_drawing/start_rom  has unconnected pin dina[0]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \sprite_drawing/block_sprite_rom  has unconnected pin wea[0]
@@ -838,37 +836,37 @@ CRITICAL WARNING: [Synth 8-4442] BlackBox module \bg/bg_rom  has unconnected pin
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \bg/bg_rom  has unconnected pin dina[1]
 CRITICAL WARNING: [Synth 8-4442] BlackBox module \bg/bg_rom  has unconnected pin dina[0]
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:38 ; elapsed = 00:01:43 . Memory (MB): peak = 2380.344 ; gain = 938.523
+Finished IO Insertion : Time (s): cpu = 00:01:35 ; elapsed = 00:01:40 . Memory (MB): peak = 2386.004 ; gain = 943.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:38 ; elapsed = 00:01:43 . Memory (MB): peak = 2380.344 ; gain = 938.523
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:35 ; elapsed = 00:01:40 . Memory (MB): peak = 2386.004 ; gain = 943.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:38 ; elapsed = 00:01:44 . Memory (MB): peak = 2380.344 ; gain = 938.523
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 2386.004 ; gain = 943.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:38 ; elapsed = 00:01:44 . Memory (MB): peak = 2380.344 ; gain = 938.523
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:35 ; elapsed = 00:01:41 . Memory (MB): peak = 2386.004 ; gain = 943.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:39 ; elapsed = 00:01:44 . Memory (MB): peak = 2380.344 ; gain = 938.523
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 2386.004 ; gain = 943.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:39 ; elapsed = 00:01:44 . Memory (MB): peak = 2380.344 ; gain = 938.523
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 2386.004 ; gain = 943.773
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -940,13 +938,13 @@ Report Cell Usage:
 |22    |start_rom                    |     1|
 |23    |CARRY4                       |   612|
 |24    |DSP48E1                      |     5|
-|26    |LUT1                         |   164|
-|27    |LUT2                         |  1171|
-|28    |LUT3                         |   951|
-|29    |LUT4                         |  1231|
-|30    |LUT5                         |   870|
-|31    |LUT6                         |  3390|
-|32    |MUXF7                        |   376|
+|26    |LUT1                         |   159|
+|27    |LUT2                         |  1186|
+|28    |LUT3                         |   939|
+|29    |LUT4                         |  1244|
+|30    |LUT5                         |   871|
+|31    |LUT6                         |  3375|
+|32    |MUXF7                        |   372|
 |33    |MUXF8                        |   175|
 |34    |FDCE                         |   898|
 |35    |FDPE                         |   116|
@@ -957,30 +955,30 @@ Report Cell Usage:
 |40    |OBUF                         |    45|
 +------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:39 ; elapsed = 00:01:44 . Memory (MB): peak = 2380.344 ; gain = 938.523
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 2386.004 ; gain = 943.773
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 13 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:28 ; elapsed = 00:01:41 . Memory (MB): peak = 2380.344 ; gain = 863.523
-Synthesis Optimization Complete : Time (s): cpu = 00:01:39 ; elapsed = 00:01:44 . Memory (MB): peak = 2380.344 ; gain = 938.523
+Synthesis finished with 0 errors, 12 critical warnings and 20 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:25 ; elapsed = 00:01:38 . Memory (MB): peak = 2386.004 ; gain = 856.594
+Synthesis Optimization Complete : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 2386.004 ; gain = 943.773
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.106 . Memory (MB): peak = 2380.344 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 1273 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.105 . Memory (MB): peak = 2386.004 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1269 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-140] Inserted 1 IBUFs to IO ports without IO buffers.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2380.344 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 2386.004 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 105 instances were transformed.
   LD => LDCE: 3 instances
   LDC => LDCE: 102 instances
 
-Synth Design complete, checksum: b7b5c603
+Synth Design complete, checksum: 107ce0a7
 INFO: [Common 17-83] Releasing license: Synthesis
-145 Infos, 368 Warnings, 13 Critical Warnings and 0 Errors encountered.
+145 Infos, 367 Warnings, 12 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:44 ; elapsed = 00:01:50 . Memory (MB): peak = 2380.344 ; gain = 1317.402
+synth_design: Time (s): cpu = 00:01:40 ; elapsed = 00:01:47 . Memory (MB): peak = 2386.004 ; gain = 1322.125
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/synth_1/tetris_top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file tetris_top_utilization_synth.rpt -pb tetris_top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 13 13:57:32 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 13 14:41:44 2024...

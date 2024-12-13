@@ -1,8 +1,8 @@
 -- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
--- Date        : Fri Dec 13 13:25:29 2024
--- Host        : ECEB-4072-09 running 64-bit major release  (build 9200)
+-- Date        : Fri Dec 13 14:39:43 2024
+-- Host        : ECEB-3022-15 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/ip/start_rom/start_rom_stub.vhdl
 -- Design      : start_rom
@@ -15,7 +15,6 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity start_rom is
   Port ( 
     clka : in STD_LOGIC;
-    ena : in STD_LOGIC;
     wea : in STD_LOGIC_VECTOR ( 0 to 0 );
     addra : in STD_LOGIC_VECTOR ( 12 downto 0 );
     dina : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -28,7 +27,7 @@ architecture stub of start_rom is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "clka,ena,wea[0:0],addra[12:0],dina[0:0],douta[0:0]";
+attribute black_box_pad_pin of stub : architecture is "clka,wea[0:0],addra[12:0],dina[0:0],douta[0:0]";
 attribute x_core_info : string;
 attribute x_core_info of stub : architecture is "blk_mem_gen_v8_4_5,Vivado 2022.2";
 begin

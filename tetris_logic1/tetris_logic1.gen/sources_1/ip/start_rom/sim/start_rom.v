@@ -55,7 +55,6 @@
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module start_rom (
   clka,
-  ena,
   wea,
   addra,
   dina,
@@ -64,8 +63,6 @@ module start_rom (
 
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA CLK" *)
 input wire clka;
-(* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA EN" *)
-input wire ena;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA WE" *)
 input wire [0 : 0] wea;
 (* X_INTERFACE_INFO = "xilinx.com:interface:bram:1.0 BRAM_PORTA ADDR" *)
@@ -101,15 +98,15 @@ output wire [0 : 0] douta;
     .C_RST_PRIORITY_A("CE"),
     .C_RSTRAM_A(0),
     .C_INITA_VAL("0"),
-    .C_HAS_ENA(1),
+    .C_HAS_ENA(0),
     .C_HAS_REGCEA(0),
     .C_USE_BYTE_WEA(0),
     .C_WEA_WIDTH(1),
     .C_WRITE_MODE_A("WRITE_FIRST"),
     .C_WRITE_WIDTH_A(1),
     .C_READ_WIDTH_A(1),
-    .C_WRITE_DEPTH_A(8000),
-    .C_READ_DEPTH_A(8000),
+    .C_WRITE_DEPTH_A(4800),
+    .C_READ_DEPTH_A(4800),
     .C_ADDRA_WIDTH(13),
     .C_HAS_RSTB(0),
     .C_RST_PRIORITY_B("CE"),
@@ -122,8 +119,8 @@ output wire [0 : 0] douta;
     .C_WRITE_MODE_B("WRITE_FIRST"),
     .C_WRITE_WIDTH_B(1),
     .C_READ_WIDTH_B(1),
-    .C_WRITE_DEPTH_B(8000),
-    .C_READ_DEPTH_B(8000),
+    .C_WRITE_DEPTH_B(4800),
+    .C_READ_DEPTH_B(4800),
     .C_ADDRB_WIDTH(13),
     .C_HAS_MEM_OUTPUT_REGS_A(1),
     .C_HAS_MEM_OUTPUT_REGS_B(0),
@@ -155,7 +152,7 @@ output wire [0 : 0] douta;
   ) inst (
     .clka(clka),
     .rsta(1'D0),
-    .ena(ena),
+    .ena(1'D0),
     .regcea(1'D0),
     .wea(wea),
     .addra(addra),

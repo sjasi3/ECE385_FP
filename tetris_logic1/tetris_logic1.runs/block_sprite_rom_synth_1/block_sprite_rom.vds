@@ -2,13 +2,13 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Fri Dec 13 11:53:11 2024
-# Process ID: 12140
+# Start of session at: Fri Dec 13 14:14:16 2024
+# Process ID: 11724
 # Current directory: C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/block_sprite_rom_synth_1
 # Command line: vivado.exe -log block_sprite_rom.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source block_sprite_rom.tcl
 # Log file: C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/block_sprite_rom_synth_1/block_sprite_rom.vds
 # Journal file: C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/block_sprite_rom_synth_1\vivado.jou
-# Running On: ECEB-4072-09, OS: Windows, CPU Frequency: 3000 MHz, CPU Physical cores: 6, Host memory: 33554 MB
+# Running On: ECEB-3022-15, OS: Windows, CPU Frequency: 3000 MHz, CPU Physical cores: 6, Host memory: 33554 MB
 #-----------------------------------------------------------
 source block_sprite_rom.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
@@ -22,4 +22,4 @@ INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385_FP/te
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.cache/ip/2022.2/c/7/c7a8c2c654fc3e77/block_sprite_rom_stub.v to C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/block_sprite_rom_synth_1/block_sprite_rom_stub.v.
 INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.cache/ip/2022.2/c/7/c7a8c2c654fc3e77/block_sprite_rom_stub.vhdl to C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.runs/block_sprite_rom_synth_1/block_sprite_rom_stub.vhdl.
 INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP block_sprite_rom, cache-ID = c7a8c2c654fc3e77.
-INFO: [Common 17-206] Exiting Vivado at Fri Dec 13 11:53:20 2024...
+INFO: [Common 17-206] Exiting Vivado at Fri Dec 13 14:14:26 2024...

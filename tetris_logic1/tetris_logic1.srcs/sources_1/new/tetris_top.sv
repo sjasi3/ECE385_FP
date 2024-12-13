@@ -417,44 +417,44 @@ module tetris_top(
             else begin; end
             case (eGrid)
                 0: begin
-                    red <= bgred;
-                    green <= bggreen;
-                    blue <= bgblue;
+                    red = bgred;
+                    green = bggreen;
+                    blue = bgblue;
                 end
                 1: begin
-                    red <= fgred;
-                    green <= 0;
-                    blue <= 0;
+                    red = fgred;
+                    green = 0;
+                    blue = 0;
                 end
                 2: begin
-                    red <= 0;
-                    green <= fggreen;
-                    blue <= 0;
+                    red = 0;
+                    green = fggreen;
+                    blue = 0;
                 end
                 3: begin
-                    red <= 0;
-                    green <= 0;
-                    blue <= fgblue;
+                    red = 0;
+                    green = 0;
+                    blue = fgblue;
                 end
                 4: begin
-                    red <= fgred;
-                    green <= fggreen;
-                    blue <= fgblue * 0;
+                    red = fgred;
+                    green = fggreen;
+                    blue = fgblue * 0;
                 end
                 5: begin
-                    red <= fgred;
-                    green <= 0;
-                    blue <= fgblue;
+                    red = fgred;
+                    green = 0;
+                    blue = fgblue;
                 end
                 6: begin
-                    red <= fgred;
-                    green <= fggreen >> 1;
-                    blue <= 0;
+                    red = fgred;
+                    green = fggreen >> 1;
+                    blue = 0;
                 end
                 7: begin
-                    red <= fgred;
-                    green <= fggreen >> 2;
-                    blue <= fgblue >> 1;
+                    red = fgred;
+                    green = fggreen >> 2;
+                    blue = fgblue >> 1;
                 end
                 default: begin
                 end
@@ -475,44 +475,44 @@ module tetris_top(
             else begin; end
             case (eGrid)
                 0: begin
-                    red <= bgred;
-                    green <= bggreen;
-                    blue <= bgblue;
+                    red = bgred;
+                    green = bggreen;
+                    blue = bgblue;
                 end
                 1: begin
-                    red <= fgred;
-                    green <= 0;
-                    blue <= 0;
+                    red = fgred;
+                    green = 0;
+                    blue = 0;
                 end
                 2: begin
-                    red <= 0;
-                    green <= fggreen;
-                    blue <= 0;
+                    red = 0;
+                    green = fggreen;
+                    blue = 0;
                 end
                 3: begin
-                    red <= 0;
-                    green <= 0;
-                    blue <= fgblue;
+                    red = 0;
+                    green = 0;
+                    blue = fgblue;
                 end
                 4: begin
-                    red <= fgred;
-                    green <= fggreen;
-                    blue <= fgblue * 0;
+                    red = fgred;
+                    green = fggreen;
+                    blue = fgblue * 0;
                 end
                 5: begin
-                    red <= fgred;
-                    green <= 0;
-                    blue <= fgblue;
+                    red = fgred;
+                    green = 0;
+                    blue = fgblue;
                 end
                 6: begin
-                    red <= fgred;
-                    green <= fggreen >> 1;
-                    blue <= 0;
+                    red = fgred;
+                    green = fggreen >> 1;
+                    blue = 0;
                 end
                 7: begin
-                    red <= fgred;
-                    green <= fggreen >> 2;
-                    blue <= fgblue >> 1;
+                    red = fgred;
+                    green = fggreen >> 2;
+                    blue = fgblue >> 1;
                 end
                 default: begin
                 end
