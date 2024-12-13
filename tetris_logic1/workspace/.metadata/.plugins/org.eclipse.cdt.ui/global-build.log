@@ -1,6 +1,6 @@
-13:16:52 **** Incremental Build of project tetris_top ****
-buildplatform.bat 61313 tetris_top no_domain_build 
-XSDB Server Channel: tcfchan#1
+14:02:49 **** Incremental Build of project tetris_top ****
+buildplatform.bat 61510 tetris_top no_domain_build 
+XSDB Server Channel: tcfchan#2
 C:/Xilinx/Vitis/2022.2/gnu/microblaze/nt
 Building the BSP Library for domain  - standalone_microblaze_0 on processor microblaze_0
 make --no-print-directory seq_libs
@@ -11,11 +11,11 @@ make -j 10 --no-print-directory par_libs
 
 "Running Make include in microblaze_0/libsrc/bram_v4_8/src"
 
-"Running Make include in microblaze_0/libsrc/cpu_v2_16/src"
-
 make -C microblaze_0/libsrc/bram_v4_8/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
 R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
 MPILER_FLAGS=-g -ffunction-sections -fdata-sections -Wall -Wextra -fno-tree-loop-distribute-patterns"
+
+"Running Make include in microblaze_0/libsrc/cpu_v2_16/src"
 
 make -C microblaze_0/libsrc/cpu_v2_16/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ASSEMBLER=mb-as" "ARCHIVER=mb-ar" "COMPILE
 R_FLAGS=  -O2 -c -mcpu=v11.0 -mlittle-endian -mno-xl-reorder -mno-xl-soft-mul -mxl-barrel-shift -mxl-pattern-compare" "EXTRA_CO
@@ -144,7 +144,7 @@ xuartlite_stats.o
 mb-ar: creating microblaze_0/lib/libxil.a
 'Finished building libraries'
 
-13:17:03 **** Incremental Build of configuration Debug for project mb_keeb ****
+14:02:59 **** Incremental Build of configuration Debug for project mb_keeb ****
 make all 
 'Building file: ../src/lw_usb/MAX3421E.c'
 'Invoking: MicroBlaze gcc compiler'
@@ -223,6 +223,14 @@ mb-size mb_keeb.elf  |tee "mb_keeb.elf.size"
   24532	    488	   2652	  27672	   6c18	mb_keeb.elf
 'Finished building: mb_keeb.elf.size'
 ' '
-13:17:06 **** Incremental Build of configuration Debug for project mb_keeb_system ****
+14:03:02 **** Incremental Build of configuration Debug for project mb_keeb_system ****
+make all 
+Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
+Nothing to build in platform 'tetris_top'
+
+14:03:48 **** Incremental Build of configuration Debug for project mb_keeb ****
+make all 
+make: Nothing to be done for 'all'.
+14:03:48 **** Incremental Build of configuration Debug for project mb_keeb_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."

@@ -1,6 +1,6 @@
-13:17:06 **** Incremental Build of configuration Debug for project mb_keeb_system ****
+14:03:48 **** Incremental Build of configuration Debug for project mb_keeb_system ****
 make all 
 Skipping SD card image generation. Reason: "The system project only has applications for microblaze processors."
 
-13:17:07 Build Finished (took 219ms)
+14:03:49 Build Finished (took 217ms)
 

@@ -71,7 +71,6 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 3
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7s50csga324-1
 
@@ -92,7 +91,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 add_files C:/Users/sjasi3/ECE385_FP/Image_to_COE/bg/bg.COE
 add_files C:/Users/sjasi3/ECE385_FP/Image_to_COE/block_sprite/block_sprite.COE
-add_files c:/Users/sjasi3/ECE385_FP/Image_to_COE/start/start.COE
+add_files C:/Users/sjasi3/ECE385_FP/Image_to_COE/start/start.COE
 read_verilog -library xil_defaultlib -sv {
   C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/FPL.sv
   C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/FSMC.sv
@@ -164,7 +163,7 @@ set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385
 read_ip -quiet C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/bg_rom/bg_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/ip/bg_rom/bg_rom_ooc.xdc]
 
-read_ip -quiet c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/start_rom/start_rom.xci
+read_ip -quiet C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/start_rom/start_rom.xci
 set_property used_in_implementation false [get_files -all c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/ip/start_rom/start_rom_ooc.xdc]
 
 OPTRACE "Adding files" END { }

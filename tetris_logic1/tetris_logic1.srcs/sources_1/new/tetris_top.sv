@@ -399,8 +399,8 @@ module tetris_top(
 
     // BG or FG calculator
     always_comb begin
-        red <= bgred;
-        green <= bggreen;
+        red = bgred;
+        green = bggreen;
         blue = bgblue;
         if (drawX >= 420 && drawY >= 40 && drawX < 500 && drawY < 120)
         begin
@@ -520,9 +520,9 @@ module tetris_top(
         end
         else begin; end
         if (startscr) begin
-            red <= sred;
-            green <= sgreen;
-            blue <= sblue;
+            red = sred;
+            green = sgreen;
+            blue = sblue;
         end
     end
 

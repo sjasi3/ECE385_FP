@@ -212,3 +212,21 @@ platform generate
 platform active {tetris_top}
 platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
 platform generate -domains 
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform active {tetris_top}
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform active {tetris_top}
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform active {tetris_top}
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 

@@ -115,7 +115,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -147,7 +146,7 @@ OPTRACE "add files" START { }
   read_ip -quiet C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci
   read_ip -quiet C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/block_sprite_rom/block_sprite_rom.xci
   read_ip -quiet C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/bg_rom/bg_rom.xci
-  read_ip -quiet c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/start_rom/start_rom.xci
+  read_ip -quiet C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/ip/start_rom/start_rom.xci
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc

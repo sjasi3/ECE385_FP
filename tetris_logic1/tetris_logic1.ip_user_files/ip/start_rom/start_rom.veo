@@ -59,8 +59,8 @@ start_rom your_instance_name (
   .ena(ena),      // input wire ena
   .wea(wea),      // input wire [0 : 0] wea
   .addra(addra),  // input wire [12 : 0] addra
-  .dina(dina),    // input wire [3 : 0] dina
-  .douta(douta)  // output wire [3 : 0] douta
+  .dina(dina),    // input wire [0 : 0] dina
+  .douta(douta)  // output wire [0 : 0] douta
 );
 // INST_TAG_END ------ End INSTANTIATION Template ---------
 
