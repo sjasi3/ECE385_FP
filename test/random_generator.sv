@@ -9,10 +9,10 @@ wire [16:0] Q_ns;
 always @(posedge clk) begin	
     
     
-    // if (Q_state == seed)        //max tick logic
-    //     max_tick_reg = 1'b1;
-    // else
-    //     max_tick_reg = 1'b0;
+	if (Q_state == seed)        //max tick logic  indicate the full T has reached and the number will repeat after 
+        max_tick_reg = 1'b1;
+    else
+        max_tick_reg = 1'b0;
         
     if	(rst_n)	
         Q_state	<=	seed;
