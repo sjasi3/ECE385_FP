@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Fri Dec 13 09:16:18 2024
-| Host         : SgoSkzD running 64-bit Gentoo Linux
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Fri Dec 13 12:59:56 2024
+| Host         : ECEB-4072-09 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file tetris_top_utilization_synth.rpt -pb tetris_top_utilization_synth.pb
 | Design       : tetris_top
 | Device       : xc7s50csga324-1
@@ -31,14 +31,14 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             | 7375 |     0 |          0 |     32600 | 22.62 |
-|   LUT as Logic          | 7375 |     0 |          0 |     32600 | 22.62 |
+| Slice LUTs*             | 6437 |     0 |          0 |     32600 | 19.75 |
+|   LUT as Logic          | 6437 |     0 |          0 |     32600 | 19.75 |
 |   LUT as Memory         |    0 |     0 |          0 |      9600 |  0.00 |
-| Slice Registers         | 1942 |     0 |          0 |     65200 |  2.98 |
-|   Register as Flip Flop | 1465 |     0 |          0 |     65200 |  2.25 |
-|   Register as Latch     |  477 |     0 |          0 |     65200 |  0.73 |
-| F7 Muxes                |  299 |     0 |          0 |     16300 |  1.83 |
-| F8 Muxes                |   91 |     0 |          0 |      8150 |  1.12 |
+| Slice Registers         | 1202 |     0 |          0 |     65200 |  1.84 |
+|   Register as Flip Flop | 1097 |     0 |          0 |     65200 |  1.68 |
+|   Register as Latch     |  105 |     0 |          0 |     65200 |  0.16 |
+| F7 Muxes                |  372 |     0 |          0 |     16300 |  2.28 |
+| F8 Muxes                |  175 |     0 |          0 |      8150 |  2.15 |
 +-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 Warning! LUT value is adjusted to account for LUT combining.
@@ -56,10 +56,10 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |            _ |         Set |            - |
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
-| 485   |          Yes |           - |          Set |
-| 1375  |          Yes |           - |        Reset |
+| 116   |          Yes |           - |          Set |
+| 1003  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 82    |          Yes |       Reset |            - |
+| 83    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -82,8 +82,8 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------------+------+-------+------------+-----------+-------+
 |    Site Type   | Used | Fixed | Prohibited | Available | Util% |
 +----------------+------+-------+------------+-----------+-------+
-| DSPs           |    3 |     0 |          0 |       120 |  2.50 |
-|   DSP48E1 only |    3 |       |            |           |       |
+| DSPs           |    5 |     0 |          0 |       120 |  4.17 |
+|   DSP48E1 only |    5 |       |            |           |       |
 +----------------+------+-------+------------+-----------+-------+
 
 
@@ -148,22 +148,22 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     | 3231 |                 LUT |
-| LUT5     | 1495 |                 LUT |
-| LUT2     | 1442 |                 LUT |
-| LUT3     | 1439 |                 LUT |
-| LUT4     | 1250 |                 LUT |
+| LUT6     | 3375 |                 LUT |
+| LUT4     | 1244 |                 LUT |
+| LUT2     | 1186 |                 LUT |
+| LUT3     |  939 |                 LUT |
 | FDCE     |  898 |        Flop & Latch |
-| CARRY4   |  580 |          CarryLogic |
-| FDPE     |  485 |        Flop & Latch |
-| LDCE     |  477 |        Flop & Latch |
-| MUXF7    |  299 |               MuxFx |
-| LUT1     |  152 |                 LUT |
-| MUXF8    |   91 |               MuxFx |
-| FDRE     |   82 |        Flop & Latch |
+| LUT5     |  871 |                 LUT |
+| CARRY4   |  612 |          CarryLogic |
+| MUXF7    |  372 |               MuxFx |
+| MUXF8    |  175 |               MuxFx |
+| LUT1     |  159 |                 LUT |
+| FDPE     |  116 |        Flop & Latch |
+| LDCE     |  105 |        Flop & Latch |
+| FDRE     |   83 |        Flop & Latch |
 | OBUF     |   45 |                  IO |
 | IBUF     |    6 |                  IO |
-| DSP48E1  |    3 |    Block Arithmetic |
+| DSP48E1  |    5 |    Block Arithmetic |
 +----------+------+---------------------+
 
 
@@ -173,6 +173,7 @@ Warning! LUT value is adjusted to account for LUT combining.
 +--------------------------------+------+
 |            Ref Name            | Used |
 +--------------------------------+------+
+| start_rom                      |    1 |
 | mb_usb_xbar_0                  |    1 |
 | mb_usb_rst_clk_wiz_1_100M_0    |    1 |
 | mb_usb_microblaze_0_axi_intc_0 |    1 |

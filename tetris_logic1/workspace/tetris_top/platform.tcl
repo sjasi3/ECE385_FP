@@ -196,3 +196,19 @@ platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetr
 platform generate -domains 
 platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
 platform generate -domains 
+platform active {tetris_top}
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains standalone_microblaze_0 
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform generate
+platform active {tetris_top}
+platform config -updatehw {C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 

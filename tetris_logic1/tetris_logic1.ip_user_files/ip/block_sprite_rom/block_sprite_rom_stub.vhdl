@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
 -- Date        : Mon Dec  9 11:02:22 2024
 -- Host        : SgoSkzD running 64-bit Gentoo Linux
--- Command     : write_vhdl -force -mode synth_stub
---               /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/ip/block_sprite_rom/block_sprite_rom_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top block_sprite_rom -prefix
+--               block_sprite_rom_ block_sprite_rom_stub.vhdl
 -- Design      : block_sprite_rom
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7s50csga324-1

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc rfile:../../../tetris_logic1.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:C:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc rfile:../../../tetris_logic1.srcs/constrs_1/imports/pin_assignment/mb_usb_hdmi_top.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN J2 [get_ports reset_rtl_0]
 set_property src_info {type:XDC file:1 line:7 export:INPUT save:INPUT read:READ} [current_design]

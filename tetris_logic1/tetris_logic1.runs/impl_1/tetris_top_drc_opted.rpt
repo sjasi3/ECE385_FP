@@ -1,8 +1,8 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Fri Dec 13 09:16:57 2024
-| Host         : SgoSkzD running 64-bit Gentoo Linux
+| Tool Version : Vivado v.2022.2 (win64) Build 3671981 Fri Oct 14 05:00:03 MDT 2022
+| Date         : Fri Dec 13 13:00:51 2024
+| Host         : ECEB-4072-09 running 64-bit major release  (build 9200)
 | Command      : report_drc -file tetris_top_drc_opted.rpt -pb tetris_top_drc_opted.pb -rpx tetris_top_drc_opted.rpx
 | Design       : tetris_top
 | Device       : xc7s50csga324-1
@@ -24,13 +24,13 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 26
+             Violations found: 28
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
 | CHECK-3   | Warning  | Report rule limit reached                           | 1          |
-| DPIP-1    | Warning  | Input pipelining                                    | 4          |
+| DPIP-1    | Warning  | Input pipelining                                    | 6          |
 | REQP-1840 | Warning  | RAMB18 async control check                          | 20         |
 +-----------+----------+-----------------------------------------------------+------------+
 
@@ -72,6 +72,16 @@ Related violations: <none>
 DPIP-1#4 Warning
 Input pipelining  
 DSP bg/rom_address2 input bg/rom_address2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#5 Warning
+Input pipelining  
+DSP start_drawing/rom_address1 input start_drawing/rom_address1/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+DPIP-1#6 Warning
+Input pipelining  
+DSP start_drawing/rom_address2 input start_drawing/rom_address2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
 Related violations: <none>
 
 REQP-1840#1 Warning

@@ -25,7 +25,10 @@ module FSMC (
     input logic restart,
     input logic valid,
     input logic above,
+    input logic harddrop,
+    input logic nr,
 
+    output logic startscr,
     output logic fall,
     output logic LR,
     output logic rot,
@@ -87,11 +90,13 @@ module FSMC (
             LR <= 0;
             rot <= 0;
             val <= 0;
+            startscr <= 0;
 
             // State-specific output logic
             case (cstate)
                 s_setup: begin
                     lost <= 0;
+                    startscr <= 1;
                 end
                 s_fall: begin
                     fall <= 1; // Trigger fall
@@ -130,7 +135,7 @@ module FSMC (
         nstate = cstate; // Default to remain in current state
         case (cstate)
             s_reset:   nstate = s_setup;    // Transition to setup
-            s_setup:   nstate = s_update;   // Transition to update
+            s_setup:   nstate = nr ? s_update : s_setup;   // Transition to update
             s_validate:begin
                 nstate = s_update;   // Wait one clock cycle
                 if (hold == s_fall)
@@ -144,7 +149,7 @@ module FSMC (
                     hold = s_rot;
                     nstate = s_rot;
                 end
-                if (counter >= FALL_DELAY) begin
+                if (counter >= (FALL_DELAY / (harddrop ? 4 : 1))) begin
                     hold = s_fall;
                     nstate = s_fall; // Fall after delay
                 end

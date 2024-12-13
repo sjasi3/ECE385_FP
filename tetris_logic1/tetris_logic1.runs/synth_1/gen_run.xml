@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1734102887" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/tetris_top.dcp">
-  <File Type="VDS-TIMINGSUMMARY" Name="tetris_top_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="tetris_top.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="tetris_top_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="tetris_top_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="tetris_top_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="tetris_top.vds"/>
-  <File Type="REPORTS-TCL" Name="tetris_top_reports.tcl"/>
-  <File Type="VDS-TIMING-PB" Name="tetris_top_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xc7s50csga324-1" LaunchTime="1734116250" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/tetris_top.dcp">
   <File Type="PA-TCL" Name="tetris_top.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="tetris_top_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="tetris_top_reports.tcl"/>
+  <File Type="RDS-RDS" Name="tetris_top.vds"/>
+  <File Type="RDS-UTIL" Name="tetris_top_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="tetris_top_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="tetris_top.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="tetris_top_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="tetris_top_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/mb_usb/mb_usb.bd">
@@ -107,6 +107,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../Image_to_COE/start/start_example.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Image_to_COE/start/start_palette.sv">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/tetris_top.sv">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -156,6 +170,20 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../Image_to_COE/start/start_rom.sv">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Image_to_COE/start/start.COE">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="tetris_top"/>
@@ -194,10 +222,11 @@
     <Step Id="synth_design"/>
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="mb_usb_dlmb_bram_if_cntlr_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_usb_lmb_bram_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="mb_usb_ilmb_bram_if_cntlr_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="block_sprite_rom"/>
-  <BlockFileSet Type="BlockSrcs" Name="bg_rom"/>
   <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
   <BlockFileSet Type="BlockSrcs" Name="hdmi_tx_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_usb_lmb_bram_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="block_sprite_rom"/>
+  <BlockFileSet Type="BlockSrcs" Name="bg_rom"/>
+  <BlockFileSet Type="BlockSrcs" Name="mb_usb_ilmb_bram_if_cntlr_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="start_rom"/>
 </GenRun>

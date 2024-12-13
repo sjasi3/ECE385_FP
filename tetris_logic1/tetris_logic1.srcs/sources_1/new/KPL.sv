@@ -33,6 +33,8 @@ module KPL(
     input logic [5:0] Y,
     input logic [1:0] rType,
 
+    output logic harddrop,
+    output logic nr,
     output logic [3:0] nX,
     output logic [5:0] nY,
     output logic [1:0] nrType
@@ -71,11 +73,16 @@ module KPL(
                 end
                 nr <= 1;
             end
+            8'h5D: begin
+                harddrop <= 1;
+                nr <= 1;
+            end
             // Any other button press should do nothing
             default: begin
                 nX <= X;
                 nrType <= rType;
                 nr <= 0;
+                harddrop <= 0;
             end
         endcase
     end

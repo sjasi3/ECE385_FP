@@ -97,7 +97,7 @@ module tetris_top(
     logic [16:0] random;
 
     // Logic vars
-    logic place, valid, fall, update, halt, lost, remove, above, clkplace, LR, rot, val;
+    logic place, valid, fall, update, halt, lost, remove, above, clkplace, LR, rot, val, harddrop, nr, startscr;
 
     // Piece and Rotation
     logic [2:0] pType, npType;
@@ -140,7 +140,10 @@ module tetris_top(
         .restart(restart),
         .valid(valid),
         .above(above),
+        .harddrop(harddrop),
+        .nr(nr),
     
+        .startscr(startscr),
         .fall(fall),
         .LR(LR),
         .rot(rot),
@@ -370,6 +373,8 @@ module tetris_top(
         .Y(Y),
         .rType(rType),
 
+        .nr(nr),
+        .harddrop(harddrop),
         .nX(nnX),
         /* .nY(nY), */
         .nrType(nnrType)
@@ -384,6 +389,7 @@ module tetris_top(
 
     logic hsync, vsync, vde;
     logic [3:0] red, green, blue;
+    logic [3:0] sred, sgreen, sblue;
     logic [3:0] bgred, bggreen, bgblue;
     logic [3:0] fgred, fggreen, fgblue;
     logic reset_ah;
@@ -513,6 +519,11 @@ module tetris_top(
             endcase
         end
         else begin; end
+        if (startscr) begin
+            red <= sred;
+            green <= sgreen;
+            blue <= sblue;
+        end
     end
 
     //clock wizard configured with a 1x and 5x clock for HDMI
@@ -582,6 +593,16 @@ module tetris_top(
         .red(fgred),
         .green(fggreen),
         .blue(fgblue)
+        );
+        
+    start_example start_drawing (
+        .vga_clk(clk_25MHz),
+        .DrawX(drawX),
+        .DrawY(drawY),
+        .blank(vde),
+        .red(sred),
+        .green(sgreen),
+        .blue(sblue)
         );
     
     // MicroBlaze Stuff
