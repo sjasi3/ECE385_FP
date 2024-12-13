@@ -4083,3 +4083,38 @@ con
 13:17:02 INFO  : Result from executing command 'getProjects': tetris_top
 13:17:02 INFO  : Result from executing command 'getPlatforms': tetris_top|C:/Users/sjasi3/ECE385_FP/tetris_logic1/workspace/tetris_top/export/tetris_top/tetris_top.xpfm;xilinx_vck190_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_202220_1/xilinx_vck190_base_202220_1.xpfm;xilinx_vck190_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vck190_base_dfx_202220_1/xilinx_vck190_base_dfx_202220_1.xpfm;xilinx_vmk180_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_vmk180_base_202220_1/xilinx_vmk180_base_202220_1.xpfm;xilinx_zcu102_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|C:/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
 13:17:03 INFO  : Checking for BSP changes to sync application flags for project 'mb_keeb'...
+13:17:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:17:24 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+13:17:24 INFO  : 'jtag frequency' command is executed.
+13:17:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+13:17:25 INFO  : Device configured successfully with "C:/Users/sjasi3/ECE385_FP/tetris_logic1/workspace/mb_keeb/_ide/bitstream/tetris_top.bit"
+13:17:25 INFO  : Context for processor 'microblaze_0' is selected.
+13:17:25 INFO  : Hardware design and registers information is loaded from 'C:/Users/sjasi3/ECE385_FP/tetris_logic1/workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa'.
+13:17:25 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+13:17:25 INFO  : Context for processor 'microblaze_0' is selected.
+13:17:25 INFO  : System reset is completed.
+13:17:28 INFO  : 'after 3000' command is executed.
+13:17:28 INFO  : Context for processor 'microblaze_0' is selected.
+13:17:28 INFO  : The application 'C:/Users/sjasi3/ECE385_FP/tetris_logic1/workspace/mb_keeb/Debug/mb_keeb.elf' is downloaded to processor 'microblaze_0'.
+13:17:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file C:/Users/sjasi3/ECE385_FP/tetris_logic1/workspace/mb_keeb/_ide/bitstream/tetris_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw C:/Users/sjasi3/ECE385_FP/tetris_logic1/workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow C:/Users/sjasi3/ECE385_FP/tetris_logic1/workspace/mb_keeb/Debug/mb_keeb.elf
+----------------End of Script----------------
+
+13:17:28 INFO  : Context for processor 'microblaze_0' is selected.
+13:17:28 INFO  : 'con' command is executed.
+13:17:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+13:17:28 INFO  : Disconnected from the channel tcfchan#2.
