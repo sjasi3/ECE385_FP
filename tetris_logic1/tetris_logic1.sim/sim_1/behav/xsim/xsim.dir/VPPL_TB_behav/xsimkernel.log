@@ -1,7 +1,0 @@
-Running: xsim.dir/VPPL_TB_behav/xsimk -simmode gui -wdb VPPL_TB_behav.wdb -simrunnum 0 -socket 60837
-Design successfully loaded
-Design Loading Memory Usage: 28868 KB (Peak: 29520 KB)
-Design Loading CPU Usage: 60 ms
-Simulation completed
-Simulation Memory Usage: 110864 KB (Peak: 168136 KB)
-Simulation CPU Usage: 60 ms

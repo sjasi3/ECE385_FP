@@ -1,4 +1,4 @@
-01:25:06 **** Incremental Build of configuration Debug for project mb_keeb ****
+04:56:30 **** Incremental Build of configuration Debug for project mb_keeb ****
 make all 
 Building file: ../src/lw_usb/MAX3421E.c
 Invoking: MicroBlaze gcc compiler
@@ -78,5 +78,5 @@ mb-size mb_keeb.elf  |tee "mb_keeb.elf.size"
 Finished building: mb_keeb.elf.size
  
 
-01:25:06 Build Finished (took 325ms)
+04:56:31 Build Finished (took 331ms)
 

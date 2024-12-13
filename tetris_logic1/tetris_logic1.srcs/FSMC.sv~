@@ -1,0 +1,150 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 12/07/2024 01:32:37 AM
+// Design Name: 
+// Module Name: FSMC
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+module FSMC (
+    input logic clk,
+    input logic rst,
+    input logic valid,
+    input logic place,
+    input logic above,
+
+    output logic fall,
+    output logic LR,
+    output logic rot,
+    output logic update,
+    output logic halt,
+    output logic lost,
+    output logic clkplace,
+    output logic remove
+);
+
+    logic [31:0] counter;
+    logic shift;
+    logic order;
+
+    // State Definitions
+    typedef enum logic [3:0] {
+        s_setup,    // Set up new game
+        s_halt,     // Stop the game
+        s_reset,    // Reset the game
+        s_place,    // Place the block
+        s_remove,   // Remove full rows
+        s_newblk,   // Set up new block
+        s_shift,    // Shift blocks
+        s_fall,     // Make piece fall
+        s_LR,       // Make piece shift left or right
+        s_rot,      // Make the piece rotate
+        s_update,   // Update block position
+        s_lose      // Game lost
+    } state_t;
+
+    state_t cstate, nstate;
+
+    // Parameter for Counter Threshold
+    parameter CLOCK_RATE = 100_000_000; // Clock frequency in Hz
+    parameter FALL_DELAY = CLOCK_RATE / 4; // Half a second delay
+    // State Machine (Sequential)
+    always_ff @(posedge clk or posedge rst) begin
+        if (rst) begin
+            cstate <= s_reset;
+            counter <= 0;
+            lost <= 0;
+            order <= 0;
+        end else begin
+            cstate <= nstate;
+            order <= ~order;
+
+            // Update Counter
+            if (cstate == s_update)
+                counter <= counter + 1;
+            else
+                counter <= 0;
+
+            // Default output values
+            fall <= 0;
+            update <= 0;
+            clkplace <= 0;
+            remove <= 0;
+            LR <= 0;
+            rot <= 0;
+
+            // State-specific output logic
+            case (cstate)
+                s_fall: begin
+                    fall <= 1; // Trigger fall
+                end
+                s_LR: begin
+                    LR <= 1;
+                end
+                s_rot: begin
+                    rot <= 1;
+                end
+                s_update: begin
+                    if (valid) update <= 1;
+                end
+                s_place: begin
+                    clkplace <= 1;
+                end
+                s_remove: begin
+                    remove <= 1;
+                end
+                s_shift: begin
+                    shift <= 1;
+                end
+                s_lose: begin
+                    lost <= 1;
+                end
+                // Add additional state-specific logic here
+            endcase
+        end
+    end
+
+    // State Machine (Combinational)
+    always_comb begin
+        nstate = cstate; // Default to remain in current state
+        case (cstate)
+            s_reset:   nstate = s_setup;    // Transition to setup
+            s_setup:   nstate = s_update;   // Transition to update
+            s_update:  begin
+                // Do LR then s_rot
+                if (order)
+                    nstate = s_LR;
+                else
+                    nstate = s_rot;
+
+                if (counter >= FALL_DELAY) 
+                    nstate = s_fall; // Fall after delay
+                if (above)
+                    nstate = s_lose;
+            end
+            s_fall:     nstate = valid ? s_update : s_place; // Check if valid or place
+            s_rot:      nstate = s_update;  // Update after a rotate
+            s_LR:       nstate = s_update;  // Update after a left right move
+            s_place:    nstate = s_remove;  // Transition to remove after placing
+            s_remove:   nstate = s_shift;   // Remove rows and shift
+            s_shift:    nstate = s_newblk;  // Transition to setup new block
+            s_newblk:   nstate = s_update;  // Setup new block and update
+            s_lose:     nstate = s_halt;    // Halt on losing
+            s_halt:     nstate = s_halt;    // Remain in halt
+        endcase
+    end
+
+endmodule

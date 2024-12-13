@@ -41,3 +41,154 @@ platform generate
 platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
 platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
 platform generate -domains 
+platform active {tetris_top}
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform active {tetris_top}
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 
+platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}
+platform generate -domains 

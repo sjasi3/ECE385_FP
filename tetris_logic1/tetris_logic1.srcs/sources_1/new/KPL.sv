@@ -27,16 +27,15 @@
 // will seemingly teleport 2 spaces instead of 1. However, the clock signal
 // should be fast enough for this to not be possible
 module KPL(
-    input logic [31:0] keycode,
+    input logic clk,
+    input logic [7:0] keycode,
     input logic [3:0] X,
     input logic [5:0] Y,
     input logic [1:0] rType,
-    input logic [1:0] mType,
 
     output logic [3:0] nX,
     output logic [5:0] nY,
-    output logic [1:0] nrType,
-    output logic [1:0] nmType
+    output logic [1:0] nrType
     );
     
     // Setup enums for defining piece and rotation
@@ -44,21 +43,39 @@ module KPL(
     enum logic [1:0] { up, down, left, right } rTypes;      // Possible rotations
     enum logic [1:0] { Fa, Le, Ri } mTypes;                 // Possible movements
 
+    // No repeat!
+    logic nr;
+
     // TODO: Need to make sure this does not repeat more than once
-    always_comb begin
+    always_ff @(posedge clk) begin
         // TODO: Implement keycodes and their actions
         case (keycode)
             8'h5C: begin
-                nX <= X - 1;
+                if (~nr)
+                    nX <= X - 1;
+                nr <= 1;
             end
             8'h5E: begin
-                nX <= X + 1;
+                if (~nr)
+                    nX <= X + 1;
+                nr <= 1;
+            end
+            8'h60: begin
+                if (~nr) begin
+                    case (rType) 
+                        up: nrType <= left;
+                        left: nrType <= down;
+                        down: nrType <= right;
+                        right: nrType <= up;
+                    endcase
+                end
+                nr <= 1;
             end
             // Any other button press should do nothing
             default: begin
                 nX <= X;
                 nrType <= rType;
-                nmType <= nmType;
+                nr <= 0;
             end
         endcase
     end

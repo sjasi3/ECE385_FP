@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
-| Date         : Wed Dec 11 01:23:06 2024
+| Date         : Fri Dec 13 04:55:37 2024
 | Host         : SgoSkzD running 64-bit Gentoo Linux
 | Command      : report_drc -file tetris_top_drc_routed.rpt -pb tetris_top_drc_routed.pb -rpx tetris_top_drc_routed.rpx
 | Design       : tetris_top
@@ -24,13 +24,14 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 26
+             Violations found: 325
 +-----------+----------+-----------------------------------------------------+------------+
 | Rule      | Severity | Description                                         | Violations |
 +-----------+----------+-----------------------------------------------------+------------+
 | CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
 | CHECK-3   | Warning  | Report rule limit reached                           | 1          |
 | DPIP-1    | Warning  | Input pipelining                                    | 4          |
+| PDRC-153  | Warning  | Gated clock check                                   | 299        |
 | REQP-1840 | Warning  | RAMB18 async control check                          | 20         |
 +-----------+----------+-----------------------------------------------------+------------+
 
@@ -72,6 +73,1501 @@ Related violations: <none>
 DPIP-1#4 Warning
 Input pipelining  
 DSP bg/rom_address2 input bg/rom_address2/A[29:0] is not pipelined. Pipelining DSP48 input will improve performance.
+Related violations: <none>
+
+PDRC-153#1 Warning
+Gated clock check  
+Net FSM_controller/hold__0 is a gated clock net sourced by a combinational pin FSM_controller/hold_reg[3]_i_2/O, cell FSM_controller/hold_reg[3]_i_2. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#2 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_0 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][1][0]_LDC_i_1/O, cell FSM_controller/grid_reg[10][1][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#3 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_10 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][1][0]_LDC_i_1/O, cell FSM_controller/grid_reg[18][1][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#4 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_102 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][9][2]_LDC_i_1/O, cell FSM_controller/grid_reg[18][9][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#5 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_103 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][9][1]_LDC_i_1/O, cell FSM_controller/grid_reg[18][9][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#6 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_105 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][9][0]_LDC_i_1/O, cell FSM_controller/grid_reg[18][9][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#7 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_108 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][9][2]_LDC_i_1/O, cell FSM_controller/grid_reg[10][9][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#8 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_109 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][9][1]_LDC_i_1/O, cell FSM_controller/grid_reg[10][9][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#9 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_111 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][9][0]_LDC_i_1/O, cell FSM_controller/grid_reg[10][9][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#10 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_114 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][8][2]_LDC_i_1/O, cell FSM_controller/grid_reg[18][8][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#11 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_115 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][8][1]_LDC_i_1/O, cell FSM_controller/grid_reg[18][8][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#12 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_117 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][8][0]_LDC_i_1/O, cell FSM_controller/grid_reg[18][8][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#13 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_12 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[18][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#14 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_120 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[16][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[16][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#15 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_122 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[16][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[16][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#16 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_124 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[16][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[16][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#17 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_126 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][0][0]_LDC_i_1/O, cell FSM_controller/grid_reg[8][0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#18 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_128 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][0][1]_LDC_i_1/O, cell FSM_controller/grid_reg[8][0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#19 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_130 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][0][2]_LDC_i_1/O, cell FSM_controller/grid_reg[8][0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#20 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_132 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][1][0]_LDC_i_1/O, cell FSM_controller/grid_reg[8][1][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#21 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_134 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[8][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#22 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_136 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][1][2]_LDC_i_1/O, cell FSM_controller/grid_reg[8][1][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#23 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_138 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[8][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#24 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_14 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][2][0]_LDC_i_1/O, cell FSM_controller/grid_reg[2][2][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#25 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_140 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[8][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#26 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_142 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][4][2]_LDC_i_1/O, cell FSM_controller/grid_reg[8][4][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#27 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_144 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[8][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#28 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_146 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[8][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#29 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_148 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[8][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#30 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_150 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][2][0]_LDC_i_1/O, cell FSM_controller/grid_reg[8][2][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#31 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_152 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[8][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#32 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_154 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[8][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#33 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_156 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[8][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#34 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_158 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[8][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#35 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_16 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[2][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#36 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_160 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][7][0]_LDC_i_1/O, cell FSM_controller/grid_reg[8][7][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#37 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_162 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][7][1]_LDC_i_1/O, cell FSM_controller/grid_reg[8][7][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#38 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_164 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][7][2]_LDC_i_1/O, cell FSM_controller/grid_reg[8][7][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#39 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_166 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][9][0]_LDC_i_1/O, cell FSM_controller/grid_reg[8][9][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#40 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_168 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][9][1]_LDC_i_1/O, cell FSM_controller/grid_reg[8][9][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#41 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_170 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][9][2]_LDC_i_1/O, cell FSM_controller/grid_reg[8][9][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#42 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_172 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][8][0]_LDC_i_1/O, cell FSM_controller/grid_reg[8][8][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#43 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_174 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][8][1]_LDC_i_1/O, cell FSM_controller/grid_reg[8][8][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#44 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_176 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[8][8][2]_LDC_i_1/O, cell FSM_controller/grid_reg[8][8][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#45 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_178 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[4][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[4][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#46 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_18 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][2][0]_LDC_i_1/O, cell FSM_controller/grid_reg[10][2][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#47 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_180 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[4][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[4][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#48 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_182 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[4][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[4][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#49 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_184 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[4][4][2]_LDC_i_1/O, cell FSM_controller/grid_reg[4][4][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#50 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_186 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[1][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#51 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_187 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][1][0]_LDC_i_1/O, cell FSM_controller/grid_reg[1][1][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#52 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_190 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][1][2]_LDC_i_1/O, cell FSM_controller/grid_reg[1][1][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#53 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_192 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[1][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#54 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_193 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][2][0]_LDC_i_1/O, cell FSM_controller/grid_reg[1][2][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#55 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_196 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][2][2]_LDC_i_1/O, cell FSM_controller/grid_reg[1][2][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#56 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_198 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][5][1]_LDC_i_1/O, cell FSM_controller/grid_reg[1][5][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#57 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_2 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[10][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#58 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_20 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[10][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#59 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_200 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[1][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#60 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_201 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[1][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#61 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_203 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[1][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#62 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_206 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[1][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#63 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_208 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[1][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#64 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_210 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[1][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#65 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_212 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[17][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#66 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_214 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[17][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#67 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_216 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][4][2]_LDC_i_1/O, cell FSM_controller/grid_reg[17][4][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#68 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_218 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[1][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#69 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_219 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[1][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#70 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_22 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][2][2]_LDC_i_1/O, cell FSM_controller/grid_reg[10][2][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#71 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_222 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][4][2]_LDC_i_1/O, cell FSM_controller/grid_reg[1][4][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#72 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_224 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[17][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#73 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_225 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[17][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#74 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_227 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[17][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#75 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_230 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[9][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#76 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_231 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][0][0]_LDC_i_1/O, cell FSM_controller/grid_reg[17][0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#77 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_233 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][0][1]_LDC_i_1/O, cell FSM_controller/grid_reg[17][0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#78 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_236 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][0][2]_LDC_i_1/O, cell FSM_controller/grid_reg[17][0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#79 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_238 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][0][2]_LDC_i_1/O, cell FSM_controller/grid_reg[1][0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#80 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_239 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][0][1]_LDC_i_1/O, cell FSM_controller/grid_reg[1][0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#81 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_24 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[18][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#82 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_241 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[1][0][0]_LDC_i_1/O, cell FSM_controller/grid_reg[1][0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#83 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_244 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][0][1]_LDC_i_1/O, cell FSM_controller/grid_reg[9][0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#84 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_246 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][9][0]_LDC_i_1/O, cell FSM_controller/grid_reg[9][9][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#85 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_248 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][9][1]_LDC_i_1/O, cell FSM_controller/grid_reg[9][9][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#86 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_250 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][9][2]_LDC_i_1/O, cell FSM_controller/grid_reg[9][9][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#87 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_252 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][9][0]_LDC_i_1/O, cell FSM_controller/grid_reg[17][9][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#88 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_254 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][9][1]_LDC_i_1/O, cell FSM_controller/grid_reg[17][9][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#89 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_256 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][9][2]_LDC_i_1/O, cell FSM_controller/grid_reg[17][9][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#90 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_258 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][8][2]_LDC_i_1/O, cell FSM_controller/grid_reg[17][8][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#91 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_259 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][8][1]_LDC_i_1/O, cell FSM_controller/grid_reg[17][8][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#92 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_26 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[18][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#93 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_261 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][8][0]_LDC_i_1/O, cell FSM_controller/grid_reg[17][8][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#94 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_264 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[14][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#95 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_265 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[14][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#96 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_267 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[14][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#97 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_27 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[18][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#98 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_270 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][2][2]_LDC_i_1/O, cell FSM_controller/grid_reg[14][2][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#99 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_272 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[14][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#100 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_274 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][2][0]_LDC_i_1/O, cell FSM_controller/grid_reg[14][2][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#101 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_275 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][5][0]_LDC_i_1/O, cell FSM_controller/grid_reg[14][5][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#102 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_277 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][5][1]_LDC_i_1/O, cell FSM_controller/grid_reg[14][5][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#103 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_280 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][5][2]_LDC_i_1/O, cell FSM_controller/grid_reg[14][5][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#104 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_282 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][8][2]_LDC_i_1/O, cell FSM_controller/grid_reg[14][8][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#105 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_283 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][8][1]_LDC_i_1/O, cell FSM_controller/grid_reg[14][8][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#106 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_285 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][8][0]_LDC_i_1/O, cell FSM_controller/grid_reg[14][8][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#107 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_287 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][0][0]_LDC_i_1/O, cell FSM_controller/grid_reg[14][0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#108 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_289 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][0][1]_LDC_i_1/O, cell FSM_controller/grid_reg[14][0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#109 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_292 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][0][2]_LDC_i_1/O, cell FSM_controller/grid_reg[14][0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#110 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_294 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][8][0]_LDC_i_1/O, cell FSM_controller/grid_reg[3][8][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#111 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_296 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][9][2]_LDC_i_1/O, cell FSM_controller/grid_reg[3][9][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#112 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_297 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][9][1]_LDC_i_1/O, cell FSM_controller/grid_reg[3][9][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#113 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_299 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][9][0]_LDC_i_1/O, cell FSM_controller/grid_reg[3][9][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#114 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_30 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][4][2]_LDC_i_1/O, cell FSM_controller/grid_reg[18][4][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#115 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_302 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[19][0][2]_LDC_i_1/O, cell FSM_controller/grid_reg[19][0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#116 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_303 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[19][0][1]_LDC_i_1/O, cell FSM_controller/grid_reg[19][0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#117 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_305 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[19][0][0]_LDC_i_1/O, cell FSM_controller/grid_reg[19][0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#118 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_308 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][0][1]_LDC_i_1/O, cell FSM_controller/grid_reg[3][0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#119 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_309 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][0][0]_LDC_i_1/O, cell FSM_controller/grid_reg[3][0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#120 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_312 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][0][2]_LDC_i_1/O, cell FSM_controller/grid_reg[3][0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#121 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_314 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][0][2]_LDC_i_1/O, cell FSM_controller/grid_reg[11][0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#122 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_315 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][0][1]_LDC_i_1/O, cell FSM_controller/grid_reg[11][0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#123 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_317 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][0][0]_LDC_i_1/O, cell FSM_controller/grid_reg[11][0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#124 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_32 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[2][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#125 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_320 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[19][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[19][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#126 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_321 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[19][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[19][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#127 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_323 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[19][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[19][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#128 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_325 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[3][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#129 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_327 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[3][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#130 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_330 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[3][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#131 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_331 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[11][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#132 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_333 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[11][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#133 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_336 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[11][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#134 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_338 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][5][0]_LDC_i_1/O, cell FSM_controller/grid_reg[3][5][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#135 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_339 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][5][1]_LDC_i_1/O, cell FSM_controller/grid_reg[3][5][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#136 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_34 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[2][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#137 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_342 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][5][2]_LDC_i_1/O, cell FSM_controller/grid_reg[3][5][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#138 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_344 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][5][0]_LDC_i_1/O, cell FSM_controller/grid_reg[11][5][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#139 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_346 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[11][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#140 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_348 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[11][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#141 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_350 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[11][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#142 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_352 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][1][2]_LDC_i_1/O, cell FSM_controller/grid_reg[11][1][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#143 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_354 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][8][2]_LDC_i_1/O, cell FSM_controller/grid_reg[9][8][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#144 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_355 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][8][1]_LDC_i_1/O, cell FSM_controller/grid_reg[9][8][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#145 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_357 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][8][0]_LDC_i_1/O, cell FSM_controller/grid_reg[9][8][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#146 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_36 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][4][2]_LDC_i_1/O, cell FSM_controller/grid_reg[2][4][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#147 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_360 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][7][2]_LDC_i_1/O, cell FSM_controller/grid_reg[9][7][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#148 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_361 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][7][0]_LDC_i_1/O, cell FSM_controller/grid_reg[9][7][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#149 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_363 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][7][1]_LDC_i_1/O, cell FSM_controller/grid_reg[9][7][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#150 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_366 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[9][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#151 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_368 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[12][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#152 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_370 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][0][2]_LDC_i_1/O, cell FSM_controller/grid_reg[12][0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#153 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_371 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][0][1]_LDC_i_1/O, cell FSM_controller/grid_reg[12][0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#154 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_373 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][0][0]_LDC_i_1/O, cell FSM_controller/grid_reg[12][0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#155 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_376 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][9][2]_LDC_i_1/O, cell FSM_controller/grid_reg[12][9][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#156 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_377 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][9][1]_LDC_i_1/O, cell FSM_controller/grid_reg[12][9][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#157 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_379 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][9][0]_LDC_i_1/O, cell FSM_controller/grid_reg[12][9][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#158 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_38 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[10][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#159 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_382 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][8][2]_LDC_i_1/O, cell FSM_controller/grid_reg[12][8][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#160 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_383 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][8][1]_LDC_i_1/O, cell FSM_controller/grid_reg[12][8][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#161 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_385 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][8][0]_LDC_i_1/O, cell FSM_controller/grid_reg[12][8][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#162 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_388 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][5][1]_LDC_i_1/O, cell FSM_controller/grid_reg[12][5][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#163 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_389 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][5][0]_LDC_i_1/O, cell FSM_controller/grid_reg[12][5][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#164 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_392 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][5][2]_LDC_i_1/O, cell FSM_controller/grid_reg[12][5][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#165 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_394 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[12][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#166 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_396 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[12][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#167 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_398 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[12][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#168 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_4 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][1][2]_LDC_i_1/O, cell FSM_controller/grid_reg[10][1][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#169 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_40 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[18][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#170 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_400 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][2][0]_LDC_i_1/O, cell FSM_controller/grid_reg[12][2][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#171 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_402 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[12][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#172 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_404 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[13][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[13][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#173 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_405 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[13][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[13][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#174 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_407 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[13][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[13][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#175 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_410 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[13][1][2]_LDC_i_1/O, cell FSM_controller/grid_reg[13][1][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#176 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_412 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[6][1][0]_LDC_i_1/O, cell FSM_controller/grid_reg[6][1][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#177 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_414 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[6][2][0]_LDC_i_1/O, cell FSM_controller/grid_reg[6][2][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#178 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_416 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[6][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[6][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#179 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_418 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[6][8][2]_LDC_i_1/O, cell FSM_controller/grid_reg[6][8][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#180 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_42 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[18][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#181 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_420 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[6][8][1]_LDC_i_1/O, cell FSM_controller/grid_reg[6][8][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#182 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_421 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[6][8][0]_LDC_i_1/O, cell FSM_controller/grid_reg[6][8][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#183 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_424 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[6][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[6][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#184 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_426 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[6][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[6][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#185 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_428 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[6][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[6][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#186 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_430 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[6][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[6][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#187 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_432 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[6][4][2]_LDC_i_1/O, cell FSM_controller/grid_reg[6][4][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#188 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_434 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[6][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[6][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#189 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_436 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[14][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#190 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_438 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[14][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#191 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_44 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[18][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#192 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_440 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[14][4][2]_LDC_i_1/O, cell FSM_controller/grid_reg[14][4][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#193 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_442 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[15][1][2]_LDC_i_1/O, cell FSM_controller/grid_reg[15][1][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#194 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_444 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[15][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[15][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#195 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_446 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[15][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[15][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#196 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_447 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[15][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[15][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#197 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_450 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[3][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#198 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_452 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][1][2]_LDC_i_1/O, cell FSM_controller/grid_reg[3][1][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#199 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_454 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][1][0]_LDC_i_1/O, cell FSM_controller/grid_reg[3][1][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#200 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_456 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[3][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#201 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_458 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][4][2]_LDC_i_1/O, cell FSM_controller/grid_reg[3][4][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#202 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_46 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[10][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#203 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_460 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[3][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#204 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_462 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[11][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#205 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_464 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[11][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#206 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_466 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][4][2]_LDC_i_1/O, cell FSM_controller/grid_reg[11][4][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#207 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_468 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[3][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#208 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_470 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][2][2]_LDC_i_1/O, cell FSM_controller/grid_reg[3][2][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#209 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_472 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][2][0]_LDC_i_1/O, cell FSM_controller/grid_reg[3][2][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#210 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_474 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[3][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#211 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_476 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[3][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#212 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_477 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[3][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[3][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#213 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_48 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[2][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#214 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_480 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[11][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#215 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_482 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[11][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[11][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#216 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_484 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][1][0]_LDC_i_1/O, cell FSM_controller/grid_reg[7][1][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#217 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_486 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[7][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#218 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_488 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[7][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#219 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_490 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[7][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#220 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_492 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[7][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#221 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_494 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[7][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#222 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_496 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][9][1]_LDC_i_1/O, cell FSM_controller/grid_reg[7][9][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#223 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_498 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][8][2]_LDC_i_1/O, cell FSM_controller/grid_reg[7][8][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#224 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_50 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[2][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#225 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_500 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][8][1]_LDC_i_1/O, cell FSM_controller/grid_reg[7][8][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#226 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_501 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][8][0]_LDC_i_1/O, cell FSM_controller/grid_reg[7][8][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#227 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_504 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[7][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#228 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_505 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[7][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#229 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_508 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[7][4][2]_LDC_i_1/O, cell FSM_controller/grid_reg[7][4][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#230 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_510 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[0][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#231 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_512 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[0][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#232 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_514 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[0][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#233 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_516 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][9][1]_LDC_i_1/O, cell FSM_controller/grid_reg[0][9][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#234 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_517 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][9][0]_LDC_i_1/O, cell FSM_controller/grid_reg[0][9][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#235 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_52 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[2][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#236 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_520 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][9][2]_LDC_i_1/O, cell FSM_controller/grid_reg[0][9][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#237 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_522 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[0][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#238 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_524 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[0][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#239 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_525 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[0][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#240 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_528 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][5][1]_LDC_i_1/O, cell FSM_controller/grid_reg[0][5][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#241 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_530 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[0][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#242 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_532 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[0][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#243 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_534 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[0][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#244 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_536 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[0][0][0]_LDC_i_1/O, cell FSM_controller/grid_reg[0][0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#245 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_538 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][1][0]_LDC_i_1/O, cell FSM_controller/grid_reg[9][1][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#246 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_54 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][5][2]_LDC_i_1/O, cell FSM_controller/grid_reg[18][5][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#247 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_540 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[9][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#248 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_542 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][2][0]_LDC_i_1/O, cell FSM_controller/grid_reg[9][2][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#249 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_544 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[9][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#250 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_546 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[9][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#251 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_548 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[9][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[9][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#252 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_55 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][5][1]_LDC_i_1/O, cell FSM_controller/grid_reg[18][5][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#253 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_550 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[17][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#254 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_552 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[17][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#255 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_553 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[17][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[17][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#256 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_556 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[5][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#257 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_557 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[5][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#258 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_559 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[5][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#259 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_562 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][3][1]_LDC_i_1/O, cell FSM_controller/grid_reg[5][3][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#260 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_564 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][3][0]_LDC_i_1/O, cell FSM_controller/grid_reg[5][3][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#261 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_566 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][3][2]_LDC_i_1/O, cell FSM_controller/grid_reg[5][3][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#262 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_567 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][4][1]_LDC_i_1/O, cell FSM_controller/grid_reg[5][4][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#263 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_57 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][5][0]_LDC_i_1/O, cell FSM_controller/grid_reg[18][5][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#264 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_570 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][4][2]_LDC_i_1/O, cell FSM_controller/grid_reg[5][4][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#265 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_572 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][4][0]_LDC_i_1/O, cell FSM_controller/grid_reg[5][4][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#266 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_574 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[13][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[13][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#267 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_576 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][1][2]_LDC_i_1/O, cell FSM_controller/grid_reg[5][1][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#268 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_578 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][1][0]_LDC_i_1/O, cell FSM_controller/grid_reg[5][1][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#269 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_580 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[5][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#270 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_582 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[12][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#271 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_583 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[12][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#272 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_585 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[12][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[12][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#273 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_588 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][2][0]_LDC_i_1/O, cell FSM_controller/grid_reg[5][2][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#274 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_590 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][2][1]_LDC_i_1/O, cell FSM_controller/grid_reg[5][2][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#275 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_592 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[5][2][2]_LDC_i_1/O, cell FSM_controller/grid_reg[5][2][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#276 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_594 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[13][2][0]_LDC_i_1/O, cell FSM_controller/grid_reg[13][2][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#277 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_6 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][1][0]_LDC_i_1/O, cell FSM_controller/grid_reg[2][1][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#278 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_60 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][5][0]_LDC_i_1/O, cell FSM_controller/grid_reg[2][5][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#279 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_62 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][5][1]_LDC_i_1/O, cell FSM_controller/grid_reg[2][5][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#280 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_64 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][5][0]_LDC_i_1/O, cell FSM_controller/grid_reg[10][5][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#281 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_65 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[18][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#282 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_67 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[18][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#283 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_69 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[18][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#284 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_72 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[2][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#285 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_74 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[2][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#286 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_76 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[2][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#287 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_77 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][6][0]_LDC_i_1/O, cell FSM_controller/grid_reg[10][6][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#288 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_79 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][6][1]_LDC_i_1/O, cell FSM_controller/grid_reg[10][6][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#289 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_8 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][1][1]_LDC_i_1/O, cell FSM_controller/grid_reg[2][1][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#290 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_82 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][6][2]_LDC_i_1/O, cell FSM_controller/grid_reg[10][6][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#291 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_84 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][0][2]_LDC_i_1/O, cell FSM_controller/grid_reg[18][0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#292 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_85 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][0][1]_LDC_i_1/O, cell FSM_controller/grid_reg[18][0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#293 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_87 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[18][0][0]_LDC_i_1/O, cell FSM_controller/grid_reg[18][0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#294 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_90 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][0][0]_LDC_i_1/O, cell FSM_controller/grid_reg[2][0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#295 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_92 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][0][1]_LDC_i_1/O, cell FSM_controller/grid_reg[2][0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#296 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_94 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[2][0][2]_LDC_i_1/O, cell FSM_controller/grid_reg[2][0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#297 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_96 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][0][2]_LDC_i_1/O, cell FSM_controller/grid_reg[10][0][2]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#298 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_98 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][0][1]_LDC_i_1/O, cell FSM_controller/grid_reg[10][0][1]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Related violations: <none>
+
+PDRC-153#299 Warning
+Gated clock check  
+Net FSM_controller/reset_rtl_0_99 is a gated clock net sourced by a combinational pin FSM_controller/grid_reg[10][0][0]_LDC_i_1/O, cell FSM_controller/grid_reg[10][0][0]_LDC_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 REQP-1840#1 Warning
