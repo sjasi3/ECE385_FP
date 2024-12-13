@@ -3760,3 +3760,46 @@ con
 ----------------End of Script----------------
 
 04:56:39 INFO  : Disconnected from the channel tcfchan#145.
+09:06:50 INFO  : Hardware specification for platform project 'tetris_top' is updated.
+09:06:54 INFO  : Result from executing command 'getProjects': tetris_top
+09:06:54 INFO  : Result from executing command 'getPlatforms': tetris_top|/home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace/tetris_top/export/tetris_top/tetris_top.xpfm;xilinx_zcu102_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_202220_1/xilinx_zcu102_base_202220_1.xpfm;xilinx_zcu102_base_dfx_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu102_base_dfx_202220_1/xilinx_zcu102_base_dfx_202220_1.xpfm;xilinx_zcu104_base_202220_1|/alottadata/tools/Xilinx/Vitis/2022.2/base_platforms/xilinx_zcu104_base_202220_1/xilinx_zcu104_base_202220_1.xpfm
+09:06:57 INFO  : Checking for BSP changes to sync application flags for project 'mb_keeb'...
+09:06:58 INFO  : The hardware specification used by project 'mb_keeb' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+09:06:58 INFO  : The file '/home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace/mb_keeb/_ide/bitstream/tetris_top.bit' stored in project is removed.
+09:06:58 INFO  : The file '/home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace/mb_keeb/_ide/bitstream/tetris_top.mmi' stored in project is removed.
+09:06:58 INFO  : The updated bitstream files are copied from platform to folder '/home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace/mb_keeb/_ide/bitstream' in project 'mb_keeb'.
+09:07:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:07:00 INFO  : Jtag cable 'RealDigital Boo 8874292301A7A' is selected.
+09:07:00 INFO  : 'jtag frequency' command is executed.
+09:07:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}' command is executed.
+09:07:01 INFO  : Device configured successfully with "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace/mb_keeb/_ide/bitstream/tetris_top.bit"
+09:07:01 INFO  : Context for processor 'microblaze_0' is selected.
+09:07:01 INFO  : Hardware design and registers information is loaded from '/home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa'.
+09:07:01 INFO  : 'configparams mdm-detect-bscan-mask 2' command is executed.
+09:07:01 INFO  : Context for processor 'microblaze_0' is selected.
+09:07:01 INFO  : System reset is completed.
+09:07:04 INFO  : 'after 3000' command is executed.
+09:07:04 INFO  : Context for processor 'microblaze_0' is selected.
+09:07:05 INFO  : The application '/home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace/mb_keeb/Debug/mb_keeb.elf' is downloaded to processor 'microblaze_0'.
+09:07:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "RealDigital Boo 8874292301A7A" && level==0 && jtag_device_ctx=="jsn1-0362f093-0"}
+fpga -file /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace/mb_keeb/_ide/bitstream/tetris_top.bit
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+loadhw -hw /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace/tetris_top/export/tetris_top/hw/tetris_top.xsa -regs
+configparams mdm-detect-bscan-mask 2
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+rst -system
+after 3000
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+dow /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace/mb_keeb/Debug/mb_keeb.elf
+----------------End of Script----------------
+
+09:07:05 INFO  : Context for processor 'microblaze_0' is selected.
+09:07:05 INFO  : 'con' command is executed.
+09:07:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*microblaze*#0" && bscan=="USER2" }
+con
+----------------End of Script----------------
+
+09:07:05 INFO  : Disconnected from the channel tcfchan#147.

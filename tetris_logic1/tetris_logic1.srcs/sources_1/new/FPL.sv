@@ -152,7 +152,7 @@ module FPL(
                 Ys[2] = 0;
 
                 Xs[3] = rType==left ? 1 : -1;
-                Ys[3] = rType==left ? -1 : 1;
+                Ys[3] = rType==left ? 1 : -1;
             end
         end
         T:  begin
