@@ -1,22 +1,5 @@
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/FPL.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module FPL
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/FSMC.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module FSMC
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/KPL.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module KPL
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/sources_1/imports/design_source/VGA_controller.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module vga_controller
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/VPPL.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module VPPL
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/sources_1/imports/bg/bg_example.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bg_example
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/sources_1/imports/bg/bg_palette.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module bg_palette
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/block_sprite/block_sprite_example.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module block_sprite_example
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/imports/block_sprite/block_sprite_palette.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module block_sprite_palette
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/tetris_top.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tetris_top
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sim_1/new/tetris_top_TB.sv" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module tetris_top_TB
+WARNING: [VRFC 10-9336] redeclaration of ANSI port 'nr' is not allowed [/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sources_1/new/KPL.sv:49]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.srcs/sim_1/new/KPL_TB.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KPL_TB

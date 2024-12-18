@@ -7060,3 +7060,99 @@ java.net.SocketException: Connection reset
 	at org.eclipse.tcf.core.ChannelTCP.get(ChannelTCP.java:186)
 	at org.eclipse.tcf.core.StreamChannel.read(StreamChannel.java:85)
 	at org.eclipse.tcf.core.AbstractChannel$1.run(AbstractChannel.java:329)
+!SESSION 2024-12-13 16:05:15.767 -----------------------------------------------
+eclipse.buildId=2022.2
+java.version=11.0.11
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.osgi 4 0 2024-12-13 16:05:16.093
+!MESSAGE Bundle reference:file:org.apache.log4j_1.2.15.v201012070815.jar not found.
+
+!ENTRY org.eclipse.osgi 4 0 2024-12-13 16:05:16.113
+!MESSAGE Bundle reference:file:org.slf4j.impl.log4j12_1.7.2.v20131105-2200.jar not found.
+
+!ENTRY org.eclipse.core.resources 2 10035 2024-12-13 16:05:20.302
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui 4 4 2024-12-13 16:05:21.827
+!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:24.108
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:24.108
+!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:24.108
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-26
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:24.161
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:24.161
+!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-10
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:24.161
+!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:24.161
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-26
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:24.162
+!MESSAGE XSCT Command: [setws /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2], Thread: Thread-26
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:24.162
+!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, /alottadata/tools/Xilinx/Vitis/2022.2/data]. Thread: Worker-0: Initializing s/w repositories
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:24.163
+!MESSAGE XSCT command with result: [setws /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2], Result: [null, ]. Thread: Thread-26
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-12-13 16:05:31.056
+!MESSAGE Enablement expression is missing for descriptor type org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-12-13 16:05:31.056
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.launchbar.core 2 0 2024-12-13 16:05:31.056
+!MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:33.193
+!MESSAGE XSCT Command: [platform read {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/platform.spr}], Thread: Worker-4: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:33.338
+!MESSAGE XSCT command with result: [platform read {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/platform.spr}], Result: [null, ]. Thread: Worker-4: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:33.358
+!MESSAGE XSCT Command: [platform active {tetris_top}], Thread: Worker-4: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:33.358
+!MESSAGE XSCT command with result: [platform active {tetris_top}], Result: [null, ]. Thread: Worker-4: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:35.409
+!MESSAGE XSCT Command: [platform config -updatehw {C::/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}], Thread: Worker-7: Updating hardware platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:35.410
+!MESSAGE XSCT command with result: [platform config -updatehw {C::/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}], Result: [{Format=The hw specification given "C::/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa" does not exist., Time=1734127535410, Code=1}, ]. Thread: Worker-7: Updating hardware platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:39.961
+!MESSAGE XSCT Command: [platform read {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/platform.spr}], Thread: Worker-6: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:40.096
+!MESSAGE XSCT command with result: [platform read {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/platform.spr}], Result: [null, ]. Thread: Worker-6: Reading platform
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-12-13 16:05:42.417
+!MESSAGE Opening file dialog using preferences. Current path: null, Local preference: scw_hwspec_file_selection, Group preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-12-13 16:05:42.417
+!MESSAGE Preference loaded using local preference: null
+
+!ENTRY com.xilinx.sdk.utils 1 0 2024-12-13 16:05:42.417
+!MESSAGE Workspace path used is: /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:47.878
+!MESSAGE XSCT Command: [platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}], Thread: Worker-2: Updating hardware platform
+
+!ENTRY com.xilinx.sdk.utils 0 0 2024-12-13 16:05:48.140
+!MESSAGE XSCT command with result: [platform config -updatehw {/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa}], Result: [null, ]. Thread: Worker-2: Updating hardware platform

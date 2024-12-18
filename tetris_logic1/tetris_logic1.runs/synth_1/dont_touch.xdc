@@ -63,4 +63,4 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_usb_axi_
 # IP: bd/mb_usb/ip/mb_usb_axi_timer_0_0/mb_usb_axi_timer_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==mb_usb_axi_timer_0_0 || ORIG_REF_NAME==mb_usb_axi_timer_0_0} -quiet] -quiet
 
-# XDC: c:/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/mb_usb_ooc.xdc
+# XDC: /home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_logic1.gen/sources_1/bd/mb_usb/mb_usb_ooc.xdc

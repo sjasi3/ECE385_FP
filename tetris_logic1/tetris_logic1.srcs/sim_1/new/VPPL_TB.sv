@@ -28,16 +28,15 @@ module VPPL_TB(
     );
     logic clk;
     logic [3:0] X;
-    logic [5:0] Y;
+    logic [4:0] Y;
     logic [3:0] pType;
     logic [1:0] rType;
-    logic [1:0] mType;
+    // logic [1:0] mType;
     logic [3:0] Xso[4];
-    logic [5:0] Yso[4];
-    logic [2:0] Color;
-    logic [10:0][2:0] grid[20];
+    logic [4:0] Yso[4];
+    logic [2:0] grid[20][11];
     logic [2:0] eBl[4];
-    logic valid, place;
+    logic valid;
 
     FPL falling_logic (
         .X(X),
@@ -50,13 +49,13 @@ module VPPL_TB(
         );
 
     VPPL valid_piece_position_logic (
+        .clk(clk),
         .Xsi(Xso),
         .Ysi(Yso),
         .eBl(eBl),
-        .last_movement(mType),
+        // .last_movement(mType),
 
-        .valid(valid),
-        .place(place)
+        .valid(valid)
         );
 
     initial begin: CLOCK_INITIALIZATION
@@ -68,8 +67,10 @@ module VPPL_TB(
     end
     
     task clear();
-        for(int line = 0; line < 20; line++) begin
-            grid[line] = 4'b0;
+        for (int line = 0; line < 20; line++) begin
+            for (int col = 0; col < 11; col++) begin
+                grid[line][col] = 3'b0;
+            end
         end
     endtask
 
@@ -109,7 +110,6 @@ module VPPL_TB(
             Y <= 0;
             pType <= 0;
             rType <= 0;
-            mType <= 0;
         end
         @(posedge clk) begin
             grid_disp();
@@ -120,7 +120,6 @@ module VPPL_TB(
             Y <= 0;
             pType <= S;
             rType <= up;
-            mType <= Le;
         end
         @(posedge clk) begin
             grid_disp();
@@ -131,7 +130,6 @@ module VPPL_TB(
             Y <= 0;
             pType <= Z;
             rType <= up;
-            mType <= Fa;
         end
         @(posedge clk) begin
             grid_disp();
@@ -142,7 +140,6 @@ module VPPL_TB(
             Y <= 16;
             pType <= S;
             rType <= up;
-            mType <= Le;
         end
         @(posedge clk) begin
             grid_disp();
@@ -153,7 +150,6 @@ module VPPL_TB(
             Y <= 16;
             pType <= O;
             rType <= up;
-            mType <= Le;
         end
         @(posedge clk) begin
             grid_disp();
@@ -164,10 +160,10 @@ module VPPL_TB(
             Y <= 20;
             pType <= L;
             rType <= up;
-            mType <= Le;
         end
         @(posedge clk) begin
             grid_disp();
         end
+        $finish();
     end
 endmodule

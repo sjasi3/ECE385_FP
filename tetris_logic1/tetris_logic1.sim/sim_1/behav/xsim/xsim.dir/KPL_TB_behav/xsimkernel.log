@@ -1,0 +1,4 @@
+Running: xsim.dir/KPL_TB_behav/xsimk -simmode gui -wdb KPL_TB_behav.wdb -simrunnum 0 -socket 59363
+Design successfully loaded
+Design Loading Memory Usage: 28836 KB (Peak: 29496 KB)
+Design Loading CPU Usage: 60 ms

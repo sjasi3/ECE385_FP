@@ -93,3 +93,19 @@ con
 ----------------End of Script----------------
 
 14:46:39 INFO  : Disconnected from the channel tcfchan#4.
+16:05:22 DEBUG : Logs will be stored at '/home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/IDE.log'.
+16:05:23 INFO  : Launching XSCT server: xsct -n  -interactive /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/temp_xsdb_launch_script.tcl
+16:05:23 INFO  : Platform repository initialization has completed.
+16:05:24 INFO  : XSCT server has started successfully.
+16:05:24 INFO  : plnx-install-location is set to ''
+16:05:24 INFO  : Successfully done setting XSCT server connection channel  
+16:05:24 INFO  : Successfully done query RDI_DATADIR 
+16:05:24 INFO  : Successfully done setting workspace for the tool. 
+16:05:24 INFO  : Registering command handlers for Vitis TCF services
+16:05:35 ERROR : Failed to update hardware specification for project 'tetris_top'.
+Reason: Failed to execute command 'platform config -updatehw {C::/Users/sjasi3/ECE385_FP/tetris_logic1/tetris_top.xsa}'. Click on details for more information.
+16:05:48 INFO  : Hardware specification for platform project 'tetris_top' is updated.
+16:05:54 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+16:05:59 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+16:06:05 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+16:06:15 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.

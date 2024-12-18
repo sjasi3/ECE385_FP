@@ -1533,3 +1533,368 @@ TRACE::2024-12-13.14:46:24::SCWMssOS::Checking the sw design at  C:/Users/sjasi3
 TRACE::2024-12-13.14:46:24::SCWMssOS::DEBUG:  swdes dump  C:/Users/sjasi3/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
 
 TRACE::2024-12-13.14:46:24::SCWMssOS::Sw design exists and opened at  C:/Users/sjasi3/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:33::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:33::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:33::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-12-13.16:05:33::SCWPlatform::Opened new HwDB with name tetris_top
+TRACE::2024-12-13.16:05:33::SCWReader::Active system found as  tetris_top
+TRACE::2024-12-13.16:05:33::SCWReader::Handling sysconfig tetris_top
+TRACE::2024-12-13.16:05:33::SCWDomain::checking for install qemu data   : 
+TRACE::2024-12-13.16:05:33::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:33::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:33::SCWPlatform::Trying to set the existing hwdb with name tetris_top
+TRACE::2024-12-13.16:05:33::SCWPlatform::Opened existing hwdb tetris_top
+TRACE::2024-12-13.16:05:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:33::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:33::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:33::SCWPlatform::Trying to set the existing hwdb with name tetris_top
+TRACE::2024-12-13.16:05:33::SCWPlatform::Opened existing hwdb tetris_top
+TRACE::2024-12-13.16:05:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:33::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:33::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:33::SCWPlatform::Trying to set the existing hwdb with name tetris_top
+TRACE::2024-12-13.16:05:33::SCWPlatform::Opened existing hwdb tetris_top
+TRACE::2024-12-13.16:05:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:33::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:33::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:33::SCWPlatform::Trying to set the existing hwdb with name tetris_top
+TRACE::2024-12-13.16:05:33::SCWPlatform::Opened existing hwdb tetris_top
+TRACE::2024-12-13.16:05:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:33::SCWMssOS::Checking the sw design at  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:33::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2024-12-13.16:05:33::SCWMssOS::No sw design opened at  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:33::SCWMssOS::mss exists loading the mss file  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:33::SCWMssOS::Opened the sw design from mss  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:33::SCWMssOS::Adding the swdes entry /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2024-12-13.16:05:33::SCWMssOS::updating the scw layer about changes
+TRACE::2024-12-13.16:05:33::SCWMssOS::Opened the sw design.  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:33::SCWMssOS::Saving the mss changes /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:33::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2024-12-13.16:05:33::SCWMssOS::Completed writemss as part of save.
+TRACE::2024-12-13.16:05:33::SCWMssOS::Commit changes completed.
+TRACE::2024-12-13.16:05:33::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2024-12-13.16:05:33::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2024-12-13.16:05:33::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:33::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:33::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:33::SCWPlatform::Trying to set the existing hwdb with name tetris_top
+TRACE::2024-12-13.16:05:33::SCWPlatform::Opened existing hwdb tetris_top
+TRACE::2024-12-13.16:05:33::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:33::SCWMssOS::Checking the sw design at  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:33::SCWMssOS::DEBUG:  swdes dump  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-13.16:05:33::SCWMssOS::Sw design exists and opened at  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:33::SCWReader::No isolation master present  
+TRACE::2024-12-13.16:05:39::SCWPlatform::Clearing the existing platform
+TRACE::2024-12-13.16:05:39::SCWSystem::Clearing the existing sysconfig
+TRACE::2024-12-13.16:05:39::SCWMssOS::Removing the swdes entry for  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:39::SCWSystem::Clearing the domains completed.
+TRACE::2024-12-13.16:05:39::SCWPlatform::Clearing the opened hw db.
+TRACE::2024-12-13.16:05:39::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:39::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:39::SCWPlatform:: Platform location is /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:39::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:39::SCWPlatform::Removing the HwDB with name /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:39::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:39::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:39::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:39::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:39::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:39::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:39::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-12-13.16:05:40::SCWPlatform::Opened new HwDB with name tetris_top_0
+TRACE::2024-12-13.16:05:40::SCWReader::Active system found as  tetris_top
+TRACE::2024-12-13.16:05:40::SCWReader::Handling sysconfig tetris_top
+TRACE::2024-12-13.16:05:40::SCWDomain::checking for install qemu data   : 
+TRACE::2024-12-13.16:05:40::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:40::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Trying to set the existing hwdb with name tetris_top_0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Opened existing hwdb tetris_top_0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:40::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:40::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Trying to set the existing hwdb with name tetris_top_0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Opened existing hwdb tetris_top_0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:40::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:40::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Trying to set the existing hwdb with name tetris_top_0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Opened existing hwdb tetris_top_0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:40::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:40::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Trying to set the existing hwdb with name tetris_top_0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Opened existing hwdb tetris_top_0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:40::SCWMssOS::Checking the sw design at  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:40::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2024-12-13.16:05:40::SCWMssOS::No sw design opened at  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:40::SCWMssOS::mss exists loading the mss file  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:40::SCWMssOS::Opened the sw design from mss  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:40::SCWMssOS::Adding the swdes entry /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2024-12-13.16:05:40::SCWMssOS::updating the scw layer about changes
+TRACE::2024-12-13.16:05:40::SCWMssOS::Opened the sw design.  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:40::SCWMssOS::Saving the mss changes /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:40::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2024-12-13.16:05:40::SCWMssOS::Completed writemss as part of save.
+TRACE::2024-12-13.16:05:40::SCWMssOS::Commit changes completed.
+TRACE::2024-12-13.16:05:40::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2024-12-13.16:05:40::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2024-12-13.16:05:40::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:40::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:40::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Trying to set the existing hwdb with name tetris_top_0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Opened existing hwdb tetris_top_0
+TRACE::2024-12-13.16:05:40::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:40::SCWMssOS::Checking the sw design at  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:40::SCWMssOS::DEBUG:  swdes dump  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-13.16:05:40::SCWMssOS::Sw design exists and opened at  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:40::SCWReader::No isolation master present  
+TRACE::2024-12-13.16:05:47::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/tempdsa/tetris_top.xsa
+TRACE::2024-12-13.16:05:47::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/tempdsa/tetris_top.xsa
+TRACE::2024-12-13.16:05:47::SCWPlatform:: Platform location is /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/tempdsa
+TRACE::2024-12-13.16:05:47::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/tempdsa/tetris_top.xsa
+TRACE::2024-12-13.16:05:47::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:48::SCWMssOS::Doing hw sync for the mss in domain: standalone_microblaze_0
+TRACE::2024-12-13.16:05:48::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:48::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:48::SCWPlatform::Trying to set the existing hwdb with name tetris_top_0
+TRACE::2024-12-13.16:05:48::SCWPlatform::Opened existing hwdb tetris_top_0
+TRACE::2024-12-13.16:05:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:48::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:48::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:48::SCWPlatform::Trying to set the existing hwdb with name tetris_top_0
+TRACE::2024-12-13.16:05:48::SCWPlatform::Opened existing hwdb tetris_top_0
+TRACE::2024-12-13.16:05:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:48::SCWMssOS::Checking the sw design at  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:48::SCWMssOS::DEBUG:  swdes dump  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-13.16:05:48::SCWMssOS::Sw design exists and opened at  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:48::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/tempdsa/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/tempdsa/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/tempdsa/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/tempdsa
+TRACE::2024-12-13.16:05:48::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/tempdsa/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:48::SCWPlatform::update - Opened existing hwdb tetris_top_1
+TRACE::2024-12-13.16:05:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:48::SCWMssOS::Saving the mss changes /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:48::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2024-12-13.16:05:48::SCWMssOS::Completed writemss as part of save.
+TRACE::2024-12-13.16:05:48::SCWMssOS::Commit changes completed.
+TRACE::2024-12-13.16:05:48::SCWMssOS::Completed hw sync for the mss in domain: standalone_microblaze_0
+TRACE::2024-12-13.16:05:48::SCWMssOS::Removing the swdes entry for  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:48::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:48::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:48::SCWPlatform::Do not have an existing db opened. 
+TRACE::2024-12-13.16:05:48::SCWPlatform::Opened new HwDB with name tetris_top_2
+TRACE::2024-12-13.16:05:48::SCWMssOS::Saving the mss changes /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:48::SCWMssOS::Adding the swdes entry, mss present, able to open swdb /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss with des name system
+TRACE::2024-12-13.16:05:48::SCWMssOS::Writing the mss file completed /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:48::SCWMssOS::Commit changes completed.
+TRACE::2024-12-13.16:05:48::SCWPlatform::Trying to open the hw design at /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA given /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA absoulate path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform::DSA directory /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw
+TRACE::2024-12-13.16:05:48::SCWPlatform:: Platform Path /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/hw/tetris_top.xsa
+TRACE::2024-12-13.16:05:48::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2024-12-13.16:05:48::SCWPlatform::Trying to set the existing hwdb with name tetris_top_2
+TRACE::2024-12-13.16:05:48::SCWPlatform::Opened existing hwdb tetris_top_2
+TRACE::2024-12-13.16:05:48::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2024-12-13.16:05:48::SCWMssOS::Checking the sw design at  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:48::SCWMssOS::DEBUG:  swdes dump  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss|system||
+
+TRACE::2024-12-13.16:05:48::SCWMssOS::Sw design exists and opened at  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp/system.mss
+TRACE::2024-12-13.16:05:48::SCWWriter::formatted JSON is {
+	"platformName":	"tetris_top",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"tetris_top",
+	"platHandOff":	"/home/sean/Downloads/git/ECE385_FP/tetris_logic1/tetris_top.xsa",
+	"platIntHandOff":	"<platformDir>/hw/tetris_top.xsa",
+	"deviceType":	"FPGA",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"tetris_top",
+	"systems":	[{
+			"systemName":	"tetris_top",
+			"systemDesc":	"tetris_top",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"tetris_top",
+			"sysActiveDom":	"standalone_microblaze_0",
+			"sysDefaultDom":	"standalone_microblaze_0",
+			"domains":	[{
+					"domainName":	"standalone_microblaze_0",
+					"domainDispName":	"standalone_microblaze_0",
+					"domainDesc":	"standalone_microblaze_0",
+					"processors":	"microblaze_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"8.0",
+					"mssFile":	"",
+					"md5Digest":	"d42b97a3d2ad9274514bdbac3aafaab01",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	[],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2024-12-13.16:05:54::SCWMssOS::cleaning the bsp 
+TRACE::2024-12-13.16:05:54::SCWMssOS::System Command Ran  cd  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp ; bash -c "make  clean " 
+TRACE::2024-12-13.16:05:54::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s clean 
+
+TRACE::2024-12-13.16:05:54::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s clean 
+
+TRACE::2024-12-13.16:05:54::SCWMssOS::make -C microblaze_0/libsrc/gpio_v4_9/src -s clean 
+
+TRACE::2024-12-13.16:05:54::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s clean 
+
+TRACE::2024-12-13.16:05:54::SCWMssOS::make -C microblaze_0/libsrc/spi_v4_9/src -s clean 
+
+TRACE::2024-12-13.16:05:54::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s clean 
+
+TRACE::2024-12-13.16:05:54::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s clean 
+
+TRACE::2024-12-13.16:05:54::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s clean 
+
+TRACE::2024-12-13.16:05:54::SCWMssOS::rm -f microblaze_0/lib/libxil.a
+
+TRACE::2024-12-13.16:05:59::SCWMssOS::cleaning the bsp 
+TRACE::2024-12-13.16:05:59::SCWMssOS::System Command Ran  cd  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp ; bash -c "make  clean " 
+TRACE::2024-12-13.16:05:59::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s clean 
+
+TRACE::2024-12-13.16:05:59::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s clean 
+
+TRACE::2024-12-13.16:05:59::SCWMssOS::make -C microblaze_0/libsrc/gpio_v4_9/src -s clean 
+
+TRACE::2024-12-13.16:05:59::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s clean 
+
+TRACE::2024-12-13.16:05:59::SCWMssOS::make -C microblaze_0/libsrc/spi_v4_9/src -s clean 
+
+TRACE::2024-12-13.16:05:59::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s clean 
+
+TRACE::2024-12-13.16:05:59::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s clean 
+
+TRACE::2024-12-13.16:05:59::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s clean 
+
+TRACE::2024-12-13.16:05:59::SCWMssOS::rm -f microblaze_0/lib/libxil.a
+
+TRACE::2024-12-13.16:06:05::SCWMssOS::cleaning the bsp 
+TRACE::2024-12-13.16:06:05::SCWMssOS::System Command Ran  cd  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp ; bash -c "make  clean " 
+TRACE::2024-12-13.16:06:05::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s clean 
+
+TRACE::2024-12-13.16:06:05::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s clean 
+
+TRACE::2024-12-13.16:06:05::SCWMssOS::make -C microblaze_0/libsrc/gpio_v4_9/src -s clean 
+
+TRACE::2024-12-13.16:06:05::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s clean 
+
+TRACE::2024-12-13.16:06:05::SCWMssOS::make -C microblaze_0/libsrc/spi_v4_9/src -s clean 
+
+TRACE::2024-12-13.16:06:05::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s clean 
+
+TRACE::2024-12-13.16:06:05::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s clean 
+
+TRACE::2024-12-13.16:06:05::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s clean 
+
+TRACE::2024-12-13.16:06:05::SCWMssOS::rm -f microblaze_0/lib/libxil.a
+
+TRACE::2024-12-13.16:06:15::SCWMssOS::cleaning the bsp 
+TRACE::2024-12-13.16:06:15::SCWMssOS::System Command Ran  cd  /home/sean/Downloads/git/ECE385_FP/tetris_logic1/workspace2/tetris_top/microblaze_0/standalone_microblaze_0/bsp ; bash -c "make  clean " 
+TRACE::2024-12-13.16:06:15::SCWMssOS::make -C microblaze_0/libsrc/bram_v4_8/src -s clean 
+
+TRACE::2024-12-13.16:06:15::SCWMssOS::make -C microblaze_0/libsrc/cpu_v2_16/src -s clean 
+
+TRACE::2024-12-13.16:06:15::SCWMssOS::make -C microblaze_0/libsrc/gpio_v4_9/src -s clean 
+
+TRACE::2024-12-13.16:06:15::SCWMssOS::make -C microblaze_0/libsrc/intc_v3_15/src -s clean 
+
+TRACE::2024-12-13.16:06:15::SCWMssOS::make -C microblaze_0/libsrc/spi_v4_9/src -s clean 
+
+TRACE::2024-12-13.16:06:15::SCWMssOS::make -C microblaze_0/libsrc/standalone_v8_0/src -s clean 
+
+TRACE::2024-12-13.16:06:15::SCWMssOS::make -C microblaze_0/libsrc/tmrctr_v4_9/src -s clean 
+
+TRACE::2024-12-13.16:06:15::SCWMssOS::make -C microblaze_0/libsrc/uartlite_v3_7/src -s clean 
+
+TRACE::2024-12-13.16:06:15::SCWMssOS::rm -f microblaze_0/lib/libxil.a
+

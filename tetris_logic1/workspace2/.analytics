@@ -8,3 +8,10 @@ timestamp=[2024-12-13 14:32:39], mode=BUILD, duration=0:00:00.235, duration_ms=2
 timestamp=[2024-12-13 14:46:24], mode=PLATFORM_GENERATION, duration=0:00:09.709, duration_ms=9709, data={name=tetris_top}
 timestamp=[2024-12-13 14:46:27], mode=BUILD, duration=0:00:02.259, duration_ms=2259, data={name=mb_usb, configuration=Debug, clean_build=false}
 timestamp=[2024-12-13 14:46:28], mode=BUILD, duration=0:00:00.198, duration_ms=198, data={name=mb_usb_system, configuration=Debug, clean_build=false}
+timestamp=[2024-12-13 16:05:23], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:00.140, duration_ms=140, data={}
+timestamp=[2024-12-13 16:05:24], mode=WORKBENCH_START, duration=0:00:03.679, duration_ms=3679, data={}
+timestamp=[2024-12-13 16:05:24], mode=WORKBENCH_UI_INIT, duration=0:00:00.228, duration_ms=228, data={editors_count=2, platform_editors_count=0, projects_count=4, platform_projects_count=1, active_platform_editor=false, projects=RemoteSystemsTempFiles,mb_usb,mb_usb_system,tetris_top}
+timestamp=[2024-12-13 16:05:58], mode=PLATFORM_GENERATION, duration=0:00:03.953, duration_ms=3953, data={name=tetris_top}
+timestamp=[2024-12-13 16:06:02], mode=PLATFORM_GENERATION, duration=0:00:03.928, duration_ms=3928, data={name=tetris_top}
+timestamp=[2024-12-13 16:06:08], mode=PLATFORM_GENERATION, duration=0:00:03.926, duration_ms=3926, data={name=tetris_top}
+timestamp=[2024-12-13 16:06:18], mode=PLATFORM_GENERATION, duration=0:00:03.978, duration_ms=3978, data={name=tetris_top}
